@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "@angular/http": "^7.2.16",
     "json-server": "^0.17.0"
+  },
+  "devDependencies": {
+    "tslib": "^2.4.0"
   }
 }

@@ -33,7 +33,6 @@ module.exports = function () {
         ],
         CurriculumVitae: [
             {
-                idCV: 1,
                 habilidadesCV: "Luisa",
                 capacidadesCV: "",
                 experienciasCV: "",
