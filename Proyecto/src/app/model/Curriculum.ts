@@ -1,6 +1,6 @@
 export class CurriculumVitae{
-    Cexperiencia:number=0; 
-    Ccapacitacion:number=0;
-    Chabilidad:number=0;
-    Ccontador:number=0;
+    experienciasCV:string=""; 
+    capacidadesCV:string="";
+    habilidadesCV:string="";
+    Contador: Contador = new Contador();
 }

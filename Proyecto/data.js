@@ -135,7 +135,24 @@ module.exports = function () {
         ],
         CurriculumVitae: [
             {
-                idCV: 1,
+                habilidadesCV: "asdasd",
+                capacidadesCV: "asdadsa",
+                experienciasCV: "asdasdad",
+                Contador: {
+                    idContador: 1
+                },
+                habilidadesCV: "Luisa",
+                capacidadesCV: "asdads",
+                experienciasCV: "asda",
+                Contador: {
+                    idContador: 1
+                },
+                habilidadesCV: "Luisa",
+                capacidadesCV: "",
+                experienciasCV: "",
+                Contador: {
+                    idContador: 1
+                },
                 habilidadesCV: "Luisa",
                 capacidadesCV: "",
                 experienciasCV: "",
