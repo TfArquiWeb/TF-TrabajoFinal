@@ -149,14 +149,66 @@ module.exports = function () {
             {
                 idContrato: 1,
                 numeroContrato: 001,
-                FechainiContrato: 01 - 12 - 2010,
-                fechafinContrato: 01 - 12 - 2011,
-                FlagContrato: true,
+                fechainiContrato: 01 - 08 - 2022,
+                fechafinContrato: 01 - 08 - 2023,
+                flagContrato: true,
                 Contador: {
                     idContador: 1
                 },
                 Empresario: {
                     idEmpresario: 1
+                }
+            },
+            {
+                idContrato: 2,
+                numeroContrato: 002,
+                fechainiContrato: 01 - 10 - 2022,
+                fechafinContrato: 01 - 10 - 2023,
+                flagContrato: true,
+                Contador: {
+                    idContador: 2
+                },
+                Empresario: {
+                    idEmpresario: 2
+                }
+            },
+            {
+                idContrato: 3,
+                numeroContrato: 003,
+                fechainiContrato: 01 - 04 - 2022,
+                fechafinContrato: 01 - 10 - 2022,
+                flagContrato: true,
+                Contador: {
+                    idContador: 3
+                },
+                Empresario: {
+                    idEmpresario: 3
+                }
+            },
+            {
+                idContrato: 4,
+                numeroContrato: 004,
+                fechainiContrato: 01 - 03 - 2022,
+                fechafinContrato: 01 - 03 - 2024,
+                flagContrato: true,
+                Contador: {
+                    idContador: 4
+                },
+                Empresario: {
+                    idEmpresario: 4
+                }
+            },
+            {
+                idContrato: 5,
+                numeroContrato: 005,
+                fechainiContrato: 01 - 12 - 2022,
+                fechafinContrato: 01 - 12 - 2023,
+                flagContrato: true,
+                Contador: {
+                    idContador: 5
+                },
+                Empresario: {
+                    idEmpresario: 5
                 }
             },
 
