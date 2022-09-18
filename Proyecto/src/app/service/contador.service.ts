@@ -1,3 +1,4 @@
+import { CurriculumVitae } from './../model/curriculum';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Contador } from '../model/contador';
@@ -15,5 +16,8 @@ export class ContadorService {
   }
   getlistarTipoPago() {
     return this.http.get<TipoPago[]>(`${this.url}TipoPago`)
+  }
+  listarCurriculum() {
+    return this.http.get<CurriculumVitae[]>(this.url)
   }
 } 
