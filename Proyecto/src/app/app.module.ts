@@ -10,7 +10,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContadorComponent } from './page/contador/contador.component';
 import { ContadorListarComponent } from './page/contador/contador-listar/contador-listar.component';
 import { CurriculumComponent } from './page/curriculum/curriculum.component';
-import { ListarCurriculumComponent } from './page/Curriculum/listar-curriculum/listar-curriculum.component';
 import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/curriculum-listar.component';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/c
     ContadorComponent,
     ContadorListarComponent,
     CurriculumComponent,
-    ListarCurriculumComponent,
     CurriculumListarComponent
   ],
   imports: [
