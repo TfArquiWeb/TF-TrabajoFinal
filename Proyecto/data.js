@@ -4,14 +4,69 @@ module.exports = function () {
             {
                 idEmpresario: 1,
                 nameEmpresario: "Luisa",
-                apellidoEmpresario: "",
-                emailEmpresario: "luisa@gmail.com",
-                dniEmpresario: 1234567,
-                numeroEmpresario: 123456789,
+                apellidoEmpresario: "Ramos",
+                emailEmpresario: "lramos@gmail.com",
+                dniEmpresario: 477526778,
+                numeroEmpresario: 980512756,
                 fotoEmpresario: "",
-                razonsocialEmpresario: "",
+                razonsocialEmpresario: "VentasRamos",
+                rucEmpresario: 20201324652,
+                rubroEmpresario: "Comercio",
+                prefEmpresario: "",
+            },
+            {
+                idEmpresario: 2,
+                nameEmpresario: "Miguel",
+                apellidoEmpresario: "Cornejo",
+                emailEmpresario: "mcornejo@gmail.com",
+                dniEmpresario: 74742099,
+                numeroEmpresario: 987475567,
+                fotoEmpresario: "",
+                razonsocialEmpresario: "PescadosCornejo",
+                rucEmpresario: 20604082931,
+                rubroEmpresario: "Agropecuario",
+                prefEmpresario: "",
+
+            },
+            {
+                idEmpresario: 3,
+                nameEmpresario: "Rodrigo",
+                apellidoEmpresario: "Gutierrez",
+                emailEmpresario: "rgutierrez@gmail.com",
+                dniEmpresario: 09586685,
+                numeroEmpresario: 992800125,
+                fotoEmpresario: "",
+                razonsocialEmpresario: "ServiciosGutierrez",
+                rucEmpresario: 20603750342,
+                rubroEmpresario: "Servicios",
+                prefEmpresario: "",
+
+            },
+            {
+                idEmpresario: 4,
+                nameEmpresario: "Andrea",
+                apellidoEmpresario: "Torres",
+                emailEmpresario: "atorres@gmail.com",
+                dniEmpresario: 74068863,
+                numeroEmpresario: 970695964,
+                fotoEmpresario: "",
+                razonsocialEmpresario: "ImportacionesTorres",
                 rucEmpresario: 2020123456,
-                rubroEmpresario: "",
+                rubroEmpresario: "Comercio",
+                prefEmpresario: "",
+
+            },
+            {
+                idEmpresario: 5,
+                nameEmpresario: "Sofia",
+                apellidoEmpresario: "Smith",
+                emailEmpresario: "ssmith@gmail.com",
+                dniEmpresario: 38040366,
+                numeroEmpresario: 974364038,
+                fotoEmpresario: "",
+                razonsocialEmpresario: "MariscosSmith",
+                rucEmpresario: 2020123456,
+                rubroEmpresario: "Agropecuario",
                 prefEmpresario: "",
 
             },
@@ -47,14 +102,14 @@ module.exports = function () {
             {
                 idContrato: 1,
                 numeroContrato: 001,
-                FechainiContrato:01-12-2010,
-                fechafinContrato:01-12-2011,
+                FechainiContrato: 01 - 12 - 2010,
+                fechafinContrato: 01 - 12 - 2011,
                 FlagContrato: true,
                 Contador: {
                     idContador: 1
                 },
                 Empresario: {
-                    iidEmpresariod: 1
+                    idEmpresario: 1
                 }
             },
 
