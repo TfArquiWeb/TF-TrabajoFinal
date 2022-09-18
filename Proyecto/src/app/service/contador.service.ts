@@ -2,16 +2,20 @@ import { CurriculumVitae } from './../model/curriculum';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Contador } from '../model/contador';
+import { TipoPago } from '../model/tipopago';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContadorService {
-  url: string = "http://localhost:5000/Contador"
+  url: string = "http://localhost:5000/"
   constructor(private http: HttpClient) { }
 
-  listar() {
-    return this.http.get<Contador[]>(this.url)
+  listarContador() {
+    return this.http.get<Contador[]>(`${this.url}Contador`);
+  }
+  getlistarTipoPago() {
+    return this.http.get<TipoPago[]>(`${this.url}TipoPago`)
   }
   listarCurriculum() {
     return this.http.get<CurriculumVitae[]>(this.url)

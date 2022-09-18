@@ -9,8 +9,8 @@ import { EmpresarioListarComponent } from './page/empresario/empresario-listar/e
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContadorComponent } from './page/contador/contador.component';
 import { ContadorListarComponent } from './page/contador/contador-listar/contador-listar.component';
-import { CurriculumComponent } from './page/curriculum/curriculum.component';
-import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/curriculum-listar.component';
+import { TipopagoComponent } from './page/tipopago/tipopago.component';
+import { TipopagoListarComponent } from './page/tipopago/tipopago-listar/tipopago-listar.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +19,8 @@ import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/c
     EmpresarioListarComponent,
     ContadorComponent,
     ContadorListarComponent,
-    CurriculumComponent,
-    CurriculumListarComponent
+    TipopagoComponent,
+    TipopagoListarComponent
   ],
   imports: [
     BrowserModule,
