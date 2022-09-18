@@ -1,4 +1,5 @@
 import { Empresario } from "./empresario";
+
 export class Contador {
     idContador: number = 0;
     nameContador: string = "";
@@ -7,5 +8,5 @@ export class Contador {
     dniContador: number = 0;
     numeroContador: number = 0;
     fotoContador: string = "";
-    Empresario: Empresario = new Empresario();
+    Empresario: Empresario = new Empresario();  
 }
