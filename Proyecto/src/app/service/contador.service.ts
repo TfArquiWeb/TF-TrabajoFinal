@@ -7,13 +7,13 @@ import { TipoPago } from '../model/tipopago';
   providedIn: 'root'
 })
 export class ContadorService {
-  url: string = "http://localhost:5000/Contador"
+  url: string = "http://localhost:5000/"
   constructor(private http: HttpClient) { }
 
   listarContador() {
-    return this.http.get<Contador[]>(this.url)
+    return this.http.get<Contador[]>(`${this.url}Contador`);
   }
-  listarTipoPago() {
-    return this.http.get<TipoPago[]>(this.url)
+  getlistarTipoPago() {
+    return this.http.get<TipoPago[]>(`${this.url}TipoPago`)
   }
 } 
