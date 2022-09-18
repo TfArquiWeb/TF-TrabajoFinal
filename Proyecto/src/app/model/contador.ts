@@ -8,5 +8,5 @@ export class Contador {
     dniContador: number = 0;
     numeroContador: number = 0;
     fotoContador: string = "";
-    Empresario: Empresario = new Empresario();
+    Empresario: Empresario = new Empresario(); 
 }

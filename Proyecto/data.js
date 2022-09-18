@@ -74,17 +74,64 @@ module.exports = function () {
         Contador: [
             {
                 idContador: 1,
-                nameContador: "Luisa",
-                apellidoContador: "",
-                emailContador: "luisa@gmail.com",
-                dniContador: 1234567,
-                numeroContador: 123456789,
+                nameContador: "Abel",
+                apellidoContador: "Ramirez",
+                emailContador: "aramirez@gmail.com",
+                dniContador: 40525999,
+                numeroContador: 998250912,
                 fotoContador: "",
                 Empresario: {
                     idEmpresario: 1,
                 }
+            }, 
+            {
+                idContador: 2,
+                nameContador: "Alexandro",
+                apellidoContador: "Lopez",
+                emailContador: "alopez@gmail.com",
+                dniContador: 54644485,
+                numeroContador: 937084291,
+                fotoContador: "",
+                Empresario: {
+                    idEmpresario: 2,
+                }
             },
-
+            {
+                idContador: 3,
+                nameContador: "Diego",
+                apellidoContador: "Crespo",
+                emailContador: "dcrespo@gmail.com",
+                dniContador: 55046035,
+                numeroContador: 979179104,
+                fotoContador: "",
+                Empresario: {
+                    idEmpresario: 3,
+                }
+            },
+            {
+                idContador: 4,
+                nameContador: "Bruno",
+                apellidoContador: "Bolivar",
+                emailContador: "bbolivar@gmail.com",
+                dniContador: 58845197,
+                numeroContador: 929712873,
+                fotoContador: "",
+                Empresario: {
+                    idEmpresario: 4,
+                }
+            },
+            {
+                idContador: 5,
+                nameContador: "Abel",
+                apellidoContador: "Ramirez",
+                emailContador: "aramirez@gmail.com",
+                dniContador: 42656609,
+                numeroContador: 907196576,
+                fotoContador: "",
+                Empresario: {
+                    idEmpresario: 5,
+                }
+            },
         ],
         CurriculumVitae: [
             {

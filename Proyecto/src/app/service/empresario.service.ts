@@ -9,7 +9,7 @@ export class EmpresarioService {
   url: string = "http://localhost:5000/Empresario"
   constructor(private http: HttpClient) { }
 
-  listar(){
+  listar() {
     return this.http.get<Empresario[]>(this.url)
   }
 }
