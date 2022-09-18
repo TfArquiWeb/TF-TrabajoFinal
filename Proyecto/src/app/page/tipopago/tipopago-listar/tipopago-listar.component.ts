@@ -14,8 +14,9 @@ export class TipopagoListarComponent implements OnInit {
   constructor(private Vs:ContadorService) { }
 
   ngOnInit(): void {
-    this.Vs.listarTipoPago().subscribe(data=>{
+    this.Vs.getlistarTipoPago().subscribe(data=>{
       this.dataSource=new MatTableDataSource(data);
+      console.log(data);
     })
   }
 
