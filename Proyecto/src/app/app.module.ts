@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { EmpresarioComponent } from './page/empresario/empresario.component';
 import { EmpresarioListarComponent } from './page/empresario/empresario-listar/empresario-listar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContadorComponent } from './page/contador/contador.component';
+import { ContadorListarComponent } from './page/contador/contador-listar/contador-listar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmpresarioComponent,
-    EmpresarioListarComponent
+    EmpresarioListarComponent,
+    ContadorComponent,
+    ContadorListarComponent
   ],
   imports: [
     BrowserModule,
