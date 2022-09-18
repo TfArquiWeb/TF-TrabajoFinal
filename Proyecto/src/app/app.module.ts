@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmpresarioComponent } from './page/empresario/empresario.component';
 import { EmpresarioListarComponent } from './page/empresario/empresario-listar/empresario-listar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EmpresarioListarComponent } from './page/empresario/empresario-listar/e
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],
