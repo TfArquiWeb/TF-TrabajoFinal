@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-
   url : string = 'http://localhost:5000/';
   constructor() { }
   ListaContadores(){
