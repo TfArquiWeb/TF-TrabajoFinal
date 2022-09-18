@@ -14,7 +14,7 @@ export class ContadorListarComponent implements OnInit {
   constructor(private Vs: ContadorService) { }
 
   ngOnInit(): void {
-    this.Vs.listar().subscribe(d => {
+    this.Vs.getlistarContador().subscribe(d => {
       this.dataSource = new MatTableDataSource(d);
     })
   }
