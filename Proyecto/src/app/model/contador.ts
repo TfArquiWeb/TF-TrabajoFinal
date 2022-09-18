@@ -1,4 +1,5 @@
 import { Empresario } from "./empresario";
+
 export class Contador {
     idContador: number = 0;
     nameContador: string = "";
