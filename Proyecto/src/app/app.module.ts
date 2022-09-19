@@ -11,6 +11,7 @@ import { ContadorComponent } from './page/contador/contador.component';
 import { ContadorListarComponent } from './page/contador/contador-listar/contador-listar.component';
 import { TipopagoComponent } from './page/tipopago/tipopago.component';
 import { TipopagoListarComponent } from './page/tipopago/tipopago-listar/tipopago-listar.component';
+import { ContratoComponent } from './page/contrato/contrato.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TipopagoListarComponent } from './page/tipopago/tipopago-listar/tipopag
     ContadorComponent,
     ContadorListarComponent,
     TipopagoComponent,
-    TipopagoListarComponent
+    TipopagoListarComponent,
+    ContratoComponent
   ],
   imports: [
     BrowserModule,

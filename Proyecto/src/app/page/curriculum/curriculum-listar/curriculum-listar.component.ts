@@ -1,5 +1,5 @@
-import { ContadorService } from './../../../service/contador.service';
-import { CurriculumVitae } from './../../../model/curriculum';
+import { ContadorService } from '../../../service/contador.service';
+import { CurriculumVitae } from './../../../model/Curriculum';
 import { MatTableDataSource } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
 
@@ -14,7 +14,7 @@ export class CurriculumListarComponent implements OnInit {
   constructor(private Vs:ContadorService) { }
 
   ngOnInit(): void {
-    this.Vs.listarCurriculum().subscribe(data=>{
+    this.Vs.getlistarCurriculum().subscribe(data=>{
       this.dataSource=new MatTableDataSource(data);
     })
   }

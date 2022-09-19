@@ -1,4 +1,4 @@
-import { ContadorService } from './../../../service/contador.service';
+import { ContadorService } from '../../../service/contador.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
 import { Contador } from 'src/app/model/contador';
