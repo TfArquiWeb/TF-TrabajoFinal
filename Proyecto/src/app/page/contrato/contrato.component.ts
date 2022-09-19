@@ -17,6 +17,6 @@ export class ContratoComponent implements OnInit {
     this.Vs.getlistarContrato().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
       console.log(data);
-    }
-
+    })
+  }
 }
