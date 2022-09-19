@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Contador } from '../model/contador';
 import { TipoPago } from '../model/tipopago';
+import { Contrato } from './../model/contrato';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +24,8 @@ export class ContadorService {
   }
   getlistarCurriculum() {
     return this.http.get<CurriculumVitae[]>(`${this.url}Curriculum`)
+  }
+  getlistarContrato() {
+    return this.http.get<Contrato[]>(`${this.url}Contrato`)
   }
 } 

@@ -170,10 +170,14 @@ module.exports = function () {
                 fechafinContrato: 01 - 08 - 2023,
                 flagContrato: true,
                 Contador: {
-                    idContador: 1
+                    idContador: 1,
+                    nameContador: "Diego",
+                    apellidoContador: "Pacheco",
                 },
                 Empresario: {
-                    idEmpresario: 1
+                    idEmpresario: 1,
+                    nameEmpresario: "Diego",
+                    apellidoEmpresario: "Pacheco",
                 }
             },
             {
