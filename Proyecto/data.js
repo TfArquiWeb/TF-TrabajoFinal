@@ -352,7 +352,6 @@ module.exports = function () {
                     idEmpresario:1,
                 },
             },
-
         ],
     }
     return data
