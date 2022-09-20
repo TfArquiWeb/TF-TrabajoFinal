@@ -1,18 +1,44 @@
 module.exports = function () {
     var data = {
+        Usuario: [
+            {
+                idUsuario: 1,
+                dniUsuario: 1234567,
+                nombreUsuario: "Luisa",
+                apellidoUsuario: "Ramos",
+                numeroUsuario: 123456789,
+                correoUsuario: "lramos@gmail.com",
+                fotoUsuario: "Esta Es mi foto,soy guapo lo se",
+            },
+            {
+                idUsuario: 2,
+                dniUsuario: 1234567,
+                nombreUsuario: "Luisa",
+                apellidoUsuario: "Ramos",
+                numeroUsuario: 123456789,
+                correoUsuario: "lramos@gmail.com",
+                fotoUsuario: "Esta Es mi foto,soy guapo lo se",
+            },
+            {
+                idUsuario: 3,
+                dniUsuario: 1234567,
+                nombreUsuario: "Luisa",
+                apellidoUsuario: "Ramos",
+                numeroUsuario: 123456789,
+                correoUsuario: "lramos@gmail.com",
+                fotoUsuario: "Esta Es mi foto,soy guapo lo se",
+            },
+        ],
         Empresario: [
             {
                 idEmpresario: 1,
-                nameEmpresario: "Luisa",
-                apellidoEmpresario: "Ramos",
-                emailEmpresario: "lramos@gmail.com",
-                dniEmpresario: 477526778,
-                numeroEmpresario: 980512756,
-                fotoEmpresario: "",
                 razonsocialEmpresario: "VentasRamos",
                 rucEmpresario: 20201324652,
                 rubroEmpresario: "Comercio",
                 prefEmpresario: "",
+                Usuario: {
+                    idUsuario: 1,
+                }
             },
             {
                 idEmpresario: 2,
