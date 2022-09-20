@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContratoListarComponent implements OnInit {
   dataSource: MatTableDataSource<Contrato> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'fechainicio', 'fechafin', 'vigencia', 'monto', 'contador', 'empresario', 'tipomoneda', 'tipopago'];
+  displayedColumns: string[] = ['id', 'fechainicio', 'fechafin', 'vigencia', 'monto', 'contador', 'empresario', 'tipomoneda', 'tipopago','curriculumvitae'];
   constructor(private Cs: ContratoService) { }
 
   ngOnInit(): void {

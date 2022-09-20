@@ -10,7 +10,7 @@ import { CurriculumService } from 'src/app/service/curriculum.service';
 })  
 export class CurriculumListarComponent implements OnInit {
   dataSource: MatTableDataSource<CurriculumVitae> = new MatTableDataSource();
-  displayedColumns: string[] = ['idcontador', 'experiencias', 'capacidades', 'habilidades'];
+  displayedColumns: string[] = ['idcurriculum', 'experiencias', 'capacidades', 'habilidades'];
   constructor(private Cs: CurriculumService) { }
 
   ngOnInit(): void {

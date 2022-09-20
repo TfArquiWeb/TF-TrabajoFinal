@@ -1,3 +1,4 @@
+import { CurriculumVitae } from './curriculum';
 import { TipoPago } from './tipopago';
 import { TipoMoneda } from './tipomoneda';
 import { Empresario } from './empresario';
@@ -12,5 +13,6 @@ export class Contrato {
     Contador: Contador = new Contador(); 
     Empresario: Empresario = new Empresario();
     TipoMoneda: TipoMoneda = new TipoMoneda();
-    TipoPago: TipoPago = new TipoPago(); 
+    TipoPago: TipoPago = new TipoPago();
+    CurriculumVitae: CurriculumVitae = new CurriculumVitae();
 }
