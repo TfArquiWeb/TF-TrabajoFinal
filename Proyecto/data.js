@@ -154,12 +154,12 @@ module.exports = function () {
 
         ],
         Contrato: [
-            {
+            { 
                 idContrato: 1,
                 fechainiContrato: "01 - 08 - 2022",
                 fechafinContrato: "01 - 08 - 2023",
                 vigenciaContrato: true,
-                montoContrato:123441,
+                montoContrato:8500,
                 Contador: {
                     idContador: 1,
                 },
@@ -178,6 +178,7 @@ module.exports = function () {
                 fechainiContrato: "01 - 05 - 2022",
                 fechafinContrato: "01 - 05 - 2023",
                 vigenciaContrato: true,
+                montoContrato:4300,
                 Contador: {
                     idContador: 2,
                 },
@@ -196,6 +197,7 @@ module.exports = function () {
                 fechainiContrato: "01 - 11 - 2022",
                 fechafinContrato: "01 - 11 - 2023",
                 vigenciaContrato: true,
+                montoContrato:9150,
                 Contador: {
                     idContador: 3,
                 },

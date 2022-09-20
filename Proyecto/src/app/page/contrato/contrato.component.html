@@ -1,44 +1,4 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-    <!--- Note that these columns can be defined in any order.
-              The actual rendered columns are set as a property on the row definition" -->
-
-    <!-- Position Column -->
-    <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> Id </th>
-        <td mat-cell *matCellDef="let element"> {{element.idContrato}} </td>
-    </ng-container>
-
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> NumeroContrato </th>
-        <td mat-cell *matCellDef="let element"> {{element.numeroContrato}} </td>
-    </ng-container>
-
-    <!-- Weight Column -->
-    <ng-container matColumnDef="fechainicio">
-        <th mat-header-cell *matHeaderCellDef> FechaInicial </th>
-        <td mat-cell *matCellDef="let element"> {{element.fechainiContrato}} </td>
-    </ng-container>
-
-    <!-- Weight Column -->
-    <ng-container matColumnDef="fechafinal">
-        <th mat-header-cell *matHeaderCellDef> FechaFinal </th>
-        <td mat-cell *matCellDef="let element"> {{element.fechafinContrato}} </td>
-    </ng-container>
-
-    <!-- Weight Column -->
-    <ng-container matColumnDef="contador">
-        <th mat-header-cell *matHeaderCellDef> Contador </th>
-        <td mat-cell *matCellDef="let element"> {{element.Contador.nameContador}} </td>
-    </ng-container>
-
-    <!-- Weight Column -->
-    <ng-container matColumnDef="empresario">
-        <th mat-header-cell *matHeaderCellDef> Empresario </th>
-        <td mat-cell *matCellDef="let element"> {{element.Empresario.nameEmpresario}} </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+<router-outlet></router-outlet>
+<div [hidden]="route.children.length!==0">
+    <app-contrato-listar></app-contrato-listar>
+</div>
