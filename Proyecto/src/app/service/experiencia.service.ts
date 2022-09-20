@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Experiencia } from './../model/experiencia';
+import { Subject } from 'rxjs';
 
 
 @Injectable({
@@ -8,8 +9,18 @@ import { Experiencia } from './../model/experiencia';
 })
 export class ExperienciaService {
   url: string = "http://localhost:5000/experiencia"
+  private listaCambio = new Subject<Experiencia[]>()
   constructor(public http:HttpClient) { }
-  listar() {
+  listarExperiencia() {
     return this.http.get<Experiencia[]>(this.url);
+  }
+  insertarExperiencia(experiencia: Experiencia) {
+    return this.http.post(this.url, experiencia);
+  }
+  setListaExperiencia(listaNueva: Experiencia[]) {
+    this.listaCambio.next(listaNueva);
+  }
+  getListaExperiencia() {
+    return this.listaCambio.asObservable();
   }
 }

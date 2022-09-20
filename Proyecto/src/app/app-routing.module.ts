@@ -11,7 +11,8 @@ import { HabilidadComponent } from './page/habilidad/habilidad.component';
 import { CapacitacionCreaeditaComponent } from './page/capacitacion/capacitacion-creaedita/capacitacion-creaedita.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { HabilidadCreaeditaComponent } from './page/habilidad/habilidad-creaedita/habilidad-creaedita.component';
+import { ExperienciaCreaeditaComponent } from './page/experiencia/experiencia-creaedita/experiencia-creaedita.component';
 const routes: Routes = [{
   path: 'empresario', component: EmpresarioComponent, children: [
 
@@ -26,14 +27,16 @@ const routes: Routes = [{
   ]
 }, {
   path: 'capacitacion', component: CapacitacionComponent, children: [
-    { path: 'editar', component: CapacitacionCreaeditaComponent }
+    { path: 'insertar', component: CapacitacionCreaeditaComponent }
   ]
 }, {
   path: 'habilidad', component: HabilidadComponent, children: [
+    { path: 'insertar', component: HabilidadCreaeditaComponent }
 
   ]
 }, {
   path: 'experiencia', component: ExperienciaComponent, children: [
+    { path: 'insertar', component: ExperienciaCreaeditaComponent }
 
   ]
 }, {

@@ -1,3 +1,5 @@
+
+import { CurriculumVitae } from './Curriculum';
 import { Usuario } from './usuario';
 import { CurriculumVitae } from './curriculum';
 import { TipoPago } from './tipopago';

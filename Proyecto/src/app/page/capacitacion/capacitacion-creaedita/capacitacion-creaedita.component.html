@@ -1,11 +1,12 @@
 
+<p>propietario-creaedita works!</p>
 <div class="container">
 
   <h1>Capacitacion</h1>
 
   <mat-form-field class="example-full-width">
     <mat-label>Id</mat-label>
-    <input matInput placeholder="idCapacitacion" [(ngModel)]="capacitacion.idCapacitacion">
+    <input matInput placeholder="Id" [(ngModel)]="capacitaciones.idCapacitacion">
   </mat-form-field>
 
   <br>
@@ -18,7 +19,7 @@
 
   <br>
   
-  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="primary" (click)="aceptarCapacitacion()">Aceptar</button>
   <button mat-raised-button color="warn" routerLink="/capacitacion">Cancelar</button>
   <p>{{mensaje}}</p>
 
