@@ -1,5 +1,4 @@
 import { CurriculumVitae } from './../../../model/Curriculum';
-
 import { CurriculumService } from './../../../service/curriculum.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
