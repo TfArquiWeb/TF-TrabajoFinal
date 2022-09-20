@@ -28,6 +28,7 @@ import { UsuarioComponent } from './page/usuario/usuario.component';
 import { UsuarioListarComponent } from './page/usuario/usuario-listar/usuario-listar.component';
 import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
 import { TipomonedaListarComponent } from './page/tipomoneda/tipomoneda-listar/tipomoneda-listar.component';
+import { ContratoListarComponent } from './page/contrato/contrato-listar/contrato-listar.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { TipomonedaListarComponent } from './page/tipomoneda/tipomoneda-listar/t
     UsuarioListarComponent,
     TipomonedaComponent,
     TipomonedaListarComponent,
+    ContratoListarComponent,
   ],
   imports: [
     BrowserModule,

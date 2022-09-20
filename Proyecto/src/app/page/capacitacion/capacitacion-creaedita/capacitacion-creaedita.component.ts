@@ -22,7 +22,7 @@ export class CapacitacionCreaeditaComponent implements OnInit {
           this.capacitacionService.setLista(data);
         })
       })
-      this.router.navigate(['capacitaciones']);
+      this.router.navigate(['capacitacion']);
     } else {
       this.mensaje = "Complete los valores requeridos";
     }

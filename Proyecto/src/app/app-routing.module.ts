@@ -23,15 +23,15 @@ const routes: Routes = [{
 
   ]
 }, {
-  path: 'capacitaciones', component: CapacitacionComponent, children: [
+  path: 'capacitacion', component: CapacitacionComponent, children: [
     { path: 'editar', component: CapacitacionCreaeditaComponent }
   ]
 }, {
-  path: 'habilidades', component: HabilidadComponent, children: [
+  path: 'habilidad', component: HabilidadComponent, children: [
 
   ]
 }, {
-  path: 'experiencias', component: ExperienciaComponent, children: [
+  path: 'experiencia', component: ExperienciaComponent, children: [
 
   ]
 }, {
@@ -40,6 +40,14 @@ const routes: Routes = [{
   ]
 }, {
   path: 'usuario', component: UsuarioComponent, children: [
+
+  ]
+}, {
+  path: 'contrato', component: UsuarioComponent, children: [
+
+  ]
+}, {
+  path: 'curriculum', component: UsuarioComponent, children: [
 
   ]
 },

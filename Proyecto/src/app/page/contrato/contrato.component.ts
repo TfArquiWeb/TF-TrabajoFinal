@@ -1,7 +1,5 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { ContadorService } from 'src/app/service/contador.service';
-import { MatTableDataSource } from '@angular/material/table';
-import { Contrato } from './../../model/contrato';
 
 @Component({
   selector: 'app-contrato',
@@ -9,14 +7,9 @@ import { Contrato } from './../../model/contrato';
   styleUrls: ['./contrato.component.css']
 })
 export class ContratoComponent implements OnInit {
-  dataSource: MatTableDataSource<Contrato> = new MatTableDataSource();
-  displayedColumns: string[] = ['idContrato','numeroContrato', 'fechainiContrato' ,'fechafinContrato', 'Contador', 'Empresario'];
-  constructor(private Vs: ContadorService) { }
+
+  constructor(public route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.Vs.getlistarContrato().subscribe(data => {
-      this.dataSource = new MatTableDataSource(data);
-      console.log(data);
-    })
   }
 }
