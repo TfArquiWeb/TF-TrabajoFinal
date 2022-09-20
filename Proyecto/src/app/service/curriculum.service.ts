@@ -1,4 +1,4 @@
-import { CurriculumVitae } from './../model/curriculum';
+import { CurriculumVitae } from './../model/Curriculum';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
