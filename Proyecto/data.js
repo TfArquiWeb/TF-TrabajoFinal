@@ -32,10 +32,6 @@ module.exports = function () {
         Empresario: [
             {
                 idEmpresario: 1,
-                emailEmpresario: "lramos@gmail.com",
-                dniEmpresario: 477526778,
-                numeroEmpresario: 980512756,
-                fotoEmpresario: "",
                 razonsocialEmpresario: "VentasRamos",
                 rucEmpresario: 20201324652,
                 rubroEmpresario: "Comercio",
