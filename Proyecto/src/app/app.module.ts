@@ -12,6 +12,12 @@ import { ContadorListarComponent } from './page/contador/contador-listar/contado
 import { TipopagoComponent } from './page/tipopago/tipopago.component';
 import { TipopagoListarComponent } from './page/tipopago/tipopago-listar/tipopago-listar.component';
 import { ContratoComponent } from './page/contrato/contrato.component';
+import { ExperienciaComponent } from './page/experiencia/experiencia.component';
+import { HabilidadComponent } from './page/habilidad/habilidad.component';
+import { CapacitacionComponent } from './page/capacitacion/capacitacion.component';
+import { CapacitacionListarComponent } from './page/capacitacion/capacitacion-listar/capacitacion-listar.component';
+import { ExperienciaListarComponent } from './page/experiencia/experiencia-listar/experiencia-listar.component';
+import { HabilidadListarComponent } from './page/habilidad/habilidad-listar/habilidad-listar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,13 @@ import { ContratoComponent } from './page/contrato/contrato.component';
     ContadorListarComponent,
     TipopagoComponent,
     TipopagoListarComponent,
-    ContratoComponent
+    ContratoComponent,
+    ExperienciaComponent,
+    HabilidadComponent,
+    CapacitacionComponent,
+    CapacitacionListarComponent,
+    ExperienciaListarComponent,
+    HabilidadListarComponent
   ],
   imports: [
     BrowserModule,
