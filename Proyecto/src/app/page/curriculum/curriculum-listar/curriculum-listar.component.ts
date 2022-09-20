@@ -1,5 +1,5 @@
 import { ContadorService } from '../../../service/contador.service';
-import { CurriculumVitae } from '../../../model/curriculum';
+import { CurriculumVitae } from '../../../model/Curriculum';
 import { MatTableDataSource } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
 

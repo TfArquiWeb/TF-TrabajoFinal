@@ -1,4 +1,4 @@
-import { CurriculumVitae } from '../model/curriculum';
+import { CurriculumVitae } from '../model/Curriculum';
 import { Empresario } from 'src/app/model/empresario';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -10,11 +10,11 @@ import { Contrato } from './../model/contrato';
   providedIn: 'root'
 })
 export class ContadorService {
-  url: string = "http://localhost:5000/"
+  url: string = "http://localhost:5000/contador"
   constructor(private http: HttpClient) { }
 
   getlistarContador() {
-    return this.http.get<Contador[]>(`${this.url}Contador`);
+    return this.http.get<Contador[]>(this.url);
   }
   getlistarTipoPago() {
     return this.http.get<TipoPago[]>(`${this.url}TipoPago`)
