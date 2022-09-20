@@ -97,13 +97,13 @@ module.exports = function () {
         ],
         CurriculumVitae: [
             {
-                habilidadesCV: {
+                Habilidad: {
                     idHabilidad: 1,
                 },
-                capacidadesCV: {
+                Capacitacion: {
                     idCapacitacion: 1,
                 },
-                experienciasCV: {
+                Experiencia: {
                     idExperiencia: 1,
                 },
                 Contador: {
@@ -111,13 +111,13 @@ module.exports = function () {
                 },
             },
             {
-                habilidadesCV: {
+                Habilidad: {
                     idHabilidad: 1,
                 },
-                capacidadesCV: {
+                Capacitacion: {
                     idCapacitacion: 1,
                 },
-                experienciasCV: {
+                Experiencia: {
                     idExperiencia: 1,
                 },
                 Contador: {
@@ -125,13 +125,13 @@ module.exports = function () {
                 },
             },
             {
-                habilidadesCV: {
+                Habilidad: {
                     idHabilidad: 1,
                 },
-                capacidadesCV: {
+                Capacitacion: {
                     idCapacitacion: 1,
                 },
-                experienciasCV: {
+                Experiencia: {
                     idExperiencia: 1,
                 },
                 Contador: {
@@ -145,8 +145,8 @@ module.exports = function () {
                 idContrato: 1,
                 fechainiContrato: 01 - 08 - 2022,
                 fechafinContrato: 01 - 08 - 2023,
-                flagContrato: true,
-                calificacionContrato: 1,
+                vigenciaContrato: true,
+                montoContrato:123441,
                 Contador: {
                     idContador: 1,
                 },
@@ -164,8 +164,7 @@ module.exports = function () {
                 idContrato: 1,
                 fechainiContrato: 01 - 08 - 2022,
                 fechafinContrato: 01 - 08 - 2023,
-                flagContrato: true,
-                calificacionContrato: 1,
+                vigenciaContrato: true,
                 Contador: {
                     idContador: 1,
                 },
@@ -183,8 +182,7 @@ module.exports = function () {
                 idContrato: 1,
                 fechainiContrato: 01 - 08 - 2022,
                 fechafinContrato: 01 - 08 - 2023,
-                flagContrato: true,
-                calificacionContrato: 1,
+                vigenciaContrato: true,
                 Contador: {
                     idContador: 1,
                 },
@@ -202,8 +200,7 @@ module.exports = function () {
                 idContrato: 1,
                 fechainiContrato: 01 - 08 - 2022,
                 fechafinContrato: 01 - 08 - 2023,
-                flagContrato: true,
-                calificacionContrato: 1,
+                vigenciaContrato: true,
                 Contador: {
                     idContador: 1,
                 },
@@ -221,8 +218,7 @@ module.exports = function () {
                 idContrato: 1,
                 fechainiContrato: 01 - 08 - 2022,
                 fechafinContrato: 01 - 08 - 2023,
-                flagContrato: true,
-                calificacionContrato: 1,
+                vigenciaContrato: true,
                 Contador: {
                     idContador: 1,
                 },
@@ -274,45 +270,92 @@ module.exports = function () {
         Experiencia: [
             {
                 idExperiencia: 1,
-                nExperiencia: "Creativo",
+                nExperiencia: "Creativo, trabaje 5 años en macdonald",
             },
             {
                 idExperiencia: 2,
-                nExperiencia: "Caritativo",
+                nExperiencia: "Creativo, trabaje 5 años en macdonald",
             },
             {
                 idExperiencia: 3,
-                nExperiencia: "Trabajo bajo presion",
+                nExperiencia: "Creativo, trabaje 5 años en macdonald",
             },
 
         ],
         Capacitacion: [
             {
                 idCapacitacion: 1,
-                nCapacitacion: "Creativo",
+                nCapacitacion: "Creativo, trabaje 5 años en macdonald",
             },
             {
                 idCapacitacion: 2,
-                nCapacitacion: "Creativo",
+                nCapacitacion: "Creativo, trabaje 5 años en macdonald",
             },
             {
                 idCapacitacion: 3,
-                nCapacitacion: "Creativo",
+                nCapacitacion: "Creativo, trabaje 5 años en macdonald",
             },
         ],
         Habilidad: [
             {
                 idHabilidad: 1,
-                nHabilidad: "Creativo",
+                nHabilidad: "Creativo, trabaje 5 años en macdonald",
             },
             {
                 idHabilidad: 2,
-                nHabilidad: "Creativo",
+                nHabilidad: "Creativo, trabaje 5 años en macdonald",
             },
             {
                 idHabilidad: 3,
-                nHabilidad: "Creativo",
+                nHabilidad: "Creativo, trabaje 5 años en macdonald",
             },
+        ],
+        SolicitudEmpleo: [
+            {
+                idSE: 1,
+                fechaSE:"01-01-2022",
+                estadoSE:true,
+                Contador:{
+                    idContador:1,
+                },
+                Empresario:{
+                    idEmpresario:1,
+                },
+            },
+            {
+                idSE: 1,
+                fechaSE:"01-01-2022",
+                estadoSE:true,
+                Contador:{
+                    idContador:1,
+                },
+                Empresario:{
+                    idEmpresario:1,
+                },
+            },
+            {
+                idSE: 1,
+                fechaSE:"01-01-2022",
+                estadoSE:true,
+                Contador:{
+                    idContador:1,
+                },
+                Empresario:{
+                    idEmpresario:1,
+                },
+            },
+            {
+                idSE: 1,
+                fechaSE:"01-01-2022",
+                estadoSE:true,
+                Contador:{
+                    idContador:1,
+                },
+                Empresario:{
+                    idEmpresario:1,
+                },
+            },
+
         ],
         
 
