@@ -7,7 +7,7 @@ import { MatTableDataSource } from '@angular/material/table';
   selector: 'app-empresario-listar',
   templateUrl: './empresario-listar.component.html',
   styleUrls: ['./empresario-listar.component.css']
-})
+}) 
 export class EmpresarioListarComponent implements OnInit {
   dataSource: MatTableDataSource<Empresario> = new MatTableDataSource();
   displayedColumns: string[] = ['id','dni','nombre','apellido','numero','correo','foto','razon','ruc','rubro','descripcion'];
