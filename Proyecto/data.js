@@ -113,7 +113,7 @@ module.exports = function () {
             {
                 descContador: "Hola soy buen trabajador",
                 linkedinContador: "Mi perfil de linkedin es...",
-                CurriculumVitae:{
+                CurriculumVitae: {
                     idCurriculum: 1,
                 },
                 Usuario: {
@@ -129,7 +129,7 @@ module.exports = function () {
             {
                 descContador: "Hola soy trabajador bueno",
                 linkedinContador: "Mi perfil de linkedin es...",
-                CurriculumVitae:{
+                CurriculumVitae: {
                     idCurriculum: 2,
                 },
                 Usuario: {
@@ -145,7 +145,7 @@ module.exports = function () {
             {
                 descContador: "Hola me gusta trabajar",
                 linkedinContador: "Mi perfil de linkedin es...",
-                CurriculumVitae:{
+                CurriculumVitae: {
                     idCurriculum: 3,
                 },
                 Usuario: {
@@ -205,11 +205,8 @@ module.exports = function () {
                 fechafinContrato: "01 - 08 - 2023",
                 vigenciaContrato: true,
                 montoContrato: 8500,
-                Contador: {
-                    idContador: 1,
-                },
-                Empresario: {
-                    idEmpresario: 1,
+                Usuario: {
+                    idUsuario: 1,
                 },
                 TipoMoneda: {
                     idTM: 1,
@@ -224,11 +221,8 @@ module.exports = function () {
                 fechafinContrato: "01 - 05 - 2023",
                 vigenciaContrato: true,
                 montoContrato: 4300,
-                Contador: {
-                    idContador: 2,
-                },
-                Empresario: {
-                    idEmpresario: 2,
+                Usuario: {
+                    idUsuario: 2,
                 },
                 TipoMoneda: {
                     idTM: 2,
@@ -243,11 +237,8 @@ module.exports = function () {
                 fechafinContrato: "01 - 11 - 2023",
                 vigenciaContrato: true,
                 montoContrato: 9150,
-                Contador: {
-                    idContador: 3,
-                },
-                Empresario: {
-                    idEmpresario: 3,
+                Usuario: {
+                    idUsuario: 3,
                 },
                 TipoMoneda: {
                     idTM: 3,
@@ -297,7 +288,7 @@ module.exports = function () {
                 idExperiencia: 1,
                 descExperiencia: "Trabaje 5 años en macdonald",
             },
-            { 
+            {
                 idExperiencia: 2,
                 descExperiencia: "Trabaje 8 años en constructoras",
             },
@@ -340,33 +331,24 @@ module.exports = function () {
                 idSE: 1,
                 fechaSE: "01-01-2022",
                 estadoSE: true,
-                Contador: {
-                    idContador: 1,
-                },
-                Empresario: {
-                    idEmpresario: 1,
-                },
+                Usuario: {
+                    idUsuario: 1,
+                }, 
             },
             {
                 idSE: 2,
                 fechaSE: "01-04-2022",
                 estadoSE: true,
-                Contador: {
-                    idContador: 1,
-                },
-                Empresario: {
-                    idEmpresario: 1,
+                Usuario: {
+                    idUsuario: 2,
                 },
             },
             {
                 idSE: 3,
                 fechaSE: "01-03-2022",
                 estadoSE: true,
-                Contador: {
-                    idContador: 1,
-                },
-                Empresario: {
-                    idEmpresario: 1,
+                Usuario: {
+                    idUsuario: 3,
                 },
             },
         ],
