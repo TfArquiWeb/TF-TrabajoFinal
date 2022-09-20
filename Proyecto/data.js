@@ -98,49 +98,46 @@ module.exports = function () {
         CurriculumVitae: [
             {
                 habilidadesCV: {
-                    idHabilidades: 1
+                    idHabilidad: 1,
                 },
                 capacidadesCV: {
-                    idCapacidades: 1
+                    idCapacitacion: 1,
                 },
                 experienciasCV: {
-                    idExperiencias: 1
+                    idExperiencia: 1,
                 },
                 Contador: {
-                    idContador: 1
+                    idContador: 1,
                 },
-                Contador: 1
             },
             {
                 habilidadesCV: {
-                    idHabilidades: 1
+                    idHabilidad: 1,
                 },
                 capacidadesCV: {
-                    idCapacidades: 1
+                    idCapacitacion: 1,
                 },
                 experienciasCV: {
-                    idExperiencias: 1
+                    idExperiencia: 1,
                 },
                 Contador: {
-                    idContador: 1
+                    idContador: 1,
                 },
-                Contador: 1
             },
             {
                 habilidadesCV: {
-                    idHabilidades: 1
+                    idHabilidad: 1,
                 },
                 capacidadesCV: {
-                    idCapacidades: 1
+                    idCapacitacion: 1,
                 },
                 experienciasCV: {
-                    idExperiencias: 1
+                    idExperiencia: 1,
                 },
                 Contador: {
-                    idContador: 1
+                    idContador: 1,
                 },
-                Contador: 1
-            }
+            },
 
         ],
         Contrato: [
@@ -273,7 +270,51 @@ module.exports = function () {
                 TipodeMoneda: "Pesos Mexicanos",
             },
 
-        ]
+        ],
+        Experiencia: [
+            {
+                idExperiencia: 1,
+                nExperiencia: "Creativo",
+            },
+            {
+                idExperiencia: 2,
+                nExperiencia: "Caritativo",
+            },
+            {
+                idExperiencia: 3,
+                nExperiencia: "Trabajo bajo presion",
+            },
+
+        ],
+        Capacitacion: [
+            {
+                idCapacitacion: 1,
+                nCapacitacion: "Creativo",
+            },
+            {
+                idCapacitacion: 2,
+                nCapacitacion: "Creativo",
+            },
+            {
+                idCapacitacion: 3,
+                nCapacitacion: "Creativo",
+            },
+        ],
+        Habilidad: [
+            {
+                idHabilidad: 1,
+                nHabilidad: "Creativo",
+            },
+            {
+                idHabilidad: 2,
+                nHabilidad: "Creativo",
+            },
+            {
+                idHabilidad: 3,
+                nHabilidad: "Creativo",
+            },
+        ],
+        
 
     }
     return data
