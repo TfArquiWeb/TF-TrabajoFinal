@@ -18,6 +18,11 @@ import { CapacitacionComponent } from './page/capacitacion/capacitacion.componen
 import { CapacitacionListarComponent } from './page/capacitacion/capacitacion-listar/capacitacion-listar.component';
 import { ExperienciaListarComponent } from './page/experiencia/experiencia-listar/experiencia-listar.component';
 import { HabilidadListarComponent } from './page/habilidad/habilidad-listar/habilidad-listar.component';
+import { CapacitacionCreaeditaComponent } from './page/capacitacion/capacitacion-creaedita/capacitacion-creaedita.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,14 +39,19 @@ import { HabilidadListarComponent } from './page/habilidad/habilidad-listar/habi
     CapacitacionComponent,
     CapacitacionListarComponent,
     ExperienciaListarComponent,
-    HabilidadListarComponent
+    HabilidadListarComponent,
+    CapacitacionCreaeditaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MatTableModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatIconModule
 
   ],
   providers: [],

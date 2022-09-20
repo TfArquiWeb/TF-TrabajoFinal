@@ -4,6 +4,7 @@ import { EmpresarioComponent } from './page/empresario/empresario.component';
 import { CapacitacionComponent } from './page/capacitacion/capacitacion.component';
 import { ExperienciaComponent } from './page/experiencia/experiencia.component';
 import { HabilidadComponent } from './page/habilidad/habilidad.component';
+import { CapacitacionCreaeditaComponent } from './page/capacitacion/capacitacion-creaedita/capacitacion-creaedita.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -21,7 +22,7 @@ const routes: Routes = [{
   ]
 },{
   path: 'capacitaciones', component: CapacitacionComponent, children:[
-
+    { path: 'editar', component: CapacitacionCreaeditaComponent }
   ]
 },{
   path: 'habilidades', component: HabilidadComponent, children:[
