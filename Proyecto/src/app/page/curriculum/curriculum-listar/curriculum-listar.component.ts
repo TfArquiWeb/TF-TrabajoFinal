@@ -1,16 +1,16 @@
+import { CurriculumVitae } from './../../../model/curriculum';
+import { CurriculumService } from './../../../service/curriculum.service';
 import { MatTableDataSource } from '@angular/material/table';
-import { CurriculumVitae } from '../../../model/curriculum';
 import { Component, OnInit } from '@angular/core';
-import { CurriculumService } from 'src/app/service/curriculum.service';
 
 @Component({
   selector: 'app-curriculum-listar',
   templateUrl: './curriculum-listar.component.html',
   styleUrls: ['./curriculum-listar.component.css']
-})  
+})
 export class CurriculumListarComponent implements OnInit {
   dataSource: MatTableDataSource<CurriculumVitae> = new MatTableDataSource();
-  displayedColumns: string[] = ['idcurriculum', 'experiencias', 'capacidades', 'habilidades'];
+  displayedColumns: string[] = ['id', 'fecha', 'estado', 'idempresario', 'idcontador'];
   constructor(private Cs: CurriculumService) { }
 
   ngOnInit(): void {
@@ -18,5 +18,4 @@ export class CurriculumListarComponent implements OnInit {
       this.dataSource = new MatTableDataSource(data);
     })
   }
- 
 }
