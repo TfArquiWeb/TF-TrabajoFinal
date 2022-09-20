@@ -18,33 +18,28 @@
         <th mat-header-cell *matHeaderCellDef> Fecha Inicio </th>
         <td mat-cell *matCellDef="let element"> {{element.fechainiContrato}} </td>
     </ng-container>
-
     <!-- Name Column -->
     <ng-container matColumnDef="fechafin">
         <th mat-header-cell *matHeaderCellDef> Fecha Fin </th>
         <td mat-cell *matCellDef="let element"> {{element.fechafinContrato}} </td>
     </ng-container>
-
     <!-- Weight Column -->
     <ng-container matColumnDef="vigencia">
         <th mat-header-cell *matHeaderCellDef> Vigencia </th>
         <td mat-cell *matCellDef="let element"> {{element.vigenciaContrato}} </td>
     </ng-container>
-
     <!-- Weight Column -->
     <ng-container matColumnDef="monto">
         <th mat-header-cell *matHeaderCellDef> Monto </th>
         <td mat-cell *matCellDef="let element"> {{element.montoContrato}} </td>
     </ng-container>
-
     <!-- Weight Column -->
-    <ng-container matColumnDef="contador">
+    <ng-container matColumnDef="idcontador">
         <th mat-header-cell *matHeaderCellDef> Contador </th>
         <td mat-cell *matCellDef="let element"> {{element.Usuario.idUsuario}} </td>
     </ng-container>
-
     <!-- Weight Column -->
-    <ng-container matColumnDef="empresario">
+    <ng-container matColumnDef="idempresario">
         <th mat-header-cell *matHeaderCellDef> Empresario </th>
         <td mat-cell *matCellDef="let element"> {{element.Usuario.idUsuario}} </td>
     </ng-container>
