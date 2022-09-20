@@ -6,4 +6,4 @@ export class Empresario {
     rubroEmpresario: string = "";
     descEmpresario: string = "";
     Usuario: Usuario = new Usuario(); 
-}
+} 

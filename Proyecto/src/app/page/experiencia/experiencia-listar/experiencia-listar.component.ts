@@ -7,7 +7,7 @@ import { ExperienciaService } from './../../../service/experiencia.service';
   selector: 'app-experiencia-listar',
   templateUrl: './experiencia-listar.component.html',
   styleUrls: ['./experiencia-listar.component.css']
-})
+})  
 export class ExperienciaListarComponent implements OnInit {
   dataSource: MatTableDataSource<Experiencia> = new MatTableDataSource();
   displayedColumns:string[]=['idExperiencia','descExperiencia']

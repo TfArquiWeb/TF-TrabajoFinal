@@ -1,6 +1,6 @@
 module.exports = function () {
     var data = {
-        Usuario: [ 
+        Usuario: [
             {
                 idUsuario: 1,
                 dniUsuario: 79824316,
@@ -58,12 +58,18 @@ module.exports = function () {
         ],
         Empresario: [
             {
-                razonsocialEmpresario: "VentasRamos", 
+                razonsocialEmpresario: "VentasRamos",
                 rucEmpresario: 20201324652,
                 rubroEmpresario: "Comercio",
                 descEmpresario: "Busco un empresario chino",
                 Usuario: {
                     idUsuario: 1,
+                    dniUsuario: 79824316,
+                    nombreUsuario: "Luisa",
+                    apellidoUsuario: "Ramos",
+                    numeroUsuario: 912305611,
+                    correoUsuario: "lramos@gmail.com",
+                    fotoUsuario: "Esta Es mi foto,soy guapo lo se",
                 }
             },
             {
@@ -73,8 +79,14 @@ module.exports = function () {
                 descEmpresario: "Busco un empresario peruano",
                 Usuario: {
                     idUsuario: 2,
+                    dniUsuario: 77833749,
+                    nombreUsuario: "Abel",
+                    apellidoUsuario: "Gutierrez",
+                    numeroUsuario: 910667108,
+                    correoUsuario: "agutierrez@gmail.com",
+                    fotoUsuario: "Esta Es mi foto,soy guapo lo se",
                 }
-            }, 
+            },
             {
                 razonsocialEmpresario: "TelasFinas",
                 rucEmpresario: 20157624892,
@@ -82,6 +94,12 @@ module.exports = function () {
                 descEmpresario: "Busco un empresario joven",
                 Usuario: {
                     idUsuario: 3,
+                    dniUsuario: 79436328,
+                    nombreUsuario: "Rodrigo",
+                    apellidoUsuario: "Guerrero",
+                    numeroUsuario: 954640108,
+                    correoUsuario: "rguerrero@gmail.com",
+                    fotoUsuario: "Esta Es mi foto,soy guapo lo se",
                 }
             },
         ],
@@ -91,6 +109,12 @@ module.exports = function () {
                 linkedinContador: "Mi perfil de linkedin es...",
                 Usuario: {
                     idUsuario: 4,
+                    dniUsuario: 41542195,
+                    nombreUsuario: "Monica",
+                    apellidoUsuario: "Zapata",
+                    numeroUsuario: 936091471,
+                    correoUsuario: "mzapata@gmail.com",
+                    fotoUsuario: "Esta Es mi foto,soy guapo lo se",
                 }
             },
             {
@@ -98,6 +122,12 @@ module.exports = function () {
                 linkedinContador: "Mi perfil de linkedin es...",
                 Usuario: {
                     idUsuario: 5,
+                    dniUsuario: 71529412,
+                    nombreUsuario: "Miguel",
+                    apellidoUsuario: "Lopez",
+                    numeroUsuario: 927526443,
+                    correoUsuario: "mlopez@gmail.com",
+                    fotoUsuario: "Esta Es mi foto,soy guapo lo se",
                 }
             },
             {
@@ -105,6 +135,12 @@ module.exports = function () {
                 linkedinContador: "Mi perfil de linkedin es...",
                 Usuario: {
                     idUsuario: 6,
+                    dniUsuario: 48839718,
+                    nombreUsuario: "Diego",
+                    apellidoUsuario: "Salas",
+                    numeroUsuario: 921781388,
+                    correoUsuario: "dsalas@gmail.com",
+                    fotoUsuario: "Esta Es mi foto,soy guapo lo se",
                 }
             },
         ],
@@ -154,12 +190,12 @@ module.exports = function () {
 
         ],
         Contrato: [
-            { 
+            {
                 idContrato: 1,
                 fechainiContrato: "01 - 08 - 2022",
                 fechafinContrato: "01 - 08 - 2023",
                 vigenciaContrato: true,
-                montoContrato:8500,
+                montoContrato: 8500,
                 Contador: {
                     idContador: 1,
                 },
@@ -178,7 +214,7 @@ module.exports = function () {
                 fechainiContrato: "01 - 05 - 2022",
                 fechafinContrato: "01 - 05 - 2023",
                 vigenciaContrato: true,
-                montoContrato:4300,
+                montoContrato: 4300,
                 Contador: {
                     idContador: 2,
                 },
@@ -197,7 +233,7 @@ module.exports = function () {
                 fechainiContrato: "01 - 11 - 2022",
                 fechafinContrato: "01 - 11 - 2023",
                 vigenciaContrato: true,
-                montoContrato:9150,
+                montoContrato: 9150,
                 Contador: {
                     idContador: 3,
                 },
@@ -211,11 +247,11 @@ module.exports = function () {
                     idTP: 3,
                 },
             },
-            
+
         ],
         TipoPago: [
             {
-                idTP: 1, 
+                idTP: 1,
                 TipodePago: "Efectivo",
             },
             {
@@ -234,7 +270,7 @@ module.exports = function () {
         ],
         TipoMoneda: [
             {
-                idTM: 1, 
+                idTM: 1,
                 TipodeMoneda: "Soles",
             },
             {
@@ -252,7 +288,7 @@ module.exports = function () {
                 idExperiencia: 1,
                 descExperiencia: "Trabaje 5 años en macdonald",
             },
-            {
+            { 
                 idExperiencia: 2,
                 descExperiencia: "Trabaje 8 años en constructoras",
             },
@@ -293,35 +329,35 @@ module.exports = function () {
         SolicitudEmpleo: [
             {
                 idSE: 1,
-                fechaSE:"01-01-2022",
-                estadoSE:true,
-                Contador:{
-                    idContador:1,
+                fechaSE: "01-01-2022",
+                estadoSE: true,
+                Contador: {
+                    idContador: 1,
                 },
-                Empresario:{
-                    idEmpresario:1,
+                Empresario: {
+                    idEmpresario: 1,
                 },
             },
             {
                 idSE: 2,
-                fechaSE:"01-04-2022",
-                estadoSE:true,
-                Contador:{
-                    idContador:1,
+                fechaSE: "01-04-2022",
+                estadoSE: true,
+                Contador: {
+                    idContador: 1,
                 },
-                Empresario:{
-                    idEmpresario:1,
+                Empresario: {
+                    idEmpresario: 1,
                 },
             },
             {
                 idSE: 3,
-                fechaSE:"01-03-2022",
-                estadoSE:true,
-                Contador:{
-                    idContador:1,
+                fechaSE: "01-03-2022",
+                estadoSE: true,
+                Contador: {
+                    idContador: 1,
                 },
-                Empresario:{
-                    idEmpresario:1,
+                Empresario: {
+                    idEmpresario: 1,
                 },
             },
         ],
