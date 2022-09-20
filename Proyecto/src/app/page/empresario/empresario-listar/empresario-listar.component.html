@@ -6,47 +6,47 @@
   <!-- Position Column -->
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> Id </th>
-    <td mat-cell *matCellDef="let element"> {{element.idEmpresario}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.usuario.idUsuario}} </td>
   </ng-container>
 
   <!-- Name Column -->
-  <ng-container matColumnDef="name">
+  <ng-container matColumnDef="dni">
+    <th mat-header-cell *matHeaderCellDef> DNI </th>
+    <td mat-cell *matCellDef="let element"> {{element.usuario.dniUsuario}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="nombre">
     <th mat-header-cell *matHeaderCellDef> Nombre </th>
-    <td mat-cell *matCellDef="let element"> {{element.nameEmpresario}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.usuario.nombreUsuario}} </td>
   </ng-container>
 
   <!-- Weight Column -->
   <ng-container matColumnDef="apellido">
     <th mat-header-cell *matHeaderCellDef> Apellido </th>
-    <td mat-cell *matCellDef="let element"> {{element.apellidoEmpresario}} </td>
-  </ng-container>
-
-  <!-- Weight Column -->
-  <ng-container matColumnDef="email">
-    <th mat-header-cell *matHeaderCellDef> Email </th>
-    <td mat-cell *matCellDef="let element"> {{element.emailEmpresario}} </td>
-  </ng-container>
-
-  <!-- Weight Column -->
-  <ng-container matColumnDef="dni">
-    <th mat-header-cell *matHeaderCellDef> DNI </th>
-    <td mat-cell *matCellDef="let element"> {{element.dniEmpresario}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.usuario.apellidoUsuario}} </td>
   </ng-container>
 
   <!-- Weight Column -->
   <ng-container matColumnDef="numero">
     <th mat-header-cell *matHeaderCellDef> Número </th>
-    <td mat-cell *matCellDef="let element"> {{element.numeroEmpresario}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.usuario.numeroUsuario}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="correo">
+    <th mat-header-cell *matHeaderCellDef> Correo </th>
+    <td mat-cell *matCellDef="let element"> {{element.usuario.correoUsuario}} </td>
   </ng-container>
 
   <!-- Weight Column -->
   <ng-container matColumnDef="foto">
     <th mat-header-cell *matHeaderCellDef> Foto </th>
-    <td mat-cell *matCellDef="let element"> {{element.fotoEmpresario}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.usuario.fotoUsuario}} </td>
   </ng-container>
 
   <!-- Weight Column -->
-  <ng-container matColumnDef="razon-social">
+  <ng-container matColumnDef="razon">
     <th mat-header-cell *matHeaderCellDef> Razon Social </th>
     <td mat-cell *matCellDef="let element"> {{element.razonsocialEmpresario}} </td>
   </ng-container>
@@ -64,9 +64,9 @@
   </ng-container>
 
   <!-- Weight Column -->
-  <ng-container matColumnDef="pref">
-    <th mat-header-cell *matHeaderCellDef> Pref </th>
-    <td mat-cell *matCellDef="let element"> {{element.prefEmpresario}} </td>
+  <ng-container matColumnDef="descripcion">
+    <th mat-header-cell *matHeaderCellDef> Descripción </th>
+    <td mat-cell *matCellDef="let element"> {{element.descEmpresario}} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

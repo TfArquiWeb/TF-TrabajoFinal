@@ -1,3 +1,5 @@
+import { UsuarioComponent } from './page/usuario/usuario.component';
+import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
 import { TipopagoComponent } from './page/tipopago/tipopago.component';
 import { ContadorComponent } from './page/contador/contador.component';
 import { EmpresarioComponent } from './page/empresario/empresario.component';
@@ -9,35 +11,42 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [{
-  path: 'empresarios', component: EmpresarioComponent, children: [
+  path: 'empresario', component: EmpresarioComponent, children: [
 
   ]
 }, {
-  path: 'contadores', component: ContadorComponent, children: [
+  path: 'contador', component: ContadorComponent, children: [
 
   ]
 }, {
   path: 'tipopago', component: TipopagoComponent, children: [
 
   ]
-},{
-  path: 'capacitaciones', component: CapacitacionComponent, children:[
+}, {
+  path: 'capacitaciones', component: CapacitacionComponent, children: [
     { path: 'editar', component: CapacitacionCreaeditaComponent }
   ]
-},{
-  path: 'habilidades', component: HabilidadComponent, children:[
+}, {
+  path: 'habilidades', component: HabilidadComponent, children: [
 
   ]
-}
-,{
-  path: 'experiencias', component: ExperienciaComponent, children:[
+}, {
+  path: 'experiencias', component: ExperienciaComponent, children: [
 
   ]
-}
+}, {
+  path: 'tipomoneda', component: TipomonedaComponent, children: [
+
+  ]
+}, {
+  path: 'usuario', component: UsuarioComponent, children: [
+
+  ]
+},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-exports: [RouterModule]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

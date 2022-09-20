@@ -1,11 +1,11 @@
+import { ExperienciaListarComponent } from './page/experiencia/experiencia-listar/experiencia-listar.component';
+import { Empresario } from 'src/app/model/empresario';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatTableModule } from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmpresarioComponent } from './page/empresario/empresario.component';
-import { EmpresarioListarComponent } from './page/empresario/empresario-listar/empresario-listar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContadorComponent } from './page/contador/contador.component';
 import { ContadorListarComponent } from './page/contador/contador-listar/contador-listar.component';
@@ -16,20 +16,18 @@ import { ExperienciaComponent } from './page/experiencia/experiencia.component';
 import { HabilidadComponent } from './page/habilidad/habilidad.component';
 import { CapacitacionComponent } from './page/capacitacion/capacitacion.component';
 import { CapacitacionListarComponent } from './page/capacitacion/capacitacion-listar/capacitacion-listar.component';
-import { ExperienciaListarComponent } from './page/experiencia/experiencia-listar/experiencia-listar.component';
+import { EmpresarioComponent } from './page/empresario/empresario.component';
+import { EmpresarioListarComponent } from './page/empresario/empresario-listar/empresario-listar.component';
 import { HabilidadListarComponent } from './page/habilidad/habilidad-listar/habilidad-listar.component';
-<<<<<<< Updated upstream
 import { CapacitacionCreaeditaComponent } from './page/capacitacion/capacitacion-creaedita/capacitacion-creaedita.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
-=======
 import { UsuarioComponent } from './page/usuario/usuario.component';
 import { UsuarioListarComponent } from './page/usuario/usuario-listar/usuario-listar.component';
 import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
 import { TipomonedaListarComponent } from './page/tipomoneda/tipomoneda-listar/tipomoneda-listar.component';
->>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -45,16 +43,13 @@ import { TipomonedaListarComponent } from './page/tipomoneda/tipomoneda-listar/t
     HabilidadComponent,
     CapacitacionComponent,
     CapacitacionListarComponent,
-    ExperienciaListarComponent,
+    ExperienciaListarComponent, 
     HabilidadListarComponent,
-<<<<<<< Updated upstream
-    CapacitacionCreaeditaComponent
-=======
+    CapacitacionCreaeditaComponent,
     UsuarioComponent,
     UsuarioListarComponent,
     TipomonedaComponent,
     TipomonedaListarComponent
->>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,

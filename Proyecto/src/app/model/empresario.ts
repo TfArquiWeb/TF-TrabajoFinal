@@ -1,8 +1,9 @@
 import { Usuario } from './usuario';
+
 export class Empresario {
     razonsocialEmpresario: string = "";
-    rucEmpresario: string = "";
+    rucEmpresario: number = 0;
     rubroEmpresario: string = "";
-    prefEmpresario: number = 0;
-    Usuario:Usuario=new Usuario();
+    descEmpresario: string = "";
+    Usuario: Usuario = new Usuario(); 
 }

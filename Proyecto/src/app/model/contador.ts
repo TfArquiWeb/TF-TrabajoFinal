@@ -1,7 +1,7 @@
 import { Usuario } from './usuario';
 
 export class Contador {
-    CDescripcion: string = "";
-    Clinkedin: string = "";
+    descContador: string = "";
+    linkedinContador: string = "";
     Usuario: Usuario=new Usuario();
-}
+} 
