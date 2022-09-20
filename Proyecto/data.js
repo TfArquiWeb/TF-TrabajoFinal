@@ -1,6 +1,6 @@
 module.exports = function () {
     var data = {
-        Usuario: [
+        Usuario: [ 
             {
                 idUsuario: 1,
                 dniUsuario: 79824316,
@@ -232,7 +232,7 @@ module.exports = function () {
         ],
         TipoMoneda: [
             {
-                idTM: 1,
+                idTM: 1, 
                 TipodeMoneda: "Soles",
             },
             {
