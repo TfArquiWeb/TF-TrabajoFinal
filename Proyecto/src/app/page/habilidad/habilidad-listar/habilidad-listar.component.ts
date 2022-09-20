@@ -14,9 +14,12 @@ export class HabilidadListarComponent implements OnInit {
   constructor(private Hs: HabilidadService) { }
 
   ngOnInit(): void {
-    this.Hs.listar().subscribe(data => {
+    this.Hs.listarHabilidad().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     })
+    this.Hs.getListaHabilidad().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    });
   }
 
 }

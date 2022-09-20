@@ -1,14 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Habilidad } from './../model/habilidad';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HabilidadService {
   url: string = "http://localhost:5000/habilidad"
+  private listaCambio = new Subject<Habilidad[]>()
   constructor(public http:HttpClient) { }
-  listar() {
+  listarHabilidad() {
     return this.http.get<Habilidad[]>(this.url);
+  }
+  insertarHabilidad(habilidad: Habilidad) {
+    return this.http.post(this.url, habilidad);
+  }
+  setListaHabilidad(listaNueva: Habilidad[]) {
+    this.listaCambio.next(listaNueva);
+  }
+  getListaHabilidad() {
+    return this.listaCambio.asObservable();
   }
 }

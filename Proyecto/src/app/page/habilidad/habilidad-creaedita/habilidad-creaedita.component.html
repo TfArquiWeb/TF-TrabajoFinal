@@ -1,1 +1,24 @@
-<p>habilidad-creaedita works!</p>
+<div class="container">
+
+    <h1>Habilidad</h1>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>idHabilidad</mat-label>
+      <input matInput placeholder="idHabilidad" [(ngModel)]="habilidad.idHabilidad">
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Descripcion</mat-label>
+      <input matInput required placeholder="descHabilidad" [(ngModel)]="habilidad.descHabilidad">
+  
+    </mat-form-field>
+  
+    <br>
+    
+    <button mat-raised-button color="primary" (click)="aceptarHabilidad()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/habilidad">Cancelar</button>
+    <p>{{mensaje}}</p>
+  
+  </div>
