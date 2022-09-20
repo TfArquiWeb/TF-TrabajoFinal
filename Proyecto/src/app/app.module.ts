@@ -18,18 +18,16 @@ import { CapacitacionComponent } from './page/capacitacion/capacitacion.componen
 import { CapacitacionListarComponent } from './page/capacitacion/capacitacion-listar/capacitacion-listar.component';
 import { ExperienciaListarComponent } from './page/experiencia/experiencia-listar/experiencia-listar.component';
 import { HabilidadListarComponent } from './page/habilidad/habilidad-listar/habilidad-listar.component';
-<<<<<<< Updated upstream
 import { CapacitacionCreaeditaComponent } from './page/capacitacion/capacitacion-creaedita/capacitacion-creaedita.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
-=======
 import { UsuarioComponent } from './page/usuario/usuario.component';
 import { UsuarioListarComponent } from './page/usuario/usuario-listar/usuario-listar.component';
 import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
 import { TipomonedaListarComponent } from './page/tipomoneda/tipomoneda-listar/tipomoneda-listar.component';
->>>>>>> Stashed changes
+
 
 @NgModule({
   declarations: [
@@ -47,14 +45,11 @@ import { TipomonedaListarComponent } from './page/tipomoneda/tipomoneda-listar/t
     CapacitacionListarComponent,
     ExperienciaListarComponent,
     HabilidadListarComponent,
-<<<<<<< Updated upstream
-    CapacitacionCreaeditaComponent
-=======
+    CapacitacionCreaeditaComponent,
     UsuarioComponent,
     UsuarioListarComponent,
     TipomonedaComponent,
-    TipomonedaListarComponent
->>>>>>> Stashed changes
+    TipomonedaListarComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +60,7 @@ import { TipomonedaListarComponent } from './page/tipomoneda/tipomoneda-listar/t
     MatInputModule,
     FormsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
 
   ],
   providers: [],

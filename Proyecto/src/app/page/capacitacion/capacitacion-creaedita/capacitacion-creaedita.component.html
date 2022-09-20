@@ -1,7 +1,7 @@
 
 <div class="container">
 
-  <h1>Propietario</h1>
+  <h1>Capacitacion</h1>
 
   <mat-form-field class="example-full-width">
     <mat-label>Id</mat-label>
@@ -11,7 +11,7 @@
   <br>
 
   <mat-form-field class="example-full-width">
-    <mat-label>Nombre</mat-label>
+    <mat-label>Descripcion</mat-label>
     <input matInput required placeholder="descCapacitacion" [(ngModel)]="capacitacion.descCapacitacion">
 
   </mat-form-field>
@@ -19,7 +19,7 @@
   <br>
   
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
-  <button mat-raised-button color="warn" routerLink="/propietarios">Cancelar</button>
+  <button mat-raised-button color="warn" routerLink="/capacitaciones">Cancelar</button>
   <p>{{mensaje}}</p>
 
 </div>
