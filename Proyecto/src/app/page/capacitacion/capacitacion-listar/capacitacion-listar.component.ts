@@ -14,10 +14,10 @@ export class CapacitacionListarComponent implements OnInit {
   constructor(private Cs: CapacitacionService) { }
 
   ngOnInit(): void {
-    this.Cs.listar().subscribe(data => {
+    this.Cs.listarCapacitacion().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     })
-    this.Cs.getLista().subscribe(data => {
+    this.Cs.getListaCapacitacion().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     });
   }

@@ -29,6 +29,8 @@ import { UsuarioListarComponent } from './page/usuario/usuario-listar/usuario-li
 import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
 import { TipomonedaListarComponent } from './page/tipomoneda/tipomoneda-listar/tipomoneda-listar.component';
 import { ContratoListarComponent } from './page/contrato/contrato-listar/contrato-listar.component';
+import { ExperienciaCreaeditaComponent } from './page/experiencia/experiencia-creaedita/experiencia-creaedita.component';
+import { HabilidadCreaeditaComponent } from './page/habilidad/habilidad-creaedita/habilidad-creaedita.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { ContratoListarComponent } from './page/contrato/contrato-listar/contrat
     TipomonedaComponent,
     TipomonedaListarComponent,
     ContratoListarComponent,
+    ExperienciaCreaeditaComponent,
+    HabilidadCreaeditaComponent,
   ],
   imports: [
     BrowserModule,

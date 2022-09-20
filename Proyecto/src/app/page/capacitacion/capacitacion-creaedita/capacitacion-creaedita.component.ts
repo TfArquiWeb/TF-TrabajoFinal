@@ -9,17 +9,19 @@ import { CapacitacionService } from './../../../service/capacitacion.service';
   styleUrls: ['./capacitacion-creaedita.component.css']
 })
 export class CapacitacionCreaeditaComponent implements OnInit {
-  capacitacion:Capacitacion=new Capacitacion();
-  mensaje: string="";
-  constructor(private capacitacionService: CapacitacionService,private router: Router) { }
+  capacitacion: Capacitacion = new Capacitacion();
+  mensaje: string = "";
+  constructor(private capacitacionService: CapacitacionService, private router: Router) { }
 
-  ngOnInit(): void {}
-  aceptar(): void {
-    if (this.capacitacion.idCapacitacion > 0 ) {
+  ngOnInit(): void {
 
-      this.capacitacionService.insertar(this.capacitacion).subscribe(data => {
-        this.capacitacionService.listar().subscribe(data => {
-          this.capacitacionService.setLista(data);
+  }
+  aceptarCapacitacion(): void {
+    if (this.capacitacion.descCapacitacion.length > 0) {
+
+      this.capacitacionService.insertarCapacitacion(this.capacitacion).subscribe(data => {
+        this.capacitacionService.listarCapacitacion().subscribe(data => {
+          this.capacitacionService.setListaCapacitacion(data);
         })
       })
       this.router.navigate(['capacitacion']);
@@ -27,6 +29,6 @@ export class CapacitacionCreaeditaComponent implements OnInit {
       this.mensaje = "Complete los valores requeridos";
     }
   }
-  
+
 
 }

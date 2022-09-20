@@ -1,4 +1,4 @@
-import { CurriculumVitae } from './curriculum';
+import { CurriculumVitae } from './Curriculum';
 import { TipoPago } from './tipopago';
 import { TipoMoneda } from './tipomoneda';
 import { Empresario } from './empresario';

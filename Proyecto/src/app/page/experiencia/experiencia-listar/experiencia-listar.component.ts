@@ -14,9 +14,12 @@ export class ExperienciaListarComponent implements OnInit {
   constructor(private Es: ExperienciaService) { }
 
   ngOnInit(): void {
-    this.Es.listar().subscribe(data => {
+    this.Es.listarExperiencia().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     })
+    this.Es.getListaExperiencia().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    });
   }
 
 }

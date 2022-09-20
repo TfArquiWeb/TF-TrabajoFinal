@@ -1,3 +1,5 @@
+import { HabilidadCreaeditaComponent } from './page/habilidad/habilidad-creaedita/habilidad-creaedita.component';
+import { ExperienciaCreaeditaComponent } from './page/experiencia/experiencia-creaedita/experiencia-creaedita.component';
 import { UsuarioComponent } from './page/usuario/usuario.component';
 import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
 import { TipopagoComponent } from './page/tipopago/tipopago.component';
@@ -24,14 +26,16 @@ const routes: Routes = [{
   ]
 }, {
   path: 'capacitacion', component: CapacitacionComponent, children: [
-    { path: 'editar', component: CapacitacionCreaeditaComponent }
+    { path: 'insertar', component: CapacitacionCreaeditaComponent }
   ]
 }, {
   path: 'habilidad', component: HabilidadComponent, children: [
+    { path: 'insertar', component: HabilidadCreaeditaComponent }
 
   ]
 }, {
   path: 'experiencia', component: ExperienciaComponent, children: [
+    { path: 'insertar', component: ExperienciaCreaeditaComponent }
 
   ]
 }, {
