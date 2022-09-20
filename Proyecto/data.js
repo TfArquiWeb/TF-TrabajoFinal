@@ -113,6 +113,9 @@ module.exports = function () {
             {
                 descContador: "Hola soy buen trabajador",
                 linkedinContador: "Mi perfil de linkedin es...",
+                CurriculumVitae:{
+                    idCurriculum: 1,
+                },
                 Usuario: {
                     idUsuario: 4,
                     dniUsuario: 41542195,
@@ -126,6 +129,9 @@ module.exports = function () {
             {
                 descContador: "Hola soy trabajador bueno",
                 linkedinContador: "Mi perfil de linkedin es...",
+                CurriculumVitae:{
+                    idCurriculum: 2,
+                },
                 Usuario: {
                     idUsuario: 5,
                     dniUsuario: 71529412,
@@ -139,6 +145,9 @@ module.exports = function () {
             {
                 descContador: "Hola me gusta trabajar",
                 linkedinContador: "Mi perfil de linkedin es...",
+                CurriculumVitae:{
+                    idCurriculum: 3,
+                },
                 Usuario: {
                     idUsuario: 6,
                     dniUsuario: 48839718,
@@ -152,6 +161,7 @@ module.exports = function () {
         ],
         CurriculumVitae: [
             {
+                idCurriculum: 1,
                 Habilidad: {
                     idHabilidad: 1,
                 },
@@ -161,11 +171,9 @@ module.exports = function () {
                 Experiencia: {
                     idExperiencia: 1,
                 },
-                Contador: {
-                    idContador: 1,
-                },
             },
             {
+                idCurriculum: 2,
                 Habilidad: {
                     idHabilidad: 2,
                 },
@@ -175,11 +183,9 @@ module.exports = function () {
                 Experiencia: {
                     idExperiencia: 2,
                 },
-                Contador: {
-                    idContador: 2,
-                },
             },
             {
+                idCurriculum: 3,
                 Habilidad: {
                     idHabilidad: 3,
                 },
@@ -188,9 +194,6 @@ module.exports = function () {
                 },
                 Experiencia: {
                     idExperiencia: 3,
-                },
-                Contador: {
-                    idContador: 3,
                 },
             },
 

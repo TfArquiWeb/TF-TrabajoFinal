@@ -53,6 +53,11 @@
         <th mat-header-cell *matHeaderCellDef> Tipo Pago </th>
         <td mat-cell *matCellDef="let element"> {{element.TipoPago.idTP}} </td>
     </ng-container>
+    <!-- Weight Column -->
+    <ng-container matColumnDef="curriculumvitae">                       
+        <th mat-header-cell *matHeaderCellDef> Curriculum Vitae </th>
+        <td mat-cell *matCellDef="let element"> {{element.CurriculumVitae.idCurriculum}} </td>
+    </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
