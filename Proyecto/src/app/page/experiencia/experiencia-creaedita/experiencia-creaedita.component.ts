@@ -11,14 +11,10 @@ import { Component, OnInit } from '@angular/core';
 export class ExperienciaCreaeditaComponent implements OnInit {
   experiencia:Experiencia=new Experiencia();
   mensaje: string="";
-  
-
   constructor(private experienciaService: ExperienciaService,private router: Router) { }
-
   ngOnInit(): void {}
   aceptarExperiencia(): void {
     if (this.experiencia.descExperiencia.length > 0 ) {
-
       this.experienciaService.insertarExperiencia(this.experiencia).subscribe(dataexp => {
         this.experienciaService.listarExperiencia().subscribe(dataexp => {
           this.experienciaService.setListaExperiencia(dataexp);
