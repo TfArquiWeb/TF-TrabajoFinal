@@ -1,7 +1,7 @@
+import { TipopagoService } from './../../../service/tipopago.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
 import { TipoPago } from 'src/app/model/tipopago';
-import { ContadorService } from 'src/app/service/contador.service';
 
 @Component({
   selector: 'app-tipopago-listar',
@@ -9,15 +9,14 @@ import { ContadorService } from 'src/app/service/contador.service';
   styleUrls: ['./tipopago-listar.component.css']
 })
 export class TipopagoListarComponent implements OnInit {
-  dataSource: MatTableDataSource<TipoPago>=new MatTableDataSource();
+  dataSource: MatTableDataSource<TipoPago> = new MatTableDataSource();
   displayedColumns: string[] = ['id', 'tipodepago'];
-  constructor(private Vs:ContadorService) { }
+  constructor(private TPs: TipopagoService) { }
 
   ngOnInit(): void {
-    this.Vs.getlistarTipoPago().subscribe(data=>{
-      this.dataSource=new MatTableDataSource(data);
-      console.log(data);
-    })
+    this.TPs.listar().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    }) 
   }
 
 }

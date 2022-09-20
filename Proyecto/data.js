@@ -213,7 +213,7 @@ module.exports = function () {
         ],
         TipoPago: [
             {
-                idTP: 1,
+                idTP: 1, 
                 TipodePago: "Efectivo",
             },
             {
