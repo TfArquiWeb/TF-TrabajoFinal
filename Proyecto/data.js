@@ -9,6 +9,7 @@ module.exports = function () {
                 numeroUsuario: 912305611,
                 correoUsuario: "lramos@gmail.com",
                 fotoUsuario: "Esta Es mi foto,soy guapo lo se",
+                roleUsuario: "empresario",
             },
             {
                 idUsuario: 2,
@@ -18,6 +19,7 @@ module.exports = function () {
                 numeroUsuario: 910667108,
                 correoUsuario: "agutierrez@gmail.com",
                 fotoUsuario: "Esta Es mi foto,soy guapo lo se",
+                roleUsuario: "empresario",
             },
             {
                 idUsuario: 3,
@@ -27,6 +29,7 @@ module.exports = function () {
                 numeroUsuario: 954640108,
                 correoUsuario: "rguerrero@gmail.com",
                 fotoUsuario: "Esta Es mi foto,soy guapo lo se",
+                roleUsuario: "empresario",
             },
             {
                 idUsuario: 4,
@@ -36,6 +39,7 @@ module.exports = function () {
                 numeroUsuario: 936091471,
                 correoUsuario: "mzapata@gmail.com",
                 fotoUsuario: "Esta Es mi foto,soy guapo lo se",
+                roleUsuario: "contador",
             },
             {
                 idUsuario: 5,
@@ -45,6 +49,7 @@ module.exports = function () {
                 numeroUsuario: 927526443,
                 correoUsuario: "mlopez@gmail.com",
                 fotoUsuario: "Esta Es mi foto,soy guapo lo se",
+                roleUsuario: "contador",
             },
             {
                 idUsuario: 6,
@@ -54,11 +59,12 @@ module.exports = function () {
                 numeroUsuario: 921781388,
                 correoUsuario: "dsalas@gmail.com",
                 fotoUsuario: "Esta Es mi foto,soy guapo lo se",
+                roleUsuario: "contador",
             },
         ],
         Empresario: [
             {
-                razonsocialEmpresario: "VentasRamos",
+                razonEmpresario: "VentasRamos",
                 rucEmpresario: 20201324652,
                 rubroEmpresario: "Comercio",
                 descEmpresario: "Busco un empresario chino",
@@ -73,7 +79,7 @@ module.exports = function () {
                 }
             },
             {
-                razonsocialEmpresario: "MaderasMayor",
+                razonEmpresario: "MaderasMayor",
                 rucEmpresario: 20253053671,
                 rubroEmpresario: "Comercio",
                 descEmpresario: "Busco un empresario peruano",
@@ -88,7 +94,7 @@ module.exports = function () {
                 }
             },
             {
-                razonsocialEmpresario: "TelasFinas",
+                razonEmpresario: "TelasFinas",
                 rucEmpresario: 20157624892,
                 rubroEmpresario: "Comercio",
                 descEmpresario: "Busco un empresario joven",
