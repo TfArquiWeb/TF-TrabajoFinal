@@ -10,13 +10,13 @@ import { Contador } from 'src/app/model/contador';
 })
 export class ContadorListarComponent implements OnInit {
   dataSource: MatTableDataSource<Contador> = new MatTableDataSource();
-  displayedColumns:string[]=['id','name','apellido','email','dni','numero','foto','empresario']
-  constructor(private Vs: ContadorService) { }
+  displayedColumns: string[] = ['id','dni','nombre','apellido','numero','correo','foto','desc','linkedid'];
+  constructor(private Cs: ContadorService) { }
 
   ngOnInit(): void {
-    this.Vs.getlistarContador().subscribe(d => {
-      this.dataSource = new MatTableDataSource(d);
-    })
+    this.Cs.listar().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    }) 
   }
 
 }

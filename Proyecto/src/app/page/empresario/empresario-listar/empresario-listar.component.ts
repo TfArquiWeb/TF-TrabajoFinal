@@ -1,4 +1,4 @@
-import { ContadorService } from 'src/app/service/contador.service';
+import { EmpresarioService } from './../../../service/empresario.service';
 import { Component, OnInit } from '@angular/core';
 import { Empresario } from 'src/app/model/empresario';
 import { MatTableDataSource } from '@angular/material/table';
@@ -10,13 +10,13 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class EmpresarioListarComponent implements OnInit {
   dataSource: MatTableDataSource<Empresario> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'name', "apellido", "email", "dni", "numero", "foto", "razon-social", "ruc", "rubro", "pref"];
-  constructor(private ps: ContadorService) { }
+  displayedColumns: string[] = ['id','dni','nombre','apellido','numero','correo','foto','razon','ruc','rubro','descripcion'];
+  constructor(private Es: EmpresarioService) { }
 
   ngOnInit(): void {
-    this.ps.getlistarEmpresario().subscribe(data => {
+    this.Es.listar().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
-    })
+    }) 
   }
 
 }

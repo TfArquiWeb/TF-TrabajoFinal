@@ -58,10 +58,10 @@ module.exports = function () {
         ],
         Empresario: [
             {
-                razonsocialEmpresario: "VentasRamos",
+                razonsocialEmpresario: "VentasRamos", 
                 rucEmpresario: 20201324652,
                 rubroEmpresario: "Comercio",
-                descripcionEmpresario: "Busco un empresario chino",
+                descEmpresario: "Busco un empresario chino",
                 Usuario: {
                     idUsuario: 1,
                 }
@@ -70,7 +70,7 @@ module.exports = function () {
                 razonsocialEmpresario: "MaderasMayor",
                 rucEmpresario: 20253053671,
                 rubroEmpresario: "Comercio",
-                descripcionEmpresario: "Busco un empresario peruano",
+                descEmpresario: "Busco un empresario peruano",
                 Usuario: {
                     idUsuario: 2,
                 }
@@ -79,7 +79,7 @@ module.exports = function () {
                 razonsocialEmpresario: "TelasFinas",
                 rucEmpresario: 20157624892,
                 rubroEmpresario: "Comercio",
-                descripcionEmpresario: "Busco un empresario joven",
+                descEmpresario: "Busco un empresario joven",
                 Usuario: {
                     idUsuario: 3,
                 }
@@ -87,22 +87,22 @@ module.exports = function () {
         ],
         Contador: [
             {
-                CDescripcion: "Hola soy buen trabajador",
-                Clinkedin: "Mi perfil de linkedin es...",
+                descContador: "Hola soy buen trabajador",
+                linkedinContador: "Mi perfil de linkedin es...",
                 Usuario: {
                     idUsuario: 4,
                 }
             },
             {
-                CDescripcion: "Hola soy trabajador bueno",
-                Clinkedin: "Mi perfil de linkedin es...",
+                descContador: "Hola soy trabajador bueno",
+                linkedinContador: "Mi perfil de linkedin es...",
                 Usuario: {
                     idUsuario: 5,
                 }
             },
             {
-                CDescripcion: "Hola me gusta trabajar",
-                Clinkedin: "Mi perfil de linkedin es...",
+                descContador: "Hola me gusta trabajar",
+                linkedinContador: "Mi perfil de linkedin es...",
                 Usuario: {
                     idUsuario: 6,
                 }
