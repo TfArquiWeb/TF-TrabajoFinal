@@ -40,180 +40,205 @@ module.exports = function () {
                 }
             },
             {
-                razonsocialEmpresario: "VentasJamon",
-                rucEmpresario: 20201355552,
+                razonsocialEmpresario: "VentasRamos",
+                rucEmpresario: 20201324652,
                 rubroEmpresario: "Comercio",
                 prefEmpresario: "",
-                Usuario: {
-                    idUsuario: 2,
-                }
-            }, {
-                razonsocialEmpresario: "VentasHola",
-                rucEmpresario: 20201323352,
-                rubroEmpresario: "Comercio",
-                prefEmpresario: "",
-                Usuario: {
-                    idUsuario: 3,
-                }
-            },
-        ],
-        Contador: [
-            {
-                CDescripcion:"Hola",
-                Clinkedin:"Mi perfil de linkedin",
                 Usuario: {
                     idUsuario: 1,
                 }
             }, 
             {
-                idContador: 2,
-                nameContador: "Alexandro",
-                apellidoContador: "Lopez",
-                emailContador: "alopez@gmail.com",
-                dniContador: 54644485,
-                numeroContador: 937084291,
-                fotoContador: "",
-                Empresario: {
-                    idEmpresario: 2,
+                razonsocialEmpresario: "VentasRamos",
+                rucEmpresario: 20201324652,
+                rubroEmpresario: "Comercio",
+                prefEmpresario: "",
+                Usuario: {
+                    idUsuario: 1,
+                }
+            },
+        ],
+        Contador: [
+            {
+                CDescripcion: "Hola",
+                Clinkedin: "Mi perfil de linkedin",
+                Usuario: {
+                    idUsuario: 1,
                 }
             },
             {
-                idContador: 3,
-                nameContador: "Diego",
-                apellidoContador: "Crespo",
-                emailContador: "dcrespo@gmail.com",
-                dniContador: 55046035,
-                numeroContador: 979179104,
-                fotoContador: "",
-                Empresario: {
-                    idEmpresario: 3,
+                CDescripcion: "Hola",
+                Clinkedin: "Mi perfil de linkedin",
+                Usuario: {
+                    idUsuario: 1,
                 }
             },
             {
-                idContador: 4,
-                nameContador: "Bruno",
-                apellidoContador: "Bolivar",
-                emailContador: "bbolivar@gmail.com",
-                dniContador: 58845197,
-                numeroContador: 929712873,
-                fotoContador: "",
-                Empresario: {
-                    idEmpresario: 4,
+                CDescripcion: "Hola",
+                Clinkedin: "Mi perfil de linkedin",
+                Usuario: {
+                    idUsuario: 1,
                 }
             },
             {
-                idContador: 5,
-                nameContador: "Abel",
-                apellidoContador: "Ramirez",
-                emailContador: "aramirez@gmail.com",
-                dniContador: 42656609,
-                numeroContador: 907196576,
-                fotoContador: "",
-                Empresario: {
-                    idEmpresario: 5,
+                CDescripcion: "Hola",
+                Clinkedin: "Mi perfil de linkedin",
+                Usuario: {
+                    idUsuario: 1,
+                }
+            },
+            {
+                CDescripcion: "Hola",
+                Clinkedin: "Mi perfil de linkedin",
+                Usuario: {
+                    idUsuario: 1,
                 }
             },
         ],
         CurriculumVitae: [
             {
-                habilidadesCV: "asdasd",
-                capacidadesCV: "asdadsa",
-                experienciasCV: "asdasdad",
+                habilidadesCV: {
+                    idHabilidades: 1
+                },
+                capacidadesCV: {
+                    idCapacidades: 1
+                },
+                experienciasCV: {
+                    idExperiencias: 1
+                },
                 Contador: {
                     idContador: 1
                 },
-                habilidadesCV: "Luisa",
-                capacidadesCV: "asdads",
-                experienciasCV: "asda",
-                Contador: {
-                    idContador: 1
-                },
-                habilidadesCV: "Luisa",
-                capacidadesCV: "",
-                experienciasCV: "",
-                Contador: {
-                    idContador: 1
-                },
-                habilidadesCV: "Luisa",
-                capacidadesCV: "",
-                experienciasCV: "",
-                Contador: {
-                    idContador: 1
-                }
+                Contador: 1
             },
+            {
+                habilidadesCV: {
+                    idHabilidades: 1
+                },
+                capacidadesCV: {
+                    idCapacidades: 1
+                },
+                experienciasCV: {
+                    idExperiencias: 1
+                },
+                Contador: {
+                    idContador: 1
+                },
+                Contador: 1
+            },
+            {
+                habilidadesCV: {
+                    idHabilidades: 1
+                },
+                capacidadesCV: {
+                    idCapacidades: 1
+                },
+                experienciasCV: {
+                    idExperiencias: 1
+                },
+                Contador: {
+                    idContador: 1
+                },
+                Contador: 1
+            }
 
         ],
         Contrato: [
             {
                 idContrato: 1,
-                numeroContrato: 001,
                 fechainiContrato: 01 - 08 - 2022,
                 fechafinContrato: 01 - 08 - 2023,
                 flagContrato: true,
+                calificacionContrato: 1,
                 Contador: {
                     idContador: 1,
-                    nameContador: "Diego",
-                    apellidoContador: "Pacheco",
                 },
                 Empresario: {
                     idEmpresario: 1,
-                    nameEmpresario: "Diego",
-                    apellidoEmpresario: "Pacheco",
-                }
+                },
+                TipoMoneda: {
+                    idTM: 1,
+                },
+                TipoPago: {
+                    idTP: 1,
+                },
             },
             {
-                idContrato: 2,
-                numeroContrato: 002,
-                fechainiContrato: 01 - 10 - 2022,
-                fechafinContrato: 01 - 10 - 2023,
+                idContrato: 1,
+                fechainiContrato: 01 - 08 - 2022,
+                fechafinContrato: 01 - 08 - 2023,
                 flagContrato: true,
+                calificacionContrato: 1,
                 Contador: {
-                    idContador: 2
+                    idContador: 1,
                 },
                 Empresario: {
-                    idEmpresario: 2
-                }
+                    idEmpresario: 1,
+                },
+                TipoMoneda: {
+                    idTM: 1,
+                },
+                TipoPago: {
+                    idTP: 1,
+                },
             },
             {
-                idContrato: 3,
-                numeroContrato: 003,
-                fechainiContrato: 01 - 04 - 2022,
-                fechafinContrato: 01 - 10 - 2022,
+                idContrato: 1,
+                fechainiContrato: 01 - 08 - 2022,
+                fechafinContrato: 01 - 08 - 2023,
                 flagContrato: true,
+                calificacionContrato: 1,
                 Contador: {
-                    idContador: 3
+                    idContador: 1,
                 },
                 Empresario: {
-                    idEmpresario: 3
-                }
+                    idEmpresario: 1,
+                },
+                TipoMoneda: {
+                    idTM: 1,
+                },
+                TipoPago: {
+                    idTP: 1,
+                },
             },
             {
-                idContrato: 4,
-                numeroContrato: 004,
-                fechainiContrato: 01 - 03 - 2022,
-                fechafinContrato: 01 - 03 - 2024,
+                idContrato: 1,
+                fechainiContrato: 01 - 08 - 2022,
+                fechafinContrato: 01 - 08 - 2023,
                 flagContrato: true,
+                calificacionContrato: 1,
                 Contador: {
-                    idContador: 4
+                    idContador: 1,
                 },
                 Empresario: {
-                    idEmpresario: 4
-                }
+                    idEmpresario: 1,
+                },
+                TipoMoneda: {
+                    idTM: 1,
+                },
+                TipoPago: {
+                    idTP: 1,
+                },
             },
             {
-                idContrato: 5,
-                numeroContrato: 005,
-                fechainiContrato: 01 - 12 - 2022,
-                fechafinContrato: 01 - 12 - 2023,
+                idContrato: 1,
+                fechainiContrato: 01 - 08 - 2022,
+                fechafinContrato: 01 - 08 - 2023,
                 flagContrato: true,
+                calificacionContrato: 1,
                 Contador: {
-                    idContador: 5
+                    idContador: 1,
                 },
                 Empresario: {
-                    idEmpresario: 5
-                }
+                    idEmpresario: 1,
+                },
+                TipoMoneda: {
+                    idTM: 1,
+                },
+                TipoPago: {
+                    idTP: 1,
+                },
             },
-
         ],
         TipoPago: [
             {
