@@ -3,29 +3,56 @@ module.exports = function () {
         Usuario: [
             {
                 idUsuario: 1,
-                dniUsuario: 1234567,
+                dniUsuario: 79824316,
                 nombreUsuario: "Luisa",
                 apellidoUsuario: "Ramos",
-                numeroUsuario: 123456789,
+                numeroUsuario: 912305611,
                 correoUsuario: "lramos@gmail.com",
                 fotoUsuario: "Esta Es mi foto,soy guapo lo se",
             },
             {
                 idUsuario: 2,
-                dniUsuario: 1234567,
-                nombreUsuario: "Luisa",
-                apellidoUsuario: "Ramos",
-                numeroUsuario: 123456789,
-                correoUsuario: "lramos@gmail.com",
+                dniUsuario: 77833749,
+                nombreUsuario: "Abel",
+                apellidoUsuario: "Gutierrez",
+                numeroUsuario: 910667108,
+                correoUsuario: "agutierrez@gmail.com",
                 fotoUsuario: "Esta Es mi foto,soy guapo lo se",
             },
             {
                 idUsuario: 3,
-                dniUsuario: 1234567,
-                nombreUsuario: "Luisa",
-                apellidoUsuario: "Ramos",
-                numeroUsuario: 123456789,
-                correoUsuario: "lramos@gmail.com",
+                dniUsuario: 79436328,
+                nombreUsuario: "Rodrigo",
+                apellidoUsuario: "Guerrero",
+                numeroUsuario: 954640108,
+                correoUsuario: "rguerrero@gmail.com",
+                fotoUsuario: "Esta Es mi foto,soy guapo lo se",
+            },
+            {
+                idUsuario: 4,
+                dniUsuario: 41542195,
+                nombreUsuario: "Monica",
+                apellidoUsuario: "Zapata",
+                numeroUsuario: 936091471,
+                correoUsuario: "mzapata@gmail.com",
+                fotoUsuario: "Esta Es mi foto,soy guapo lo se",
+            },
+            {
+                idUsuario: 5,
+                dniUsuario: 71529412,
+                nombreUsuario: "Miguel",
+                apellidoUsuario: "Lopez",
+                numeroUsuario: 927526443,
+                correoUsuario: "mlopez@gmail.com",
+                fotoUsuario: "Esta Es mi foto,soy guapo lo se",
+            },
+            {
+                idUsuario: 6,
+                dniUsuario: 48839718,
+                nombreUsuario: "Diego",
+                apellidoUsuario: "Salas",
+                numeroUsuario: 921781388,
+                correoUsuario: "dsalas@gmail.com",
                 fotoUsuario: "Esta Es mi foto,soy guapo lo se",
             },
         ],
@@ -34,61 +61,50 @@ module.exports = function () {
                 razonsocialEmpresario: "VentasRamos",
                 rucEmpresario: 20201324652,
                 rubroEmpresario: "Comercio",
+                descripcionEmpresario: "Busco un empresario chino",
                 Usuario: {
                     idUsuario: 1,
                 }
             },
             {
-                razonsocialEmpresario: "VentasRamos",
-                rucEmpresario: 20201324652,
+                razonsocialEmpresario: "MaderasMayor",
+                rucEmpresario: 20253053671,
                 rubroEmpresario: "Comercio",
+                descripcionEmpresario: "Busco un empresario peruano",
                 Usuario: {
-                    idUsuario: 1,
+                    idUsuario: 2,
                 }
             }, 
             {
-                razonsocialEmpresario: "VentasRamos",
-                rucEmpresario: 20201324652,
+                razonsocialEmpresario: "TelasFinas",
+                rucEmpresario: 20157624892,
                 rubroEmpresario: "Comercio",
+                descripcionEmpresario: "Busco un empresario joven",
                 Usuario: {
-                    idUsuario: 1,
+                    idUsuario: 3,
                 }
             },
         ],
         Contador: [
             {
-                CDescripcion: "Hola",
-                Clinkedin: "Mi perfil de linkedin",
+                CDescripcion: "Hola soy buen trabajador",
+                Clinkedin: "Mi perfil de linkedin es...",
                 Usuario: {
-                    idUsuario: 1,
+                    idUsuario: 4,
                 }
             },
             {
-                CDescripcion: "Hola",
-                Clinkedin: "Mi perfil de linkedin",
+                CDescripcion: "Hola soy trabajador bueno",
+                Clinkedin: "Mi perfil de linkedin es...",
                 Usuario: {
-                    idUsuario: 1,
+                    idUsuario: 5,
                 }
             },
             {
-                CDescripcion: "Hola",
-                Clinkedin: "Mi perfil de linkedin",
+                CDescripcion: "Hola me gusta trabajar",
+                Clinkedin: "Mi perfil de linkedin es...",
                 Usuario: {
-                    idUsuario: 1,
-                }
-            },
-            {
-                CDescripcion: "Hola",
-                Clinkedin: "Mi perfil de linkedin",
-                Usuario: {
-                    idUsuario: 1,
-                }
-            },
-            {
-                CDescripcion: "Hola",
-                Clinkedin: "Mi perfil de linkedin",
-                Usuario: {
-                    idUsuario: 1,
+                    idUsuario: 6,
                 }
             },
         ],
@@ -109,30 +125,30 @@ module.exports = function () {
             },
             {
                 Habilidad: {
-                    idHabilidad: 1,
+                    idHabilidad: 2,
                 },
                 Capacitacion: {
-                    idCapacitacion: 1,
+                    idCapacitacion: 2,
                 },
                 Experiencia: {
-                    idExperiencia: 1,
+                    idExperiencia: 2,
                 },
                 Contador: {
-                    idContador: 1,
+                    idContador: 2,
                 },
             },
             {
                 Habilidad: {
-                    idHabilidad: 1,
+                    idHabilidad: 3,
                 },
                 Capacitacion: {
-                    idCapacitacion: 1,
+                    idCapacitacion: 3,
                 },
                 Experiencia: {
-                    idExperiencia: 1,
+                    idExperiencia: 3,
                 },
                 Contador: {
-                    idContador: 1,
+                    idContador: 3,
                 },
             },
 
@@ -140,8 +156,8 @@ module.exports = function () {
         Contrato: [
             {
                 idContrato: 1,
-                fechainiContrato: 01 - 08 - 2022,
-                fechafinContrato: 01 - 08 - 2023,
+                fechainiContrato: "01 - 08 - 2022",
+                fechafinContrato: "01 - 08 - 2023",
                 vigenciaContrato: true,
                 montoContrato:123441,
                 Contador: {
@@ -158,77 +174,42 @@ module.exports = function () {
                 },
             },
             {
-                idContrato: 1,
-                fechainiContrato: 01 - 08 - 2022,
-                fechafinContrato: 01 - 08 - 2023,
+                idContrato: 2,
+                fechainiContrato: "01 - 05 - 2022",
+                fechafinContrato: "01 - 05 - 2023",
                 vigenciaContrato: true,
                 Contador: {
-                    idContador: 1,
+                    idContador: 2,
                 },
                 Empresario: {
-                    idEmpresario: 1,
+                    idEmpresario: 2,
                 },
                 TipoMoneda: {
-                    idTM: 1,
+                    idTM: 2,
                 },
                 TipoPago: {
-                    idTP: 1,
+                    idTP: 2,
                 },
             },
             {
-                idContrato: 1,
-                fechainiContrato: 01 - 08 - 2022,
-                fechafinContrato: 01 - 08 - 2023,
+                idContrato: 3,
+                fechainiContrato: "01 - 11 - 2022",
+                fechafinContrato: "01 - 11 - 2023",
                 vigenciaContrato: true,
                 Contador: {
-                    idContador: 1,
+                    idContador: 3,
                 },
                 Empresario: {
-                    idEmpresario: 1,
+                    idEmpresario: 3,
                 },
                 TipoMoneda: {
-                    idTM: 1,
+                    idTM: 3,
                 },
                 TipoPago: {
-                    idTP: 1,
+                    idTP: 3,
                 },
             },
-            {
-                idContrato: 1,
-                fechainiContrato: 01 - 08 - 2022,
-                fechafinContrato: 01 - 08 - 2023,
-                vigenciaContrato: true,
-                Contador: {
-                    idContador: 1,
-                },
-                Empresario: {
-                    idEmpresario: 1,
-                },
-                TipoMoneda: {
-                    idTM: 1,
-                },
-                TipoPago: {
-                    idTP: 1,
-                },
-            },
-            {
-                idContrato: 1,
-                fechainiContrato: 01 - 08 - 2022,
-                fechafinContrato: 01 - 08 - 2023,
-                vigenciaContrato: true,
-                Contador: {
-                    idContador: 1,
-                },
-                Empresario: {
-                    idEmpresario: 1,
-                },
-                TipoMoneda: {
-                    idTM: 1,
-                },
-                TipoPago: {
-                    idTP: 1,
-                },
-            },
+            
         ],
         TipoPago: [
             {
@@ -245,7 +226,7 @@ module.exports = function () {
             },
             {
                 idTP: 4,
-                TipodePago: "PLin",
+                TipodePago: "Plin",
             },
 
         ],
@@ -267,44 +248,44 @@ module.exports = function () {
         Experiencia: [
             {
                 idExperiencia: 1,
-                nExperiencia: "Creativo, trabaje 5 años en macdonald",
+                descExperiencia: "Trabaje 5 años en macdonald",
             },
             {
                 idExperiencia: 2,
-                nExperiencia: "Creativo, trabaje 5 años en macdonald",
+                descExperiencia: "Trabaje 8 años en constructoras",
             },
             {
                 idExperiencia: 3,
-                nExperiencia: "Creativo, trabaje 5 años en macdonald",
+                descExperiencia: "Trabaje 10 años en Al Fondo Hay Sitio",
             },
 
         ],
         Capacitacion: [
             {
                 idCapacitacion: 1,
-                nCapacitacion: "Creativo, trabaje 5 años en macdonald",
+                descCapacitacion: "Me preparé en 2 universidades",
             },
             {
                 idCapacitacion: 2,
-                nCapacitacion: "Creativo, trabaje 5 años en macdonald",
+                descCapacitacion: "Hice un postgrado",
             },
             {
                 idCapacitacion: 3,
-                nCapacitacion: "Creativo, trabaje 5 años en macdonald",
+                descCapacitacion: "Tengo 2 maestrías",
             },
         ],
         Habilidad: [
             {
                 idHabilidad: 1,
-                nHabilidad: "Creativo, trabaje 5 años en macdonald",
+                descHabilidad: "Puedo trabajar muy rapido",
             },
             {
                 idHabilidad: 2,
-                nHabilidad: "Creativo, trabaje 5 años en macdonald",
+                descHabilidad: "Se tarbajar bajo presión",
             },
             {
                 idHabilidad: 3,
-                nHabilidad: "Creativo, trabaje 5 años en macdonald",
+                descHabilidad: "Soy experto en excel",
             },
         ],
         SolicitudEmpleo: [
@@ -320,8 +301,8 @@ module.exports = function () {
                 },
             },
             {
-                idSE: 1,
-                fechaSE:"01-01-2022",
+                idSE: 2,
+                fechaSE:"01-04-2022",
                 estadoSE:true,
                 Contador:{
                     idContador:1,
@@ -331,19 +312,8 @@ module.exports = function () {
                 },
             },
             {
-                idSE: 1,
-                fechaSE:"01-01-2022",
-                estadoSE:true,
-                Contador:{
-                    idContador:1,
-                },
-                Empresario:{
-                    idEmpresario:1,
-                },
-            },
-            {
-                idSE: 1,
-                fechaSE:"01-01-2022",
+                idSE: 3,
+                fechaSE:"01-03-2022",
                 estadoSE:true,
                 Contador:{
                     idContador:1,
