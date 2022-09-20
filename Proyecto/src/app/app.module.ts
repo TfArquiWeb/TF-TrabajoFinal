@@ -49,7 +49,7 @@ import { TipomonedaListarComponent } from './page/tipomoneda/tipomoneda-listar/t
     UsuarioComponent,
     UsuarioListarComponent,
     TipomonedaComponent,
-    TipomonedaListarComponent
+    TipomonedaListarComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +60,7 @@ import { TipomonedaListarComponent } from './page/tipomoneda/tipomoneda-listar/t
     MatInputModule,
     FormsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
 
   ],
   providers: [],
