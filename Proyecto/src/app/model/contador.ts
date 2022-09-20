@@ -1,12 +1,7 @@
-import { Empresario } from "./empresario";
+import { Usuario } from './usuario';
 
 export class Contador {
-    idContador: number = 0;
-    nameContador: string = "";
-    apellidoContador: string = "";
-    emailContador: string = "";
-    dniContador: number = 0;
-    numeroContador: number = 0;
-    fotoContador: string = "";
-    Empresario: Empresario = new Empresario();  
+    CDescripcion: string = "0";
+    Clinkedin: string = "";
+    Usuario: Usuario=new Usuario();
 }
