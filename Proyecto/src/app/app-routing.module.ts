@@ -1,5 +1,5 @@
-import { HabilidadCreaeditaComponent } from './page/habilidad/habilidad-creaedita/habilidad-creaedita.component';
-import { ExperienciaCreaeditaComponent } from './page/experiencia/experiencia-creaedita/experiencia-creaedita.component';
+import { CurriculumComponent } from './page/curriculum/curriculum.component';
+import { ContratoComponent } from './page/contrato/contrato.component';
 import { UsuarioComponent } from './page/usuario/usuario.component';
 import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
 import { TipopagoComponent } from './page/tipopago/tipopago.component';
@@ -11,7 +11,8 @@ import { HabilidadComponent } from './page/habilidad/habilidad.component';
 import { CapacitacionCreaeditaComponent } from './page/capacitacion/capacitacion-creaedita/capacitacion-creaedita.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { HabilidadCreaeditaComponent } from './page/habilidad/habilidad-creaedita/habilidad-creaedita.component';
+import { ExperienciaCreaeditaComponent } from './page/experiencia/experiencia-creaedita/experiencia-creaedita.component';
 const routes: Routes = [{
   path: 'empresario', component: EmpresarioComponent, children: [
 
@@ -47,11 +48,11 @@ const routes: Routes = [{
 
   ]
 }, {
-  path: 'contrato', component: UsuarioComponent, children: [
+  path: 'contrato', component: ContratoComponent, children: [
 
   ]
 }, {
-  path: 'curriculum', component: UsuarioComponent, children: [
+  path: 'curriculum', component: CurriculumComponent, children: [
 
   ]
 },

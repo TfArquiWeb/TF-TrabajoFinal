@@ -1,8 +1,9 @@
+
 import { CurriculumVitae } from './Curriculum';
+import { Usuario } from './usuario';
+import { CurriculumVitae } from './curriculum';
 import { TipoPago } from './tipopago';
 import { TipoMoneda } from './tipomoneda';
-import { Empresario } from './empresario';
-import { Contador } from './contador';
 
 export class Contrato {
     idContrato: number = 0;
@@ -10,8 +11,7 @@ export class Contrato {
     fechafinContrato: string = "";
     vigenciaContrato: boolean = true;
     montoContrato: number = 0;
-    Contador: Contador = new Contador(); 
-    Empresario: Empresario = new Empresario();
+    Usuario: Usuario = new Usuario();
     TipoMoneda: TipoMoneda = new TipoMoneda();
     TipoPago: TipoPago = new TipoPago();
     CurriculumVitae: CurriculumVitae = new CurriculumVitae();
