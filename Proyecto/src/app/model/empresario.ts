@@ -1,14 +1,8 @@
+import { Usuario } from './usuario';
 export class Empresario {
-
-    idEmpresario: number = 0;
-    nameEmpresario: string = "";
-    apellidoEmpresario: string = "";
-    emailEmpresario: string = "";
-    dniEmpresario: number = 0;
-    numeroEmpresario: number = 0;
-    fotoEmpresario: string = "";
     razonsocialEmpresario: string = "";
-    rucEmpresario: number = 0;
+    rucEmpresario: string = "";
     rubroEmpresario: string = "";
-    prefEmpresario: string = "";
+    prefEmpresario: number = 0;
+    Usuario:Usuario=new Usuario();
 }
