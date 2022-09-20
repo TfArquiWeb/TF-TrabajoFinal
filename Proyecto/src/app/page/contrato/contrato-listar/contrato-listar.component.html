@@ -18,43 +18,48 @@
         <th mat-header-cell *matHeaderCellDef> Fecha Inicio </th>
         <td mat-cell *matCellDef="let element"> {{element.fechainiContrato}} </td>
     </ng-container>
+
     <!-- Name Column -->
     <ng-container matColumnDef="fechafin">
         <th mat-header-cell *matHeaderCellDef> Fecha Fin </th>
         <td mat-cell *matCellDef="let element"> {{element.fechafinContrato}} </td>
     </ng-container>
+
     <!-- Weight Column -->
-    <ng-container matColumnDef="vigencia">                       
+    <ng-container matColumnDef="vigencia">
         <th mat-header-cell *matHeaderCellDef> Vigencia </th>
         <td mat-cell *matCellDef="let element"> {{element.vigenciaContrato}} </td>
     </ng-container>
+
     <!-- Weight Column -->
-    <ng-container matColumnDef="monto">                       
+    <ng-container matColumnDef="monto">
         <th mat-header-cell *matHeaderCellDef> Monto </th>
         <td mat-cell *matCellDef="let element"> {{element.montoContrato}} </td>
     </ng-container>
+
     <!-- Weight Column -->
-    <ng-container matColumnDef="contador">                       
+    <ng-container matColumnDef="contador">
         <th mat-header-cell *matHeaderCellDef> Contador </th>
-        <td mat-cell *matCellDef="let element"> {{element.Contador.idUsuario}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.Usuario.idUsuario}} </td>
     </ng-container>
+
     <!-- Weight Column -->
-    <ng-container matColumnDef="empresario">                       
+    <ng-container matColumnDef="empresario">
         <th mat-header-cell *matHeaderCellDef> Empresario </th>
-        <td mat-cell *matCellDef="let element"> {{element.Empresario.idUsuario}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.Usuario.idUsuario}} </td>
     </ng-container>
     <!-- Weight Column -->
-    <ng-container matColumnDef="tipomoneda">                       
+    <ng-container matColumnDef="tipomoneda">
         <th mat-header-cell *matHeaderCellDef> Tipo Moneda </th>
         <td mat-cell *matCellDef="let element"> {{element.TipoMoneda.idTM}} </td>
     </ng-container>
     <!-- Weight Column -->
-    <ng-container matColumnDef="tipopago">                       
+    <ng-container matColumnDef="tipopago">
         <th mat-header-cell *matHeaderCellDef> Tipo Pago </th>
         <td mat-cell *matCellDef="let element"> {{element.TipoPago.idTP}} </td>
     </ng-container>
     <!-- Weight Column -->
-    <ng-container matColumnDef="curriculumvitae">                       
+    <ng-container matColumnDef="curriculumvitae">
         <th mat-header-cell *matHeaderCellDef> Curriculum Vitae </th>
         <td mat-cell *matCellDef="let element"> {{element.CurriculumVitae.idCurriculum}} </td>
     </ng-container>

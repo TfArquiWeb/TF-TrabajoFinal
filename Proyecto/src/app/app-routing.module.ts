@@ -1,3 +1,5 @@
+import { CurriculumComponent } from './page/curriculum/curriculum.component';
+import { ContratoComponent } from './page/contrato/contrato.component';
 import { UsuarioComponent } from './page/usuario/usuario.component';
 import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
 import { TipopagoComponent } from './page/tipopago/tipopago.component';
@@ -43,11 +45,11 @@ const routes: Routes = [{
 
   ]
 }, {
-  path: 'contrato', component: UsuarioComponent, children: [
+  path: 'contrato', component: ContratoComponent, children: [
 
   ]
 }, {
-  path: 'curriculum', component: UsuarioComponent, children: [
+  path: 'curriculum', component: CurriculumComponent, children: [
 
   ]
 },

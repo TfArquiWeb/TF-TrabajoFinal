@@ -29,6 +29,8 @@ import { UsuarioListarComponent } from './page/usuario/usuario-listar/usuario-li
 import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
 import { TipomonedaListarComponent } from './page/tipomoneda/tipomoneda-listar/tipomoneda-listar.component';
 import { ContratoListarComponent } from './page/contrato/contrato-listar/contrato-listar.component';
+import { CurriculumComponent } from './page/curriculum/curriculum.component';
+import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/curriculum-listar.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { ContratoListarComponent } from './page/contrato/contrato-listar/contrat
     TipomonedaComponent,
     TipomonedaListarComponent,
     ContratoListarComponent,
+    CurriculumComponent,
+    CurriculumListarComponent,
   ],
   imports: [
     BrowserModule,
