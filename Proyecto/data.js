@@ -31,7 +31,6 @@ module.exports = function () {
         ],
         Empresario: [
             {
-                idEmpresario: 1,
                 razonsocialEmpresario: "VentasRamos",
                 rucEmpresario: 20201324652,
                 rubroEmpresario: "Comercio",
@@ -41,73 +40,29 @@ module.exports = function () {
                 }
             },
             {
-                idEmpresario: 2,
-                nameEmpresario: "Miguel",
-                apellidoEmpresario: "Cornejo",
-                emailEmpresario: "mcornejo@gmail.com",
-                dniEmpresario: 74742099,
-                numeroEmpresario: 987475567,
-                fotoEmpresario: "",
-                razonsocialEmpresario: "PescadosCornejo",
-                rucEmpresario: 20604082931,
-                rubroEmpresario: "Agropecuario",
-                prefEmpresario: "",
-
-            },
-            {
-                idEmpresario: 3,
-                nameEmpresario: "Rodrigo",
-                apellidoEmpresario: "Gutierrez",
-                emailEmpresario: "rgutierrez@gmail.com",
-                dniEmpresario: 09586685,
-                numeroEmpresario: 992800125,
-                fotoEmpresario: "",
-                razonsocialEmpresario: "ServiciosGutierrez",
-                rucEmpresario: 20603750342,
-                rubroEmpresario: "Servicios",
-                prefEmpresario: "",
-
-            },
-            {
-                idEmpresario: 4,
-                nameEmpresario: "Andrea",
-                apellidoEmpresario: "Torres",
-                emailEmpresario: "atorres@gmail.com",
-                dniEmpresario: 74068863,
-                numeroEmpresario: 970695964,
-                fotoEmpresario: "",
-                razonsocialEmpresario: "ImportacionesTorres",
-                rucEmpresario: 2020123456,
+                razonsocialEmpresario: "VentasJamon",
+                rucEmpresario: 20201355552,
                 rubroEmpresario: "Comercio",
                 prefEmpresario: "",
-
-            },
-            {
-                idEmpresario: 5,
-                nameEmpresario: "Sofia",
-                apellidoEmpresario: "Smith",
-                emailEmpresario: "ssmith@gmail.com",
-                dniEmpresario: 38040366,
-                numeroEmpresario: 974364038,
-                fotoEmpresario: "",
-                razonsocialEmpresario: "MariscosSmith",
-                rucEmpresario: 2020123456,
-                rubroEmpresario: "Agropecuario",
+                Usuario: {
+                    idUsuario: 2,
+                }
+            }, {
+                razonsocialEmpresario: "VentasHola",
+                rucEmpresario: 20201323352,
+                rubroEmpresario: "Comercio",
                 prefEmpresario: "",
-
+                Usuario: {
+                    idUsuario: 3,
+                }
             },
         ],
         Contador: [
             {
-                idContador: 1,
-                nameContador: "Abel",
-                apellidoContador: "Ramirez",
-                emailContador: "aramirez@gmail.com",
-                dniContador: 40525999,
-                numeroContador: 998250912,
-                fotoContador: "",
-                Empresario: {
-                    idEmpresario: 1,
+                CDescripcion:"Hola",
+                Clinkedin:"Mi perfil de linkedin",
+                Usuario: {
+                    idUsuario: 1,
                 }
             }, 
             {
@@ -264,30 +219,18 @@ module.exports = function () {
             {
                 idTP: 1,
                 TipodePago: "Efectivo",
-                Contrato: {
-                    idContrato: 1
-                }
             },
             {
                 idTP: 2,
                 TipodePago: "Yape",
-                Contrato: {
-                    idContrato: 2
-                }
             },
             {
                 idTP: 3,
                 TipodePago: "Tarjeta",
-                Contrato: {
-                    idContrato: 3
-                }
             },
             {
                 idTP: 4,
                 TipodePago: "PLin",
-                Contrato: {
-                    idContrato: 4
-                }
             },
 
         ],
@@ -295,23 +238,14 @@ module.exports = function () {
             {
                 idTM: 1,
                 TipodeMoneda: "Soles",
-                Contrato: {
-                    idContrato: 1
-                }
             },
             {
                 idTM: 2,
                 TipodeMoneda: "Dolares",
-                Contrato: {
-                    idContrato: 2
-                }
             },
             {
                 idTM: 3,
                 TipodeMoneda: "Pesos Mexicanos",
-                Contrato: {
-                    idContrato: 3
-                }
             },
 
         ]
