@@ -17,6 +17,9 @@ export class SolicitudempleoListarComponent implements OnInit {
     this.SEs.listar().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     })
+    this.SEs.getlistasolicitud().subscribe(data=>{
+      this.dataSource = new MatTableDataSource(data);
+    })
   } 
 
 }
