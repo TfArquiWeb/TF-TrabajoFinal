@@ -9,6 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 export class CapacitacionComponent implements OnInit {
 
   constructor(public route: ActivatedRoute) { }
+
+
+  
   ngOnInit(): void {
   }
 
