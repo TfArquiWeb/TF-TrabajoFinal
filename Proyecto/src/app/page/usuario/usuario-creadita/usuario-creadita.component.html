@@ -1,0 +1,54 @@
+<p>usuario-creadita works!</p>
+<div class="container">
+
+    <h1>Propietario</h1>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="id" [(ngModel)]="usuario.idUsuario">
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput required placeholder="dni" [(ngModel)]="usuario.dniUsuario">
+  
+    </mat-form-field>
+  
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput required placeholder="nombre" [(ngModel)]="usuario.nombreUsuario">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput required placeholder="apellido" [(ngModel)]="usuario.apellidoUsuario">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput required placeholder="numero" [(ngModel)]="usuario.numeroUsuario">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput required placeholder="correo" [(ngModel)]="usuario.correoUsuario">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput required placeholder="foto" [(ngModel)]="usuario.fotoUsuario">
+    </mat-form-field>
+  
+    <br>
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/usuario">Cancelar</button>
+    <p>{{mensaje}}</p>
+  
+  </div>

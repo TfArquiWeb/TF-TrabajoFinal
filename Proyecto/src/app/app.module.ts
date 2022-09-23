@@ -34,6 +34,8 @@ import { CurriculumComponent } from './page/curriculum/curriculum.component';
 import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/curriculum-listar.component';
 import { SolicitudempleoCreaditaComponent } from './page/solicitudempleo/solicitudempleo-creadita/solicitudempleo-creadita.component';
 import { ContadorCreaditaComponent } from './page/contador/contador-creadita/contador-creadita.component';
+import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
+import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
 
 
 @NgModule({
@@ -64,6 +66,8 @@ import { ContadorCreaditaComponent } from './page/contador/contador-creadita/con
     CurriculumListarComponent,
     SolicitudempleoCreaditaComponent,
     ContadorCreaditaComponent,
+    UsuarioCreaditaComponent,
+    EmpresarioCreaditaComponent,
   ],
   imports: [
     BrowserModule,

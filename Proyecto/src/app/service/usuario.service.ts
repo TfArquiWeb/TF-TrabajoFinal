@@ -1,3 +1,4 @@
+import { Subject } from 'rxjs';
 import { Usuario } from './../model/usuario';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -7,8 +8,18 @@ import { Injectable } from '@angular/core';
 })
 export class UsuarioService {
   url: string = "http://localhost:5000/usuario"
+  private listaCambio =new Subject<Usuario[]>()
   constructor(private http: HttpClient) { }
   listar() {
     return this.http.get<Usuario[]>(this.url);
+  }
+  insertar(usuario:Usuario){
+    return this.http.post(this.url,usuario);
+  }
+  setListaUsuario(listanueva:Usuario[]){
+    this.listaCambio.next(listanueva);
+  }
+  getListaUsuario(){
+    return this.listaCambio.asObservable();
   }
 }
