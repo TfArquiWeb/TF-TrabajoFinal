@@ -36,6 +36,7 @@ import { SolicitudempleoCreaditaComponent } from './page/solicitudempleo/solicit
 import { ContadorCreaditaComponent } from './page/contador/contador-creadita/contador-creadita.component';
 import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
+import { CreaditaComponent } from './page/contrato/contrato-creadita/creadita/contrato-creadita.component';
 
 
 @NgModule({
@@ -52,7 +53,7 @@ import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadi
     HabilidadComponent,
     CapacitacionComponent,
     CapacitacionListarComponent,
-    ExperienciaListarComponent, 
+    ExperienciaListarComponent,
     HabilidadListarComponent,
     CapacitacionCreaeditaComponent,
     UsuarioComponent,
@@ -68,6 +69,7 @@ import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadi
     ContadorCreaditaComponent,
     UsuarioCreaditaComponent,
     EmpresarioCreaditaComponent,
+    CreaditaComponent,
   ],
   imports: [
     BrowserModule,

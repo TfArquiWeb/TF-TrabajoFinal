@@ -17,6 +17,8 @@ export class ContratoListarComponent implements OnInit {
     this.Cs.listar().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     })
+    this.Cs.getLista().subscribe(data=>{
+      this.dataSource = new MatTableDataSource(data);
+    })
   }
-
 }
