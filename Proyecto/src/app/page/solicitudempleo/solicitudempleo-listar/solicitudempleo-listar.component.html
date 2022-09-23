@@ -34,6 +34,11 @@
       </ng-container>
     
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>      
     </table>
-    
+    <div class="example-button-container">
+
+      <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+        routerLink="/solicitudempleo/nuevo">
+      </button>
+    </div>
