@@ -22,7 +22,7 @@ const routes: Routes = [{
   ]
 }, {
   path: 'contador', component: ContadorComponent, children: [
-
+    { path: 'insertar', component: HabilidadCreaeditaComponent }
   ]
 }, {
   path: 'tipopago', component: TipopagoComponent, children: [
