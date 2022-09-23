@@ -11,5 +11,12 @@ export class SolicitudempleoListarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+    this.SEs.listar().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    })
+    this.SEs.getlistasolicitud().subscribe(data=>{
+      this.dataSource = new MatTableDataSource(data);
+    })
+  } 
 
 }

@@ -1,0 +1,32 @@
+<p>solicitudempleo-creadita works!</p>
+<div class="container">
+    <h1>solicitudes de empleo</h1>
+    <mat-form-field class="example-full-width">
+        <mat-label></mat-label>
+        <input matInput placeholder="id" [(ngModel)]="solicitudempleo.idSE">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label></mat-label>
+        <input matInput placeholder="fecha" [(ngModel)]="solicitudempleo.fechaSE">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label></mat-label>
+        <input matInput placeholder="estado" [(ngModel)]="solicitudempleo.estadoSE">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label></mat-label>
+        <input matInput placeholder="idempresario" [(ngModel)]="solicitudempleo.Usuario.idUsuario">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label></mat-label>
+        <input matInput placeholder="idcontador" [(ngModel)]="solicitudempleo.Usuario.idUsuario">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/solicitudempleo">Cancelar</button>
+    <p>{{mensaje}}</p>
+</div>

@@ -1,3 +1,6 @@
+import { SolicitudempleoCreaditaComponent } from './page/solicitudempleo/solicitudempleo-creadita/solicitudempleo-creadita.component';
+import { SolicitudEmpleo } from './model/solicitudempleo';
+import { SolicitudempleoComponent } from './page/solicitudempleo/solicitudempleo.component';
 import { CurriculumComponent } from './page/curriculum/curriculum.component';
 import { ContratoComponent } from './page/contrato/contrato.component';
 import { UsuarioComponent } from './page/usuario/usuario.component';
@@ -9,7 +12,7 @@ import { CapacitacionComponent } from './page/capacitacion/capacitacion.componen
 import { ExperienciaComponent } from './page/experiencia/experiencia.component';
 import { HabilidadComponent } from './page/habilidad/habilidad.component';
 import { CapacitacionCreaeditaComponent } from './page/capacitacion/capacitacion-creaedita/capacitacion-creaedita.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HabilidadCreaeditaComponent } from './page/habilidad/habilidad-creaedita/habilidad-creaedita.component';
 import { ExperienciaCreaeditaComponent } from './page/experiencia/experiencia-creaedita/experiencia-creaedita.component';
@@ -55,7 +58,11 @@ const routes: Routes = [{
   path: 'curriculum', component: CurriculumComponent, children: [
 
   ]
-},
+}, {
+  path: 'solicitudempleo', component: SolicitudempleoComponent, children: [
+    { path: 'nuevo', component: SolicitudempleoCreaditaComponent }
+  ]
+}
 ];
 
 @NgModule({

@@ -32,6 +32,8 @@ import { ExperienciaCreaeditaComponent } from './page/experiencia/experiencia-cr
 import { HabilidadCreaeditaComponent } from './page/habilidad/habilidad-creaedita/habilidad-creaedita.component';
 import { CurriculumComponent } from './page/curriculum/curriculum.component';
 import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/curriculum-listar.component';
+import { SolicitudempleoCreaditaComponent } from './page/solicitudempleo/solicitudempleo-creadita/solicitudempleo-creadita.component';
+import { ContadorCreaditaComponent } from './page/contador/contador-creadita/contador-creadita.component';
 
 
 @NgModule({
@@ -60,6 +62,8 @@ import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/c
     HabilidadCreaeditaComponent,
     CurriculumComponent,
     CurriculumListarComponent,
+    SolicitudempleoCreaditaComponent,
+    ContadorCreaditaComponent,
   ],
   imports: [
     BrowserModule,
