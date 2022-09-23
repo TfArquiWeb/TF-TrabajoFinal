@@ -18,7 +18,7 @@ import { HabilidadCreaeditaComponent } from './page/habilidad/habilidad-creaedit
 import { ExperienciaCreaeditaComponent } from './page/experiencia/experiencia-creaedita/experiencia-creaedita.component';
 const routes: Routes = [{
   path: 'empresario', component: EmpresarioComponent, children: [
-
+    { path: 'insertar', component: HabilidadCreaeditaComponent }
   ]
 }, {
   path: 'contador', component: ContadorComponent, children: [
@@ -48,7 +48,7 @@ const routes: Routes = [{
   ]
 }, {
   path: 'usuario', component: UsuarioComponent, children: [
-
+    { path: 'insertar', component: ExperienciaCreaeditaComponent }
   ]
 }, {
   path: 'contrato', component: ContratoComponent, children: [

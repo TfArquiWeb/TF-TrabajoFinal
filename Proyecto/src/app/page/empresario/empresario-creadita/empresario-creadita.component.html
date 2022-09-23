@@ -1,0 +1,35 @@
+<p>empresario-creadita works!</p>
+<div class="container">
+
+    <h1>Propietario</h1>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>razon</mat-label>
+      <input matInput placeholder="razon" [(ngModel)]="empresario.razonsocialEmpresario">
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>ruc</mat-label>
+      <input matInput required placeholder="ruc" [(ngModel)]="empresario.rucEmpresario">
+  
+    </mat-form-field>
+  
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>rubro</mat-label>
+      <input type="email" matInput required placeholder="rubro" [(ngModel)]="empresario.rubroEmpresario">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>descripcion</mat-label>
+      <input type="email" matInput required placeholder="descripcion" [(ngModel)]="empresario.descEmpresario">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/empresario">Cancelar</button>
+    <p>{{mensaje}}</p>
+  
+  </div>
