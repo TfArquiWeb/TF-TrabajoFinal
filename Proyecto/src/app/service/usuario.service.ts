@@ -13,7 +13,7 @@ export class UsuarioService {
   listarUsuario() {
     return this.http.get<Usuario[]>(this.url);
   }
-  insertar(usuario:Usuario){
+  insertarUsuario(usuario:Usuario){
     return this.http.post(this.url,usuario);
   }
   setListaUsuario(listanueva:Usuario[]){
