@@ -10,7 +10,7 @@ export class UsuarioService {
   url: string = "http://localhost:5000/usuario"
   private listaCambio =new Subject<Usuario[]>()
   constructor(private http: HttpClient) { }
-  listar() {
+  listarUsuario() {
     return this.http.get<Usuario[]>(this.url);
   }
   insertar(usuario:Usuario){

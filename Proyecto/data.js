@@ -314,15 +314,15 @@ module.exports = function () {
         ],
         Habilidad: [
             {
-                idHabilidad: 1,
+                id: 1,
                 descHabilidad: "Puedo trabajar muy rapido",
             },
             {
-                idHabilidad: 2,
+                id: 2,
                 descHabilidad: "Se tarbajar bajo presión",
             },
             {
-                idHabilidad: 3,
+                id: 3,
                 descHabilidad: "Soy experto en excel",
             },
         ],

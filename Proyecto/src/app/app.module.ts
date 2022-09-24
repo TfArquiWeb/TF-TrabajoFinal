@@ -32,7 +32,6 @@ import { ExperienciaCreaeditaComponent } from './page/experiencia/experiencia-cr
 import { HabilidadCreaeditaComponent } from './page/habilidad/habilidad-creaedita/habilidad-creaedita.component';
 import { CurriculumComponent } from './page/curriculum/curriculum.component';
 import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/curriculum-listar.component';
-import { SolicitudempleoCreaditaComponent } from './page/solicitudempleo/solicitudempleo-creadita/solicitudempleo-creadita.component';
 import { ContadorCreaditaComponent } from './page/contador/contador-creadita/contador-creadita.component';
 import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
@@ -65,7 +64,6 @@ import { CreaditaComponent } from './page/contrato/contrato-creadita/creadita/co
     HabilidadCreaeditaComponent,
     CurriculumComponent,
     CurriculumListarComponent,
-    SolicitudempleoCreaditaComponent,
     ContadorCreaditaComponent,
     UsuarioCreaditaComponent,
     EmpresarioCreaditaComponent,

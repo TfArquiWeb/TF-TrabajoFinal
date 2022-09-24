@@ -1,7 +1,3 @@
-import { ContratoCreaditaComponent } from './page/contrato/contrato-creadita/creadita/contrato-creadita.component';
-import { SolicitudempleoCreaditaComponent } from './page/solicitudempleo/solicitudempleo-creadita/solicitudempleo-creadita.component';
-import { SolicitudEmpleo } from './model/solicitudempleo';
-import { SolicitudempleoComponent } from './page/solicitudempleo/solicitudempleo.component';
 import { CurriculumComponent } from './page/curriculum/curriculum.component';
 import { ContratoComponent } from './page/contrato/contrato.component';
 import { UsuarioComponent } from './page/usuario/usuario.component';
@@ -53,17 +49,13 @@ const routes: Routes = [{
   ]
 }, {
   path: 'contrato', component: ContratoComponent, children: [
-    { path: 'insertar', component: ContratoCreaditaComponent }
+
   ]
 }, {
   path: 'curriculum', component: CurriculumComponent, children: [
 
   ]
-}, {
-  path: 'solicitudempleo', component: SolicitudempleoComponent, children: [
-    { path: 'nuevo', component: SolicitudempleoCreaditaComponent }
-  ]
-}
+}, 
 ];
 
 @NgModule({
