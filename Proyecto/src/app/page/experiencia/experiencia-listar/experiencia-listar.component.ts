@@ -10,7 +10,7 @@ import { ExperienciaService } from './../../../service/experiencia.service';
 })  
 export class ExperienciaListarComponent implements OnInit {
   dataSource: MatTableDataSource<Experiencia> = new MatTableDataSource();
-  displayedColumns:string[]=['idExperiencia','descExperiencia']
+  displayedColumns:string[]=['idExperiencia','descExperiencia', 'acciones']
   constructor(private Es: ExperienciaService) { }
 
   ngOnInit(): void {
