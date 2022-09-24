@@ -35,6 +35,7 @@ import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/c
 import { ContadorCreaditaComponent } from './page/contador/contador-creadita/contador-creadita.component';
 import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
+import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/tipopago-creaedita.component';
 
 
 @NgModule({
@@ -66,6 +67,7 @@ import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadi
     ContadorCreaditaComponent,
     UsuarioCreaditaComponent,
     EmpresarioCreaditaComponent,
+    TipopagoCreaeditaComponent,
   ],
   imports: [
     BrowserModule,

@@ -19,7 +19,7 @@ export class UsuarioCreaditaComponent implements OnInit {
     if (this.usuario.dniUsuario > 0 && this.usuario.nombreUsuario.length > 0&& this.usuario.apellidoUsuario.length > 0&& this.usuario.numeroUsuario> 0&& this.usuario.correoUsuario.length > 0&& this.usuario.fotoUsuario.length > 0) {
 
       this.uSe.insertar(this.usuario).subscribe(data => {
-        this.uSe.listar().subscribe(data => {
+        this.uSe.listarUsuario().subscribe(data => {
           this.uSe.setListaUsuario(data);
         })
       })

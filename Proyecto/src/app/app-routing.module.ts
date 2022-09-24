@@ -13,6 +13,7 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HabilidadCreaeditaComponent } from './page/habilidad/habilidad-creaedita/habilidad-creaedita.component';
 import { ExperienciaCreaeditaComponent } from './page/experiencia/experiencia-creaedita/experiencia-creaedita.component';
+import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/tipopago-creaedita.component';
 const routes: Routes = [{
   path: 'empresario', component: EmpresarioComponent, children: [
     { path: 'insertar', component: HabilidadCreaeditaComponent }
@@ -23,7 +24,7 @@ const routes: Routes = [{
   ]
 }, {
   path: 'tipopago', component: TipopagoComponent, children: [
-
+    {path: 'nuevo', component: TipopagoCreaeditaComponent}
   ]
 }, {
   path: 'capacitacion', component: CapacitacionComponent, children: [
