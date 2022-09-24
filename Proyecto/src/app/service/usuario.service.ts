@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class UsuarioService {
   url: string = "http://localhost:5000/usuario"
   constructor(private http: HttpClient) { }
-  listar() {
+  listarUsuario() {
     return this.http.get<Usuario[]>(this.url);
   }
 }
