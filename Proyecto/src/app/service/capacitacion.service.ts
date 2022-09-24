@@ -9,7 +9,6 @@ export class CapacitacionService {
   url: string = "http://localhost:5000/capacitacion"
   private listaCambio = new Subject<Capacitacion[]>()
   constructor(public http:HttpClient) { }
-  
   listarCapacitacion() {
     return this.http.get<Capacitacion[]>(this.url);
   }

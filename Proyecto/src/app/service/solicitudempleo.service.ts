@@ -10,16 +10,16 @@ export class SolicitudempleoService {
   url: string = "http://localhost:5000/solicitudempleo"
   private listacambio=new Subject<SolicitudEmpleo[]>()
   constructor(public http: HttpClient) { }
-  listar() {
+  listarSolicitud() {
     return this.http.get<SolicitudEmpleo[]>(this.url);
   }
-  insertar(solicitudempleo:SolicitudEmpleo){
+  insertarSolicitud(solicitudempleo:SolicitudEmpleo){
     return this.http.post(this.url,solicitudempleo);
   }
-  setlistarsolicitud(listanueva:SolicitudEmpleo[]){
+  setlistarSolicitud(listanueva:SolicitudEmpleo[]){
     this.listacambio.next(listanueva);
   }
-  getlistasolicitud(){
+  getlistaSolicitud(){
     return this.listacambio.asObservable();
   }
 }
