@@ -32,7 +32,8 @@ const routes: Routes = [{
   ]
 }, {
   path: 'habilidad', component: HabilidadComponent, children: [
-    { path: 'insertar', component: HabilidadCreaeditaComponent }
+    { path: 'insertar', component: HabilidadCreaeditaComponent },
+    { path: 'edicion/:id', component: HabilidadCreaeditaComponent }
 
   ]
 }, {

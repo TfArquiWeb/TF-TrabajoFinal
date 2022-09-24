@@ -22,4 +22,10 @@ export class HabilidadService {
   getListaHabilidad() {
     return this.listaCambio.asObservable();
   }
+  modificarHabilidad(habilidad: Habilidad) {
+    return this.http.put(this.url + "/" + habilidad.id, habilidad);
+  }
+  listarIdHabilidad(id: number) {
+    return this.http.get<Habilidad>(`${this.url}/${id}`);
+  }
 }

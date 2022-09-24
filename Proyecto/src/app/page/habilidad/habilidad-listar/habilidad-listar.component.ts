@@ -10,7 +10,7 @@ import { HabilidadService } from './../../../service/habilidad.service';
 })
 export class HabilidadListarComponent implements OnInit {
   dataSource: MatTableDataSource<Habilidad> = new MatTableDataSource();
-  displayedColumns:string[]=['idHabilidad','descHabilidad']
+  displayedColumns:string[]=['idHabilidad','descHabilidad','acciones']
   constructor(private Hs: HabilidadService) { }
 
   ngOnInit(): void {
