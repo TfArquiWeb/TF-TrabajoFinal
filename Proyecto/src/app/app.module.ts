@@ -36,6 +36,8 @@ import { ContadorCreaditaComponent } from './page/contador/contador-creadita/con
 import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
 import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/tipopago-creaedita.component';
+import { CapacitacionDialogoComponent } from './page/capacitacion/capacitacion-listar/capacitacion-dialogo/capacitacion-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -68,6 +70,7 @@ import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/t
     UsuarioCreaditaComponent,
     EmpresarioCreaditaComponent,
     TipopagoCreaeditaComponent,
+    CapacitacionDialogoComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,6 +82,8 @@ import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/t
     FormsModule,
     MatButtonModule,
     MatIconModule,
+    MatDialogModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

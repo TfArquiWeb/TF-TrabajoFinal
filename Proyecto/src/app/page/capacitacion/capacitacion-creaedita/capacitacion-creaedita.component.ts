@@ -15,7 +15,6 @@ export class CapacitacionCreaeditaComponent implements OnInit {
   id: number = 0;
   constructor(private capacitacionService: CapacitacionService, 
     private router: Router, private route: ActivatedRoute) { }
-
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
       this.id = data['id'];
@@ -32,7 +31,6 @@ export class CapacitacionCreaeditaComponent implements OnInit {
           })
         })
       } else {
-
         this.capacitacionService.insertarCapacitacion(this.capacitacion).subscribe(data => {
           this.capacitacionService.listarCapacitacion().subscribe(data => {
             this.capacitacionService.setListaCapacitacion(data);
