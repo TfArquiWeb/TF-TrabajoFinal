@@ -22,10 +22,10 @@ export class UsuarioService {
   getListaUsuario(){
     return this.listaCambio.asObservable();
   }
-  modificarUsuaria(usuario:Usuario){
+  modificarUsuario(usuario:Usuario){
     return this.http.put(this.url+"/"+usuario.id,usuario)
   }
-  listaIdUsuario(id:number){
+  listarIdUsuario(id:number){
     return this.http.get<Usuario>(`${this.url}/${id}`);
   }
 }

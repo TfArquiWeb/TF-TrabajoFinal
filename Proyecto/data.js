@@ -285,30 +285,30 @@ module.exports = function () {
         ],
         Experiencia: [
             {
-                idExperiencia: 1,
+                id: 1,
                 descExperiencia: "Trabaje 5 años en macdonald",
             },
             { 
-                idExperiencia: 2,
+                id: 2,
                 descExperiencia: "Trabaje 8 años en constructoras",
             },
             {
-                idExperiencia: 3,
+                id: 3,
                 descExperiencia: "Trabaje 10 años en Al Fondo Hay Sitio",
             },
 
         ],
         Capacitacion: [
             {
-                idCapacitacion: 1,
+                id: 1,
                 descCapacitacion: "Me preparé en 2 universidades",
             },
             {
-                idCapacitacion: 2,
+                id: 2,
                 descCapacitacion: "Hice un postgrado",
             },
             {
-                idCapacitacion: 3,
+                id: 3,
                 descCapacitacion: "Tengo 2 maestrías",
             },
         ],

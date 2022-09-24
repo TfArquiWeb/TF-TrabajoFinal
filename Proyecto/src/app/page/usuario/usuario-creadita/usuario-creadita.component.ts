@@ -13,7 +13,8 @@ export class UsuarioCreaditaComponent implements OnInit {
   mensaje: string = "";
   edicion: boolean = false;
   id: number = 0;
-  constructor(private uSe:UsuarioService,private router:Router,private route:ActivatedRoute) { }
+  constructor(private usuarioService:UsuarioService,private router:Router,
+    private route:ActivatedRoute) { }
 
   ngOnInit(): void { 
     this.route.params.subscribe((data: Params) => {
@@ -22,28 +23,22 @@ export class UsuarioCreaditaComponent implements OnInit {
       this.init();
     });
   }
-  aceptar():void{
-    if (this.usuario.dniUsuario > 0 && this.usuario.nombreUsuario.length > 0&& this.usuario.apellidoUsuario.length > 0&& this.usuario.numeroUsuario> 0&& this.usuario.correoUsuario.length > 0&& this.usuario.fotoUsuario.length > 0) {
-
+  aceptarUsuario(): void {
+    if (this.usuario.apellidoUsuario.length > 0) {
       if (this.edicion) {
-        this.uSe.modificarUsuaria(this.usuario).subscribe(data => {
-          this.uSe.listarUsuario().subscribe(data => {
-            this.uSe.setListaUsuario(data);
+        this.usuarioService.modificarUsuario(this.usuario).subscribe(data => {
+          this.usuarioService.listarUsuario().subscribe(data => {
+            this.usuarioService.setListaUsuario(data);
           })
+        })
+      } else {
 
-      this.uSe.insertar(this.usuario).subscribe(data => {
-        this.uSe.listarUsuario().subscribe(data => {
-          this.uSe.setListaUsuario(data);
+        this.usuarioService.insertarUsuario(this.usuario).subscribe(data => {
+          this.usuarioService.listarUsuario().subscribe(data => {
+            this.usuarioService.setListaUsuario(data);
+          })
         })
       }
-      else {
-        this.uSe.insertarUsuario(this.usuario).subscribe(data => {
-          this.uSe.listarUsuario().subscribe(data => {
-            this.uSe.setListaUsuario(data);
-          })
-        })        
-      }
-      
       this.router.navigate(['usuario']);
     } else {
       this.mensaje = "Complete los valores requeridos";
@@ -51,10 +46,11 @@ export class UsuarioCreaditaComponent implements OnInit {
   }
   init() {
     if (this.edicion) {
-      this.uSe.listaIdUsuario(this.id).subscribe(data => {
+      this.usuarioService.listarIdUsuario(this.id).subscribe(data => {
         this.usuario = data;
       })
     }
 
   }
+
 }
