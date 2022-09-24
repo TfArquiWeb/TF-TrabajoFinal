@@ -1,4 +1,4 @@
 export class Capacitacion {
-    idCapacitacion: number = 0;
+    id: number = 0;
     descCapacitacion: string = "";
 }
