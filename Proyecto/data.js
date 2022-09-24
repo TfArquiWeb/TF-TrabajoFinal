@@ -2,7 +2,7 @@ module.exports = function () {
     var data = {
         Usuario: [
             {
-                idUsuario: 1,
+                id: 1,
                 dniUsuario: 79824316,
                 nombreUsuario: "Luisa",
                 apellidoUsuario: "Ramos",
@@ -12,7 +12,7 @@ module.exports = function () {
                 roleUsuario: "empresario",
             },
             {
-                idUsuario: 2,
+                id: 2,
                 dniUsuario: 77833749,
                 nombreUsuario: "Abel",
                 apellidoUsuario: "Gutierrez",
@@ -22,7 +22,7 @@ module.exports = function () {
                 roleUsuario: "empresario",
             },
             {
-                idUsuario: 3,
+                id: 3,
                 dniUsuario: 79436328,
                 nombreUsuario: "Rodrigo",
                 apellidoUsuario: "Guerrero",
@@ -32,7 +32,7 @@ module.exports = function () {
                 roleUsuario: "empresario",
             },
             {
-                idUsuario: 4,
+                id: 4,
                 dniUsuario: 41542195,
                 nombreUsuario: "Monica",
                 apellidoUsuario: "Zapata",
@@ -42,7 +42,7 @@ module.exports = function () {
                 roleUsuario: "contador",
             },
             {
-                idUsuario: 5,
+                id: 5,
                 dniUsuario: 71529412,
                 nombreUsuario: "Miguel",
                 apellidoUsuario: "Lopez",
@@ -52,7 +52,7 @@ module.exports = function () {
                 roleUsuario: "contador",
             },
             {
-                idUsuario: 6,
+                id: 6,
                 dniUsuario: 48839718,
                 nombreUsuario: "Diego",
                 apellidoUsuario: "Salas",
