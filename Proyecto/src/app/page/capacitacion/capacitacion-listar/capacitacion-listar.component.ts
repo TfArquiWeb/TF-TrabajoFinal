@@ -4,7 +4,6 @@ import { Capacitacion } from './../../../model/capacitacion';
 import { CapacitacionService } from './../../../service/capacitacion.service';
 import { MatDialog } from '@angular/material/dialog';
 import { CapacitacionDialogoComponent } from './capacitacion-dialogo/capacitacion-dialogo.component';
-
 @Component({
   selector: 'app-capacitacion-listar',
   templateUrl: './capacitacion-listar.component.html',
@@ -30,9 +29,7 @@ export class CapacitacionListarComponent implements OnInit {
   confirmarCapacitacion(id: number) {
     this.idMayor = id;
     this.dialog.open(CapacitacionDialogoComponent);
-  }
-
-
+  } 
   eliminarCapacitacion(id: number) {
     this.Cs.eliminarCapacitacion(id).subscribe(() => {
       this.Cs.listarCapacitacion().subscribe(data => {
