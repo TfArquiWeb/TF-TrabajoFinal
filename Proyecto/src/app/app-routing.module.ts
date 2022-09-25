@@ -29,7 +29,9 @@ const routes: Routes = [{
   ]
 }, {
   path: 'capacitacion', component: CapacitacionComponent, children: [
-    { path: 'insertar', component: CapacitacionCreaeditaComponent }
+    { path: 'insertar', component: CapacitacionCreaeditaComponent },
+    { path: 'edicion/:id', component: CapacitacionCreaeditaComponent }
+    
   ]
 }, {
   path: 'habilidad', component: HabilidadComponent, children: [
@@ -39,7 +41,8 @@ const routes: Routes = [{
   ]
 }, {
   path: 'experiencia', component: ExperienciaComponent, children: [
-    { path: 'insertar', component: ExperienciaCreaeditaComponent }
+    { path: 'insertar', component: ExperienciaCreaeditaComponent },
+    { path: 'edicion/:id', component: ExperienciaCreaeditaComponent }
 
   ]
 }, {
