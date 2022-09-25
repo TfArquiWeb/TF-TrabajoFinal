@@ -38,6 +38,7 @@ import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadi
 import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/tipopago-creaedita.component';
 import { CapacitacionDialogoComponent } from './page/capacitacion/capacitacion-listar/capacitacion-dialogo/capacitacion-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CapacitacionBuscarComponent } from './page/capacitacion/capacitacion-buscar/capacitacion-buscar.component';
 
 
 @NgModule({
@@ -71,6 +72,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     EmpresarioCreaditaComponent,
     TipopagoCreaeditaComponent,
     CapacitacionDialogoComponent,
+    CapacitacionBuscarComponent,
   ],
   imports: [
     BrowserModule,
