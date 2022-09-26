@@ -10,16 +10,16 @@ export class TipopagoService {
   url: string = "http://localhost:5000/tipopago"
   private listaCambio = new Subject <TipoPago[]>()
   constructor(private http: HttpClient) { }
-  listar() {
+  listarTipopago() {
     return this.http.get<TipoPago[]>(this.url);
   }
-  insertar(tipopago: TipoPago){
+  insertarTipopago(tipopago: TipoPago){
     return this.http.post(this.url,tipopago);
   }
-  setLista(listaNueva: TipoPago[]){
+  setListaTipopago(listaNueva: TipoPago[]){
     this.listaCambio.next(listaNueva);
   }
-  getLista(){
+  getListaTipopago(){
     return this.listaCambio.asObservable();
   }
 }

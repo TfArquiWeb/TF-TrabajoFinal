@@ -16,11 +16,11 @@ export class TipopagoCreaeditaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  aceptar(): void {
+  aceptarTipopago(): void {
     if (this.tipopago.TipodePago.length > 0) {
-      this.tipopagoservice.insertar(this.tipopago).subscribe(data => {
-        this.tipopagoservice.listar().subscribe(data => {
-          this.tipopagoservice.setLista(data);
+      this.tipopagoservice.insertarTipopago(this.tipopago).subscribe(data => {
+        this.tipopagoservice.listarTipopago().subscribe(data => {
+          this.tipopagoservice.setListaTipopago(data);
         })
       })
       this.router.navigate(['tipopago'])
