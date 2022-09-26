@@ -23,10 +23,4 @@ export class ExperienciaService {
   getListaExperiencia() {
     return this.listaCambio.asObservable();
   }
-  modificarExperiencia(experiencia: Experiencia) {
-    return this.http.put(this.url + "/" + experiencia.id, experiencia);
-  }
-  listarIdExperiencia(id: number) {
-    return this.http.get<Experiencia>(`${this.url}/${id}`);
-  }
 }

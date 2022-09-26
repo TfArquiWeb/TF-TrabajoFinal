@@ -36,11 +36,6 @@ import { ContadorCreaditaComponent } from './page/contador/contador-creadita/con
 import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
 import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/tipopago-creaedita.component';
-import { CapacitacionDialogoComponent } from './page/capacitacion/capacitacion-listar/capacitacion-dialogo/capacitacion-dialogo.component';
-import { MatDialogModule } from '@angular/material/dialog';
-import { CapacitacionBuscarComponent } from './page/capacitacion/capacitacion-buscar/capacitacion-buscar.component';
-import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creaedita/tipomoneda-creaedita.component';
-import { TipomonedaDialogoComponent } from './page/tipomoneda/tipomoneda-listar/tipomoneda-dialogo/tipomoneda-dialogo.component';
 
 
 @NgModule({
@@ -73,10 +68,6 @@ import { TipomonedaDialogoComponent } from './page/tipomoneda/tipomoneda-listar/
     UsuarioCreaditaComponent,
     EmpresarioCreaditaComponent,
     TipopagoCreaeditaComponent,
-    CapacitacionDialogoComponent,
-    CapacitacionBuscarComponent,
-    TipomonedaCreaeditaComponent,
-    TipomonedaDialogoComponent,
   ],
   imports: [
     BrowserModule,
@@ -88,8 +79,6 @@ import { TipomonedaDialogoComponent } from './page/tipomoneda/tipomoneda-listar/
     FormsModule,
     MatButtonModule,
     MatIconModule,
-    MatDialogModule
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
