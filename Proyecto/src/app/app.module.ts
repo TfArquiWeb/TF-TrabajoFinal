@@ -8,8 +8,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContadorComponent } from './page/contador/contador.component';
 import { ContadorListarComponent } from './page/contador/contador-listar/contador-listar.component';
-import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habilidad-buscar.component'
-import { ExperienciaBuscarComponent } from './page/experiencia/experiencia-buscar/experiencia-buscar.component'
 import { TipopagoComponent } from './page/tipopago/tipopago.component';
 import { TipopagoListarComponent } from './page/tipopago/tipopago-listar/tipopago-listar.component';
 import { ContratoComponent } from './page/contrato/contrato.component';
@@ -38,12 +36,6 @@ import { ContadorCreaditaComponent } from './page/contador/contador-creadita/con
 import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
 import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/tipopago-creaedita.component';
-import { CapacitacionDialogoComponent } from './page/capacitacion/capacitacion-listar/capacitacion-dialogo/capacitacion-dialogo.component';
-import { MatDialogModule } from '@angular/material/dialog';
-import { CapacitacionBuscarComponent } from './page/capacitacion/capacitacion-buscar/capacitacion-buscar.component';
-import { UsuarioDialogoComponent } from './page/usuario/usuario-listar/usuario-dialogo/usuario-dialogo.component';
-import { UsuarioBuscarComponent } from './page/usuario/usuario-buscar/usuario-buscar.component';
-import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
@@ -57,8 +49,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     TipopagoListarComponent,
     ContratoComponent,
     ExperienciaComponent,
-    ExperienciaBuscarComponent,
-    HabilidadBuscarComponent,
     HabilidadComponent,
     CapacitacionComponent,
     CapacitacionListarComponent,
@@ -78,24 +68,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     UsuarioCreaditaComponent,
     EmpresarioCreaditaComponent,
     TipopagoCreaeditaComponent,
-    CapacitacionDialogoComponent,
-    CapacitacionBuscarComponent,
-    UsuarioDialogoComponent,
-    UsuarioBuscarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule,
     MatTableModule,
+    BrowserAnimationsModule,
     MatInputModule,
     FormsModule,
     MatButtonModule,
     MatIconModule,
-    MatDialogModule,
-    MatFormFieldModule
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
