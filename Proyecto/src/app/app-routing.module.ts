@@ -47,7 +47,7 @@ const routes: Routes = [{
   ]
 }, {
   path: 'tipomoneda', component: TipomonedaComponent, children: [
-
+  { path:'insertar', Component:TipopagoCreaeditaComponent}
   ]
 }, {
   path: 'usuario', component: UsuarioComponent, children: [

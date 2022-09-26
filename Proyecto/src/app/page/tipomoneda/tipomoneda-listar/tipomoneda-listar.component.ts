@@ -14,7 +14,7 @@ export class TipomonedaListarComponent implements OnInit {
   constructor(private TMs: TipomonedaService) { }
 
   ngOnInit(): void {
-    this.TMs.listar().subscribe(data => {
+    this.TMs.listarMoneda().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     }) 
   }
