@@ -14,10 +14,10 @@ export class ContratoListarComponent implements OnInit {
   constructor(private Cs: ContratoService) { }
 
   ngOnInit(): void {
-    this.Cs.listar().subscribe(data => {
+    this.Cs.listarContrato().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     })
-    this.Cs.getLista().subscribe(data=>{
+    this.Cs.getListaContrato().subscribe(data=>{
       this.dataSource = new MatTableDataSource(data);
     })
   }

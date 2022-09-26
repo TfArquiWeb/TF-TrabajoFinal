@@ -21,9 +21,9 @@ export class ContratoCreaditaComponent implements OnInit {
     if(this.contrato.fechainiContrato.length > 0 && this.contrato.fechafinContrato.length > 0 &&
       this.contrato.montoContrato > 0 && this.contrato.Usuario && this.contrato.TipoMoneda && this.contrato.TipoPago &&
       this.contrato.CurriculumVitae){
-        this.contratoService.insertar(this.contrato).subscribe(data=>{
-          this.contratoService.listar().subscribe(data=>{
-            this.contratoService.setLista(data);
+        this.contratoService.insertarContrato(this.contrato).subscribe(data=>{
+          this.contratoService.listarContrato().subscribe(data=>{
+            this.contratoService.setListaContrato(data);
           })
         })
         this.router.navigate(['contrato']);
