@@ -23,6 +23,9 @@ export class HabilidadListarComponent implements OnInit {
     this.Hs.getListaHabilidad().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     });
+    this.Hs.getConfirmaEliminacionHabilidad().subscribe(data => {
+      data == true ? this.eliminarHabilidad(this.idMayor) : false;
+    });
   }
   confirmarHabilidad(id: number) {
     this.idMayor = id;
