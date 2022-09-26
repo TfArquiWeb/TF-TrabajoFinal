@@ -288,7 +288,7 @@ module.exports = function () {
                 id: 1,
                 descExperiencia: "Trabaje 5 años en macdonald",
             },
-            { 
+            {
                 id: 2,
                 descExperiencia: "Trabaje 8 años en constructoras",
             },

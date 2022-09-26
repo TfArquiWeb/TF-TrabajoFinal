@@ -22,5 +22,10 @@ export class TipopagoService {
   getListaTipopago(){
     return this.listaCambio.asObservable();
   }
+  modificarTipopago(tipopago: TipoPago) {
+    return this.http.put(this.url + "/" + tipopago.idTP, tipopago);
+  }
+  listarIdTipopago(idTP: number) {
+    return this.http.get<TipoPago>(`${this.url}/${idTP}`);
+  }
 }
- 

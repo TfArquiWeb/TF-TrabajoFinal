@@ -10,13 +10,16 @@ import { TipoPago } from 'src/app/model/tipopago';
 })
 export class TipopagoListarComponent implements OnInit {
   dataSource: MatTableDataSource<TipoPago> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'tipodepago'];
+  displayedColumns: string[] = ['id', 'tipodepago', 'editarTP'];
   constructor(private TPs: TipopagoService) { }
 
   ngOnInit(): void {
     this.TPs.listarTipopago().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
-    }) 
+    })
+    this.TPs.getListaTipopago().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    });
   }
 
 }
