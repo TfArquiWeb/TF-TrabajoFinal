@@ -20,10 +20,10 @@ export class TipomonedaCreaeditaComponent implements OnInit {
       if(this.tipomoneda.TipodeMoneda.length>0){
       this.tPs.insertarTipoMoneda(this.tipomoneda).subscribe(data=>{
         this.tPs.listarMoneda().subscribe(data=>{
-          this.tPs.setLista(data);
+          this.tPs.setListaTipoMoneda(data);
         })
       })
-      this.router.navegation(['tipomoneda']);
+      this.router.navigate(['tipomoneda']);
     }else{
       this.mensaje="Complete los valores requeridos";
     }

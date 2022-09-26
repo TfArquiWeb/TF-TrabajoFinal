@@ -14,7 +14,7 @@ export class TipopagoListarComponent implements OnInit {
   constructor(private TPs: TipopagoService) { }
 
   ngOnInit(): void {
-    this.TPs.listar().subscribe(data => {
+    this.TPs.listarTipopago().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     }) 
   }

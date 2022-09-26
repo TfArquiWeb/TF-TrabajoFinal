@@ -1,3 +1,4 @@
+import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creaedita/tipomoneda-creaedita.component';
 import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { CurriculumComponent } from './page/curriculum/curriculum.component';
 import { ContratoComponent } from './page/contrato/contrato.component';
@@ -47,7 +48,7 @@ const routes: Routes = [{
   ]
 }, {
   path: 'tipomoneda', component: TipomonedaComponent, children: [
-  { path:'insertar', component:TipopagoCreaeditaComponent}
+  { path:'insertar', component:TipomonedaCreaeditaComponent}
   ]
 }, {
   path: 'usuario', component: UsuarioComponent, children: [

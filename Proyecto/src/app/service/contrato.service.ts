@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 })
 export class ContratoService {
   url: string = "http://localhost:5000/contrato"
-  private listacambio = new Subject<Contrato[]>
+  private listacambio = new Subject<Contrato[]>()
   constructor(private http: HttpClient) { }
   listarContrato() {
     return this.http.get<Contrato[]>(this.url);

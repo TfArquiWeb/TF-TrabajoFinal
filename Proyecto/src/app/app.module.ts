@@ -40,6 +40,7 @@ import { CapacitacionDialogoComponent } from './page/capacitacion/capacitacion-l
 import { MatDialogModule } from '@angular/material/dialog';
 import { CapacitacionBuscarComponent } from './page/capacitacion/capacitacion-buscar/capacitacion-buscar.component';
 import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creaedita/tipomoneda-creaedita.component';
+import { TipomonedaDialogoComponent } from './page/tipomoneda/tipomoneda-listar/tipomoneda-dialogo/tipomoneda-dialogo.component';
 
 
 @NgModule({
@@ -75,6 +76,7 @@ import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creae
     CapacitacionDialogoComponent,
     CapacitacionBuscarComponent,
     TipomonedaCreaeditaComponent,
+    TipomonedaDialogoComponent,
   ],
   imports: [
     BrowserModule,

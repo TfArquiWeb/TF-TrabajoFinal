@@ -9,6 +9,7 @@ import { TipoMoneda } from '../model/tipomoneda';
 export class TipomonedaService {
   url: string = "http://localhost:5000/tipomoneda"
   private listacambio = new Subject<TipoMoneda[]>()
+  private confirmaEliminacionTipoMoneda = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
   listarMoneda() {
     return this.http.get<TipoMoneda[]>(this.url);
@@ -16,10 +17,25 @@ export class TipomonedaService {
   insertarTipoMoneda(tipoMoneda:TipoMoneda){
     return this.http.post(this.url,tipoMoneda);
   }
-  setLista(listanueva:TipoMoneda[]){ 
+  setListaTipoMoneda(listanueva:TipoMoneda[]){ 
     this.listacambio.next(listanueva);
   }
-  getLista(){ 
+  getListaTipoMoneda(){ 
     return this.listacambio.asObservable();
+  }
+  modificarTipoMoneda(tipomoneda: TipoMoneda) {
+    return this.http.put(this.url + "/" + tipomoneda.idTM, tipomoneda);
+  }
+  listarIdTipoMoneda(id: number) {
+    return this.http.get<TipoMoneda>(`${this.url}/${id}`);
+  }
+  eliminarTipoMoneda(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacionTipoMoneda() {
+    return this.confirmaEliminacionTipoMoneda.asObservable();
+  }
+  setConfirmaEliminacionTipoMoneda(estado: Boolean) {
+    this.confirmaEliminacionTipoMoneda.next(estado);
   }
 }

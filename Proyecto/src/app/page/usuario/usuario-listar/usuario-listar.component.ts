@@ -21,5 +21,4 @@ export class UsuarioListarComponent implements OnInit {
        this.dataSource = new MatTableDataSource(data)
        });
   }
-
 }
