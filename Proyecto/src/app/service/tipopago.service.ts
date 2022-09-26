@@ -1,3 +1,4 @@
+import { Subject } from 'rxjs';
 import { TipoPago } from './../model/tipopago';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -7,9 +8,19 @@ import { Injectable } from '@angular/core';
 })
 export class TipopagoService {
   url: string = "http://localhost:5000/tipopago"
+  private listaCambio = new Subject <TipoPago[]>()
   constructor(private http: HttpClient) { }
-  listar() {
+  listarTipopago() {
     return this.http.get<TipoPago[]>(this.url);
+  }
+  insertarTipopago(tipopago: TipoPago){
+    return this.http.post(this.url,tipopago);
+  }
+  setListaTipopago(listaNueva: TipoPago[]){
+    this.listaCambio.next(listaNueva);
+  }
+  getListaTipopago(){
+    return this.listaCambio.asObservable();
   }
 }
  

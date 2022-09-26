@@ -1,3 +1,4 @@
+import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { CurriculumComponent } from './page/curriculum/curriculum.component';
 import { ContratoComponent } from './page/contrato/contrato.component';
 import { UsuarioComponent } from './page/usuario/usuario.component';
@@ -13,6 +14,7 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HabilidadCreaeditaComponent } from './page/habilidad/habilidad-creaedita/habilidad-creaedita.component';
 import { ExperienciaCreaeditaComponent } from './page/experiencia/experiencia-creaedita/experiencia-creaedita.component';
+import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/tipopago-creaedita.component';
 const routes: Routes = [{
   path: 'empresario', component: EmpresarioComponent, children: [
     { path: 'insertar', component: HabilidadCreaeditaComponent }
@@ -23,20 +25,24 @@ const routes: Routes = [{
   ]
 }, {
   path: 'tipopago', component: TipopagoComponent, children: [
-
+    {path: 'insertar', component: TipopagoCreaeditaComponent}
   ]
 }, {
   path: 'capacitacion', component: CapacitacionComponent, children: [
-    { path: 'insertar', component: CapacitacionCreaeditaComponent }
+    { path: 'insertar', component: CapacitacionCreaeditaComponent },
+    { path: 'edicion/:id', component: CapacitacionCreaeditaComponent }
+    
   ]
 }, {
   path: 'habilidad', component: HabilidadComponent, children: [
-    { path: 'insertar', component: HabilidadCreaeditaComponent }
+    { path: 'insertar', component: HabilidadCreaeditaComponent },
+    { path: 'edicion/:id', component: HabilidadCreaeditaComponent }
 
   ]
 }, {
   path: 'experiencia', component: ExperienciaComponent, children: [
-    { path: 'insertar', component: ExperienciaCreaeditaComponent }
+    { path: 'insertar', component: ExperienciaCreaeditaComponent },
+    { path: 'edicion/:id', component: ExperienciaCreaeditaComponent }
 
   ]
 }, {
@@ -45,7 +51,8 @@ const routes: Routes = [{
   ]
 }, {
   path: 'usuario', component: UsuarioComponent, children: [
-    { path: 'insertar', component: ExperienciaCreaeditaComponent }
+    { path: 'insertar', component: UsuarioCreaditaComponent },
+    { path: 'edicion/:id', component: UsuarioCreaditaComponent }
   ]
 }, {
   path: 'contrato', component: ContratoComponent, children: [

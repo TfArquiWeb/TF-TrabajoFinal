@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Registre nuevo tipo de pago</h1>
+    <mat-form-field class="example-full-width">
+        <mat-label>IdPago</mat-label>
+        <input matInput placeholder="id" [(ngModel)]="tipopago.idTP">
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Tipo pago</mat-label>
+        <input matInput required placeholder="tipodepago" [(ngModel)]="tipopago.TipodePago">
+
+    </mat-form-field>
+
+    <br>
+    <button mat-raised-button color="primary" (click)="aceptarTipopago()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/tipopago">Cancelar</button>
+    <p>{{mensaje}}</p>
+</div>
