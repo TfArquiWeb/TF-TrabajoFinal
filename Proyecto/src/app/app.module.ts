@@ -39,6 +39,8 @@ import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/t
 import { CapacitacionDialogoComponent } from './page/capacitacion/capacitacion-listar/capacitacion-dialogo/capacitacion-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CapacitacionBuscarComponent } from './page/capacitacion/capacitacion-buscar/capacitacion-buscar.component';
+import { ExperienciaDialogoComponent } from './page/experiencia/experiencia-listar/experiencia-dialogo/experiencia-dialogo.component';
+import { ExperienciaBuscarComponent } from './page/experiencia/experiencia-buscar/experiencia-buscar.component';
 
 
 @NgModule({
@@ -73,6 +75,8 @@ import { CapacitacionBuscarComponent } from './page/capacitacion/capacitacion-bu
     TipopagoCreaeditaComponent,
     CapacitacionDialogoComponent,
     CapacitacionBuscarComponent,
+    ExperienciaDialogoComponent,
+    ExperienciaBuscarComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experiencia-creaedita.component.css']
 })
 export class ExperienciaCreaeditaComponent implements OnInit {
-  experiencia:Experiencia=new Experiencia();
-  mensaje: string="";
+  experiencia: Experiencia = new Experiencia();
+  mensaje: string = "";
   edicion: boolean = false;
   id: number = 0;
   constructor(private experienciaService: ExperienciaService,
@@ -31,7 +31,6 @@ export class ExperienciaCreaeditaComponent implements OnInit {
           })
         })
       } else {
-
         this.experienciaService.insertarExperiencia(this.experiencia).subscribe(data => {
           this.experienciaService.listarExperiencia().subscribe(data => {
             this.experienciaService.setListaExperiencia(data);
