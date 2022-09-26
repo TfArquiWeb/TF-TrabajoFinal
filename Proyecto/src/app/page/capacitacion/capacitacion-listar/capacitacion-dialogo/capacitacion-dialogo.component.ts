@@ -16,4 +16,4 @@ export class CapacitacionDialogoComponent implements OnInit {
     this.capacitacionService.setConfirmaEliminacionCapacitacion(estado);
     this.dialogRef.close();
   }
-}
+} 
