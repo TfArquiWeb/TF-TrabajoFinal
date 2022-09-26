@@ -41,6 +41,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CapacitacionBuscarComponent } from './page/capacitacion/capacitacion-buscar/capacitacion-buscar.component';
 import { ExperienciaDialogoComponent } from './page/experiencia/experiencia-listar/experiencia-dialogo/experiencia-dialogo.component';
 import { ExperienciaBuscarComponent } from './page/experiencia/experiencia-buscar/experiencia-buscar.component';
+import { HabilidadDialogoComponent } from './page/habilidad/habilidad-listar/habilidad-dialogo/habilidad-dialogo.component';
+import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habilidad-buscar.component';
 
 
 @NgModule({
@@ -77,6 +79,9 @@ import { ExperienciaBuscarComponent } from './page/experiencia/experiencia-busca
     CapacitacionBuscarComponent,
     ExperienciaDialogoComponent,
     ExperienciaBuscarComponent,
+    HabilidadDialogoComponent,
+    HabilidadBuscarComponent,
+
   ],
   imports: [
     BrowserModule,
