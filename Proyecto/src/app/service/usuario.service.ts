@@ -1,4 +1,4 @@
-import { Subject } from 'rxjs';
+import { EMPTY, Subject } from 'rxjs';
 import { Usuario } from './../model/usuario';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -9,6 +9,7 @@ import { Injectable } from '@angular/core';
 export class UsuarioService {
   url: string = "http://localhost:5000/usuario"
   private listaCambio =new Subject<Usuario[]>()
+  private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
   listarUsuario() {
     return this.http.get<Usuario[]>(this.url);
@@ -27,5 +28,21 @@ export class UsuarioService {
   }
   listarIdUsuario(id:number){
     return this.http.get<Usuario>(`${this.url}/${id}`);
+  }
+  eliminarUsuario(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacionUsuario() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacionUsuario(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
+  }
+  buscarUsuario(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<Usuario[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
 }
