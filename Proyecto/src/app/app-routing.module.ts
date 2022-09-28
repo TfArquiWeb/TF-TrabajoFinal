@@ -25,14 +25,13 @@ const routes: Routes = [{
   ]
 }, {
   path: 'tipopago', component: TipopagoComponent, children: [
-    {path: 'insertar', component: TipopagoCreaeditaComponent},
-    { path: 'edicion/:id', component: TipopagoCreaeditaComponent }
+    {path: 'nuevo', component: TipopagoCreaeditaComponent}
   ]
 }, {
   path: 'capacitacion', component: CapacitacionComponent, children: [
     { path: 'insertar', component: CapacitacionCreaeditaComponent },
     { path: 'edicion/:id', component: CapacitacionCreaeditaComponent }
-
+    
   ]
 }, {
   path: 'habilidad', component: HabilidadComponent, children: [
@@ -63,7 +62,7 @@ const routes: Routes = [{
   path: 'curriculum', component: CurriculumComponent, children: [
 
   ]
-},
+}, 
 ];
 
 @NgModule({

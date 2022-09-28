@@ -36,11 +36,6 @@ import { ContadorCreaditaComponent } from './page/contador/contador-creadita/con
 import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
 import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/tipopago-creaedita.component';
-import { CapacitacionDialogoComponent } from './page/capacitacion/capacitacion-listar/capacitacion-dialogo/capacitacion-dialogo.component';
-import { MatDialogModule } from '@angular/material/dialog';
-import { CapacitacionBuscarComponent } from './page/capacitacion/capacitacion-buscar/capacitacion-buscar.component';
-import { HabilidadDialogoComponent } from './page/habilidad/habilidad-listar/habilidad-dialogo/habilidad-dialogo.component';
-import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habilidad-buscar.component';
 
 
 @NgModule({
@@ -73,23 +68,17 @@ import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habi
     UsuarioCreaditaComponent,
     EmpresarioCreaditaComponent,
     TipopagoCreaeditaComponent,
-    CapacitacionDialogoComponent,
-    CapacitacionBuscarComponent,
-    HabilidadDialogoComponent,
-    HabilidadBuscarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule,
     MatTableModule,
+    BrowserAnimationsModule,
     MatInputModule,
     FormsModule,
     MatButtonModule,
     MatIconModule,
-    MatDialogModule
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
