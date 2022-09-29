@@ -10,13 +10,16 @@ import { UsuarioService } from 'src/app/service/usuario.service';
 })
 export class UsuarioListarComponent implements OnInit {
   dataSource: MatTableDataSource<Usuario> = new MatTableDataSource();
-  displayedColumns: string[] = ['id','dni','nombre','apellido','numero','correo','foto'];
+  displayedColumns: string[] = ['idUsuario', 'dniUsuario', 'nombreUsuario', 'apellidoUsuario', 'numeroUsuario', 'correoUsuario', 'fotoUsuario', 'acciones'];
   constructor(private Us: UsuarioService) { }
 
   ngOnInit(): void {
-    this.Us.listar().subscribe(data => {
+    this.Us.listarUsuario().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     })
+    this.Us.getListaUsuario().subscribe(data => {
+       this.dataSource = new MatTableDataSource(data)
+       });
   }
 
 }

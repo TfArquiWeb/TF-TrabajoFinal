@@ -2,7 +2,7 @@ module.exports = function () {
     var data = {
         Usuario: [
             {
-                idUsuario: 1,
+                id: 1,
                 dniUsuario: 79824316,
                 nombreUsuario: "Luisa",
                 apellidoUsuario: "Ramos",
@@ -12,7 +12,7 @@ module.exports = function () {
                 roleUsuario: "empresario",
             },
             {
-                idUsuario: 2,
+                id: 2,
                 dniUsuario: 77833749,
                 nombreUsuario: "Abel",
                 apellidoUsuario: "Gutierrez",
@@ -22,7 +22,7 @@ module.exports = function () {
                 roleUsuario: "empresario",
             },
             {
-                idUsuario: 3,
+                id: 3,
                 dniUsuario: 79436328,
                 nombreUsuario: "Rodrigo",
                 apellidoUsuario: "Guerrero",
@@ -32,7 +32,7 @@ module.exports = function () {
                 roleUsuario: "empresario",
             },
             {
-                idUsuario: 4,
+                id: 4,
                 dniUsuario: 41542195,
                 nombreUsuario: "Monica",
                 apellidoUsuario: "Zapata",
@@ -42,7 +42,7 @@ module.exports = function () {
                 roleUsuario: "contador",
             },
             {
-                idUsuario: 5,
+                id: 5,
                 dniUsuario: 71529412,
                 nombreUsuario: "Miguel",
                 apellidoUsuario: "Lopez",
@@ -52,7 +52,7 @@ module.exports = function () {
                 roleUsuario: "contador",
             },
             {
-                idUsuario: 6,
+                id: 6,
                 dniUsuario: 48839718,
                 nombreUsuario: "Diego",
                 apellidoUsuario: "Salas",
@@ -285,44 +285,44 @@ module.exports = function () {
         ],
         Experiencia: [
             {
-                idExperiencia: 1,
+                id: 1,
                 descExperiencia: "Trabaje 5 años en macdonald",
             },
             { 
-                idExperiencia: 2,
+                id: 2,
                 descExperiencia: "Trabaje 8 años en constructoras",
             },
             {
-                idExperiencia: 3,
+                id: 3,
                 descExperiencia: "Trabaje 10 años en Al Fondo Hay Sitio",
             },
 
         ],
         Capacitacion: [
             {
-                idCapacitacion: 1,
+                id: 1,
                 descCapacitacion: "Me preparé en 2 universidades",
             },
             {
-                idCapacitacion: 2,
+                id: 2,
                 descCapacitacion: "Hice un postgrado",
             },
             {
-                idCapacitacion: 3,
+                id: 3,
                 descCapacitacion: "Tengo 2 maestrías",
             },
         ],
         Habilidad: [
             {
-                idHabilidad: 1,
+                id: 1,
                 descHabilidad: "Puedo trabajar muy rapido",
             },
             {
-                idHabilidad: 2,
+                id: 2,
                 descHabilidad: "Se tarbajar bajo presión",
             },
             {
-                idHabilidad: 3,
+                id: 3,
                 descHabilidad: "Soy experto en excel",
             },
         ],

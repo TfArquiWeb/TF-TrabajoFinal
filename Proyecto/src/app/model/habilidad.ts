@@ -1,4 +1,5 @@
 export class Habilidad {
-    idHabilidad: number = 0;
+    id: number = 0;
     descHabilidad: string = "";
+    
 }

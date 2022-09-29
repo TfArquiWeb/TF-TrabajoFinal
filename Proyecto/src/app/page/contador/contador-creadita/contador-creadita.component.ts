@@ -17,9 +17,9 @@ export class ContadorCreaditaComponent implements OnInit {
   }
   aceptar(): void {
     if (this.contador.descContador.length > 0 && this.contador.linkedinContador.length > 0) {
-      this.contadorservice.insertar(this.contador).subscribe(data => {
-        this.contadorservice.listar().subscribe(data => {
-          this.contadorservice.setlistacontador(data);
+      this.contadorservice.insertarContador(this.contador).subscribe(data => {
+        this.contadorservice.listarContador().subscribe(data => {
+          this.contadorservice.setlistaContador(data);
         })
       });
       this.router.navigate(['contador']);

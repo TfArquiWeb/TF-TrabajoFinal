@@ -8,12 +8,13 @@ import { Injectable } from '@angular/core';
 })
 export class UsuarioService {
   url: string = "http://localhost:5000/usuario"
-  private listaCambio =new Subject<Usuario[]>()
+  private listaCambio =new Subject<Usuario[]>()  
+  private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
-  listar() {
+  listarUsuario() {
     return this.http.get<Usuario[]>(this.url);
   }
-  insertar(usuario:Usuario){
+  insertarUsuario(usuario:Usuario){
     return this.http.post(this.url,usuario);
   }
   setListaUsuario(listanueva:Usuario[]){
@@ -21,5 +22,20 @@ export class UsuarioService {
   }
   getListaUsuario(){
     return this.listaCambio.asObservable();
+  }
+  modificarUsuario(usuario:Usuario){
+    return this.http.put(this.url+"/"+usuario.id,usuario)
+  }
+  listarIdUsuario(id:number){
+    return this.http.get<Usuario>(`${this.url}/${id}`);
+  }  
+  eliminarUsuario(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacionUsuario() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacionUsuario(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
   }
 }

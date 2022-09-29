@@ -10,7 +10,7 @@ import { CapacitacionService } from './../../../service/capacitacion.service';
 })
 export class CapacitacionListarComponent implements OnInit {
   dataSource: MatTableDataSource<Capacitacion> = new MatTableDataSource();
-  displayedColumns:string[]=['idCapacitacion','descCapacitacion']
+  displayedColumns:string[]=['idCapacitacion','descCapacitacion','acciones']
   constructor(private Cs: CapacitacionService) { }
 
   ngOnInit(): void {
