@@ -8,18 +8,18 @@ import { Injectable } from '@angular/core';
 })
 export class ContratoService {
   url: string = "http://localhost:5000/contrato"
-  private listacambio = new Subject<Contrato[]>
+  private listacambio = new Subject<Contrato[]>()
   constructor(private http: HttpClient) { }
-  listar() {
+  listarContrato() {
     return this.http.get<Contrato[]>(this.url);
   }
-  insertar(contrato: Contrato){
+  insertarContrato(contrato: Contrato){
     return this.http.post(this.url, contrato);
   }
-  setLista(listanueva: Contrato[]){
+  setListaContrato(listanueva: Contrato[]){
     this.listacambio.next(listanueva);
   }
-  getLista(){
+  getListaContrato(){
     return this.listacambio.asObservable();
   }
 }

@@ -1,0 +1,23 @@
+<p>tipomoneda-creaedita works!</p>
+<div class="container">
+
+  <h1>Tipomoneda</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>ID</mat-label>
+    <input matInput placeholder="id" [(ngModel)]="tipomoneda.idTM">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Tipo de moneda</mat-label>
+    <input matInput required placeholder="tipomoneda" [(ngModel)]="tipomoneda.TipodeMoneda">
+  </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/tipomoneda">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>
