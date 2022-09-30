@@ -9,7 +9,7 @@ import { CapacitacionService } from './../../../../service/capacitacion.service'
 })
 export class CapacitacionDialogoComponent implements OnInit {
 
-<
+
   constructor(private capacitacionService: CapacitacionService,
     private dialogRef: MatDialogRef<CapacitacionDialogoComponent>) { }
 
