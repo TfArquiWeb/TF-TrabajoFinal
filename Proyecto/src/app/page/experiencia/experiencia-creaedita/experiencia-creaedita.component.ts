@@ -1,4 +1,4 @@
-import { Router, Params, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { ExperienciaService } from './../../../service/experiencia.service';
 import { Experiencia } from './../../../model/experiencia';
 import { Component, OnInit } from '@angular/core';
@@ -9,46 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experiencia-creaedita.component.css']
 })
 export class ExperienciaCreaeditaComponent implements OnInit {
-  experiencia: Experiencia = new Experiencia();
-  mensaje: string = "";
-  edicion: boolean = false;
-  id: number = 0;
-  constructor(private experienciaService: ExperienciaService,
-    private router: Router, private route: ActivatedRoute) { }
-  ngOnInit(): void {
-    this.route.params.subscribe((data: Params) => {
-      this.id = data['id'];
-      this.edicion = data['id'] != null;
-      this.init();
-    });
-  }
+  experiencia:Experiencia=new Experiencia();
+  mensaje: string="";
+  constructor(private experienciaService: ExperienciaService,private router: Router) { }
+  ngOnInit(): void {}
   aceptarExperiencia(): void {
-    if (this.experiencia.descExperiencia.length > 0) {
-      if (this.edicion) {
-        this.experienciaService.modificarExperiencia(this.experiencia).subscribe(data => {
-          this.experienciaService.listarExperiencia().subscribe(data => {
-            this.experienciaService.setListaExperiencia(data);
-          })
+    if (this.experiencia.descExperiencia.length > 0 ) {
+      this.experienciaService.insertarExperiencia(this.experiencia).subscribe(dataexp => {
+        this.experienciaService.listarExperiencia().subscribe(dataexp => {
+          this.experienciaService.setListaExperiencia(dataexp);
         })
-      } else {
-        this.experienciaService.insertarExperiencia(this.experiencia).subscribe(data => {
-          this.experienciaService.listarExperiencia().subscribe(data => {
-            this.experienciaService.setListaExperiencia(data);
-          })
-        })
-      }
+      })
       this.router.navigate(['experiencia']);
     } else {
       this.mensaje = "Complete los valores requeridos";
     }
-  }
-  init() {
-    if (this.edicion) {
-      this.experienciaService.listarIdExperiencia(this.id).subscribe(data => {
-        this.experiencia = data;
-      })
-    }
-
   }
 
 }
