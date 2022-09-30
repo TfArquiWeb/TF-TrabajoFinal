@@ -9,7 +9,6 @@ import { Subject } from 'rxjs';
 export class HabilidadService {
   url: string = "http://localhost:5000/habilidad"
   private listaCambio = new Subject<Habilidad[]>()
-  private confirmaEliminacionHabilidad = new Subject<Boolean>()
   constructor(public http:HttpClient) { }
   listarHabilidad() {
     return this.http.get<Habilidad[]>(this.url);
@@ -29,14 +28,4 @@ export class HabilidadService {
   listarIdHabilidad(id: number) {
     return this.http.get<Habilidad>(`${this.url}/${id}`);
   }
-  eliminarHabilidad(id: number) {
-    return this.http.delete(this.url + "/" + id);
-  }
-  getConfirmaEliminacionHabilidad() {
-    return this.confirmaEliminacionHabilidad.asObservable();
-  }
-  setConfirmaEliminacionHabilidad(estado: Boolean) {
-    this.confirmaEliminacionHabilidad.next(estado);
-  }
 }
-

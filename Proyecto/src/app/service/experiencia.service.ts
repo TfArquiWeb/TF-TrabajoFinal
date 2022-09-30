@@ -10,8 +10,7 @@ import { Subject } from 'rxjs';
 export class ExperienciaService {
   url: string = "http://localhost:5000/experiencia"
   private listaCambio = new Subject<Experiencia[]>()
-  private confirmaEliminacionExperiencia = new Subject<Boolean>()
-  constructor(public http: HttpClient) { }
+  constructor(public http:HttpClient) { }
   listarExperiencia() {
     return this.http.get<Experiencia[]>(this.url);
   }
@@ -24,20 +23,4 @@ export class ExperienciaService {
   getListaExperiencia() {
     return this.listaCambio.asObservable();
   }
-  modificarExperiencia(experiencia: Experiencia) {
-    return this.http.put(this.url + "/" + experiencia.id, experiencia);
-  }
-  listarIdExperiencia(id: number) {
-    return this.http.get<Experiencia>(`${this.url}/${id}`);
-  }
-  eliminarExperiencia(id: number) { 
-    return this.http.delete(this.url + "/" + id);
-  }
-  getConfirmaEliminacionExperiencia() {
-    return this.confirmaEliminacionExperiencia.asObservable();
-  }
-  setConfirmaEliminacionExperiencia(estado: Boolean) {
-    this.confirmaEliminacionExperiencia.next(estado);
-  }
-
 }
