@@ -44,7 +44,10 @@ import { CapacitacionBuscarComponent } from './page/capacitacion/capacitacion-bu
 import { UsuarioDialogoComponent } from './page/usuario/usuario-listar/usuario-dialogo/usuario-dialogo.component';
 import { UsuarioBuscarComponent } from './page/usuario/usuario-buscar/usuario-buscar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { SidenavComponent } from './page/sidenav/sidenav.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -82,6 +85,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     CapacitacionBuscarComponent,
     UsuarioDialogoComponent,
     UsuarioBuscarComponent,
+    SidenavComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -94,7 +99,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSidenavModule,
+    MatListModule,
+    MatToolbarModule,
     
   ],
   providers: [],
