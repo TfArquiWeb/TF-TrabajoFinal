@@ -37,16 +37,18 @@ import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuari
 import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
 import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/tipopago-creaedita.component';
 
-import { CapacitacionDialogoComponent } from './page/capacitacion/capacitacion-listar/capacitacion-dialogo/capacitacion-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { CapacitacionBuscarComponent } from './page/capacitacion/capacitacion-buscar/capacitacion-buscar.component';
-import { UsuarioDialogoComponent } from './page/usuario/usuario-listar/usuario-dialogo/usuario-dialogo.component';
-import { UsuarioBuscarComponent } from './page/usuario/usuario-buscar/usuario-buscar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { SidenavComponent } from './page/sidenav/sidenav.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { CapacitacionBuscarComponent } from './page/capacitacion/capacitacion-buscar/capacitacion-buscar.component';
+import { CapacitacionDialogoComponent } from './page/capacitacion/capacitacion-listar/capacitacion-dialogo/capacitacion-dialogo.component';
+import { ExperienciaDialogoComponent } from './page/experiencia/experiencia-listar/experiencia-dialogo/experiencia-dialogo.component';
+import { ExperienciaBuscarComponent } from './page/experiencia/experiencia-buscar/experiencia-buscar.component';
+import { HabilidadDialogoComponent } from './page/habilidad/habilidad-listar/habilidad-dialogo/habilidad-dialogo.component';
+import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habilidad-buscar.component';
 
 
 
@@ -81,12 +83,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     UsuarioCreaditaComponent,
     EmpresarioCreaditaComponent,
     TipopagoCreaeditaComponent,
-
-    CapacitacionDialogoComponent,
-    CapacitacionBuscarComponent,
-    UsuarioDialogoComponent,
-    UsuarioBuscarComponent,
     SidenavComponent,
+    CapacitacionBuscarComponent,
+    CapacitacionDialogoComponent,
+    ExperienciaDialogoComponent,
+    ExperienciaBuscarComponent,
+    HabilidadDialogoComponent,
+    HabilidadBuscarComponent,
     
   ],
   imports: [
