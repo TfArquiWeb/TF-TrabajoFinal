@@ -17,17 +17,17 @@
       <!-- Name Column -->
       <ng-container matColumnDef="habilidad">
         <th mat-header-cell *matHeaderCellDef> Habilidad </th>
-        <td mat-cell *matCellDef="let element"> {{element.Habilidad.id}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.Habilidad.descHabilidad}} </td>
       </ng-container>
   
       <!-- Weight Column -->
       <ng-container matColumnDef="capacitacion">
         <th mat-header-cell *matHeaderCellDef> Capacitacion </th>
-        <td mat-cell *matCellDef="let element"> {{element.Capacitacion.id}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.Capacitacion.descCapacitacion}} </td>
       </ng-container>
       <ng-container matColumnDef="experiencia">
         <th mat-header-cell *matHeaderCellDef> Experiencia </th>
-        <td mat-cell *matCellDef="let element"> {{element.Experiencia.id}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.Experiencia.descExperiencia}} </td>
       </ng-container>
   
   
@@ -42,3 +42,4 @@
         <mat-icon>plus_one</mat-icon>
       </button>
     </div>
+  </div>
