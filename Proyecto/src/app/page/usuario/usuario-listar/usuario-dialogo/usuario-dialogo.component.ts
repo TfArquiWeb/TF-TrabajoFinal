@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from './../../../../service/usuario.service';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-usuario-dialogo',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuarioDialogoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private usuarioService: UsuarioService,
+    private dialogRef: MatDialogRef<UsuarioDialogoComponent>) { }
 
   ngOnInit(): void {
   }
-
-}
+  confirmarUsuario(estado: boolean) {
+    this.usuarioService.setConfirmaEliminacionUsuario(estado);
+    this.dialogRef.close();
+  }
+} 

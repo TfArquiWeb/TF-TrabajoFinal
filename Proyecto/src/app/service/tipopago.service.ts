@@ -11,31 +11,31 @@ export class TipopagoService {
   private listaCambio = new Subject <TipoPago[]>()
   private confirmaEliminacionTipopago = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
-  listarTipopago() {
+  listarTipoPago() {
     return this.http.get<TipoPago[]>(this.url);
   }
-  insertarTipopago(tipopago: TipoPago){
+  insertarTipoPago(tipopago: TipoPago){
     return this.http.post(this.url,tipopago);
   }
-  setListaTipopago(listaNueva: TipoPago[]){
+  setListaTipoPago(listaNueva: TipoPago[]){
     this.listaCambio.next(listaNueva);
   }
-  getListaTipopago(){
+  getListaTipoPago(){
     return this.listaCambio.asObservable();
   }
-  modificarTipopago(tipopago: TipoPago) {
+  modificarTipoPago(tipopago: TipoPago) {
     return this.http.put(this.url + "/" + tipopago.id, tipopago);
   }
-  listarIdTipopago(id: number) {
+  listarIdTipoPago(id: number) {
     return this.http.get<TipoPago>(`${this.url}/${id}`);
   }
-  eliminarTipopago(id: number) {
+  eliminarTipoPago(id: number) {
     return this.http.delete(this.url + "/" + id);
   }
-  getConfirmaEliminacionTipopago() {
+  getConfirmaEliminacionTipoPago() {
     return this.confirmaEliminacionTipopago.asObservable();
   }
-  setConfirmaEliminacionTipopago(estado: Boolean) {
+  setConfirmaEliminacionTipoPago(estado: Boolean) {
     this.confirmaEliminacionTipopago.next(estado);
   }
 }

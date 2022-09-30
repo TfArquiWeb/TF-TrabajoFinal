@@ -161,39 +161,39 @@ module.exports = function () {
         ],
         CurriculumVitae: [
             {
-                idCurriculum: 1,
+                id: 1,
                 Habilidad: {
-                    idHabilidad: 1,
+                    id: 1,
                 },
                 Capacitacion: {
-                    idCapacitacion: 1,
+                    id: 1,
                 },
                 Experiencia: {
-                    idExperiencia: 1,
+                    id: 1,
                 },
             },
             {
-                idCurriculum: 2,
+                id: 2,
                 Habilidad: {
-                    idHabilidad: 2,
+                    id: 2,
                 },
                 Capacitacion: {
-                    idCapacitacion: 2,
+                    id: 2,
                 },
                 Experiencia: {
-                    idExperiencia: 2,
+                    id: 2,
                 },
             },
             {
-                idCurriculum: 3,
+                id: 3,
                 Habilidad: {
-                    idHabilidad: 3,
+                    id: 3,
                 },
                 Capacitacion: {
-                    idCapacitacion: 3,
+                    id: 3,
                 },
                 Experiencia: {
-                    idExperiencia: 3,
+                    id: 3,
                 },
             },
 
@@ -206,13 +206,13 @@ module.exports = function () {
                 vigenciaContrato: true,
                 montoContrato: 8500,
                 Usuario: {
-                    idUsuario: 2,
+                    id: 2,
                 },
                 TipoMoneda: {
-                    idTM: 1,
+                    id: 1,
                 },
                 TipoPago: {
-                    idTP: 1,
+                    id: 1,
                 },
             },
             {
@@ -222,10 +222,10 @@ module.exports = function () {
                 vigenciaContrato: true,
                 montoContrato: 4300,
                 Usuario: {
-                    idUsuario: 2,
+                    id: 2,
                 },
                 TipoMoneda: {
-                    idTM: 2,
+                    id: 2,
                 },
                 TipoPago: {
                     id: 2,
@@ -238,13 +238,13 @@ module.exports = function () {
                 vigenciaContrato: true,
                 montoContrato: 9150,
                 Usuario: {
-                    idUsuario: 3,
+                    id: 3,
                 },
                 TipoMoneda: {
-                    idTM: 3,
+                    id: 3,
                 },
                 TipoPago: {
-                    idTP: 3,
+                    id: 3,
                 },
             },
 
