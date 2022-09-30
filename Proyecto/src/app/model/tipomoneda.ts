@@ -1,4 +1,4 @@
 export class TipoMoneda {
     id: number = 0;
-    TipodeMoneda: string = "";
+    Tipo: string = "";
 }

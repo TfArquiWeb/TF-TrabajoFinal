@@ -271,15 +271,15 @@ module.exports = function () {
         TipoMoneda: [
             {
                 id: 1,
-                TipodeMoneda: "Soles",
+                Tipo: "Soles",
             },
             {
                 id: 2,
-                TipodeMoneda: "Dolares",
+                Tipo: "Dolares",
             },
             {
                 id: 3,
-                TipodeMoneda: "Pesos Mexicanos",
+                Tipo: "Pesos Mexicanos",
             },
 
         ],

@@ -22,11 +22,8 @@ import { CapacitacionCreaeditaComponent } from './page/capacitacion/capacitacion
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
 import { UsuarioComponent } from './page/usuario/usuario.component';
 import { UsuarioListarComponent } from './page/usuario/usuario-listar/usuario-listar.component';
-import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
-import { TipomonedaListarComponent } from './page/tipomoneda/tipomoneda-listar/tipomoneda-listar.component';
 import { ContratoListarComponent } from './page/contrato/contrato-listar/contrato-listar.component';
 import { ExperienciaCreaeditaComponent } from './page/experiencia/experiencia-creaedita/experiencia-creaedita.component';
 import { HabilidadCreaeditaComponent } from './page/habilidad/habilidad-creaedita/habilidad-creaedita.component';
@@ -48,8 +45,8 @@ import { ExperienciaDialogoComponent } from './page/experiencia/experiencia-list
 import { ExperienciaBuscarComponent } from './page/experiencia/experiencia-buscar/experiencia-buscar.component';
 import { HabilidadDialogoComponent } from './page/habilidad/habilidad-listar/habilidad-dialogo/habilidad-dialogo.component';
 import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habilidad-buscar.component';
-
-
+import { FormsModule } from '@angular/forms';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 @NgModule({
@@ -71,8 +68,6 @@ import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habi
     CapacitacionCreaeditaComponent,
     UsuarioComponent,
     UsuarioListarComponent,
-    TipomonedaComponent,
-    TipomonedaListarComponent,
     ContratoListarComponent,
     ExperienciaCreaeditaComponent,
     HabilidadCreaeditaComponent,
@@ -97,18 +92,20 @@ import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habi
     HttpClientModule,
     MatTableModule,
     BrowserAnimationsModule,
-    MatInputModule,
-    FormsModule,
-    MatButtonModule,
     MatIconModule,
     MatDialogModule,
-    MatFormFieldModule,
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
+    FormsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
