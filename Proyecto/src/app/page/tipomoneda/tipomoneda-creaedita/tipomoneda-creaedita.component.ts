@@ -49,5 +49,6 @@ export class TipomonedaCreaeditaComponent implements OnInit {
         this.tipomoneda = data;
       })
     }
+
   }
 }
