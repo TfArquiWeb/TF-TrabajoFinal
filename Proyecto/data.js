@@ -270,15 +270,15 @@ module.exports = function () {
         ],
         TipoMoneda: [
             {
-                idTM: 1,
+                id: 1,
                 TipodeMoneda: "Soles",
             },
             {
-                idTM: 2,
+                id: 2,
                 TipodeMoneda: "Dolares",
             },
             {
-                idTM: 3,
+                id: 3,
                 TipodeMoneda: "Pesos Mexicanos",
             },
 
