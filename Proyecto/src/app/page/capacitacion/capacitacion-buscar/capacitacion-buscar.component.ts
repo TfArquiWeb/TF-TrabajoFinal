@@ -1,3 +1,4 @@
+
 import { Capacitacion } from './../../../model/capacitacion';
 import { CapacitacionService } from './../../../service/capacitacion.service';
 import { Component, OnInit } from '@angular/core';
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./capacitacion-buscar.component.css']
 })
 export class CapacitacionBuscarComponent implements OnInit {
+
   textoBuscar: string = ""
   constructor(private capacitacionService: CapacitacionService) { }
 
