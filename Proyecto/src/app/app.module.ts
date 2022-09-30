@@ -46,6 +46,8 @@ import { SidenavComponent } from './page/sidenav/sidenav.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { TipopagoBuscarComponent } from './page/tipopago/tipopago-buscar/tipopago-buscar.component';
+import { TipopagoDialogoComponent } from './page/tipopago/tipopago-listar/tipopago-dialogo/tipopago-dialogo.component';
 
 
 
@@ -86,6 +88,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     UsuarioDialogoComponent,
     UsuarioBuscarComponent,
     SidenavComponent,
+    TipopagoBuscarComponent,
+    TipopagoDialogoComponent,
     
   ],
   imports: [
