@@ -26,7 +26,7 @@ const routes: Routes = [{
   ]
 }, {
   path: 'tipopago', component: TipopagoComponent, children: [
-    {path: 'nuevo', component: TipopagoCreaeditaComponent},
+    {path: 'insertar', component: TipopagoCreaeditaComponent},
     { path: 'edicion/:id', component: TipopagoCreaeditaComponent }
   ]
 }, {
@@ -59,11 +59,10 @@ const routes: Routes = [{
   ]
 }, {
   path: 'curriculum', component: CurriculumComponent, children: [
-
   ]
 },{
   path: 'tipomoneda', component: TipomonedaComponent, children: [
-    {path: 'nuevo', component: TipomonedaCreaeditaComponent},
+    {path: 'insertar', component: TipomonedaCreaeditaComponent},
     { path: 'edicion/:id', component: TipomonedaCreaeditaComponent }
   ]
 },

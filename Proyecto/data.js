@@ -159,7 +159,7 @@ module.exports = function () {
                 }
             },
         ],
-        CurriculumVitae: [
+        Curriculum: [
             {
                 id: 1,
                 Habilidad: {
