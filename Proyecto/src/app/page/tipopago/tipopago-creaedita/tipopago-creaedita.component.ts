@@ -24,11 +24,15 @@ export class TipopagoCreaeditaComponent implements OnInit {
   }
   aceptarTipopago(): void {
     if (this.tipopago.TipodePago.length > 0) {
+
       if (this.edicion) {
         this.tipopagoservice.modificarTipopago(this.tipopago).subscribe(data =>{
           this.tipopagoservice.listarTipopago().subscribe(data =>{
             this.tipopagoservice.setListaTipopago(data);
           })
+      this.tipopagoservice.insertar(this.tipopago).subscribe(data => {
+        this.tipopagoservice.listarTipoPago().subscribe(data => {
+          this.tipopagoservice.setLista(data);
         })
       } else {
         this.tipopagoservice.insertarTipopago(this.tipopago).subscribe(data => {

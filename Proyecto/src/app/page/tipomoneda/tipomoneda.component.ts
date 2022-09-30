@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TipomonedaComponent implements OnInit {
 
-  constructor(public route: ActivatedRoute) { }
+  constructor(public route:ActivatedRoute) { }
 
   ngOnInit(): void {
   }

@@ -1,6 +1,8 @@
+<div class="container">
 <div style=" text-align: center;">
     <h1>Lista de experiencias</h1>
 </div>
+<app-experiencia-buscar></app-experiencia-buscar>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
@@ -9,7 +11,7 @@
     <!-- Position Column -->
     <ng-container matColumnDef="idExperiencia">
         <th mat-header-cell *matHeaderCellDef> Id </th>
-        <td mat-cell *matCellDef="let element"> {{element.idExperiencia}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
 
     <!-- Name Column -->
@@ -17,6 +19,20 @@
         <th mat-header-cell *matHeaderCellDef> Descripcion </th>
         <td mat-cell *matCellDef="let element"> {{element.descExperiencia}} </td>
     </ng-container>
+    <ng-container matColumnDef="accion1">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+            [routerLink]="['edicion', element?.id]">Actualizar</button>
+  
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="accion2">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-raised-button color="warn" (click)="confirmarExperiencia(element.id)">Eliminar</button>
+  
+        </td>
+      </ng-container>
 
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -28,4 +44,5 @@
         routerLink="/experiencia/insertar">
         <mat-icon>plus_one</mat-icon>
     </button>
+</div>
 </div>
