@@ -18,9 +18,9 @@ export class TipopagoCreaeditaComponent implements OnInit {
   }
   aceptar(): void {
     if (this.tipopago.TipodePago.length > 0) {
-      this.tipopagoservice.insertar(this.tipopago).subscribe(data => {
+      this.tipopagoservice.insertarTipoPago(this.tipopago).subscribe(data => {
         this.tipopagoservice.listarTipoPago().subscribe(data => {
-          this.tipopagoservice.setLista(data);
+          this.tipopagoservice.setListaTipoPago(data);
         })
       })
       this.router.navigate(['tipopago'])

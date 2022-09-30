@@ -8,20 +8,20 @@ import { TipoMoneda } from '../model/tipomoneda';
 })
 export class TipomonedaService {
   url: string = "http://localhost:5000/tipomoneda"
-  private listacambio = new Subject<TipoMoneda[]>()
+  private listaCambio = new Subject<TipoMoneda[]>()
   private confirmaEliminacionTipoMoneda = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
-  listarMoneda() {
+  listarTipoMoneda() {
     return this.http.get<TipoMoneda[]>(this.url);
   }
-  insertarTipoMoneda(tipoMoneda:TipoMoneda){
-    return this.http.post(this.url,tipoMoneda);
+  insertarTipoMoneda(tipomoneda: TipoMoneda) {
+    return this.http.post(this.url, tipomoneda);
   }
-  setListaTipoMoneda(listanueva:TipoMoneda[]){
-    this.listacambio.next(listanueva);
+  setListaTipoMoneda(listaNueva: TipoMoneda[]) {
+    this.listaCambio.next(listaNueva);
   }
-  getListaTipoMoneda(){
-    return this.listacambio.asObservable();
+  getListaTipoMoneda() {
+    return this.listaCambio.asObservable();
   }
   modificarTipoMoneda(tipomoneda: TipoMoneda) {
     return this.http.put(this.url + "/" + tipomoneda.id, tipomoneda);
@@ -37,12 +37,5 @@ export class TipomonedaService {
   }
   setConfirmaEliminacionTipoMoneda(estado: Boolean) {
     this.confirmaEliminacionTipoMoneda.next(estado);
-  }
-  buscar(texto:string){
-    if(texto.length != 0){
-      return this.http.post<TipoMoneda[]>(`${this.url}/buscar`,texto.toLowerCase(), {
-      });
-    }
-    return EMPTY;
   }
 }
