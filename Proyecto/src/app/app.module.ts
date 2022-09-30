@@ -54,6 +54,7 @@ import { TipomonedaBuscarComponent } from './page/tipomoneda/tipomoneda-buscar/t
 import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creaedita/tipomoneda-creaedita.component';
 import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/curriculum-listar.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
