@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { CapacitacionService } from './../../../../service/capacitacion.service';
+
 @Component({
   selector: 'app-capacitacion-dialogo',
   templateUrl: './capacitacion-dialogo.component.html',
@@ -8,6 +9,7 @@ import { CapacitacionService } from './../../../../service/capacitacion.service'
 })
 export class CapacitacionDialogoComponent implements OnInit {
 
+<
   constructor(private capacitacionService: CapacitacionService,
     private dialogRef: MatDialogRef<CapacitacionDialogoComponent>) { }
 
