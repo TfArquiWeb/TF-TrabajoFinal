@@ -1,7 +1,7 @@
 import { Usuario } from './usuario';
 
 export class Empresario {
-    razonsocialEmpresario: string = "";
+    razonEmpresario: string = "";
     rucEmpresario: number = 0;
     rubroEmpresario: string = "";
     descEmpresario: string = "";
