@@ -164,43 +164,45 @@ module.exports = function () {
                 id: 1,
                 Habilidad: {
                     id: 1,
-                    descHabilidad: 1,
+                    descHabilidad: "i am stronger",
                 },
                 Capacitacion: {
                     id: 1,
-                    descCapacitacion: 1,
+                    descCapacitacion: "i am smarter",
                 },
                 Experiencia: {
                     id: 1,
-                    descCapacitacion: 1,
+                    descExperiencia: "i am better",
                 },
             },
             {
+                id: 1,
                 Habilidad: {
                     id: 1,
-                    descHabilidad: 1,
+                    descHabilidad: "i am stronger",
                 },
                 Capacitacion: {
                     id: 1,
-                    descCapacitacion: 1,
+                    descCapacitacion: "i am smarter",
                 },
                 Experiencia: {
                     id: 1,
-                    descCapacitacion: 1,
+                    descExperiencia: "i am better",
                 },
             },
             {
+                id: 1,
                 Habilidad: {
                     id: 1,
-                    descHabilidad: 1,
+                    descHabilidad: "i am stronger",
                 },
                 Capacitacion: {
                     id: 1,
-                    descCapacitacion: 1,
+                    descCapacitacion: "i am smarter",
                 },
                 Experiencia: {
                     id: 1,
-                    descCapacitacion: 1,
+                    descExperiencia: "i am better",
                 },
             },
 
@@ -214,45 +216,60 @@ module.exports = function () {
                 montoContrato: 8500,
                 Usuario: {
                     id: 2,
+                    nombreUsuario: "diego",
                 },
                 TipoMoneda: {
                     id: 1,
+                    Tipo: "Soles",
                 },
                 TipoPago: {
                     id: 1,
                 },
+                Curriculum:{
+                    id:1,
+                }
             },
             {
-                idContrato: 2,
-                fechainiContrato: "01 - 05 - 2022",
-                fechafinContrato: "01 - 05 - 2023",
+                idContrato: 1,
+                fechainiContrato: "01 - 08 - 2022",
+                fechafinContrato: "01 - 08 - 2023",
                 vigenciaContrato: true,
-                montoContrato: 4300,
+                montoContrato: 8500,
                 Usuario: {
                     id: 2,
+                    nombreUsuario: "diego",
                 },
                 TipoMoneda: {
-                    id: 2,
+                    id: 1,
+                    Tipo: "Soles",
                 },
                 TipoPago: {
-                    id: 2,
+                    id: 1,
                 },
+                Curriculum:{
+                    id:1,
+                }
             },
             {
-                idContrato: 3,
-                fechainiContrato: "01 - 11 - 2022",
-                fechafinContrato: "01 - 11 - 2023",
+                idContrato: 1,
+                fechainiContrato: "01 - 08 - 2022",
+                fechafinContrato: "01 - 08 - 2023",
                 vigenciaContrato: true,
-                montoContrato: 9150,
+                montoContrato: 8500,
                 Usuario: {
-                    id: 3,
+                    id: 2,
+                    nombreUsuario: "diego",
                 },
                 TipoMoneda: {
-                    id: 3,
+                    id: 1,
+                    Tipo: "Soles",
                 },
                 TipoPago: {
-                    id: 3,
+                    id: 1,
                 },
+                Curriculum:{
+                    id:1,
+                }
             },
 
         ],

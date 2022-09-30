@@ -18,11 +18,9 @@ import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creae
 import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
 const routes: Routes = [{
   path: 'empresario', component: EmpresarioComponent, children: [
-    { path: 'insertar', component: HabilidadCreaeditaComponent }
   ]
 }, {
   path: 'contador', component: ContadorComponent, children: [
-    { path: 'insertar', component: HabilidadCreaeditaComponent }
   ]
 }, {
   path: 'tipopago', component: TipopagoComponent, children: [
