@@ -13,15 +13,15 @@ export class TipopagoBuscarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  buscarTipopago(e: any) {
+  buscarTipoPago(e: any) {
     let array: TipoPago[] = [];
-    this.tipopagoservice.listarTipopago().subscribe(data => {
+    this.tipopagoservice.listarTipoPago().subscribe(data => {
       data.forEach((element, index) => {
         if (element.TipodePago.includes(e.target.value)) {
           array.push(data[index]);
         }
       });
-      this.tipopagoservice.setListaTipopago(array);
+      this.tipopagoservice.setListaTipoPago(array);
     })
   }
 

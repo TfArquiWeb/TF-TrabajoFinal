@@ -48,7 +48,5 @@ export class CapacitacionCreaeditaComponent implements OnInit {
         this.capacitacion = data;
       })
     }
-
   }
-
 }

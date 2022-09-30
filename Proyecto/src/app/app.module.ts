@@ -28,7 +28,6 @@ import { ContratoListarComponent } from './page/contrato/contrato-listar/contrat
 import { ExperienciaCreaeditaComponent } from './page/experiencia/experiencia-creaedita/experiencia-creaedita.component';
 import { HabilidadCreaeditaComponent } from './page/habilidad/habilidad-creaedita/habilidad-creaedita.component';
 import { CurriculumComponent } from './page/curriculum/curriculum.component';
-import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/curriculum-listar.component';
 import { ContadorCreaditaComponent } from './page/contador/contador-creadita/contador-creadita.component';
 import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
@@ -46,8 +45,14 @@ import { ExperienciaBuscarComponent } from './page/experiencia/experiencia-busca
 import { HabilidadDialogoComponent } from './page/habilidad/habilidad-listar/habilidad-dialogo/habilidad-dialogo.component';
 import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habilidad-buscar.component';
 import { FormsModule } from '@angular/forms';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
+import { UsuarioBuscarComponent } from './page/usuario/usuario-buscar/usuario-buscar.component';
+import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
+import { TipopagoBuscarComponent } from './page/tipopago/tipopago-buscar/tipopago-buscar.component';
+import { TipomonedaListarComponent } from './page/tipomoneda/tipomoneda-listar/tipomoneda-listar.component';
+import { TipomonedaDialogoComponent } from './page/tipomoneda/tipomoneda-listar/tipomoneda-dialogo/tipomoneda-dialogo.component';
+import { TipomonedaBuscarComponent } from './page/tipomoneda/tipomoneda-buscar/tipomoneda-buscar.component';
+import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creaedita/tipomoneda-creaedita.component';
+import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/curriculum-listar.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +77,6 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     ExperienciaCreaeditaComponent,
     HabilidadCreaeditaComponent,
     CurriculumComponent,
-    CurriculumListarComponent,
     ContadorCreaditaComponent,
     UsuarioCreaditaComponent,
     EmpresarioCreaditaComponent,
@@ -84,10 +88,19 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     ExperienciaBuscarComponent,
     HabilidadDialogoComponent,
     HabilidadBuscarComponent,
+    UsuarioBuscarComponent,
+    TipomonedaComponent,
+    TipopagoBuscarComponent,
+    TipomonedaListarComponent,
+    TipomonedaDialogoComponent,
+    TipomonedaBuscarComponent,
+    TipomonedaCreaeditaComponent,
+    CurriculumListarComponent,
 
   ],
   imports: [
-    BrowserModule,
+  
+  BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MatTableModule,

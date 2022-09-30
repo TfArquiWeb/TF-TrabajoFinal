@@ -1,5 +1,5 @@
 
-import { CurriculumVitae } from './Curriculum';
+import { Curriculum} from './curriculum';
 import { Usuario } from './usuario';
 import { TipoPago } from './tipopago';
 import { TipoMoneda } from './tipomoneda';
@@ -13,5 +13,5 @@ export class Contrato {
     Usuario: Usuario = new Usuario();
     TipoMoneda: TipoMoneda = new TipoMoneda();
     TipoPago: TipoPago = new TipoPago();
-    CurriculumVitae: CurriculumVitae = new CurriculumVitae();
+    Curriculum: Curriculum = new Curriculum();
 }

@@ -22,18 +22,18 @@ export class TipopagoCreaeditaComponent implements OnInit {
       this.init();
     });
   }
-  aceptarTipopago(): void {
+  aceptarTipoPago(): void {
     if (this.tipopago.TipodePago.length > 0) {
       if (this.edicion) {
-        this.tipopagoservice.modificarTipopago(this.tipopago).subscribe(data =>{
-          this.tipopagoservice.listarTipopago().subscribe(data =>{
-            this.tipopagoservice.setListaTipopago(data);
+        this.tipopagoservice.modificarTipoPago(this.tipopago).subscribe(data =>{
+          this.tipopagoservice.listarTipoPago().subscribe(data =>{
+            this.tipopagoservice.setListaTipoPago(data);
           })
         })
       } else {
-        this.tipopagoservice.insertarTipopago(this.tipopago).subscribe(data => {
-          this.tipopagoservice.listarTipopago().subscribe(data => {
-            this.tipopagoservice.setListaTipopago(data);
+        this.tipopagoservice.insertarTipoPago(this.tipopago).subscribe(data => {
+          this.tipopagoservice.listarTipoPago().subscribe(data => {
+            this.tipopagoservice.setListaTipoPago(data);
           })
         })
       }
@@ -46,7 +46,7 @@ export class TipopagoCreaeditaComponent implements OnInit {
   }
   init() {
     if (this.edicion) {
-      this.tipopagoservice.listarIdTipopago(this.id).subscribe(data => {
+      this.tipopagoservice.listarIdTipoPago(this.id).subscribe(data => {
         this.tipopago =data;
       })
     }

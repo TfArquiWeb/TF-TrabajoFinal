@@ -13,8 +13,8 @@ export class TipopagoDialogoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  confirmarTipopago(estado: boolean) {
-    this.tipopagoService.setConfirmaEliminacionTipopago(estado);
+  confirmarTipoPago(estado: boolean) {
+    this.tipopagoService.setConfirmaEliminacionTipoPago(estado);
     this.dialogRef.close();
   }
 

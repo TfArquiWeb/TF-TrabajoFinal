@@ -1,6 +1,8 @@
+<div class="container">
 <div style=" text-align: center;">
     <h1>Lista de usuarios</h1>
 </div>
+<app-usuario-buscar></app-usuario-buscar>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
@@ -47,13 +49,18 @@
         <th mat-header-cell *matHeaderCellDef> Foto </th>
         <td mat-cell *matCellDef="let element"> {{element.fotoUsuario}} </td>
     </ng-container>
-
-    <ng-container matColumnDef="acciones">
+    <ng-container matColumnDef="accion1">
         <th mat-header-cell *matHeaderCellDef> Acciones </th>
         <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
             [routerLink]="['edicion', element?.id]">Actualizar</button>
         </td>
-    </ng-container>
+      </ng-container>
+      <ng-container matColumnDef="accion2">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-raised-button color="warn" (click)="confirmarUsuario(element.id)">Eliminar</button>
+        </td>
+      </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
@@ -64,3 +71,4 @@
       <mat-icon>plus_one</mat-icon>
     </button>
   </div>
+</div>

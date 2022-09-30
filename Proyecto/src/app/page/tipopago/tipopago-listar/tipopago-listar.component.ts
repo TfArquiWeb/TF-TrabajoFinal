@@ -12,29 +12,29 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class TipopagoListarComponent implements OnInit {
   dataSource: MatTableDataSource<TipoPago> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'tipodepago', 'accion1','accion2'];
+  displayedColumns: string[] = ['id', 'tipo', 'accion1','accion2'];
   private idMayor: number = 0;
   constructor(private TPs: TipopagoService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.TPs.listarTipopago().subscribe(data => {
+    this.TPs.listarTipoPago().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     })
-    this.TPs.getListaTipopago().subscribe(data => {
+    this.TPs.getListaTipoPago().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     });
-    this.TPs.getConfirmaEliminacionTipopago().subscribe(data => {
-      data == true ? this.eliminarTipopago(this.idMayor) : false;
+    this.TPs.getConfirmaEliminacionTipoPago().subscribe(data => {
+      data == true ? this.eliminarTipoPago(this.idMayor) : false;
     });
   }
-  confirmarTipopago(id: number) {
+  confirmarTipoPago(id: number) {
     this.idMayor = id;
     this.dialog.open(TipopagoDialogoComponent);
   } 
-  eliminarTipopago(id: number) {
-    this.TPs.eliminarTipopago(id).subscribe(() => {
-      this.TPs.listarTipopago().subscribe(data => {
-        this.TPs.setListaTipopago(data);
+  eliminarTipoPago(id: number) {
+    this.TPs.eliminarTipoPago(id).subscribe(() => {
+      this.TPs.listarTipoPago().subscribe(data => {
+        this.TPs.setListaTipoPago(data);
       });
     });
 
