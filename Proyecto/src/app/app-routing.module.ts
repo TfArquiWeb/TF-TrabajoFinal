@@ -1,3 +1,4 @@
+import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creaedita/tipomoneda-creaedita.component';
 import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { CurriculumComponent } from './page/curriculum/curriculum.component';
 import { ContratoComponent } from './page/contrato/contrato.component';
@@ -31,7 +32,7 @@ const routes: Routes = [{
   path: 'capacitacion', component: CapacitacionComponent, children: [
     { path: 'insertar', component: CapacitacionCreaeditaComponent },
     { path: 'edicion/:id', component: CapacitacionCreaeditaComponent }
-    
+
   ]
 }, {
   path: 'habilidad', component: HabilidadComponent, children: [
@@ -47,7 +48,8 @@ const routes: Routes = [{
   ]
 }, {
   path: 'tipomoneda', component: TipomonedaComponent, children: [
-
+  { path:'insertar', component:TipomonedaCreaeditaComponent},
+  { path: 'edicion/:id', component: TipomonedaComponent}
   ]
 }, {
   path: 'usuario', component: UsuarioComponent, children: [
@@ -62,7 +64,7 @@ const routes: Routes = [{
   path: 'curriculum', component: CurriculumComponent, children: [
 
   ]
-}, 
+},
 ];
 
 @NgModule({
