@@ -8,8 +8,6 @@ import { CapacitacionService } from './../../../../service/capacitacion.service'
   styleUrls: ['./capacitacion-dialogo.component.css']
 })
 export class CapacitacionDialogoComponent implements OnInit {
-
-
   constructor(private capacitacionService: CapacitacionService,
     private dialogRef: MatDialogRef<CapacitacionDialogoComponent>) { }
 

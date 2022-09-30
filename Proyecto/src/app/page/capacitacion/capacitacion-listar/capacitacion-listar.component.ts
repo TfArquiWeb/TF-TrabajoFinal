@@ -33,10 +33,8 @@ export class CapacitacionListarComponent implements OnInit {
   eliminarCapacitacion(id: number) {
     this.Cs.eliminarCapacitacion(id).subscribe(() => {
       this.Cs.listarCapacitacion().subscribe(data => {
-        this.Cs.setListaCapacitacion(data);/* se ejecuta la línea 27*/
+        this.Cs.setListaCapacitacion(data);
       });
     });
-
   }
-
 }

@@ -1,9 +1,7 @@
-import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creaedita/tipomoneda-creaedita.component';
 import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { CurriculumComponent } from './page/curriculum/curriculum.component';
 import { ContratoComponent } from './page/contrato/contrato.component';
 import { UsuarioComponent } from './page/usuario/usuario.component';
-import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
 import { TipopagoComponent } from './page/tipopago/tipopago.component';
 import { ContadorComponent } from './page/contador/contador.component';
 import { EmpresarioComponent } from './page/empresario/empresario.component';
@@ -47,12 +45,8 @@ const routes: Routes = [{
     { path: 'edicion/:id', component: ExperienciaCreaeditaComponent }
 
   ]
-}, {
-  path: 'tipomoneda', component: TipomonedaComponent, children: [
-  { path:'insertar', component:TipomonedaCreaeditaComponent},
-  { path: 'edicion/:id', component: TipomonedaComponent}
-  ]
-}, {
+},  
+{
   path: 'usuario', component: UsuarioComponent, children: [
     { path: 'insertar', component: UsuarioCreaditaComponent },
     { path: 'edicion/:id', component: UsuarioCreaditaComponent }
