@@ -113,7 +113,7 @@ module.exports = function () {
             {
                 descContador: "Hola soy buen trabajador",
                 linkedinContador: "Mi perfil de linkedin es...",
-                CurriculumVitae:{
+                CurriculumVitae: {
                     idCurriculum: 1,
                 },
                 Usuario: {
@@ -129,7 +129,7 @@ module.exports = function () {
             {
                 descContador: "Hola soy trabajador bueno",
                 linkedinContador: "Mi perfil de linkedin es...",
-                CurriculumVitae:{
+                CurriculumVitae: {
                     idCurriculum: 2,
                 },
                 Usuario: {
@@ -145,7 +145,7 @@ module.exports = function () {
             {
                 descContador: "Hola me gusta trabajar",
                 linkedinContador: "Mi perfil de linkedin es...",
-                CurriculumVitae:{
+                CurriculumVitae: {
                     idCurriculum: 3,
                 },
                 Usuario: {
@@ -164,36 +164,43 @@ module.exports = function () {
                 id: 1,
                 Habilidad: {
                     id: 1,
+                    descHabilidad: 1,
                 },
                 Capacitacion: {
                     id: 1,
+                    descCapacitacion: 1,
                 },
                 Experiencia: {
                     id: 1,
+                    descCapacitacion: 1,
                 },
             },
             {
-                id: 2,
                 Habilidad: {
-                    id: 2,
+                    id: 1,
+                    descHabilidad: 1,
                 },
                 Capacitacion: {
-                    id: 2,
+                    id: 1,
+                    descCapacitacion: 1,
                 },
                 Experiencia: {
-                    id: 2,
+                    id: 1,
+                    descCapacitacion: 1,
                 },
             },
             {
-                id: 3,
                 Habilidad: {
-                    id: 3,
+                    id: 1,
+                    descHabilidad: 1,
                 },
                 Capacitacion: {
-                    id: 3,
+                    id: 1,
+                    descCapacitacion: 1,
                 },
                 Experiencia: {
-                    id: 3,
+                    id: 1,
+                    descCapacitacion: 1,
                 },
             },
 
