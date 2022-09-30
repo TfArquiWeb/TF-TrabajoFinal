@@ -228,7 +228,7 @@ module.exports = function () {
                     idTM: 2,
                 },
                 TipoPago: {
-                    idTP: 2,
+                    id: 2,
                 },
             },
             {
@@ -251,19 +251,19 @@ module.exports = function () {
         ],
         TipoPago: [
             {
-                idTP: 1,
+                id: 1,
                 TipodePago: "Efectivo",
             },
             {
-                idTP: 2,
+                id: 2,
                 TipodePago: "Yape",
             },
             {
-                idTP: 3,
+                id: 3,
                 TipodePago: "Tarjeta",
             },
             {
-                idTP: 4,
+                id: 4,
                 TipodePago: "Plin",
             },
 
