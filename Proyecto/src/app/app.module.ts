@@ -52,7 +52,7 @@ import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/t
     HabilidadComponent,
     CapacitacionComponent,
     CapacitacionListarComponent,
-    ExperienciaListarComponent, 
+    ExperienciaListarComponent,
     HabilidadListarComponent,
     CapacitacionCreaeditaComponent,
     UsuarioComponent,

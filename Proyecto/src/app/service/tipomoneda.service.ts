@@ -1,4 +1,4 @@
-import { Subject } from 'rxjs';
+import { EMPTY, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { TipoMoneda } from '../model/tipomoneda';
@@ -17,10 +17,10 @@ export class TipomonedaService {
   insertarTipoMoneda(tipoMoneda:TipoMoneda){
     return this.http.post(this.url,tipoMoneda);
   }
-  setListaTipoMoneda(listanueva:TipoMoneda[]){ 
+  setListaTipoMoneda(listanueva:TipoMoneda[]){
     this.listacambio.next(listanueva);
   }
-  getListaTipoMoneda(){ 
+  getListaTipoMoneda(){
     return this.listacambio.asObservable();
   }
   modificarTipoMoneda(tipomoneda: TipoMoneda) {
@@ -37,5 +37,12 @@ export class TipomonedaService {
   }
   setConfirmaEliminacionTipoMoneda(estado: Boolean) {
     this.confirmaEliminacionTipoMoneda.next(estado);
+  }
+  buscar(texto:string){
+    if(texto.length != 0){
+      return this.http.post<TipoMoneda[]>(`${this.url}/buscar`,texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
 }

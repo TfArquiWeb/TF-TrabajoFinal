@@ -32,7 +32,7 @@ const routes: Routes = [{
   path: 'capacitacion', component: CapacitacionComponent, children: [
     { path: 'insertar', component: CapacitacionCreaeditaComponent },
     { path: 'edicion/:id', component: CapacitacionCreaeditaComponent }
-    
+
   ]
 }, {
   path: 'habilidad', component: HabilidadComponent, children: [
@@ -49,6 +49,7 @@ const routes: Routes = [{
 }, {
   path: 'tipomoneda', component: TipomonedaComponent, children: [
   { path:'insertar', component:TipomonedaCreaeditaComponent}
+  { path: 'edicion/:id', Component: TipomonedaComponent}
   ]
 }, {
   path: 'usuario', component: UsuarioComponent, children: [
@@ -63,7 +64,7 @@ const routes: Routes = [{
   path: 'curriculum', component: CurriculumComponent, children: [
 
   ]
-}, 
+},
 ];
 
 @NgModule({
