@@ -24,7 +24,8 @@ const routes: Routes = [{
   ]
 }, {
   path: 'tipopago', component: TipopagoComponent, children: [
-    {path: 'nuevo', component: TipopagoCreaeditaComponent}
+    {path: 'nuevo', component: TipopagoCreaeditaComponent},
+    { path: 'edicion/:id', component: TipopagoCreaeditaComponent }
   ]
 }, {
   path: 'capacitacion', component: CapacitacionComponent, children: [

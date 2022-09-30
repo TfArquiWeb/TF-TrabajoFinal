@@ -9,18 +9,33 @@ import { Injectable } from '@angular/core';
 export class TipopagoService {
   url: string = "http://localhost:5000/tipopago"
   private listaCambio = new Subject <TipoPago[]>()
+  private confirmaEliminacionTipopago = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
-  listarTipoPago() {
+  listarTipopago() {
     return this.http.get<TipoPago[]>(this.url);
   }
-  insertarTipoPago(tipopago: TipoPago){
+  insertarTipopago(tipopago: TipoPago){
     return this.http.post(this.url,tipopago);
   }
-  setListaTipoPago(listaNueva: TipoPago[]){
+  setListaTipopago(listaNueva: TipoPago[]){
     this.listaCambio.next(listaNueva);
   }
-  getListaTipoPago(){
+  getListaTipopago(){
     return this.listaCambio.asObservable();
   }
+  modificarTipopago(tipopago: TipoPago) {
+    return this.http.put(this.url + "/" + tipopago.id, tipopago);
+  }
+  listarIdTipopago(id: number) {
+    return this.http.get<TipoPago>(`${this.url}/${id}`);
+  }
+  eliminarTipopago(id: number) {
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacionTipopago() {
+    return this.confirmaEliminacionTipopago.asObservable();
+  }
+  setConfirmaEliminacionTipopago(estado: Boolean) {
+    this.confirmaEliminacionTipopago.next(estado);
+  }
 }
- 

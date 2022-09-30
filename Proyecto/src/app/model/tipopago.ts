@@ -1,4 +1,7 @@
 export class TipoPago {
-    idTP: number = 0;
+    id: number = 0;
     TipodePago: string = "";
+     
+
+    
 }  
