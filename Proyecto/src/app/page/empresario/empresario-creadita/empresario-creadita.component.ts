@@ -16,7 +16,7 @@ export class EmpresarioCreaditaComponent implements OnInit {
   ngOnInit(): void {
   }
   aceptar(): void {
-    if (this.empresario.razonsocialEmpresario.length > 0 && this.empresario.rubroEmpresario.length > 0 && this.empresario.descEmpresario.length > 0 &&this.empresario.rucEmpresario>0) {
+    if (this.empresario.razonEmpresario.length > 0 && this.empresario.rubroEmpresario.length > 0 && this.empresario.descEmpresario.length > 0 &&this.empresario.rucEmpresario>0) {
 
       this.empresarioservice.insertar(this.empresario).subscribe(data => {
         this.empresarioservice.listar().subscribe(data => {
