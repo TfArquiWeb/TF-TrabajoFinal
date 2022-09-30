@@ -34,7 +34,7 @@ export class TipopagoListarComponent implements OnInit {
   eliminarTipopago(id: number) {
     this.TPs.eliminarTipopago(id).subscribe(() => {
       this.TPs.listarTipopago().subscribe(data => {
-        this.TPs.setListaTipopago(data);/* se ejecuta la línea 27*/
+        this.TPs.setListaTipopago(data);
       });
     });
 
