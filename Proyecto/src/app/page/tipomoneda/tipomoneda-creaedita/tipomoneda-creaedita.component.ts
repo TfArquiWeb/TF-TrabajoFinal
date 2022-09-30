@@ -16,13 +16,13 @@ export class TipomonedaCreaeditaComponent implements OnInit {
   constructor(private tPs: TipomonedaService, private router: Router, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.params.subscrite((data: Params) => {
+    this.route.params.subscribe((data: Params) => {
       this.id = data['id']
       this.edicion = data['id'] != null;
 
     })
   }
-  aceptar() {
+  aceptarTipoMoneda() {
     if (this.tipomoneda.TipodeMoneda.length > 0) {
       if (this.edicion) {
         this.tPs.insertarTipoMoneda(this.tipomoneda).subscribe(data => {
@@ -50,5 +50,4 @@ export class TipomonedaCreaeditaComponent implements OnInit {
       })
     }
   }
-
-}  /*this.router.navigate(['tipomoneda']); */
+}

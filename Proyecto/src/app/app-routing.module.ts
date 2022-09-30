@@ -48,8 +48,8 @@ const routes: Routes = [{
   ]
 }, {
   path: 'tipomoneda', component: TipomonedaComponent, children: [
-  { path:'insertar', component:TipomonedaCreaeditaComponent}
-  { path: 'edicion/:id', Component: TipomonedaComponent}
+  { path:'insertar', component:TipomonedaCreaeditaComponent},
+  { path: 'edicion/:id', component: TipomonedaComponent}
   ]
 }, {
   path: 'usuario', component: UsuarioComponent, children: [

@@ -5,7 +5,7 @@
 
   <mat-form-field class="example-full-width">
     <mat-label>ID</mat-label>
-    <input matInput placeholder="id" [(ngModel)]="tipomoneda.idTM">
+    <input matInput placeholder="id" [(ngModel)]="tipomoneda.id">
   </mat-form-field>
 
   <br>
@@ -16,7 +16,7 @@
   </mat-form-field>
 
   <br>
-  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="primary" (click)="aceptarTipoMoneda()">Aceptar</button>
   <button mat-raised-button color="warn" routerLink="/tipomoneda">Cancelar</button>
   <p>{{mensaje}}</p>
 

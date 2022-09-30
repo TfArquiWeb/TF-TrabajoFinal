@@ -24,7 +24,7 @@ export class TipomonedaService {
     return this.listacambio.asObservable();
   }
   modificarTipoMoneda(tipomoneda: TipoMoneda) {
-    return this.http.put(this.url + "/" + tipomoneda.idTM, tipomoneda);
+    return this.http.put(this.url + "/" + tipomoneda.id, tipomoneda);
   }
   listarIdTipoMoneda(id: number) {
     return this.http.get<TipoMoneda>(`${this.url}/${id}`);

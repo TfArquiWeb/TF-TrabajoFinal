@@ -106,6 +106,7 @@ import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habi
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
