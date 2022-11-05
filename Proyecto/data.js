@@ -64,6 +64,7 @@ module.exports = function () {
         ],
         Empresario: [
             {
+                idEmpresario: 1,
                 razonEmpresario: "VentasRamos",
                 rucEmpresario: 20201324652,
                 rubroEmpresario: "Comercio",
@@ -79,6 +80,7 @@ module.exports = function () {
                 }
             },
             {
+                idEmpresario: 2,
                 razonEmpresario: "MaderasMayor",
                 rucEmpresario: 20253053671,
                 rubroEmpresario: "Comercio",
@@ -94,6 +96,7 @@ module.exports = function () {
                 }
             },
             {
+                idEmpresario: 3,
                 razonEmpresario: "TelasFinas",
                 rucEmpresario: 20157624892,
                 rubroEmpresario: "Comercio",
