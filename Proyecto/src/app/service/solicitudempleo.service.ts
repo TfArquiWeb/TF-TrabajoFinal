@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SolicitudempleoService {
-  url: string = "http://localhost:5000/solicitudempleo"
+  url: string = "http://localhost:8081/solicitudempleo"
   private listacambio=new Subject<SolicitudEmpleo[]>()
   constructor(public http: HttpClient) { }
   listarSolicitud() {

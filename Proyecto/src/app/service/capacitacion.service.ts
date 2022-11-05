@@ -6,7 +6,7 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class CapacitacionService {
-  url: string = "http://localhost:5000/capacitacion"
+  url: string = "http://localhost:8081/Capacitacion"
   private listaCambio = new Subject<Capacitacion[]>()
   private confirmaEliminacionCapacitacion = new Subject<Boolean>()
   constructor(public http:HttpClient) { }

@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TipopagoService {
-  url: string = "http://localhost:5000/tipopago"
+  url: string = "http://localhost:8081/TipoPago"
   private listaCambio = new Subject <TipoPago[]>()
   private confirmaEliminacionTipopago = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
