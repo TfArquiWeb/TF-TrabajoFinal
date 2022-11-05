@@ -7,7 +7,7 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class HabilidadService {
-  url: string = "http://localhost:5000/habilidad"
+  url: string = "http://localhost:8081/Habilidad"
   private listaCambio = new Subject<Habilidad[]>()
   private confirmaEliminacionHabilidad = new Subject<Boolean>()
   constructor(public http:HttpClient) { }

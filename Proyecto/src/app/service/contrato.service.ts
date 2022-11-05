@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ContratoService {
-  url: string = "http://localhost:5000/contrato"
+  url: string = "http://localhost:8081/contrato"
   constructor(private http: HttpClient) { }
   listar() {
     return this.http.get<Contrato[]>(this.url);

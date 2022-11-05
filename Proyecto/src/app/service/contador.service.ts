@@ -6,7 +6,7 @@ import { Contador } from '../model/contador';
   providedIn: 'root'
 })
 export class ContadorService {
-  url: string = "http://localhost:5000/contador"
+  url: string = "http://localhost:8081/contador"
   private listaCambio = new Subject<Contador[]>()
   constructor(private http: HttpClient) { }
   listarContador() {

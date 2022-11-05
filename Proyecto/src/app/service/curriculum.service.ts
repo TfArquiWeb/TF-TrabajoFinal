@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CurriculumService {
-  url: string = "http://localhost:5000/curriculum"
+  url: string = "http://localhost:8081/curriculum"
   constructor(private http: HttpClient) { }
   listar() {
     return this.http.get<CurriculumVitae[]>(this.url);

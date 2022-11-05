@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UsuarioService {
-  url: string = "http://localhost:5000/usuario"
+  url: string = "http://localhost:8081/Usuario"
   private listaCambio =new Subject<Usuario[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }

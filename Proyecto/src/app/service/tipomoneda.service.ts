@@ -6,7 +6,7 @@ import { TipoMoneda } from '../model/tipomoneda';
   providedIn: 'root'
 })
 export class TipomonedaService {
-  url: string = "http://localhost:5000/tipomoneda"
+  url: string = "http://localhost:8081/TipoMoneda"
   constructor(private http: HttpClient) { }
   listar() {
     return this.http.get<TipoMoneda[]>(this.url);
