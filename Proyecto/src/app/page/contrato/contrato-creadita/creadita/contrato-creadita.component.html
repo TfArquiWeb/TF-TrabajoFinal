@@ -1,0 +1,67 @@
+<p>Contrato-creaedita works!</p>
+<div class="container">
+
+  <h1>Contrato</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="Id" [(ngModel)]="contrato.idContrato">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Inicio de contrato</mat-label>
+    <input matInput required placeholder="fechainicio" [(ngModel)]="contrato.fechainiContrato">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Fin de contrato</mat-label>
+    <input type="email" matInput required placeholder="fechafin" [(ngModel)]="contrato.fechafinContrato">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>vigencia</mat-label>
+    <input type="email" matInput required placeholder="vigencia" [(ngModel)]="contrato.vigenciaContrato">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Monto de contrato</mat-label>
+    <input type="email" matInput required placeholder="monto" [(ngModel)]="contrato.montoContrato">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>idempresario</mat-label>
+    <input type="email" matInput required placeholder="idcontador" [(ngModel)]="contrato.Usuario">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>idcontador</mat-label>
+    <input type="email" matInput required placeholder="idempresario" [(ngModel)]="contrato.Usuario">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Tipo de Moneda</mat-label>
+    <input type="email" matInput required placeholder="tipomoneda" [(ngModel)]="contrato.TipoMoneda">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Tipo de pago</mat-label>
+    <input type="email" matInput required placeholder="tipopago" [(ngModel)]="contrato.TipoPago">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>CurriculumVitae</mat-label>
+    <input type="email" matInput required placeholder="curriculumvitae" [(ngModel)]="contrato.CurriculumVitae">
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/propietarios">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>
+

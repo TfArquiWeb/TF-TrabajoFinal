@@ -1,6 +1,6 @@
-import { MatDialogRef } from '@angular/material/dialog';
-import { HabilidadService } from './../../../../service/habilidad.service';
 import { Component, OnInit } from '@angular/core';
+import { HabilidadService } from './../../../../service/habilidad.service';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-habilidad-dialogo',

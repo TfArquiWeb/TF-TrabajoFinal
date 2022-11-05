@@ -1,6 +1,6 @@
+import { Component, OnInit } from '@angular/core';
 import { HabilidadService } from './../../../service/habilidad.service';
 import { Habilidad } from './../../../model/habilidad';
-import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-habilidad-buscar',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./habilidad-buscar.component.css']
 })
 export class HabilidadBuscarComponent implements OnInit {
-  textoBuscar: string = ""
+
   constructor(private habilidadService: HabilidadService) { }
 
   ngOnInit(): void {

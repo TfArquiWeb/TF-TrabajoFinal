@@ -113,7 +113,7 @@ module.exports = function () {
             {
                 descContador: "Hola soy buen trabajador",
                 linkedinContador: "Mi perfil de linkedin es...",
-                CurriculumVitae:{
+                CurriculumVitae: {
                     idCurriculum: 1,
                 },
                 Usuario: {
@@ -129,7 +129,7 @@ module.exports = function () {
             {
                 descContador: "Hola soy trabajador bueno",
                 linkedinContador: "Mi perfil de linkedin es...",
-                CurriculumVitae:{
+                CurriculumVitae: {
                     idCurriculum: 2,
                 },
                 Usuario: {
@@ -145,7 +145,7 @@ module.exports = function () {
             {
                 descContador: "Hola me gusta trabajar",
                 linkedinContador: "Mi perfil de linkedin es...",
-                CurriculumVitae:{
+                CurriculumVitae: {
                     idCurriculum: 3,
                 },
                 Usuario: {
@@ -159,41 +159,50 @@ module.exports = function () {
                 }
             },
         ],
-        CurriculumVitae: [
+        Curriculum: [
             {
-                idCurriculum: 1,
+                id: 1,
                 Habilidad: {
-                    idHabilidad: 1,
+                    id: 1,
+                    descHabilidad: "i am stronger",
                 },
                 Capacitacion: {
-                    idCapacitacion: 1,
+                    id: 1,
+                    descCapacitacion: "i am smarter",
                 },
                 Experiencia: {
-                    idExperiencia: 1,
+                    id: 1,
+                    descExperiencia: "i am better",
                 },
             },
             {
-                idCurriculum: 2,
+                id: 1,
                 Habilidad: {
-                    idHabilidad: 2,
+                    id: 1,
+                    descHabilidad: "i am stronger",
                 },
                 Capacitacion: {
-                    idCapacitacion: 2,
+                    id: 1,
+                    descCapacitacion: "i am smarter",
                 },
                 Experiencia: {
-                    idExperiencia: 2,
+                    id: 1,
+                    descExperiencia: "i am better",
                 },
             },
             {
-                idCurriculum: 3,
+                id: 1,
                 Habilidad: {
-                    idHabilidad: 3,
+                    id: 1,
+                    descHabilidad: "i am stronger",
                 },
                 Capacitacion: {
-                    idCapacitacion: 3,
+                    id: 1,
+                    descCapacitacion: "i am smarter",
                 },
                 Experiencia: {
-                    idExperiencia: 3,
+                    id: 1,
+                    descExperiencia: "i am better",
                 },
             },
 
@@ -206,80 +215,95 @@ module.exports = function () {
                 vigenciaContrato: true,
                 montoContrato: 8500,
                 Usuario: {
-                    idUsuario: 2,
+                    id: 2,
+                    nombreUsuario: "diego",
                 },
                 TipoMoneda: {
-                    idTM: 1,
+                    id: 1,
+                    Tipo: "Soles",
                 },
                 TipoPago: {
-                    idTP: 1,
+                    id: 1,
                 },
+                Curriculum:{
+                    id:1,
+                }
             },
             {
-                idContrato: 2,
-                fechainiContrato: "01 - 05 - 2022",
-                fechafinContrato: "01 - 05 - 2023",
+                idContrato: 1,
+                fechainiContrato: "01 - 08 - 2022",
+                fechafinContrato: "01 - 08 - 2023",
                 vigenciaContrato: true,
-                montoContrato: 4300,
+                montoContrato: 8500,
                 Usuario: {
-                    idUsuario: 2,
+                    id: 2,
+                    nombreUsuario: "diego",
                 },
                 TipoMoneda: {
-                    idTM: 2,
+                    id: 1,
+                    Tipo: "Soles",
                 },
                 TipoPago: {
-                    idTP: 2,
+                    id: 1,
                 },
+                Curriculum:{
+                    id:1,
+                }
             },
             {
-                idContrato: 3,
-                fechainiContrato: "01 - 11 - 2022",
-                fechafinContrato: "01 - 11 - 2023",
+                idContrato: 1,
+                fechainiContrato: "01 - 08 - 2022",
+                fechafinContrato: "01 - 08 - 2023",
                 vigenciaContrato: true,
-                montoContrato: 9150,
+                montoContrato: 8500,
                 Usuario: {
-                    idUsuario: 3,
+                    id: 2,
+                    nombreUsuario: "diego",
                 },
                 TipoMoneda: {
-                    idTM: 3,
+                    id: 1,
+                    Tipo: "Soles",
                 },
                 TipoPago: {
-                    idTP: 3,
+                    id: 1,
                 },
+                Curriculum:{
+                    id:1,
+                }
             },
 
         ],
         TipoPago: [
             {
-                idTP: 1,
+                id: 1,
                 TipodePago: "Efectivo",
             },
             {
-                idTP: 2,
+                id: 2,
                 TipodePago: "Yape",
             },
             {
-                idTP: 3,
+                id: 3,
                 TipodePago: "Tarjeta",
             },
             {
-                idTP: 4,
+                id: 4,
                 TipodePago: "Plin",
             },
 
         ],
         TipoMoneda: [
             {
-                idTM: 1,
-                TipodeMoneda: "Soles",
+                id: 1,
+                Tipo: "Soles",
             },
             {
-                idTM: 2,
-                TipodeMoneda: "Dolares",
+                id: 2,
+                Tipo: "Dolares",
             },
             {
-                idTM: 3,
-                TipodeMoneda: "Pesos Mexicanos",
+                id: 3,
+                Tipo: "Pesos Mexicanos",
             },
 
         ],
@@ -288,7 +312,7 @@ module.exports = function () {
                 id: 1,
                 descExperiencia: "Trabaje 5 años en macdonald",
             },
-            { 
+            {
                 id: 2,
                 descExperiencia: "Trabaje 8 años en constructoras",
             },

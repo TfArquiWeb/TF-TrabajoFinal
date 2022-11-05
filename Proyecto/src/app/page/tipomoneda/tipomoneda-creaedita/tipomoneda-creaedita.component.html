@@ -1,0 +1,23 @@
+<div class="container">
+
+    <h1>Tipo de Moneda</h1>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>id</mat-label>
+      <input matInput placeholder="id" [(ngModel)]="tipomoneda.id">
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Descripcion</mat-label>
+      <input matInput required placeholder="tipomoneda" [(ngModel)]="tipomoneda.Tipo">
+  
+    </mat-form-field>
+  
+    <br>
+    <button mat-raised-button color="primary" (click)="aceptarTipoMoneda()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/tipomoneda">Cancelar</button>
+    <p>{{mensaje}}</p>
+  
+  </div>

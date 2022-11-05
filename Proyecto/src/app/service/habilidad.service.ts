@@ -39,4 +39,3 @@ export class HabilidadService {
     this.confirmaEliminacionHabilidad.next(estado);
   }
 }
-

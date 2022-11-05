@@ -1,6 +1,6 @@
-import { ExperienciaService } from './../../../service/experiencia.service';
-import { Experiencia } from './../../../model/experiencia';
 import { Component, OnInit } from '@angular/core';
+import { Experiencia } from './../../../model/experiencia';
+import { ExperienciaService } from './../../../service/experiencia.service';
 
 @Component({
   selector: 'app-experiencia-buscar',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experiencia-buscar.component.css']
 })
 export class ExperienciaBuscarComponent implements OnInit {
-  textoBuscar: string = ""
+
   constructor(private experienciaService: ExperienciaService) { }
 
   ngOnInit(): void {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from 'src/app/model/usuario';
-import { UsuarioService } from 'src/app/service/usuario.service';
+import { Usuario } from './../../../model/usuario';
+import { UsuarioService } from './../../../service/usuario.service';
 
 @Component({
   selector: 'app-usuario-buscar',
@@ -8,20 +8,21 @@ import { UsuarioService } from 'src/app/service/usuario.service';
   styleUrls: ['./usuario-buscar.component.css']
 })
 export class UsuarioBuscarComponent implements OnInit {
-  textoBuscar: string = ""
-  constructor(private Us: UsuarioService) { }
+
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
   }
   buscarUsuario(e: any) {
     let array: Usuario[] = [];
-    this.Us.listarUsuario().subscribe(data => {
+    this.usuarioService.listarUsuario().subscribe(data => {
       data.forEach((element, index) => {
         if (element.nombreUsuario.includes(e.target.value)) {
           array.push(data[index]);
         }
       });
-      this.Us.setListaUsuario(array);
+      this.usuarioService.setListaUsuario(array);
     })
   }
+
 }

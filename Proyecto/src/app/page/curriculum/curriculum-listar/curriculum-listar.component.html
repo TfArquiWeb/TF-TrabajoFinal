@@ -1,41 +1,45 @@
-<div style=" text-align: center;">
-    <h1>Lista de empresarios</h1>
-  </div> 
-  <table  mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+<div class="container">
+<div class="container">
+    <div style=" text-align: center;">
+      <h1>Lista de Curriculums</h1>
+    </div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   
-    <!--- Note that these columns can be defined in any order.
-              The actual rendered columns are set as a property on the row definition" -->
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
   
-    <!-- Position Column -->
-    <ng-container matColumnDef="id" >
-      <th mat-header-cell *matHeaderCellDef> Id </th>
-      <td mat-cell *matCellDef="let element"> {{element.idSE}} </td>
-    </ng-container>
+      <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> id </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
   
-    <!-- Name Column -->
-    <ng-container matColumnDef="fecha">
-      <th mat-header-cell *matHeaderCellDef> Fecha </th>
-      <td mat-cell *matCellDef="let element"> {{element.fechaSE}} </td>
-    </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="habilidad">
+        <th mat-header-cell *matHeaderCellDef> Habilidad </th>
+        <td mat-cell *matCellDef="let element"> {{element.Habilidad.descHabilidad}} </td>
+      </ng-container>
   
-    <!-- Weight Column -->
-    <ng-container matColumnDef="estado">
-      <th mat-header-cell *matHeaderCellDef> Estado </th>
-      <td mat-cell *matCellDef="let element"> {{element.estadoSE}} </td>
-    </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="capacitacion">
+        <th mat-header-cell *matHeaderCellDef> Capacitacion </th>
+        <td mat-cell *matCellDef="let element"> {{element.Capacitacion.descCapacitacion}} </td>
+      </ng-container>
+      <ng-container matColumnDef="experiencia">
+        <th mat-header-cell *matHeaderCellDef> Experiencia </th>
+        <td mat-cell *matCellDef="let element"> {{element.Experiencia.descExperiencia}} </td>
+      </ng-container>
   
-    <!-- Weight Column -->
-    <ng-container matColumnDef="idempresario">
-      <th mat-header-cell *matHeaderCellDef> Empresario </th>
-      <td mat-cell *matCellDef="let element"> {{element.Usuario.idUsuario}} </td>
-    </ng-container>
   
-    <!-- Weight Column -->
-    <ng-container matColumnDef="idcontador">
-      <th mat-header-cell *matHeaderCellDef> Contador </th>
-      <td mat-cell *matCellDef="let element"> {{element.Usuario.idUsuario}} </td>
-    </ng-container>
-    
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <div class="example-button-container">
+  
+      <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+        routerLink="/curriculum/insertar">
+        <mat-icon>plus_one</mat-icon>
+      </button>
+    </div>
+  </div>

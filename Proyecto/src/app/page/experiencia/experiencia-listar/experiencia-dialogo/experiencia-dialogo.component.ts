@@ -1,6 +1,7 @@
-import { MatDialogRef } from '@angular/material/dialog';
-import { ExperienciaService } from './../../../../service/experiencia.service';
 import { Component, OnInit } from '@angular/core';
+import { ExperienciaService } from './../../../../service/experiencia.service';
+import { MatDialogRef } from '@angular/material/dialog';
+
 @Component({
   selector: 'app-experiencia-dialogo',
   templateUrl: './experiencia-dialogo.component.html',
@@ -11,7 +12,8 @@ export class ExperienciaDialogoComponent implements OnInit {
   constructor(private experienciaService: ExperienciaService,
     private dialogRef: MatDialogRef<ExperienciaDialogoComponent>) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+  }
   confirmarExperiencia(estado: boolean) {
     this.experienciaService.setConfirmaEliminacionExperiencia(estado);
     this.dialogRef.close();

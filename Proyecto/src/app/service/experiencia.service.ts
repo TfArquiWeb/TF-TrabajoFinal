@@ -11,7 +11,7 @@ export class ExperienciaService {
   url: string = "http://localhost:8081/Experiencia"
   private listaCambio = new Subject<Experiencia[]>()
   private confirmaEliminacionExperiencia = new Subject<Boolean>()
-  constructor(public http: HttpClient) { }
+  constructor(public http:HttpClient) { }
   listarExperiencia() {
     return this.http.get<Experiencia[]>(this.url);
   }
@@ -30,7 +30,7 @@ export class ExperienciaService {
   listarIdExperiencia(id: number) {
     return this.http.get<Experiencia>(`${this.url}/${id}`);
   }
-  eliminarExperiencia(id: number) { 
+  eliminarExperiencia(id: number) {
     return this.http.delete(this.url + "/" + id);
   }
   getConfirmaEliminacionExperiencia() {
@@ -39,5 +39,4 @@ export class ExperienciaService {
   setConfirmaEliminacionExperiencia(estado: Boolean) {
     this.confirmaEliminacionExperiencia.next(estado);
   }
-
 }

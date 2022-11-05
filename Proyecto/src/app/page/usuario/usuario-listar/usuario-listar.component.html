@@ -49,18 +49,16 @@
         <th mat-header-cell *matHeaderCellDef> Foto </th>
         <td mat-cell *matCellDef="let element"> {{element.fotoUsuario}} </td>
     </ng-container>
-
-    <ng-container matColumnDef="acciones1">
+    <ng-container matColumnDef="accion1">
         <th mat-header-cell *matHeaderCellDef> Acciones </th>
         <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
             [routerLink]="['edicion', element?.id]">Actualizar</button>
         </td>
-    </ng-container>
-    <ng-container matColumnDef="acciones2">
+      </ng-container>
+      <ng-container matColumnDef="accion2">
         <th mat-header-cell *matHeaderCellDef> Acciones </th>
         <td mat-cell *matCellDef="let element">
-          <button mat-raised-button color="warn" (click)="confirmarUsuario(element.id)">Eliminar</button>
-  
+            <button mat-raised-button color="warn" (click)="confirmarUsuario(element.id)">Eliminar</button>
         </td>
       </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -73,5 +71,4 @@
       <mat-icon>plus_one</mat-icon>
     </button>
   </div>
-
 </div>

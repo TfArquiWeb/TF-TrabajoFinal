@@ -50,7 +50,5 @@ export class UsuarioCreaditaComponent implements OnInit {
         this.usuario = data;
       })
     }
-
   }
-
 }

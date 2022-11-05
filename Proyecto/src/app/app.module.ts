@@ -8,8 +8,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContadorComponent } from './page/contador/contador.component';
 import { ContadorListarComponent } from './page/contador/contador-listar/contador-listar.component';
-import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habilidad-buscar.component'
-import { ExperienciaBuscarComponent } from './page/experiencia/experiencia-buscar/experiencia-buscar.component'
 import { TipopagoComponent } from './page/tipopago/tipopago.component';
 import { TipopagoListarComponent } from './page/tipopago/tipopago-listar/tipopago-listar.component';
 import { ContratoComponent } from './page/contrato/contrato.component';
@@ -24,26 +22,37 @@ import { CapacitacionCreaeditaComponent } from './page/capacitacion/capacitacion
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
 import { UsuarioComponent } from './page/usuario/usuario.component';
 import { UsuarioListarComponent } from './page/usuario/usuario-listar/usuario-listar.component';
-import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
-import { TipomonedaListarComponent } from './page/tipomoneda/tipomoneda-listar/tipomoneda-listar.component';
 import { ContratoListarComponent } from './page/contrato/contrato-listar/contrato-listar.component';
 import { ExperienciaCreaeditaComponent } from './page/experiencia/experiencia-creaedita/experiencia-creaedita.component';
 import { HabilidadCreaeditaComponent } from './page/habilidad/habilidad-creaedita/habilidad-creaedita.component';
 import { CurriculumComponent } from './page/curriculum/curriculum.component';
-import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/curriculum-listar.component';
 import { ContadorCreaditaComponent } from './page/contador/contador-creadita/contador-creadita.component';
 import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
 import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/tipopago-creaedita.component';
-import { CapacitacionDialogoComponent } from './page/capacitacion/capacitacion-listar/capacitacion-dialogo/capacitacion-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { CapacitacionBuscarComponent } from './page/capacitacion/capacitacion-buscar/capacitacion-buscar.component';
-import { UsuarioDialogoComponent } from './page/usuario/usuario-listar/usuario-dialogo/usuario-dialogo.component';
-import { UsuarioBuscarComponent } from './page/usuario/usuario-buscar/usuario-buscar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { SidenavComponent } from './page/sidenav/sidenav.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { CapacitacionBuscarComponent } from './page/capacitacion/capacitacion-buscar/capacitacion-buscar.component';
+import { CapacitacionDialogoComponent } from './page/capacitacion/capacitacion-listar/capacitacion-dialogo/capacitacion-dialogo.component';
+import { ExperienciaDialogoComponent } from './page/experiencia/experiencia-listar/experiencia-dialogo/experiencia-dialogo.component';
+import { ExperienciaBuscarComponent } from './page/experiencia/experiencia-buscar/experiencia-buscar.component';
+import { HabilidadDialogoComponent } from './page/habilidad/habilidad-listar/habilidad-dialogo/habilidad-dialogo.component';
+import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habilidad-buscar.component';
+import { FormsModule } from '@angular/forms';
+import { UsuarioBuscarComponent } from './page/usuario/usuario-buscar/usuario-buscar.component';
+import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
+import { TipopagoBuscarComponent } from './page/tipopago/tipopago-buscar/tipopago-buscar.component';
+import { TipomonedaListarComponent } from './page/tipomoneda/tipomoneda-listar/tipomoneda-listar.component';
+import { TipomonedaDialogoComponent } from './page/tipomoneda/tipomoneda-listar/tipomoneda-dialogo/tipomoneda-dialogo.component';
+import { TipomonedaBuscarComponent } from './page/tipomoneda/tipomoneda-buscar/tipomoneda-buscar.component';
+import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creaedita/tipomoneda-creaedita.component';
+import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/curriculum-listar.component';
 
 
 @NgModule({
@@ -57,47 +66,60 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     TipopagoListarComponent,
     ContratoComponent,
     ExperienciaComponent,
-    ExperienciaBuscarComponent,
-    HabilidadBuscarComponent,
     HabilidadComponent,
     CapacitacionComponent,
     CapacitacionListarComponent,
-    ExperienciaListarComponent, 
+    ExperienciaListarComponent,
     HabilidadListarComponent,
     CapacitacionCreaeditaComponent,
     UsuarioComponent,
     UsuarioListarComponent,
-    TipomonedaComponent,
-    TipomonedaListarComponent,
     ContratoListarComponent,
     ExperienciaCreaeditaComponent,
     HabilidadCreaeditaComponent,
     CurriculumComponent,
-    CurriculumListarComponent,
     ContadorCreaditaComponent,
     UsuarioCreaditaComponent,
     EmpresarioCreaditaComponent,
     TipopagoCreaeditaComponent,
-    CapacitacionDialogoComponent,
+    SidenavComponent,
     CapacitacionBuscarComponent,
-    UsuarioDialogoComponent,
+    CapacitacionDialogoComponent,
+    ExperienciaDialogoComponent,
+    ExperienciaBuscarComponent,
+    HabilidadDialogoComponent,
+    HabilidadBuscarComponent,
     UsuarioBuscarComponent,
+    TipomonedaComponent,
+    TipopagoBuscarComponent,
+    TipomonedaListarComponent,
+    TipomonedaDialogoComponent,
+    TipomonedaBuscarComponent,
+    TipomonedaCreaeditaComponent,
+    CurriculumListarComponent,
+
   ],
   imports: [
-    BrowserModule,
+  
+  BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule,
     MatTableModule,
-    MatInputModule,
-    FormsModule,
-    MatButtonModule,
+    BrowserAnimationsModule,
     MatIconModule,
     MatDialogModule,
-    MatFormFieldModule
-    
+    MatSidenavModule,
+    MatListModule,
+    MatToolbarModule,
+    FormsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
