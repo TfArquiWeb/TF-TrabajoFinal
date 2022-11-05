@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { Curriculum } from './../../../model/curriculum';
+import { Curriculum } from '../../../model/curriculum';
 import { CurriculumService } from './../../../service/curriculum.service';
 
 @Component({
