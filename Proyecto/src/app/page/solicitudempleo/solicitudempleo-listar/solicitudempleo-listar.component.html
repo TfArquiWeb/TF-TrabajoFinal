@@ -5,31 +5,31 @@
     
         <!-- Position Column -->
         <ng-container matColumnDef="id">
-            <th mat-header-cell *matHeaderCellDef> Id </th>
-            <td mat-cell *matCellDef="let element"> {{element.idVehiculo}} </td>
+            <th mat-header-cell *matHeaderCellDef> id </th>
+            <td mat-cell *matCellDef="let element"> {{element.idSE}} </td>
         </ng-container>
     
         <!-- Name Column -->
         <ng-container matColumnDef="fecha">
             <th mat-header-cell *matHeaderCellDef> Licencia </th>
-            <td mat-cell *matCellDef="let element"> {{element.licensePlateVehiculo}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.fechaSE}} </td>
         </ng-container>
     
         <!-- Weight Column -->
         <ng-container matColumnDef="estado">
             <th mat-header-cell *matHeaderCellDef> Fecha de fabricación </th>
-            <td mat-cell *matCellDef="let element"> {{element.manufacturingDateVehiculo}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.estadoSE}} </td>
         </ng-container>
         <!-- Weight Column -->
         <ng-container matColumnDef="usuario">
-            <th mat-header-cell *matHeaderCellDef> Propietario </th>
-            <td mat-cell *matCellDef="let element"> {{element.propietario.namePropietario}} </td>
+            <th mat-header-cell *matHeaderCellDef> Usuario </th>
+            <td mat-cell *matCellDef="let element"> {{element.Usuario.nombreUsuario}} </td>
         </ng-container>
     
         <ng-container matColumnDef="acciones">
             <th mat-header-cell *matHeaderCellDef> Acciones </th>
             <td mat-cell *matCellDef="let element"> <button mat-raised-button color="basic"
-                    [routerLink]="['edicion', element.idVehiculo]">Actualizar</button>
+                    [routerLink]="['edicion', element.idSE]">Actualizar</button>
                 <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button>
             </td>
         </ng-container>
@@ -39,7 +39,7 @@
     
     </table>
     <button mat-mini-fab color="warn" aria-label="Example icon button with a plus one icon"
-        routerLink="/vehiculos/nuevo">
+        routerLink="/Solicitudempleo/nuevo">
         <mat-icon>plus_one</mat-icon>
     </button>
     </div>

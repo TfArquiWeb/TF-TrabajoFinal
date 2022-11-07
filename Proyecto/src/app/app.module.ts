@@ -56,7 +56,8 @@ import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/c
 import { SolicitudempleoComponent } from './page/solicitudempleo/solicitudempleo.component';
 import { SolicitudempleoListarComponent } from './page/solicitudempleo/solicitudempleo-listar/solicitudempleo-listar.component';
 import { SolicitudempleoCreaditaComponent } from './page/solicitudempleo/solicitudempleo-creadita/solicitudempleo-creadita.component';
-import { DialogoComponent } from './page/solicitudempleo/solicitudempleo-listar/dialogo/dialogo.component';
+import { SolocitudempleoDialogoComponent } from './page/solicitudempleo/solicitudempleo-listar/solocitudempleo-dialogo/solocitudempleo-dialogo.component'
+
 
 
 @NgModule({
@@ -104,7 +105,8 @@ import { DialogoComponent } from './page/solicitudempleo/solicitudempleo-listar/
     SolicitudempleoComponent,
     SolicitudempleoListarComponent,
     SolicitudempleoCreaditaComponent,
-    DialogoComponent,
+    SolocitudempleoDialogoComponent,
+
 
   ],
   imports: [
