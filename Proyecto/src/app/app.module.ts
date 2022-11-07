@@ -53,6 +53,8 @@ import { TipomonedaDialogoComponent } from './page/tipomoneda/tipomoneda-listar/
 import { TipomonedaBuscarComponent } from './page/tipomoneda/tipomoneda-buscar/tipomoneda-buscar.component';
 import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creaedita/tipomoneda-creaedita.component';
 import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/curriculum-listar.component';
+import { EmpresarioDialogoComponent } from './page/empresario/empresario-listar/empresario-dialogo/empresario-dialogo.component';
+
 
 
 @NgModule({
@@ -97,6 +99,7 @@ import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/c
     TipomonedaBuscarComponent,
     TipomonedaCreaeditaComponent,
     CurriculumListarComponent,
+    EmpresarioDialogoComponent,
 
   ],
   imports: [

@@ -41,12 +41,6 @@
   </ng-container>
 
   <!-- Weight Column -->
-  <ng-container matColumnDef="foto"> 
-    <th mat-header-cell *matHeaderCellDef> Foto </th>
-    <td mat-cell *matCellDef="let element"> {{element.Usuario.fotoUsuario}} </td>
-  </ng-container>
-
-  <!-- Weight Column -->
   <ng-container matColumnDef="razon">
     <th mat-header-cell *matHeaderCellDef> Razon Social </th>
     <td mat-cell *matCellDef="let element"> {{element.razonEmpresario}} </td>
@@ -69,6 +63,14 @@
     <th mat-header-cell *matHeaderCellDef> Descripción </th>
     <td mat-cell *matCellDef="let element"> {{element.descEmpresario}} </td>
   </ng-container>
+
+  <ng-container matColumnDef="acciones">
+    <th mat-header-cell *matHeaderCellDef> Acciones </th>
+    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="basic"
+            [routerLink]="['edicion', element.idEmpresario]">Actualizar</button>
+        <button mat-raised-button color="warn" (click)="confirmar(element.idEmpresario)">Eliminar</button>
+    </td>
+</ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

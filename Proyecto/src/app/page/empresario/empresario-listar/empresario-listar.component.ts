@@ -1,3 +1,5 @@
+import { EmpresarioDialogoComponent } from './empresario-dialogo/empresario-dialogo.component';
+
 import { MatDialog } from '@angular/material/dialog';
 import { EmpresarioService } from './../../../service/empresario.service';
 import { Component, OnInit } from '@angular/core';
@@ -12,7 +14,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class EmpresarioListarComponent implements OnInit {
   lista: Empresario[] = [];
   dataSource: MatTableDataSource<Empresario> = new MatTableDataSource();
-  displayedColumns: string[] = ['id','dni','nombre','apellido','numero','correo','foto','razon','ruc','rubro','descripcion'];
+  displayedColumns: string[] = ['id','dni','nombre','apellido','numero','correo','razon','ruc','rubro','descripcion','acciones'];
   private idMayor: number = 0;
   constructor(private empresarioService: EmpresarioService, private dialog: MatDialog) { }
 
