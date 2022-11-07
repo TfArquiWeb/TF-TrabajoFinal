@@ -1,0 +1,15 @@
+<p>curriculum-creadita works!</p>
+<div class="container">
+
+  <h1>Curriculum</h1>
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="id" [(ngModel)]="curriculum.id">
+  </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/Curriculum">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>
