@@ -48,6 +48,8 @@ import { ExperienciaDialogoComponent } from './page/experiencia/experiencia-list
 import { ExperienciaBuscarComponent } from './page/experiencia/experiencia-buscar/experiencia-buscar.component';
 import { HabilidadDialogoComponent } from './page/habilidad/habilidad-listar/habilidad-dialogo/habilidad-dialogo.component';
 import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habilidad-buscar.component';
+import { ContratoDialogoComponent } from './page/contrato-listar/contrato-dialogo/contrato-dialogo.component';
+import { ContratoDialogComponent } from './page/contrato/contrato-listar/contrato-dialog/contrato-dialog.component';
 
 
 
@@ -88,6 +90,8 @@ import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habi
     ExperienciaBuscarComponent,
     HabilidadDialogoComponent,
     HabilidadBuscarComponent,
+    ContratoDialogoComponent,
+    ContratoDialogComponent,
   ],
   imports: [
     BrowserModule,

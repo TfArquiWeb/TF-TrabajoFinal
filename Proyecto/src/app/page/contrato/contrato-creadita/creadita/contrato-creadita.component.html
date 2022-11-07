@@ -59,8 +59,18 @@
     <input type="email" matInput required placeholder="curriculumvitae" [(ngModel)]="contrato.CurriculumVitae">
   </mat-form-field>
   <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Contrato</mat-label>
+    <mat-select [(value)]="idContratoSeleccionado" required>
+        <mat-option *ngFor="let p of listaContrato" [value]="p.idContrato">
+            <!--{{p.namePropietario}}-->
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
-  <button mat-raised-button color="warn" routerLink="/propietarios">Cancelar</button>
+  <button mat-raised-button color="warn" routerLink="/contrato">Cancelar</button>
   <p>{{mensaje}}</p>
 
 </div>

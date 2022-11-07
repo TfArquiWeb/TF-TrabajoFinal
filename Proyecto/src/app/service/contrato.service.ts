@@ -7,8 +7,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ContratoService {
-  url: string = "http://localhost:5000/contrato"
+  url: string = "http://localhost:8081/contrato"
   private listacambio = new Subject<Contrato[]>()
+  private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
   listarContrato() {
     return this.http.get<Contrato[]>(this.url);
@@ -21,5 +22,19 @@ export class ContratoService {
   }
   getListaContrato(){
     return this.listacambio.asObservable();
+  }
+  getConfirmaEliminacionContrato(){
+    return this.confirmaEliminacion.asObservable();
+  }
+  listarId(id: number) {
+
+    return this.http.get<Contrato>(`${this.url}/${id}`);
+  }
+  modificar(contrato:Contrato) {
+
+    return this.http.put(this.url, contrato);
+  }
+  setConfirmaEliminacionContrato(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
   }
 }

@@ -7,7 +7,7 @@ import { TipoMoneda } from '../model/tipomoneda';
   providedIn: 'root'
 })
 export class TipomonedaService {
-  url: string = "http://localhost:5000/tipomoneda"
+  url: string = "http://localhost:8081/tipomoneda"
   private listacambio = new Subject<TipoMoneda[]>()
   private confirmaEliminacionTipoMoneda = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
