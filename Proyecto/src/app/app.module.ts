@@ -60,6 +60,7 @@ import { SolocitudempleoDialogoComponent } from './page/solicitudempleo/solicitu
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

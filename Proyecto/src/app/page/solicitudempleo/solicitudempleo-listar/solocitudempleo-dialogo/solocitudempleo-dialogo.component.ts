@@ -1,4 +1,6 @@
+import { MatDialogRef } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
+import { SolicitudempleoService } from 'src/app/service/solicitudempleo.service';
 
 @Component({
   selector: 'app-solocitudempleo-dialogo',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SolocitudempleoDialogoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private solicitudempleoService: SolicitudempleoService,
+    private dialogRef: MatDialogRef<SolocitudempleoDialogoComponent>) { }
 
   ngOnInit(): void {
+  }
+  confirmar(estado: boolean) {
+    this.solicitudempleoService.setConfirmaEliminacionSolicitud(estado);
+    this.dialogRef.close();
   }
 
 }
