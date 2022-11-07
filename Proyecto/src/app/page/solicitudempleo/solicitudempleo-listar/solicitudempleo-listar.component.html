@@ -1,0 +1,46 @@
+<div class="container">
+    <h1> Lista de Solocitud de empleo </h1>
+    
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.idVehiculo}} </td>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="fecha">
+            <th mat-header-cell *matHeaderCellDef> Licencia </th>
+            <td mat-cell *matCellDef="let element"> {{element.licensePlateVehiculo}} </td>
+        </ng-container>
+    
+        <!-- Weight Column -->
+        <ng-container matColumnDef="estado">
+            <th mat-header-cell *matHeaderCellDef> Fecha de fabricación </th>
+            <td mat-cell *matCellDef="let element"> {{element.manufacturingDateVehiculo}} </td>
+        </ng-container>
+        <!-- Weight Column -->
+        <ng-container matColumnDef="usuario">
+            <th mat-header-cell *matHeaderCellDef> Propietario </th>
+            <td mat-cell *matCellDef="let element"> {{element.propietario.namePropietario}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="acciones">
+            <th mat-header-cell *matHeaderCellDef> Acciones </th>
+            <td mat-cell *matCellDef="let element"> <button mat-raised-button color="basic"
+                    [routerLink]="['edicion', element.idVehiculo]">Actualizar</button>
+                <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button>
+            </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+    </table>
+    <button mat-mini-fab color="warn" aria-label="Example icon button with a plus one icon"
+        routerLink="/vehiculos/nuevo">
+        <mat-icon>plus_one</mat-icon>
+    </button>
+    </div>
+    
