@@ -7,7 +7,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
-  mobileQuery: MediaQueryList;
+  mobileQuery:MediaQueryList;
 
   //fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
   fillerNav=[
@@ -21,7 +21,7 @@ export class SidenavComponent implements OnInit {
     {name: "Experiencia", route: "experiencia", icon:"arrow_forward_ios"},
     {name: "Tipo de Pago", route: "tipopago", icon:"shopping_cart_checkout"},
     {name: "Tipo de Moneda", route: "tipomoneda", icon:"language"},
-    
+
   ]
 
   fillerContent = Array.from({length: 50}, () =>

@@ -37,7 +37,7 @@ import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuari
 import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
 import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/tipopago-creaedita.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';2
 import { SidenavComponent } from './page/sidenav/sidenav.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
@@ -48,7 +48,6 @@ import { ExperienciaDialogoComponent } from './page/experiencia/experiencia-list
 import { ExperienciaBuscarComponent } from './page/experiencia/experiencia-buscar/experiencia-buscar.component';
 import { HabilidadDialogoComponent } from './page/habilidad/habilidad-listar/habilidad-dialogo/habilidad-dialogo.component';
 import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habilidad-buscar.component';
-
 
 
 
@@ -89,7 +88,6 @@ import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habi
     ExperienciaBuscarComponent,
     HabilidadDialogoComponent,
     HabilidadBuscarComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -106,7 +104,6 @@ import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habi
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

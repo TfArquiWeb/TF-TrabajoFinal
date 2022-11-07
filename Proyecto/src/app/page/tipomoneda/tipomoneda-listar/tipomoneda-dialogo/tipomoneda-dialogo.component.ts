@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class TipomonedaDialogoComponent implements OnInit {
 
   constructor(private tipomonedaService:TipomonedaService,
-    private dialogRef:MatDialogRef<TipomonedaDialogoComponent>) {}
+    private dialogRef:MatDialogRef<TipomonedaDialogoComponent>) { }
 
   ngOnInit(): void {}
     confirmarTipoMoneda(estado:boolean){
