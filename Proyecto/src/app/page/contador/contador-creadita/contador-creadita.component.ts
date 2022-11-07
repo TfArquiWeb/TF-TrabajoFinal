@@ -36,7 +36,7 @@ export class ContadorCreaditaComponent implements OnInit {
       c.id= this.idUsuarioSeleccionado
       this.contador.Usuario=c;
       if(this.edicion){
-        this.contadorservice.insertarContador(this.contador).subscribe(() => {
+        this.contadorservice.modificarContador(this.contador).subscribe(() => {
           this.contadorservice.listarContador().subscribe(data => {
             this.contadorservice.setlistaContador(data);
           })

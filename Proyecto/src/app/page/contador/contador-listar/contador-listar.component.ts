@@ -13,7 +13,7 @@ import { Contador } from 'src/app/model/contador';
 export class ContadorListarComponent implements OnInit {
   listacontador:Contador[]=[];
   dataSource: MatTableDataSource<Contador> = new MatTableDataSource();
-  displayedColumns: string[] = ['idContador','desc','linkedid','idUsuario'];
+  displayedColumns: string[] = ['idContador','desc','linkedid','idUsuario','accion1','accion2'];
   private idMayor: number = 0;
   constructor(private Cs: ContadorService, private dialog: MatDialog) { }
 
@@ -30,7 +30,7 @@ export class ContadorListarComponent implements OnInit {
       data == true ? this.eliminar(this.idMayor) : false;
     })
   }
-  confirmar(id: number) {
+  confirmarContador(id: number) {
     this.idMayor = id;
     this.dialog.open(ContadorDialogoComponent);
   }
