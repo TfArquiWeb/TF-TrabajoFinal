@@ -19,6 +19,7 @@ export class ContadorListarComponent implements OnInit {
 
   ngOnInit(): void {
     this.Cs.listarContador().subscribe(data => {
+      console.log(data)
       this.listacontador=data;
       this.dataSource = new MatTableDataSource(data);
     }); 
