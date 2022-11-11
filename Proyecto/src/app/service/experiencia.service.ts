@@ -1,42 +1,49 @@
+import { environment } from 'src/environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Experiencia } from './../model/experiencia';
-import { Subject } from 'rxjs';
-
+import { EMPTY, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExperienciaService {
-  url: string = "http://localhost:8081/Experiencia"
+  private url: string = `${environment.host}/Experiencia`
   private listaCambio = new Subject<Experiencia[]>()
-  private confirmaEliminacionExperiencia = new Subject<Boolean>()
-  constructor(public http:HttpClient) { }
-  listarExperiencia() {
+  private confirmaEliminacion = new Subject<Boolean>()
+  constructor(public http: HttpClient) { }
+  listar() {
     return this.http.get<Experiencia[]>(this.url);
   }
-  insertarExperiencia(experiencia: Experiencia) {
+  registrar(experiencia: Experiencia) {
     return this.http.post(this.url, experiencia);
   }
-  setListaExperiencia(listaNueva: Experiencia[]) {
-    this.listaCambio.next(listaNueva);
+  modificar(experiencia: Experiencia) {
+    return this.http.put(this.url, experiencia);
   }
-  getListaExperiencia() {
-    return this.listaCambio.asObservable();
+  eliminar(id: number) {
+    return this.http.delete(`${this.url}/${id}`);
   }
-  modificarExperiencia(experiencia: Experiencia) {
-    return this.http.put(this.url + "/" + experiencia.id, experiencia);
+  buscar(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<Experiencia[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
-  listarIdExperiencia(id: number) {
+  listarId(id: number) {
     return this.http.get<Experiencia>(`${this.url}/${id}`);
   }
-  eliminarExperiencia(id: number) {
-    return this.http.delete(this.url + "/" + id);
+  getLista() {
+    return this.listaCambio.asObservable();
   }
-  getConfirmaEliminacionExperiencia() {
-    return this.confirmaEliminacionExperiencia.asObservable();
+  setLista(listaNueva: Experiencia[]) {
+    this.listaCambio.next(listaNueva);
   }
-  setConfirmaEliminacionExperiencia(estado: Boolean) {
-    this.confirmaEliminacionExperiencia.next(estado);
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
   }
 }

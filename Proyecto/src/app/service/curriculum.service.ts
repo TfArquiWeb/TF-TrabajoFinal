@@ -1,4 +1,4 @@
-import { curriculum } from './../model/curriculum';
+import { curriculum } from './../model/Curriculum';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';

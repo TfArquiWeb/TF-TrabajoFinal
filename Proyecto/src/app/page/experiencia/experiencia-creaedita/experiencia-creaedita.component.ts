@@ -22,18 +22,18 @@ export class ExperienciaCreaeditaComponent implements OnInit {
       this.init();
     });
   }
-  aceptarExperiencia(): void {
+  aceptar(): void {
     if (this.experiencia.descExperiencia.length > 0) {
       if (this.edicion) {
-        this.experienciaService.modificarExperiencia(this.experiencia).subscribe(data => {
-          this.experienciaService.listarExperiencia().subscribe(data => {
-            this.experienciaService.setListaExperiencia(data);
+        this.experienciaService.modificar(this.experiencia).subscribe(data => {
+          this.experienciaService.listar().subscribe(data => {
+            this.experienciaService.setLista(data);
           })
         })
       } else {
-        this.experienciaService.insertarExperiencia(this.experiencia).subscribe(data => {
-          this.experienciaService.listarExperiencia().subscribe(data => {
-            this.experienciaService.setListaExperiencia(data);
+        this.experienciaService.registrar(this.experiencia).subscribe(data => {
+          this.experienciaService.listar().subscribe(data => {
+            this.experienciaService.setLista(data);
           })
         })
       }
@@ -44,7 +44,7 @@ export class ExperienciaCreaeditaComponent implements OnInit {
   }
   init() {
     if (this.edicion) {
-      this.experienciaService.listarIdExperiencia(this.id).subscribe(data => {
+      this.experienciaService.listarId(this.id).subscribe(data => {
         this.experiencia = data;
       })
     }

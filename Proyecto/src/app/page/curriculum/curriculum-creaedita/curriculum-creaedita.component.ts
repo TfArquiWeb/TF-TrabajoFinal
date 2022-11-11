@@ -1,4 +1,4 @@
-import { curriculum } from './../../../model/curriculum';
+import { curriculum } from './../../../model/Curriculum';
 import { CapacitacionService } from './../../../service/capacitacion.service';
 import { Capacitacion } from './../../../model/capacitacion';
 import { Router, ActivatedRoute, Params } from '@angular/router';
@@ -29,7 +29,7 @@ export class CurriculumCreaeditaComponent implements OnInit {
       this.edicion = data['id'] != null;
       this.init();
     });
-    this.CapacitacionService.listarCapacitacion().subscribe(data => { this.listarCapacitacion = data });
+    this.CapacitacionService.listar().subscribe(data => { this.listarCapacitacion = data });
   }
   aceptar(): void {
     if (this.curriculum.id > 0 ) {

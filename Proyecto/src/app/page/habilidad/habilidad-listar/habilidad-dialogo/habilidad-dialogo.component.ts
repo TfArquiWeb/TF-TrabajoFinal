@@ -8,14 +8,13 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./habilidad-dialogo.component.css']
 })
 export class HabilidadDialogoComponent implements OnInit {
-
   constructor(private habilidadService: HabilidadService,
     private dialogRef: MatDialogRef<HabilidadDialogoComponent>) { }
 
   ngOnInit(): void {
   }
-  confirmarHabilidad(estado: boolean) {
-    this.habilidadService.setConfirmaEliminacionHabilidad(estado);
+  confirmar(estado: boolean) {
+    this.habilidadService.setConfirmaEliminacion(estado);
     this.dialogRef.close();
   }
 

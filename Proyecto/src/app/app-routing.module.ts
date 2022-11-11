@@ -55,7 +55,7 @@ const routes: Routes = [{
     { path: 'insertar', component: UsuarioCreaditaComponent },
     { path: 'edicion/:id', component: UsuarioCreaditaComponent }
   ]
-}, {
+}, { 
   path: 'contrato', component: ContratoComponent, children: [
 
   ]
