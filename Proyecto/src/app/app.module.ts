@@ -55,7 +55,10 @@ import { TipomonedaBuscarComponent } from './page/tipomoneda/tipomoneda-buscar/t
 import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creaedita/tipomoneda-creaedita.component';
 import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/curriculum-listar.component';
 import { ContadorDialogoComponent } from './page/contador/contador-listar/contador-dialogo/contador-dialogo.component';
-
+import { SolicitudempleoComponent } from './page/solicitudempleo/solicitudempleo.component';
+import { SolicitudempleoCreaditaComponent } from './page/solicitudempleo/solicitudempleo-creadita/solicitudempleo-creadita.component';
+import { SolicitudempleoListarComponent } from './page/solicitudempleo/solicitudempleo-listar/solicitudempleo-listar.component';
+import { SolocitudempleoDialogoComponent } from './page/solicitudempleo/solicitudempleo-listar/solocitudempleo-dialogo/solocitudempleo-dialogo.component';
 
 @NgModule({
   declarations: [
@@ -100,6 +103,12 @@ import { ContadorDialogoComponent } from './page/contador/contador-listar/contad
     TipomonedaCreaeditaComponent,
     CurriculumListarComponent,
     ContadorDialogoComponent,
+    SolicitudempleoComponent,
+    SolicitudempleoCreaditaComponent,
+    SolicitudempleoListarComponent,
+    SolocitudempleoDialogoComponent,
+
+
 
   ],
   imports: [
