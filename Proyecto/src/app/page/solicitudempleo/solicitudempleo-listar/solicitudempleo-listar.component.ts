@@ -12,7 +12,7 @@ import { SolicitudempleoService } from 'src/app/service/solicitudempleo.service'
 export class SolicitudempleoListarComponent implements OnInit {
   lista: SolicitudEmpleo[]=[];
   dataSource: MatTableDataSource<SolicitudEmpleo>= new MatTableDataSource();
-  displayedColumns: string[] = [ 'id', 'fecha', 'estado', 'usuario', 'acciones' ]
+  displayedColumns: string[] = [ 'id', 'fecha', 'estado', 'contador', 'empresario', 'acciones' ]
   private idMayor: number = 0;
 
   constructor(private solicitudempleoService: SolicitudempleoService, private dialog: MatDialog) { }

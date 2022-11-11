@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SolicitudempleoService {
-  url: string = "http://localhost:8081/solicitudempleo"
+  url: string = "http://localhost:8081/solicitudempleo" //CAMBIO DE URL
   private listacambio=new Subject<SolicitudEmpleo[]>()
   private confirmaEliminacionSolicitud = new Subject<Boolean>()
   constructor(public http: HttpClient) { }

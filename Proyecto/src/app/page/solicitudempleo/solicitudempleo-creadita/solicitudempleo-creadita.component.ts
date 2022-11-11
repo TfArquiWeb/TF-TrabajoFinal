@@ -1,7 +1,11 @@
-import { UsuarioService } from 'src/app/service/usuario.service';
+
+//import { EmpresarioService } from 'src/app/service/empresario.service';
+import { ContadorService } from 'src/app/service/contador.service';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { SolicitudempleoService } from 'src/app/service/solicitudempleo.service';
-import { Usuario } from 'src/app/model/usuario';
+
+//import { Empresario } from 'src/app/model/empresario';
+import { Contador } from 'src/app/model/contador';
 import { SolicitudEmpleo } from 'src/app/model/solicitudempleo';
 import { Component, OnInit } from '@angular/core';
 
