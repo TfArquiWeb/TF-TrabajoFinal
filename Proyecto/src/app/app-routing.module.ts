@@ -1,3 +1,4 @@
+import { CurriculumCreaeditaComponent } from './page/curriculum/curriculum-creaedita/curriculum-creaedita.component';
 import { ContadorCreaditaComponent } from './page/contador/contador-creadita/contador-creadita.component';
 import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { CurriculumComponent } from './page/curriculum/curriculum.component';
@@ -54,12 +55,14 @@ const routes: Routes = [{
     { path: 'insertar', component: UsuarioCreaditaComponent },
     { path: 'edicion/:id', component: UsuarioCreaditaComponent }
   ]
-}, {
+}, { 
   path: 'contrato', component: ContratoComponent, children: [
 
   ]
 }, {
   path: 'curriculum', component: CurriculumComponent, children: [
+    {path: 'insertar', component: CurriculumCreaeditaComponent},
+    { path: 'edicion/:id', component: CurriculumCreaeditaComponent }
   ]
 },{
   path: 'tipomoneda', component: TipomonedaComponent, children: [

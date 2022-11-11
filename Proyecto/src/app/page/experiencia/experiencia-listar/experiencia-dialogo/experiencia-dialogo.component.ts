@@ -8,14 +8,13 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./experiencia-dialogo.component.css']
 })
 export class ExperienciaDialogoComponent implements OnInit {
-
   constructor(private experienciaService: ExperienciaService,
     private dialogRef: MatDialogRef<ExperienciaDialogoComponent>) { }
 
   ngOnInit(): void {
   }
-  confirmarExperiencia(estado: boolean) {
-    this.experienciaService.setConfirmaEliminacionExperiencia(estado);
+  confirmar(estado: boolean) {
+    this.experienciaService.setConfirmaEliminacion(estado);
     this.dialogRef.close();
   }
 

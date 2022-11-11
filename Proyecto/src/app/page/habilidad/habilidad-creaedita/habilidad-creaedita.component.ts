@@ -22,19 +22,18 @@ export class HabilidadCreaeditaComponent implements OnInit {
       this.init();
     });
   }
-  aceptarHabilidad(): void {
+  aceptar(): void {
     if (this.habilidad.descHabilidad.length > 0) {
       if (this.edicion) {
-        this.habilidadService.modificarHabilidad(this.habilidad).subscribe(data => {
-          this.habilidadService.listarHabilidad().subscribe(data => {
-            this.habilidadService.setListaHabilidad(data);
+        this.habilidadService.modificar(this.habilidad).subscribe(data => {
+          this.habilidadService.listar().subscribe(data => {
+            this.habilidadService.setLista(data);
           })
         })
       } else {
-
-        this.habilidadService.insertarHabilidad(this.habilidad).subscribe(data => {
-          this.habilidadService.listarHabilidad().subscribe(data => {
-            this.habilidadService.setListaHabilidad(data);
+        this.habilidadService.registrar(this.habilidad).subscribe(data => {
+          this.habilidadService.listar().subscribe(data => {
+            this.habilidadService.setLista(data);
           })
         })
       }
@@ -45,7 +44,7 @@ export class HabilidadCreaeditaComponent implements OnInit {
   }
   init() {
     if (this.edicion) {
-      this.habilidadService.listarIdHabilidad(this.id).subscribe(data => {
+      this.habilidadService.listarId(this.id).subscribe(data => {
         this.habilidad = data;
       })
     }

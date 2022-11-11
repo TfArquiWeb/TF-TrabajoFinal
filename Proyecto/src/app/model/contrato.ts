@@ -1,5 +1,5 @@
 
-import { curriculum} from './curriculum';
+import { curriculum} from './Curriculum';
 import { Usuario } from './usuario';
 import { TipoPago } from './tipopago';
 import { TipoMoneda } from './tipomoneda';
