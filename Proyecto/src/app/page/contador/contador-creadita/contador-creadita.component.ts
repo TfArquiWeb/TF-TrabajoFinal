@@ -34,9 +34,9 @@ export class ContadorCreaditaComponent implements OnInit {
     if (this.contador.descContador.length > 0 && this.contador.linkedinContador.length > 0) {
       let c=new Usuario();
       c.id= this.idUsuarioSeleccionado
-      this.contador.Usuario=c;
+      this.contador.usuario=c;
       if(this.edicion){
-        this.contadorservice.insertarContador(this.contador).subscribe(() => {
+        this.contadorservice.modificarContador(this.contador).subscribe(() => {
           this.contadorservice.listarContador().subscribe(data => {
             this.contadorservice.setlistaContador(data);
           })
@@ -61,7 +61,7 @@ export class ContadorCreaditaComponent implements OnInit {
       this.contadorservice.listarIdContador(this.id).subscribe(data => {
         this.contador = data
         console.log(data);
-        this.idUsuarioSeleccionado = data.Usuario.id;
+        this.idUsuarioSeleccionado = data.usuario.id;
       });
 
     }
