@@ -1,9 +1,12 @@
-import { curriculum } from './../../../model/Curriculum';
+import { ExperienciaService } from './../../../service/experiencia.service';
+import { HabilidadService } from './../../../service/habilidad.service';
 import { CapacitacionService } from './../../../service/capacitacion.service';
+import { Experiencia } from './../../../model/experiencia';
+import { Habilidad } from './../../../model/habilidad';
 import { Capacitacion } from './../../../model/capacitacion';
+import { curriculum } from './../../../model/Curriculum';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { CurriculumService } from './../../../service/curriculum.service';
-
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,60 +15,75 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./curriculum-creaedita.component.css']
 })
 export class CurriculumCreaeditaComponent implements OnInit {
-  id: number = 0;
-  edicion: boolean = false;
-  listarCapacitacion:Capacitacion[]=[];
-  idCapacitacionSelecionado:number=0;
+  Curriculum: curriculum = new curriculum();
+  listaCapacitacion: Capacitacion[] = [];
+  descCapacitacionSelecionado: string = "";
+  listaHabilidad: Habilidad[] = [];
+  idHabilidadSeleccionado: number = 0;
+  listaExperiencia: Experiencia[] = [];
+  idExperienciaSeleccionado: number = 0;
   mensaje: string = "";
-  mensaje1: string = "";
-  curriculum: curriculum = new curriculum();
-  
-  constructor(private CurriculumService: CurriculumService, private router: Router,
-    private route: ActivatedRoute, private CapacitacionService:CapacitacionService) { }
-
+  edicion: boolean = false;
+  id: number = 0;
+  constructor(private curriculumService: CurriculumService,
+    private router: Router, private route: ActivatedRoute,
+    private capacitacionService: CapacitacionService,
+    private HabilidadService: HabilidadService,
+    private ExperienciaService: ExperienciaService) { }
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
       this.id = data['id'];
       this.edicion = data['id'] != null;
       this.init();
     });
-    this.CapacitacionService.listar().subscribe(data => { this.listarCapacitacion = data });
+    this.capacitacionService.listar().subscribe(data => {this.listaCapacitacion});
+    this.HabilidadService.listar().subscribe(data => {this.listaHabilidad});
+    this.ExperienciaService.listar().subscribe(data => {this.listaExperiencia});
   }
   aceptar(): void {
-    if (this.curriculum.id > 0 ) {
-      let c=new Capacitacion();
-      c.id= this.idCapacitacionSelecionado
-      this.curriculum.Capacitacion=c;
-      if(this.edicion){
-        this.CurriculumService.insertarCurriculum(this.curriculum).subscribe(() => {
-          this.CurriculumService.listarCurriculum().subscribe(data => {
-            this.CurriculumService.setListaCurriculum(data);
+    if (this.idExperienciaSeleccionado > 0 && this.idHabilidadSeleccionado > 0) {
+      let c = new Capacitacion();
+      c.descCapacitacion = this.descCapacitacionSelecionado;
+      this.Curriculum.Capacitacion = c;
+
+      let e = new Experiencia();
+      e.id = this.idExperienciaSeleccionado;
+      this.Curriculum.Experiencia = e;
+
+      let h = new Habilidad();
+      h.id = this.idHabilidadSeleccionado;
+      this.Curriculum.Habilidad = h;
+
+      if (this.edicion) {
+        this.curriculumService.modificar(this.Curriculum).subscribe(data => {
+          this.curriculumService.listar().subscribe(data => {
+            this.curriculumService.setLista(data);
           })
-        });
-      }else{
-        this.CurriculumService.insertarCurriculum(this.curriculum).subscribe(() => {
-          this.CurriculumService.listarCurriculum().subscribe(data => {
-            this.CurriculumService.setListaCurriculum(data);
+        })
+      } else {
+        this.curriculumService.insertar(this.Curriculum).subscribe(data => {
+          this.curriculumService.listar().subscribe(data => {
+            this.curriculumService.setLista(data);
           });
         }, err => {
+          //this.mensaje=err
           console.log(err);
         });
       }
-      this.router.navigate(['curriculum']);
-    } else{
-      this.mensaje="Completar los datos";
+      this.router.navigate(['capacitacion']);
+    } else {
+      this.mensaje = "Complete los valores requeridos";
     }
   }
-
   init() {
     if (this.edicion) {
-      this.CurriculumService.listarIdCurriculum(this.id).subscribe(data => {
-        this.curriculum = data
+      this.curriculumService.listarId(this.id).subscribe(data => {
+        this.Curriculum = data
         console.log(data);
-        this.idCapacitacionSelecionado = data.Capacitacion.id;
-      });
-
+        this.descCapacitacionSelecionado = data.Capacitacion.descCapacitacion;
+        this.idHabilidadSeleccionado = data.Habilidad.id;
+        this.idExperienciaSeleccionado = data.Experiencia.id;
+      })
     }
-
   }
 }
