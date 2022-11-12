@@ -1,15 +1,41 @@
-<p>curriculum-creadita works!</p>
 <div class="container">
-
   <h1>Curriculum</h1>
+  
   <mat-form-field class="example-full-width">
-    <mat-label>Id</mat-label>
-    <input matInput placeholder="id" [(ngModel)]="curriculum.id">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="idCurriculum" [(ngModel)]="Curriculum.id">
+  </mat-form-field>
+  
+  <br>
+
+  <mat-form-field appearance="fill">
+      <mat-label>Seleccione Capacitacion</mat-label>
+      <mat-select [(value)]="descCapacitacionSelecionado" required>
+          <mat-option *ngFor="let c of listaCapacitacion" [value]="c.descCapacitacion">
+              {{c.descCapacitacion}}
+          </mat-option>
+      </mat-select>
   </mat-form-field>
 
-  <br>
-  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
-  <button mat-raised-button color="warn" routerLink="/Curriculum">Cancelar</button>
-  <p>{{mensaje}}</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Habilidad</mat-label>
+    <mat-select [(value)]="idHabilidadSeleccionado" required>
+        <mat-option *ngFor="let h of listaHabilidad" [value]="h.id">
+            {{h.descHabilidad}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
 
-</div>
+<mat-form-field appearance="fill">
+  <mat-label>Seleccione Experiencia</mat-label>
+  <mat-select [(value)]="idExperienciaSeleccionado" required>
+      <mat-option *ngFor="let e of listaExperiencia" [value]="e.id">
+          {{e.descExperiencia}}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
+  <br>
+  <button mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="accent" routerLink="/curriculum">Cancelar</button>
+  </div>
+  

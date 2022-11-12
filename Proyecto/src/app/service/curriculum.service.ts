@@ -1,42 +1,50 @@
+import { environment } from 'src/environments/environment';
 import { curriculum } from './../model/Curriculum';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, EMPTY } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CurriculumService {
-  url: string = "http://localhost:8081/curriculum"
+  private url: string = `${environment.host}/curriculum`
   private listaCambio = new Subject<curriculum[]>()
-  private confirmaEliminacioncurriculum = new Subject<Boolean>()
-  
+  private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
-  listarCurriculum() {
+  listar() {
     return this.http.get<curriculum[]>(this.url);
   }
-  insertarCurriculum(experiencia: curriculum) {
-    return this.http.post(this.url, experiencia);
+  insertar(curriculum: curriculum) {
+    return this.http.post(this.url, curriculum);
   }
-  setListaCurriculum(listaNueva: curriculum[]) {
-    this.listaCambio.next(listaNueva);
+  modificar(curriculum: curriculum) {
+    return this.http.put(this.url, curriculum);
   }
-  getListaCurriculum() {
-    return this.listaCambio.asObservable();
+  eliminar(id: number) {
+    return this.http.delete(`${this.url}/${id}`);
   }
-  modificarCurriculum(curriculum: curriculum) {
-    return this.http.put(this.url + "/" + curriculum.id, curriculum);
+  buscar(texto: string) {
+    console.log("algo")
+    if (texto.length != 0) { 
+      return this.http.post<curriculum[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
-  listarIdCurriculum(id: number) {
+  listarId(id: number) {
     return this.http.get<curriculum>(`${this.url}/${id}`);
   }
-  eliminarCurriculum(id: number) {
-    return this.http.delete(this.url + "/" + id);
+  getLista() {
+    return this.listaCambio.asObservable();
   }
-  getConfirmaEliminacionCurriculum() {
-    return this.confirmaEliminacioncurriculum.asObservable();
+  setLista(listaNueva: curriculum[]) {
+    this.listaCambio.next(listaNueva);
   }
-  setConfirmaEliminacionCurriculum(estado: Boolean) {
-    this.confirmaEliminacioncurriculum.next(estado);
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
   }
 }
