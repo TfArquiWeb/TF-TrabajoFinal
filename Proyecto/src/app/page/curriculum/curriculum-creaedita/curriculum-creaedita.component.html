@@ -10,21 +10,21 @@
 
   <mat-form-field appearance="fill">
       <mat-label>Seleccione Capacitacion</mat-label>
-      <mat-select [(value)]="descCapacitacionSelecionado" required>
-          <mat-option *ngFor="let c of listaCapacitacion" [value]="c.descCapacitacion">
-              {{c.descCapacitacion}}
+      <mat-select [(value)]="idCapacitacionSelecionado" required>
+          <mat-option *ngFor="let ca of listaCapacitacion" [value]="ca.descCapacitacion">
+              {{ca.descCapacitacion}}
           </mat-option>
       </mat-select>
   </mat-form-field>
 
-  <mat-form-field appearance="fill">
+ <!-- <mat-form-field appearance="fill">
     <mat-label>Seleccione Habilidad</mat-label>
     <mat-select [(value)]="idHabilidadSeleccionado" required>
         <mat-option *ngFor="let h of listaHabilidad" [value]="h.id">
             {{h.descHabilidad}}
         </mat-option>
     </mat-select>
-</mat-form-field>
+</mat-form-field> 
 
 <mat-form-field appearance="fill">
   <mat-label>Seleccione Experiencia</mat-label>
@@ -33,7 +33,7 @@
           {{e.descExperiencia}}
       </mat-option>
   </mat-select>
-</mat-form-field>
+</mat-form-field>-->
   <br>
   <button mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
   <button mat-raised-button color="accent" routerLink="/curriculum">Cancelar</button>
