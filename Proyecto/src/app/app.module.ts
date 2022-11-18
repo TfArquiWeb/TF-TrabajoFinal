@@ -109,7 +109,7 @@ import { CurriculumDialogoComponent } from './page/curriculum/curriculum-listar/
 
   ],
   imports: [
-  
+
   BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -129,6 +129,6 @@ import { CurriculumDialogoComponent } from './page/curriculum/curriculum-listar/
   ],
   providers: [],
   bootstrap: [AppComponent],
-  
+
 })
 export class AppModule { }
