@@ -11,30 +11,33 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./experiencia-listar.component.css']
 })  
 export class ExperienciaListarComponent implements OnInit {
+  lista: Experiencia[] = [];
   dataSource: MatTableDataSource<Experiencia> = new MatTableDataSource();
   displayedColumns:string[]=['idExperiencia','descExperiencia','accion1','accion2'];
   private idMayor: number = 0;
   constructor(private Es: ExperienciaService,private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.Es.listarExperiencia().subscribe(data => {
+    this.Es.listar().subscribe(data => {
+      this.lista = data;
       this.dataSource = new MatTableDataSource(data);
+
     })
-    this.Es.getListaExperiencia().subscribe(data => {
+    this.Es.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     });
-    this.Es.getConfirmaEliminacionExperiencia().subscribe(data => {
-      data == true ? this.eliminarExperiencia(this.idMayor) : false;
+    this.Es.getConfirmaEliminacion().subscribe(data => {
+      data == true ? this.eliminar(this.idMayor) : false;
     });
   }
-    confirmarExperiencia(id: number) {
+  confirmar(id: number) {
       this.idMayor = id;
       this.dialog.open(ExperienciaDialogoComponent);
     } 
-    eliminarExperiencia(id: number) {
-      this.Es.eliminarExperiencia(id).subscribe(() => {
-        this.Es.listarExperiencia().subscribe(data => {
-          this.Es.setListaExperiencia(data);
+    eliminar(id: number) {
+      this.Es.eliminar(id).subscribe(() => {
+        this.Es.listar().subscribe(data => {
+          this.Es.setLista(data);
         });
       });
   

@@ -8,21 +8,16 @@ import { ExperienciaService } from './../../../service/experiencia.service';
   styleUrls: ['./experiencia-buscar.component.css']
 })
 export class ExperienciaBuscarComponent implements OnInit {
-
+  
+  textoBuscar: string = ""
   constructor(private experienciaService: ExperienciaService) { }
 
   ngOnInit(): void {
   }
-  buscarExperiencia(e: any) {
-    let array: Experiencia[] = [];
-    this.experienciaService.listarExperiencia().subscribe(data => {
-      data.forEach((element, index) => {
-        if (element.descExperiencia.includes(e.target.value)) {
-          array.push(data[index]);
-        }
-      });
-      this.experienciaService.setListaExperiencia(array);
-    })
+  buscar(e: any) {
+    this.experienciaService.buscar(e.target.value).subscribe(data => {
+      this.experienciaService.setLista(data);
+    });
   }
 
 }

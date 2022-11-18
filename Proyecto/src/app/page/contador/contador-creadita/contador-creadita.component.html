@@ -1,68 +1,37 @@
 <p>contador-creadita works!</p>
 <div class="container">
 
-    <h1>Propietario</h1>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>Id</mat-label>
-      <input matInput placeholder="id" [(ngModel)]="contador.Usuario.id">
-    </mat-form-field>
-  
-    <br>
-  
-    <mat-form-field class="example-full-width">
-        <mat-label>Id</mat-label>
-        <input matInput placeholder="dni" [(ngModel)]="contador.Usuario.dniUsuario">
-    </mat-form-field>
-    
-    <br>
-    <mat-form-field class="example-full-width">
-        <mat-label>Id</mat-label>
-        <input matInput placeholder="nombre" [(ngModel)]="contador.Usuario.nombreUsuario">
-    </mat-form-field>
-    <br>
+  <h1>Contador</h1>
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="idContador" [(ngModel)]="contador.id">
+  </mat-form-field>
 
-    <mat-form-field class="example-full-width">
-        <mat-label>Id</mat-label>
-        <input matInput placeholder="apellido" [(ngModel)]="contador.Usuario.apellidoUsuario">
-    </mat-form-field>
-    
-    <br>
-    <br>
-    <mat-form-field class="example-full-width">
-        <mat-label>Id</mat-label>
-        <input matInput placeholder="numero" [(ngModel)]="contador.Usuario.numeroUsuario">
-    </mat-form-field>
-    
-    <br>
-    <mat-form-field class="example-full-width">
-        <mat-label>Id</mat-label>
-        <input matInput placeholder="correo" [(ngModel)]="contador.Usuario.correoUsuario">
-    </mat-form-field>
-    
-    <br>
-    <mat-form-field class="example-full-width">
-        <mat-label>Id</mat-label>
-        <input matInput placeholder="foto" [(ngModel)]="contador.Usuario.fotoUsuario">
-    </mat-form-field>
-    
-    <br>
-    <mat-form-field class="example-full-width">
-      <mat-label>Nombre</mat-label>
-      <input matInput required placeholder="desc" [(ngModel)]="contador.descContador">
-  
-    </mat-form-field>
-  
-    <br>
-    <mat-form-field class="example-full-width">
-      <mat-label>Email</mat-label>
-      <input type="email" matInput required placeholder="linkedid" [(ngModel)]="contador.linkedinContador">
-    </mat-form-field>
-  
-    <br>
-    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
-    <button mat-raised-button color="warn" routerLink="/propietarios">Cancelar</button>
-    <p>{{mensaje}}</p>
-  
-  </div>
-  
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>descContador</mat-label>
+    <input matInput placeholder="descContador" [(ngModel)]="contador.descContador">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>linkedinContador</mat-label>
+    <input matInput placeholder="linkedinContador" [(ngModel)]="contador.linkedinContador">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Usuario</mat-label>
+    <mat-select [(value)]="idUsuarioSeleccionado" required>
+      <mat-option *ngFor="let u of listaUsuario" [value]="u.id">
+          {{u.nombreUsuario}}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/contador">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>

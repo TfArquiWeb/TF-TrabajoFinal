@@ -45,6 +45,7 @@ import { ExperienciaBuscarComponent } from './page/experiencia/experiencia-busca
 import { HabilidadDialogoComponent } from './page/habilidad/habilidad-listar/habilidad-dialogo/habilidad-dialogo.component';
 import { HabilidadBuscarComponent } from './page/habilidad/habilidad-buscar/habilidad-buscar.component';
 import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 import { UsuarioBuscarComponent } from './page/usuario/usuario-buscar/usuario-buscar.component';
 import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
 import { TipopagoBuscarComponent } from './page/tipopago/tipopago-buscar/tipopago-buscar.component';
@@ -53,8 +54,10 @@ import { TipomonedaDialogoComponent } from './page/tipomoneda/tipomoneda-listar/
 import { TipomonedaBuscarComponent } from './page/tipomoneda/tipomoneda-buscar/tipomoneda-buscar.component';
 import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creaedita/tipomoneda-creaedita.component';
 import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/curriculum-listar.component';
-import { EmpresarioDialogoComponent } from './page/empresario/empresario-listar/empresario-dialogo/empresario-dialogo.component';
-
+import { ContadorDialogoComponent } from './page/contador/contador-listar/contador-dialogo/contador-dialogo.component';
+import { CurriculumCreaeditaComponent } from './page/curriculum/curriculum-creaedita/curriculum-creaedita.component';
+import { CurriculumBuscarComponent } from './page/curriculum/curriculum-buscar/curriculum-buscar.component';
+import { CurriculumDialogoComponent } from './page/curriculum/curriculum-listar/curriculum-dialogo/curriculum-dialogo.component';
 
 
 @NgModule({
@@ -99,7 +102,10 @@ import { EmpresarioDialogoComponent } from './page/empresario/empresario-listar/
     TipomonedaBuscarComponent,
     TipomonedaCreaeditaComponent,
     CurriculumListarComponent,
-    EmpresarioDialogoComponent,
+    ContadorDialogoComponent,
+    CurriculumCreaeditaComponent,
+    CurriculumBuscarComponent,
+    CurriculumDialogoComponent,
 
   ],
   imports: [
@@ -118,7 +124,7 @@ import { EmpresarioDialogoComponent } from './page/empresario/empresario-listar/
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-
+    MatSelectModule
 
   ],
   providers: [],

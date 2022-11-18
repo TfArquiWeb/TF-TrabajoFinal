@@ -1,3 +1,4 @@
+import { environment } from 'src/environments/environment';
 import { EMPTY, Subject } from 'rxjs';
 import { Usuario } from './../model/usuario';
 import { HttpClient } from '@angular/common/http';
@@ -7,7 +8,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UsuarioService {
-  url: string = "http://localhost:8081/Usuario"
+  private url: string = `${environment.host}/Usuario`
   private listaCambio =new Subject<Usuario[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
