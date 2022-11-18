@@ -1,4 +1,5 @@
-import { Subject } from 'rxjs';
+import { environment } from './../../environments/environment';
+import { Subject, EMPTY } from 'rxjs';
 import { SolicitudEmpleo } from './../model/solicitudempleo';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -7,7 +8,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SolicitudempleoService {
-  url: string = "http://localhost:8081/solicitudempleo" //CAMBIO DE URL
+  private url: string = `${environment.host}/solicitudempleo`
   private listacambio=new Subject<SolicitudEmpleo[]>()
   private confirmaEliminacionSolicitud = new Subject<Boolean>()
   constructor(public http: HttpClient) { }
@@ -25,10 +26,6 @@ export class SolicitudempleoService {
 
     return this.http.delete(`${this.url}/${id}`);
   }
-  buscarSolicitud(texto: string) {
-
-    return this.http.post<SolicitudEmpleo[]>(`${this.url}/buscar`, texto);
-  }
   listarIdSolicitud(id: number) {
 
     return this.http.get<SolicitudEmpleo>(`${this.url}/${id}`);
@@ -45,4 +42,14 @@ export class SolicitudempleoService {
   setConfirmaEliminacionSolicitud(estado: Boolean) {
     this.confirmaEliminacionSolicitud.next(estado);
   }
+  buscarSolicitudNombre(texto: string) {
+    console.log("algo")
+    if (texto.length != 0) {
+      return this.http.post<SolicitudEmpleo[]>(`${this.url}/buscadorsoli`, texto.toLowerCase());
+    }
+    return EMPTY;
+  }
+  ordenarSolici() {
+    return this.http.get<SolicitudEmpleo[]>(`${this.url}/ordenarsoli`);
+}
 }
