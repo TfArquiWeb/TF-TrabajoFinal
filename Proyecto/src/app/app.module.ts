@@ -56,6 +56,7 @@ import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creae
 import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/curriculum-listar.component';
 import { ContadorDialogoComponent } from './page/contador/contador-listar/contador-dialogo/contador-dialogo.component';
 import { ContadorBuscarComponent } from './page/contador/contador-buscar/contador-buscar.component';
+import { ContadorOrdenarComponent } from './page/contador/contador-ordenar/contador-ordenar.component';
 
 
 @NgModule({
@@ -102,6 +103,7 @@ import { ContadorBuscarComponent } from './page/contador/contador-buscar/contado
     CurriculumListarComponent,
     ContadorDialogoComponent,
     ContadorBuscarComponent,
+    ContadorOrdenarComponent,
 
   ],
   imports: [

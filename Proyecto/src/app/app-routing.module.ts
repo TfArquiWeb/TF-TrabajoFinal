@@ -1,3 +1,4 @@
+import { ContadorOrdenarComponent } from './page/contador/contador-ordenar/contador-ordenar.component';
 import { ContadorCreaditaComponent } from './page/contador/contador-creadita/contador-creadita.component';
 import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { CurriculumComponent } from './page/curriculum/curriculum.component';
@@ -23,7 +24,8 @@ const routes: Routes = [{
 }, {
   path: 'contador', component: ContadorComponent, children: [
     { path: 'insertar', component: ContadorCreaditaComponent },
-    { path: 'edicion/:id', component: ContadorCreaditaComponent }
+    { path: 'edicion/:id', component: ContadorCreaditaComponent },
+    { path: 'ordenar', component: ContadorOrdenarComponent }
   ]
 }, {
   path: 'tipopago', component: TipopagoComponent, children: [

@@ -8,20 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contador-buscar.component.css']
 })
 export class ContadorBuscarComponent implements OnInit {
-
+  textoBuscar: string = ""
   constructor(private contadorservice:ContadorService) { }
 
   ngOnInit(): void {
   }
-  buscarContador(e: any) {
-    let array: Contador[] = [];
-    this.contadorservice.listarContador().subscribe(data => {
-      data.forEach((element, index) => {
-        if (element.descContador.includes(e.target.value)) {
-          array.push(data[index]);
-        }
-      });
-      this.contadorservice.setlistaContador(array);
-    })
+  buscarContadorDescripcion(e: any) {
+    this.contadorservice.buscarContadorDescripcion(e.target.value).subscribe(data=>{
+      this.contadorservice.setlistaContador(data);
+    });    
   }
 }
