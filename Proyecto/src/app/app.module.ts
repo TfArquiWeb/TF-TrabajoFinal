@@ -58,6 +58,8 @@ import { ContadorDialogoComponent } from './page/contador/contador-listar/contad
 import { CurriculumCreaeditaComponent } from './page/curriculum/curriculum-creaedita/curriculum-creaedita.component';
 import { CurriculumBuscarComponent } from './page/curriculum/curriculum-buscar/curriculum-buscar.component';
 import { CurriculumDialogoComponent } from './page/curriculum/curriculum-listar/curriculum-dialogo/curriculum-dialogo.component';
+import { ContratoDialogComponent } from './page/contrato/contrato-listar/contrato-dialog/contrato-dialog.component';
+import { ContratoCreaditaComponent } from './page/contrato/contrato-creadita/creadita/contrato-creadita.component';
 
 
 @NgModule({
@@ -106,7 +108,8 @@ import { CurriculumDialogoComponent } from './page/curriculum/curriculum-listar/
     CurriculumCreaeditaComponent,
     CurriculumBuscarComponent,
     CurriculumDialogoComponent,
-
+    ContratoDialogComponent,
+    ContratoCreaditaComponent
   ],
   imports: [
 

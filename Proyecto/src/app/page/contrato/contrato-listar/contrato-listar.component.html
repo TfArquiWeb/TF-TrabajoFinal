@@ -1,66 +1,86 @@
 <div class="container">
-<div style=" text-align: center;">
-    <h1>Lista de contratos</h1>
-</div>
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <div style=" text-align: center;">
+      <h1>Lista de contratos</h1>
+  </div>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <!--- Note that these columns can be defined in any order.
-              The actual rendered columns are set as a property on the row definition" -->
+      <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
 
 
-    <!-- Weight Column -->
-    <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> ID </th>
-        <td mat-cell *matCellDef="let element"> {{element.idContrato}} </td>
-    </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.idContrato}} </td>
+      </ng-container>
 
-    <!-- Position Column -->
-    <ng-container matColumnDef="fechainicio">
-        <th mat-header-cell *matHeaderCellDef> Fecha Inicio </th>
-        <td mat-cell *matCellDef="let element"> {{element.fechainiContrato}} </td>
-    </ng-container>
-    <!-- Name Column -->
-    <ng-container matColumnDef="fechafin">
-        <th mat-header-cell *matHeaderCellDef> Fecha Fin </th>
-        <td mat-cell *matCellDef="let element"> {{element.fechafinContrato}} </td>
-    </ng-container>
-    <!-- Weight Column -->
-    <ng-container matColumnDef="vigencia">
-        <th mat-header-cell *matHeaderCellDef> Vigencia </th>
-        <td mat-cell *matCellDef="let element"> {{element.vigenciaContrato}} </td>
-    </ng-container>
-    <!-- Weight Column -->
-    <ng-container matColumnDef="monto">
-        <th mat-header-cell *matHeaderCellDef> Monto </th>
-        <td mat-cell *matCellDef="let element"> {{element.montoContrato}} </td>
-    </ng-container>
-    <!-- Weight Column -->
-    <ng-container matColumnDef="idcontador">
-        <th mat-header-cell *matHeaderCellDef> Contador </th>
-        <td mat-cell *matCellDef="let element"> {{element.Usuario.id}} </td>
-    </ng-container>
-    <!-- Weight Column -->
-    <ng-container matColumnDef="idempresario">
-        <th mat-header-cell *matHeaderCellDef> Empresario </th>
-        <td mat-cell *matCellDef="let element"> {{element.Usuario.id}} </td>
-    </ng-container>
-    <!-- Weight Column -->
-    <ng-container matColumnDef="tipomoneda">
-        <th mat-header-cell *matHeaderCellDef> Tipo Moneda </th>
-        <td mat-cell *matCellDef="let element"> {{element.TipoMoneda.Tipo}} </td>
-    </ng-container>
-    <!-- Weight Column -->
-    <ng-container matColumnDef="tipopago">
-        <th mat-header-cell *matHeaderCellDef> Tipo Pago </th>
-        <td mat-cell *matCellDef="let element"> {{element.TipoPago.id}} </td>
-    </ng-container>
-    <!-- Weight Column -->
-    <ng-container matColumnDef="curriculumvitae">
-        <th mat-header-cell *matHeaderCellDef> Curriculum Vitae </th>
-        <td mat-cell *matCellDef="let element"> {{element.Curriculum.id}} </td>
-    </ng-container>
+      <!-- Position Column -->
+      <ng-container matColumnDef="fechainicio">
+          <th mat-header-cell *matHeaderCellDef> Fecha Inicio </th>
+          <td mat-cell *matCellDef="let element"> {{element.fechainiContrato}} </td>
+      </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="fechafin">
+          <th mat-header-cell *matHeaderCellDef> Fecha Fin </th>
+          <td mat-cell *matCellDef="let element"> {{element.fechafinContrato}} </td>
+      </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="vigencia">
+          <th mat-header-cell *matHeaderCellDef> Vigencia </th>
+          <td mat-cell *matCellDef="let element"> {{element.vigenciaContrato}} </td>
+      </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="monto">
+          <th mat-header-cell *matHeaderCellDef> Monto </th>
+          <td mat-cell *matCellDef="let element"> {{element.montoContrato}} </td>
+      </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="idcontador">
+          <th mat-header-cell *matHeaderCellDef> Contador </th>
+          <td mat-cell *matCellDef="let element"> {{element.Usuario.idUsuario}} </td>
+      </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="idempresario">
+          <th mat-header-cell *matHeaderCellDef> Empresario </th>
+          <td mat-cell *matCellDef="let element"> {{element.Usuario.idUsuario}} </td>
+      </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="tipomoneda">
+          <th mat-header-cell *matHeaderCellDef> Tipo Moneda </th>
+          <td mat-cell *matCellDef="let element"> {{element.TipoMoneda.idTM}} </td>
+      </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="tipopago">
+          <th mat-header-cell *matHeaderCellDef> Tipo Pago </th>
+          <td mat-cell *matCellDef="let element"> {{element.TipoPago.idTP}} </td>
+      </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="curriculumvitae">
+          <th mat-header-cell *matHeaderCellDef> Curriculum Vitae </th>
+          <td mat-cell *matCellDef="let element"> {{element.CurriculumVitae.idCurriculum}} </td>
+      </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-</div>
+      <ng-container matColumnDef="accion1">
+        <th mat-header-cell *matHeaderCellDef> Acciones 1</th>
+        <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+            [routerLink]="['edicion', element?.id]">Actualizar</button>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="accion2">
+        <th mat-header-cell *matHeaderCellDef> Acciones 2</th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-raised-button color="warn" (click)="confirmarContrato(element.id)">Eliminar</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <div class="example-button-container">
+
+        <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+            routerLink="/contrato/insertar">
+            <mat-icon>plus_one</mat-icon>
+        </button>
+    </div>
+  </div>

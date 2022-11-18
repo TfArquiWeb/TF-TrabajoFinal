@@ -17,51 +17,60 @@
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Fin de contrato</mat-label>
-    <input type="email" matInput required placeholder="fechafin" [(ngModel)]="contrato.fechafinContrato">
+    <input type="fechafin" matInput required placeholder="fechafin" [(ngModel)]="contrato.fechafinContrato">
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>vigencia</mat-label>
-    <input type="email" matInput required placeholder="vigencia" [(ngModel)]="contrato.vigenciaContrato">
+    <input type="vigencia" matInput required placeholder="vigencia" [(ngModel)]="contrato.vigenciaContrato">
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Monto de contrato</mat-label>
-    <input type="email" matInput required placeholder="monto" [(ngModel)]="contrato.montoContrato">
+    <input type="monto" matInput required placeholder="monto" [(ngModel)]="contrato.montoContrato">
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>idempresario</mat-label>
-    <input type="email" matInput required placeholder="idcontador" [(ngModel)]="contrato.Usuario">
+    <input type="idcontador" matInput required placeholder="idcontador" [(ngModel)]="contrato.Usuario">
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>idcontador</mat-label>
-    <input type="email" matInput required placeholder="idempresario" [(ngModel)]="contrato.Usuario">
+    <input type="idempresario" matInput required placeholder="idempresario" [(ngModel)]="contrato.Usuario">
   </mat-form-field>
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Tipo de Moneda</mat-label>
-    <input type="email" matInput required placeholder="tipomoneda" [(ngModel)]="contrato.TipoMoneda">
+    <input type="tipomoneda" matInput required placeholder="tipomoneda" [(ngModel)]="contrato.TipoMoneda">
   </mat-form-field>
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Tipo de pago</mat-label>
-    <input type="email" matInput required placeholder="tipopago" [(ngModel)]="contrato.TipoPago">
+    <input type="tipopago" matInput required placeholder="tipopago" [(ngModel)]="contrato.TipoPago">
   </mat-form-field>
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>CurriculumVitae</mat-label>
-    <input type="email" matInput required placeholder="curriculumvitae" [(ngModel)]="contrato.CurriculumVitae">
+    <input type="curriculumvitae" matInput required placeholder="curriculumvitae" [(ngModel)]="contrato.Curriculum">
   </mat-form-field>
   <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Tipo Pago</mat-label>
+    <mat-select [(value)]="idTipoPagoSeleccionado" required>
+        <mat-option *ngFor="let p of listaTipopago" [value]="p.id">
+            {{p.TipodePago}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
-  <button mat-raised-button color="warn" routerLink="/propietarios">Cancelar</button>
+  <button mat-raised-button color="warn" routerLink="/contrato">Cancelar</button>
   <p>{{mensaje}}</p>
 
 </div>
-
