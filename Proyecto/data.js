@@ -222,7 +222,7 @@ module.exports = function () {
                     nombreUsuario: "diego",
                 },
                 TipoMoneda: {
-                    id: 1,
+                  idtipomoneda: 1,
                     Tipo: "Soles",
                 },
                 TipoPago: {
@@ -297,15 +297,15 @@ module.exports = function () {
         ],
         TipoMoneda: [
             {
-                id: 1,
+              idtipomoneda: 1,
                 Tipo: "Soles",
             },
             {
-                id: 2,
+              idtipomoneda: 2,
                 Tipo: "Dolares",
             },
             {
-                id: 3,
+              idtipomoneda: 3,
                 Tipo: "Pesos Mexicanos",
             },
 

@@ -10,7 +10,7 @@ export class TipomonedaService {
   url: string = "http://localhost:8081/TipoMoneda"
   private listaCambio = new Subject<TipoMoneda[]>()
   private confirmaEliminacionTipoMoneda = new Subject<Boolean>()
-  
+
   constructor(private http: HttpClient) { }
   listarTipoMoneda() {
     return this.http.get<TipoMoneda[]>(this.url);
@@ -25,7 +25,7 @@ export class TipomonedaService {
     return this.listaCambio.asObservable();
   }
   modificarTipoMoneda(tipoMoneda: TipoMoneda) {
-    return this.http.put(this.url + "/" + tipoMoneda.id, tipoMoneda);
+    return this.http.put(this.url + "/" + tipoMoneda.idtipomoneda, tipoMoneda);
   }
   listarIdTipoMoneda(id: number) {
     return this.http.get<TipoMoneda>(`${this.url}/${id}`);
