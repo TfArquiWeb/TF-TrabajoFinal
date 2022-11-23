@@ -1,3 +1,4 @@
+import { Respuesta } from './../model/respuesta';
 import { environment } from 'src/environments/environment';
 import { Contador } from './../model/contador';
 import { HttpClient } from '@angular/common/http';
@@ -53,6 +54,9 @@ export class ContadorService {
     return EMPTY;
   }
   ordenarContadorDesenso() {
-    return this.http.get<Contador[]>(`${this.url}/ordenardesc`);    
-}
+    return this.http.get<Contador[]>(`${this.url}/ordenardesc`);
+  }
+  buscarContadoresCantidad() {
+    return this.http.get<Respuesta[]>(`${this.url}/cantidad`);
+  }
 }

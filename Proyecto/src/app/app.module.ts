@@ -57,6 +57,7 @@ import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/c
 import { ContadorDialogoComponent } from './page/contador/contador-listar/contador-dialogo/contador-dialogo.component';
 import { ContadorBuscarComponent } from './page/contador/contador-buscar/contador-buscar.component';
 import { ContadorOrdenarComponent } from './page/contador/contador-ordenar/contador-ordenar.component';
+import { ContadorCantidadComponent } from './page/contador/contador-cantidad/contador-cantidad.component';
 
 
 @NgModule({
@@ -104,6 +105,7 @@ import { ContadorOrdenarComponent } from './page/contador/contador-ordenar/conta
     ContadorDialogoComponent,
     ContadorBuscarComponent,
     ContadorOrdenarComponent,
+    ContadorCantidadComponent,
 
   ],
   imports: [
