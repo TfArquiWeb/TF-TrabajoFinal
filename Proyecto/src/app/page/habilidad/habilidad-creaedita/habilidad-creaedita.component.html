@@ -1,23 +1,23 @@
 <div class="container">
+  <h1>Habilidad</h1>
 
-    <h1>Habilidad</h1>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>id</mat-label>
-      <input matInput placeholder="idHabilidad" [(ngModel)]="habilidad.id">
-    </mat-form-field>
-  
-    <br>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>Descripcion</mat-label>
-      <input matInput required placeholder="descHabilidad" [(ngModel)]="habilidad.descHabilidad">
-  
-    </mat-form-field>
-  
-    <br>
-    <button mat-raised-button color="primary" (click)="aceptarHabilidad()">Aceptar</button>
-    <button mat-raised-button color="warn" routerLink="/habilidad">Cancelar</button>
-    <p>{{mensaje}}</p>
-  
-  </div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="idHabilidad" [(ngModel)]="habilidad.id">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Descripcion</mat-label>
+    <input matInput required placeholder="descHabilidad" [(ngModel)]="habilidad.descHabilidad">
+
+  </mat-form-field>
+
+  <br>
+
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/habilidad">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>

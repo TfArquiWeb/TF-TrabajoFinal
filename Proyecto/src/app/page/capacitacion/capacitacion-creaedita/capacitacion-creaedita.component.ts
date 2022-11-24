@@ -22,18 +22,18 @@ export class CapacitacionCreaeditaComponent implements OnInit {
       this.init();
     });
   }
-  aceptarCapacitacion(): void {
+  aceptar(): void {
     if (this.capacitacion.descCapacitacion.length > 0) {
       if (this.edicion) {
-        this.capacitacionService.modificarCapacitacion(this.capacitacion).subscribe(data => {
-          this.capacitacionService.listarCapacitacion().subscribe(data => {
-            this.capacitacionService.setListaCapacitacion(data);
+        this.capacitacionService.modificar(this.capacitacion).subscribe(data => {
+          this.capacitacionService.listar().subscribe(data => {
+            this.capacitacionService.setLista(data);
           })
         })
       } else {
-        this.capacitacionService.insertarCapacitacion(this.capacitacion).subscribe(data => {
-          this.capacitacionService.listarCapacitacion().subscribe(data => {
-            this.capacitacionService.setListaCapacitacion(data);
+        this.capacitacionService.registrar(this.capacitacion).subscribe(data => {
+          this.capacitacionService.listar().subscribe(data => {
+            this.capacitacionService.setLista(data);
           })
         })
       }
@@ -44,7 +44,7 @@ export class CapacitacionCreaeditaComponent implements OnInit {
   }
   init() {
     if (this.edicion) {
-      this.capacitacionService.listarIdCapacitacion(this.id).subscribe(data => {
+      this.capacitacionService.listarId(this.id).subscribe(data => {
         this.capacitacion = data;
       })
     }

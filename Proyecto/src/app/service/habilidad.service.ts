@@ -1,41 +1,49 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Habilidad } from './../model/habilidad';
-import { Subject } from 'rxjs';
+import { EMPTY, Subject } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HabilidadService {
-  url: string = "http://localhost:8081/Habilidad"
+  private url: string = `${environment.host}/Habilidad`
   private listaCambio = new Subject<Habilidad[]>()
-  private confirmaEliminacionHabilidad = new Subject<Boolean>()
-  constructor(public http:HttpClient) { }
-  listarHabilidad() {
+  private confirmaEliminacion = new Subject<Boolean>()
+  constructor(public http: HttpClient) { }
+  listar() {
     return this.http.get<Habilidad[]>(this.url);
   }
-  insertarHabilidad(habilidad: Habilidad) {
+  registrar(habilidad: Habilidad) {
     return this.http.post(this.url, habilidad);
   }
-  setListaHabilidad(listaNueva: Habilidad[]) {
-    this.listaCambio.next(listaNueva);
+  modificar(habilidad: Habilidad) {
+    return this.http.put(this.url, habilidad);
   }
-  getListaHabilidad() {
-    return this.listaCambio.asObservable();
+  eliminar(id: number) {
+    return this.http.delete(`${this.url}/${id}`);
   }
-  modificarHabilidad(habilidad: Habilidad) {
-    return this.http.put(this.url + "/" + habilidad.id, habilidad);
+  buscar(texto: string) {
+    if (texto.length != 0) {
+      return this.http.post<Habilidad[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
-  listarIdHabilidad(id: number) {
+  listarId(id: number) {
     return this.http.get<Habilidad>(`${this.url}/${id}`);
   }
-  eliminarHabilidad(id: number) {
-    return this.http.delete(this.url + "/" + id);
+  getLista() {
+    return this.listaCambio.asObservable();
   }
-  getConfirmaEliminacionHabilidad() {
-    return this.confirmaEliminacionHabilidad.asObservable();
+  setLista(listaNueva: Habilidad[]) {
+    this.listaCambio.next(listaNueva);
   }
-  setConfirmaEliminacionHabilidad(estado: Boolean) {
-    this.confirmaEliminacionHabilidad.next(estado);
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
   }
-}
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
+  }
+} 

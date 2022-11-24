@@ -9,20 +9,15 @@ import { Habilidad } from './../../../model/habilidad';
 })
 export class HabilidadBuscarComponent implements OnInit {
 
+  textoBuscar: string = ""
   constructor(private habilidadService: HabilidadService) { }
 
   ngOnInit(): void {
   }
-  buscarHabilidad(e: any) {
-    let array: Habilidad[] = [];
-    this.habilidadService.listarHabilidad().subscribe(data => {
-      data.forEach((element, index) => {
-        if (element.descHabilidad.includes(e.target.value)) {
-          array.push(data[index]);
-        }
-      });
-      this.habilidadService.setListaHabilidad(array);
-    })
+  buscar(e: any) {
+    this.habilidadService.buscar(e.target.value).subscribe(data => {
+      this.habilidadService.setLista(data);
+    });
   }
 
 }

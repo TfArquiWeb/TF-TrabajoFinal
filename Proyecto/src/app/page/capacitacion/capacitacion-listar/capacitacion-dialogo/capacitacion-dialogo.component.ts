@@ -12,8 +12,9 @@ export class CapacitacionDialogoComponent implements OnInit {
     private dialogRef: MatDialogRef<CapacitacionDialogoComponent>) { }
 
   ngOnInit(): void {}
-  confirmarCapacitacion(estado: boolean) {
-    this.capacitacionService.setConfirmaEliminacionCapacitacion(estado);
+
+  confirmar(estado: boolean) {
+    this.capacitacionService.setConfirmaEliminacion(estado);
     this.dialogRef.close();
   }
 } 

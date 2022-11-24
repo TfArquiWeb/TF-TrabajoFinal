@@ -11,30 +11,33 @@ import { HabilidadDialogoComponent } from './habilidad-dialogo/habilidad-dialogo
   styleUrls: ['./habilidad-listar.component.css']
 })
 export class HabilidadListarComponent implements OnInit {
+  lista: Habilidad[] = [];
   dataSource: MatTableDataSource<Habilidad> = new MatTableDataSource();
-  displayedColumns:string[]=['idHabilidad','descHabilidad','accion1','accion2'];
+  displayedColumns: string[] = ['idHabilidad', 'descHabilidad', 'accion1', 'accion2'];
   private idMayor: number = 0;
-  constructor(private Hs: HabilidadService,private dialog: MatDialog) { }
+  constructor(private Hs: HabilidadService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.Hs.listarHabilidad().subscribe(data => {
+    this.Hs.listar().subscribe(data => {
+      this.lista = data;
       this.dataSource = new MatTableDataSource(data);
+
     })
-    this.Hs.getListaHabilidad().subscribe(data => {
+    this.Hs.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     });
-    this.Hs.getConfirmaEliminacionHabilidad().subscribe(data => {
-      data == true ? this.eliminarHabilidad(this.idMayor) : false;
+    this.Hs.getConfirmaEliminacion().subscribe(data => {
+      data == true ? this.eliminar(this.idMayor) : false;
     });
   }
-  confirmarHabilidad(id: number) {
+  confirmar(id: number) {
     this.idMayor = id;
     this.dialog.open(HabilidadDialogoComponent);
-  } 
-  eliminarHabilidad(id: number) {
-    this.Hs.eliminarHabilidad(id).subscribe(() => {
-      this.Hs.listarHabilidad().subscribe(data => {
-        this.Hs.setListaHabilidad(data);
+  }
+  eliminar(id: number) {
+    this.Hs.eliminar(id).subscribe(() => {
+      this.Hs.listar().subscribe(data => {
+        this.Hs.setLista(data);
       });
     });
 

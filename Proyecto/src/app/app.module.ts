@@ -58,6 +58,10 @@ import { ContadorDialogoComponent } from './page/contador/contador-listar/contad
 import { ContadorBuscarComponent } from './page/contador/contador-buscar/contador-buscar.component';
 import { ContadorOrdenarComponent } from './page/contador/contador-ordenar/contador-ordenar.component';
 import { ContadorCantidadComponent } from './page/contador/contador-cantidad/contador-cantidad.component';
+import { CurriculumCreaeditaComponent } from './page/curriculum/curriculum-creaedita/curriculum-creaedita.component';
+import { CurriculumBuscarComponent } from './page/curriculum/curriculum-buscar/curriculum-buscar.component';
+import { CurriculumDialogoComponent } from './page/curriculum/curriculum-listar/curriculum-dialogo/curriculum-dialogo.component';
+
 
 
 @NgModule({
@@ -106,6 +110,10 @@ import { ContadorCantidadComponent } from './page/contador/contador-cantidad/con
     ContadorBuscarComponent,
     ContadorOrdenarComponent,
     ContadorCantidadComponent,
+    CurriculumCreaeditaComponent,
+    CurriculumBuscarComponent,
+    CurriculumDialogoComponent,
+
 
   ],
   imports: [

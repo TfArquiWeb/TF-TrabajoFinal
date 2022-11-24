@@ -1,40 +1,51 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Capacitacion } from './../model/capacitacion';
-import { Subject } from 'rxjs';
+import { EMPTY,Subject } from 'rxjs';
+import { environment } from 'src/environments/environment'; 
+
 @Injectable({
   providedIn: 'root'
 })
 export class CapacitacionService {
-  url: string = "http://localhost:8081/Capacitacion"
+  private url: string = `${environment.host}/Capacitacion`
   private listaCambio = new Subject<Capacitacion[]>()
-  private confirmaEliminacionCapacitacion = new Subject<Boolean>()
+  private confirmaEliminacion = new Subject<Boolean>()
   constructor(public http:HttpClient) { }
-  listarCapacitacion() {
+  listar() {
     return this.http.get<Capacitacion[]>(this.url);
   }
-  insertarCapacitacion(capacitacion: Capacitacion) {
+  registrar(capacitacion: Capacitacion) {
     return this.http.post(this.url, capacitacion);
   }
-  setListaCapacitacion(listaNueva: Capacitacion[]) {
-    this.listaCambio.next(listaNueva);
+  modificar(capacitacion: Capacitacion) {
+    return this.http.put(this.url, capacitacion);
   }
-  getListaCapacitacion() {
-    return this.listaCambio.asObservable();
+  eliminar(id: number) {
+    return this.http.delete(`${this.url}/${id}`);
   }
-  modificarCapacitacion(capacitacion: Capacitacion) {
-    return this.http.put(this.url + "/" + capacitacion.id, capacitacion);
+  buscar(texto: string) {
+    console.log("algo")
+    if (texto.length != 0) { 
+      return this.http.post<Capacitacion[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+      });
+    }
+    return EMPTY;
   }
-  listarIdCapacitacion(id: number) {
+  listarId(id: number) {
     return this.http.get<Capacitacion>(`${this.url}/${id}`);
   }
-  eliminarCapacitacion(id: number) {
-    return this.http.delete(this.url + "/" + id);
+  getLista() {
+    return this.listaCambio.asObservable();
   }
-  getConfirmaEliminacionCapacitacion() {
-    return this.confirmaEliminacionCapacitacion.asObservable();
+  setLista(listaNueva: Capacitacion[]) {
+    this.listaCambio.next(listaNueva);
   }
-  setConfirmaEliminacionCapacitacion(estado: Boolean) {
-    this.confirmaEliminacionCapacitacion.next(estado);
+  getConfirmaEliminacion() { 
+    return this.confirmaEliminacion.asObservable();
   }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
+  }
+  
 }
