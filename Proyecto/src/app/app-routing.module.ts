@@ -2,6 +2,15 @@ import { SolicitudempleoOrdenarComponent } from './page/solicitudempleo/solicitu
 import { SolicitudempleoCreaditaComponent } from './page/solicitudempleo/solicitudempleo-creadita/solicitudempleo-creadita.component';
 import { SolicitudempleoComponent } from './page/solicitudempleo/solicitudempleo.component';
 
+import { CvCantidadComponent } from './page/cv/cv-cantidad/cv-cantidad.component';
+import { CvOrdenarComponent } from './page/cv/cv-ordenar/cv-ordenar.component';
+import { CvCreaeditaComponent } from './page/cv/cv-creaedita/cv-creaedita.component';
+import { CvComponent } from './page/cv/cv.component';
+import { CurriculumCantidadComponent } from './page/curriculum/curriculum-cantidad/curriculum-cantidad.component';
+import { CurriculumOrdenarComponent } from './page/curriculum/curriculum-ordenar/curriculum-ordenar.component';
+import { EmpresarioCantidadComponent } from './page/empresario/empresario-cantidad/empresario-cantidad.component';
+import { EmpresarioOrdenarComponent } from './page/empresario/empresario-ordenar/empresario-ordenar.component';
+import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
 import { ContadorCantidadComponent } from './page/contador/contador-cantidad/contador-cantidad.component';
 import { ContadorOrdenarComponent } from './page/contador/contador-ordenar/contador-ordenar.component';
 import { CurriculumCreaeditaComponent } from './page/curriculum/curriculum-creaedita/curriculum-creaedita.component';
@@ -26,6 +35,10 @@ import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creae
 import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
 const routes: Routes = [{
   path: 'empresario', component: EmpresarioComponent, children: [
+    { path: 'insertar', component: EmpresarioCreaditaComponent },
+    { path: 'edicion/:id', component: EmpresarioCreaditaComponent },
+    { path: 'ordenar', component: EmpresarioOrdenarComponent },
+    { path: 'cantidad', component: EmpresarioCantidadComponent }
   ]
 }, {
   path: 'contador', component: ContadorComponent, children: [
@@ -74,11 +87,20 @@ const routes: Routes = [{
 
   ]
 }, {
-  path: 'curriculum', component: CurriculumComponent, children: [
+  path: 'nocurriculum', component: CurriculumComponent, children: [
     {path: 'insertar', component: CurriculumCreaeditaComponent},
-    { path: 'edicion/:id', component: CurriculumCreaeditaComponent }
+    { path: 'edicion/:id', component: CurriculumCreaeditaComponent },
+    { path: 'ordenar', component: CurriculumOrdenarComponent },
+    { path: 'cantidad', component: CurriculumCantidadComponent }
   ]
 },{
+  path: 'curriculum', component: CvComponent, children: [
+    {path: 'insertar', component: CvCreaeditaComponent},
+    { path: 'edicion/:id', component: CvCreaeditaComponent },
+    { path: 'ordenar', component: CvOrdenarComponent },
+    { path: 'cantidad', component: CvCantidadComponent }
+  ]
+}, {
   path: 'tipomoneda', component: TipomonedaComponent, children: [
     {path: 'insertar', component: TipomonedaCreaeditaComponent},
     { path: 'edicion/:id', component: TipomonedaCreaeditaComponent }

@@ -61,6 +61,19 @@ import { ContadorCantidadComponent } from './page/contador/contador-cantidad/con
 import { CurriculumCreaeditaComponent } from './page/curriculum/curriculum-creaedita/curriculum-creaedita.component';
 import { CurriculumBuscarComponent } from './page/curriculum/curriculum-buscar/curriculum-buscar.component';
 import { CurriculumDialogoComponent } from './page/curriculum/curriculum-listar/curriculum-dialogo/curriculum-dialogo.component';
+import { CurriculumCantidadComponent } from './page/curriculum/curriculum-cantidad/curriculum-cantidad.component';
+import { CurriculumOrdenarComponent } from './page/curriculum/curriculum-ordenar/curriculum-ordenar.component';
+import { CvComponent } from './page/cv/cv.component';
+import { CvListarComponent } from './page/cv/cv-listar/cv-listar.component';
+import { CvDialogoComponent } from './page/cv/cv-listar/cv-dialogo/cv-dialogo.component';
+import { CvBuscarComponent } from './page/cv/cv-buscar/cv-buscar.component';
+import { CvCantidadComponent } from './page/cv/cv-cantidad/cv-cantidad.component';
+import { CvOrdenarComponent } from './page/cv/cv-ordenar/cv-ordenar.component';
+import { CvCreaeditaComponent } from './page/cv/cv-creaedita/cv-creaedita.component';
+import { EmpresarioBuscarComponent } from './page/empresario/empresario-buscar/empresario-buscar.component';
+import { EmpresarioCantidadComponent } from './page/empresario/empresario-cantidad/empresario-cantidad.component';
+import { EmpresarioOrdenarComponent } from './page/empresario/empresario-ordenar/empresario-ordenar.component';
+
 
 
 
@@ -113,7 +126,18 @@ import { CurriculumDialogoComponent } from './page/curriculum/curriculum-listar/
     CurriculumCreaeditaComponent,
     CurriculumBuscarComponent,
     CurriculumDialogoComponent,
-
+    CurriculumCantidadComponent,
+    CurriculumOrdenarComponent,
+    CvComponent,
+    CvListarComponent,
+    CvDialogoComponent,
+    CvBuscarComponent,
+    CvCantidadComponent,
+    CvOrdenarComponent,
+    CvCreaeditaComponent,
+    EmpresarioBuscarComponent,
+    EmpresarioCantidadComponent,
+    EmpresarioOrdenarComponent,
 
   ],
   imports: [

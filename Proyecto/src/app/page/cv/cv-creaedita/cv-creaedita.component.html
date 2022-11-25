@@ -1,0 +1,47 @@
+<div class="container">
+    <br>
+
+    <h1 >
+        <FONT FACE="Comic Sans MS" size=6 >Curriculum</FONT>
+    </h1>
+
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input matInput placeholder="idCurriculum" [(ngModel)]="cv.id">
+    </mat-form-field>
+     
+    <br>
+  
+    <mat-form-field appearance="fill">
+        <mat-label>Seleccione Capacitación</mat-label>
+        <mat-select [(value)]="idCapacitacionSelecionado" required>
+            <mat-option *ngFor="let ca of listaCapacitacion" [value]="ca.id">
+                {{ca.descCapacitacion}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    &nbsp;
+   <mat-form-field appearance="fill">
+      <mat-label>Seleccione Habilidad</mat-label>
+      <mat-select [(value)]="idHabilidadSeleccionado" required>
+          <mat-option *ngFor="let h of listaHabilidad" [value]="h.id">
+              {{h.descHabilidad}}
+          </mat-option>
+      </mat-select>
+  </mat-form-field> 
+  &nbsp;
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Experiencia</mat-label>
+    <mat-select [(value)]="idExperienciaSeleccionado" required>
+        <mat-option *ngFor="let e of listaExperiencia" [value]="e.id">
+            {{e.descExperiencia}}
+        </mat-option>
+    </mat-select>
+  </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" (click)="aceptar()" class="mat-elevation-z8">Aceptar</button> &nbsp;
+    <button mat-raised-button color="warn" routerLink="/curriculum" class="mat-elevation-z8">Cancelar</button>
+    </div>
+    
+     

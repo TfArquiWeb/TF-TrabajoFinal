@@ -1,5 +1,6 @@
+import { RespuestaCu } from './../model/respuestaCu';
 import { environment } from 'src/environments/environment';
-import { curriculum } from './../model/Curriculum';
+import { curriculum } from '../model/curriculum';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject, EMPTY } from 'rxjs';
@@ -8,7 +9,7 @@ import { Subject, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class CurriculumService {
-  private url: string = `${environment.host}/curriculum`
+  private url: string = `${environment.host}/ `
   private listaCambio = new Subject<curriculum[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
@@ -24,11 +25,46 @@ export class CurriculumService {
   eliminar(id: number) {
     return this.http.delete(`${this.url}/${id}`);
   }
-  buscar(texto: string) {
+  
+  buscarContadorDescripcion(texto: string) {
     console.log("algo")
-    if (texto.length != 0) { 
-      return this.http.post<curriculum[]>(`${this.url}/buscar`, texto.toLowerCase(), {
-      });
+    if (texto.length != 0) {
+      return this.http.post<curriculum[]>(`${this.url}/buscardesc`, texto.toLowerCase());
+    }
+    return EMPTY;
+  }
+  buscardescCapacitacion(texto: string) {
+    console.log("algo")
+    if (texto.length != 0) {
+      return this.http.post<curriculum[]>(`${this.url}/buscardesccapacitacion`, texto.toLowerCase());
+    }
+    return EMPTY;
+  }
+  buscardescExperiencia(texto: string) {
+    console.log("algo")
+    if (texto.length != 0) {
+      return this.http.post<curriculum[]>(`${this.url}/buscardescexperiencia`, texto.toLowerCase());
+    }
+    return EMPTY;
+  }
+  buscardescHabilidad(texto: string) {
+    console.log("algo")
+    if (texto.length != 0) {
+      return this.http.post<curriculum[]>(`${this.url}/buscardeschabilidad`, texto.toLowerCase());
+    }
+    return EMPTY;
+  }
+  buscarExperiencia(texto: string) {
+    console.log("algo")
+    if (texto.length != 0) {
+      return this.http.post<curriculum[]>(`${this.url}/buscarexperiencia`, texto.toLowerCase());
+    }
+    return EMPTY;
+  }
+  buscarHabilidad(texto: string) {
+    console.log("algo")
+    if (texto.length != 0) {
+      return this.http.post<curriculum[]>(`${this.url}/buscarhabilidad`, texto.toLowerCase());
     }
     return EMPTY;
   }
@@ -47,4 +83,11 @@ export class CurriculumService {
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
   }
+  ordenarCurriculumDesenso() {
+    return this.http.get<curriculum[]>(`${this.url}/ordenardesc`);
+  }
+  buscarCurriculumCantidad() {
+    return this.http.get<RespuestaCu[]>(`${this.url}/cantidad`);
+  }
 }
+  

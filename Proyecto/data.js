@@ -116,8 +116,8 @@ module.exports = function () {
             {
                 descContador: "Hola soy buen trabajador",
                 linkedinContador: "Mi perfil de linkedin es...",
-                CurriculumVitae: {
-                    idCurriculum: 1,
+                Cv: {
+                    id: 1,
                 },
                 Usuario: {
                     idUsuario: 4,
@@ -132,8 +132,8 @@ module.exports = function () {
             {
                 descContador: "Hola soy trabajador bueno",
                 linkedinContador: "Mi perfil de linkedin es...",
-                CurriculumVitae: {
-                    idCurriculum: 2,
+                Cv: {
+                    id: 1,
                 },
                 Usuario: {
                     idUsuario: 5,
@@ -148,8 +148,8 @@ module.exports = function () {
             {
                 descContador: "Hola me gusta trabajar",
                 linkedinContador: "Mi perfil de linkedin es...",
-                CurriculumVitae: {
-                    idCurriculum: 3,
+                Cv: {
+                    id: 1,
                 },
                 Usuario: {
                     idUsuario: 6,
@@ -162,7 +162,7 @@ module.exports = function () {
                 }
             },
         ],
-        Curriculum: [
+        Cv: [
             {
                 id: 1,
                 Habilidad: {
@@ -228,7 +228,7 @@ module.exports = function () {
                 TipoPago: {
                     id: 1,
                 },
-                Curriculum:{
+                Cv:{
                     id:1,
                 }
             },
@@ -249,7 +249,7 @@ module.exports = function () {
                 TipoPago: {
                     id: 1,
                 },
-                Curriculum:{
+                Cv:{
                     id:1,
                 }
             },
@@ -270,7 +270,7 @@ module.exports = function () {
                 TipoPago: {
                     id: 1,
                 },
-                Curriculum:{
+                Cv:{
                     id:1,
                 }
             },

@@ -1,3 +1,4 @@
+
 import { Habilidad } from './habilidad';
 import { Capacitacion } from './capacitacion';
 import { Experiencia } from './experiencia';
@@ -8,3 +9,4 @@ export class curriculum {
     Experiencia: Experiencia = new Experiencia();
 
 }
+// NO SE USA!!!!!!!!!!!!

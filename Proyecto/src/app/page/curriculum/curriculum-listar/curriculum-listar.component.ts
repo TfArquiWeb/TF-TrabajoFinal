@@ -2,14 +2,14 @@ import { CurriculumDialogoComponent } from './curriculum-dialogo/curriculum-dial
 import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { curriculum } from '../../../model/Curriculum';
+import { curriculum } from '../../../model/curriculum';
 import { CurriculumService } from './../../../service/curriculum.service';
 
 @Component({
   selector: 'app-curriculum-listar',
   templateUrl: './curriculum-listar.component.html',
   styleUrls: ['./curriculum-listar.component.css']
-})
+}) 
 export class CurriculumListarComponent implements OnInit {
   lista: curriculum[] = [];
   dataSource: MatTableDataSource<curriculum> = new MatTableDataSource();
@@ -33,7 +33,7 @@ export class CurriculumListarComponent implements OnInit {
       data == true ? this.eliminar(this.idMayor) : false;
     });
   }
-  confirmar(id: number) {
+  confirmarCurriculum(id: number) {
     this.idMayor = id;
     this.dialog.open(CurriculumDialogoComponent);
   }
@@ -44,7 +44,5 @@ export class CurriculumListarComponent implements OnInit {
       });
     });
   }
-  //filtrar(e: any) {
-  //  this.dataSource.filter = e.target.value.trim();
-  //}
 }
+  

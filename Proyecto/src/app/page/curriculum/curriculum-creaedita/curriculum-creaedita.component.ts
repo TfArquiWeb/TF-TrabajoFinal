@@ -4,7 +4,7 @@ import { CapacitacionService } from './../../../service/capacitacion.service';
 import { Experiencia } from './../../../model/experiencia';
 import { Habilidad } from './../../../model/habilidad';
 import { Capacitacion } from './../../../model/capacitacion';
-import { curriculum } from './../../../model/Curriculum';
+import { curriculum } from '../../../model/curriculum';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { CurriculumService } from './../../../service/curriculum.service';
 import { Component, OnInit } from '@angular/core';
@@ -16,20 +16,20 @@ import { Component, OnInit } from '@angular/core';
 }) 
 export class CurriculumCreaeditaComponent implements OnInit {
   Curriculum: curriculum = new curriculum();
-  listaCapacitacion: Capacitacion[] = [];
+  listaCapacitacion: Capacitacion[] = []; 
   idCapacitacionSelecionado: number=0;
-  //listaHabilidad: Habilidad[] = [];
-  //idHabilidadSeleccionado: number = 0;
-  //listaExperiencia: Experiencia[] = [];
-  //idExperienciaSeleccionado: number = 0;
+  listaHabilidad: Habilidad[] = [];
+  idHabilidadSeleccionado: number = 0;
+  listaExperiencia: Experiencia[] = [];
+  idExperienciaSeleccionado: number = 0;
   mensaje: string = "";
+  mensaje1: string = "";
   edicion: boolean = false;
   id: number = 0;
-  constructor(private curriculumService: CurriculumService,
-    private router: Router, private route: ActivatedRoute,
-    private capacitacionService: CapacitacionService,
-    //private HabilidadService: HabilidadService,
-    //private ExperienciaService: ExperienciaService
+  constructor(private curriculumService: CurriculumService, private router: Router, 
+    private route: ActivatedRoute, private capacitacionService: CapacitacionService,
+    private HabilidadService: HabilidadService,
+    private ExperienciaService: ExperienciaService
     ) { }
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
@@ -38,22 +38,22 @@ export class CurriculumCreaeditaComponent implements OnInit {
       this.init();
     });
     this.capacitacionService.listar().subscribe(data => {this.listaCapacitacion = data});
-    //this.HabilidadService.listar().subscribe(data => {this.listaHabilidad = data});
-    //this.ExperienciaService.listar().subscribe(data => {this.listaExperiencia = data});
+    this.HabilidadService.listar().subscribe(data => {this.listaHabilidad = data});
+    this.ExperienciaService.listar().subscribe(data => {this.listaExperiencia = data});
   }
-  aceptar(): void {
+  aceptar(): void {  
     //if (this.idExperienciaSeleccionado > 0 && this.idHabilidadSeleccionado > 0) {
       let c = new Capacitacion();
       c.id = this.idCapacitacionSelecionado;
       this.Curriculum.Capacitacion = c;
 
-      //let e = new Experiencia();
-      //e.id = this.idExperienciaSeleccionado;
-      //this.Curriculum.Experiencia = e;
+      let e = new Experiencia();
+      e.id = this.idExperienciaSeleccionado;
+      this.Curriculum.Experiencia = e;
 
-      //let h = new Habilidad();
-      //h.id = this.idHabilidadSeleccionado;
-      //this.Curriculum.Habilidad = h;
+      let h = new Habilidad();
+      h.id = this.idHabilidadSeleccionado;
+      this.Curriculum.Habilidad = h;
 
       if (this.edicion) {
         this.curriculumService.modificar(this.Curriculum).subscribe(() => {
@@ -70,7 +70,7 @@ export class CurriculumCreaeditaComponent implements OnInit {
           console.log(err);
         });
       }
-      this.router.navigate(['capacitacion']);
+      this.router.navigate(['curriculum']);
     //} else {
     //  this.mensaje = "Complete los valores requeridos";
     //}
@@ -81,8 +81,8 @@ export class CurriculumCreaeditaComponent implements OnInit {
         this.Curriculum = data
         console.log(data);
         this.idCapacitacionSelecionado = data.Capacitacion.id;
-        //this.idHabilidadSeleccionado = data.Habilidad.id;
-        //this.idExperienciaSeleccionado = data.Experiencia.id;
+        this.idHabilidadSeleccionado = data.Habilidad.id;
+        this.idExperienciaSeleccionado = data.Experiencia.id;
       })
     }
   }
