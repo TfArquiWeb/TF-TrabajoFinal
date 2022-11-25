@@ -1,8 +1,11 @@
 <div class="container">
     <div style=" text-align: center;">
         <br>
-        <h1>Lista de Curriculum</h1>
+        <h1>
+            <FONT FACE="Comic Sans MS" size=6 >Lista de Curriculums</FONT>
+        </h1>
     </div>
+    <br>
     <app-cv-buscar></app-cv-buscar>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -10,19 +13,20 @@
               The actual rendered columns are set as a property on the row definition" -->
 
         <!-- Weight Column -->
-        <ng-container matColumnDef="id">
-            <th mat-header-cell *matHeaderCellDef> Id </th>
+        <ng-container matColumnDef="id" >
+            <th mat-header-cell *matHeaderCellDef > Id </th>
             <td mat-cell *matCellDef="let element"> {{element.id}} </td>
         </ng-container>
 
         <!-- Position Column -->
-        <ng-container matColumnDef="habilidad">
+        <ng-container matColumnDef="habilidad" >
+            
             <th mat-header-cell *matHeaderCellDef> Habilidad </th>
             <td mat-cell *matCellDef="let element"> {{element.habilidad.descHabilidad}} </td>
         </ng-container>
 
         <ng-container matColumnDef="capacitacion">
-            <th mat-header-cell *matHeaderCellDef> Capacitacion</th>
+            <th mat-header-cell *matHeaderCellDef> Capacitación</th>
             <td mat-cell *matCellDef="let element"> {{element.capacitacion.descCapacitacion}} </td>
         </ng-container>
 
@@ -32,15 +36,15 @@
         </ng-container>
 
         <ng-container matColumnDef="accion1">
-            <th mat-header-cell *matHeaderCellDef> Actualizar </th>
-            <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-                    [routerLink]="['edicion', element?.id]">Actualizar</button>
-            </td>
+            <th mat-header-cell *matHeaderCellDef style=" text-align: center;"> Actualizar </th>
+            <td mat-cell *matCellDef="let element" style=" text-align: center;"> <button mat-raised-button color="primary"
+                [routerLink]="['edicion', element?.id]">Actualizar</button> 
         </ng-container>
+        
         <ng-container matColumnDef="accion2">
-            <th mat-header-cell *matHeaderCellDef> Eliminar </th>
-            <td mat-cell *matCellDef="let element">
-                <button mat-raised-button color="warn" (click)="confirmarCv(element.id)">Eliminar</button>
+            <th mat-header-cell *matHeaderCellDef style=" text-align: center;"> Eliminar </th>
+            <td mat-cell *matCellDef="let element" style=" text-align: center;">
+                <button mat-raised-button color="warn" (click)="confirmarCv(element.id)" >Eliminar</button>
             </td>
         </ng-container>
 
@@ -50,13 +54,17 @@
     <br>
     <div class="example-button-container">
 
-        <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-            routerLink="/curriculum/insertar">
+        
+        &nbsp;
+        <button mat-raised-button color="primary" routerLink="/curriculum/ordenar" class="mat-elevation-z8">Ordenar</button>
+        &nbsp;
+        <button mat-raised-button color="primary" routerLink="/curriculum/cantidad" class="mat-elevation-z8">Cantidad</button>
+        <br>
+        <br>
+        &nbsp;
+        <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon"
+            routerLink="/curriculum/insertar"  >
             <mat-icon>plus_one</mat-icon>
         </button>
-        &nbsp;
-        <button mat-raised-button color="primary" routerLink="/curriculum/ordenar">ordenar</button>
-        &nbsp;
-        <button mat-raised-button color="primary" routerLink="/curriculum/cantidad">cantidad</button>
     </div>
 </div>

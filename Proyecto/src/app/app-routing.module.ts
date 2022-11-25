@@ -5,11 +5,9 @@ import { CvCreaeditaComponent } from './page/cv/cv-creaedita/cv-creaedita.compon
 import { CvComponent } from './page/cv/cv.component';
 import { CurriculumCantidadComponent } from './page/curriculum/curriculum-cantidad/curriculum-cantidad.component';
 import { CurriculumOrdenarComponent } from './page/curriculum/curriculum-ordenar/curriculum-ordenar.component';
-
 import { EmpresarioCantidadComponent } from './page/empresario/empresario-cantidad/empresario-cantidad.component';
 import { EmpresarioOrdenarComponent } from './page/empresario/empresario-ordenar/empresario-ordenar.component';
 import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
-
 import { ContadorCantidadComponent } from './page/contador/contador-cantidad/contador-cantidad.component';
 import { ContadorOrdenarComponent } from './page/contador/contador-ordenar/contador-ordenar.component';
 import { CurriculumCreaeditaComponent } from './page/curriculum/curriculum-creaedita/curriculum-creaedita.component';

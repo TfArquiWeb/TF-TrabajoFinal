@@ -11,7 +11,7 @@ import { RespuestaCu } from 'src/app/model/respuestaCu';
 export class CvCantidadComponent implements OnInit {
   lista:RespuestaCu[]=[];
   dataSource: MatTableDataSource<RespuestaCu> = new MatTableDataSource();
-  displayedColumns: string[] = ['curriculum', 'cantidad'];
+  displayedColumns: string[] = ['capacitacion', 'cantidad'];
   constructor(private cvService:CvService) { }
  
   ngOnInit(): void {
@@ -20,4 +20,4 @@ export class CvCantidadComponent implements OnInit {
     })
   }
 
-}
+} 
