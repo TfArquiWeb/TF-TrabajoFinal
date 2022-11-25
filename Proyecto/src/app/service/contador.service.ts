@@ -1,8 +1,9 @@
+import { Respuesta } from './../model/respuesta';
 import { environment } from 'src/environments/environment';
 import { Contador } from './../model/contador';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, EMPTY } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -37,5 +38,25 @@ export class ContadorService {
   }
   setConfirmaEliminacionContador(estado: Boolean) {
     this.confirmaEliminacionContador.next(estado);
+  }
+  buscarContadorDescripcion(texto: string) {
+    console.log("algo")
+    if (texto.length != 0) {
+      return this.http.post<Contador[]>(`${this.url}/buscardesc`, texto.toLowerCase());
+    }
+    return EMPTY;
+  }
+  buscarContadorNombre(texto: string) {
+    console.log("algo")
+    if (texto.length != 0) {
+      return this.http.post<Contador[]>(`${this.url}/buscarusu`, texto.toLowerCase());
+    }
+    return EMPTY;
+  }
+  ordenarContadorDesenso() {
+    return this.http.get<Contador[]>(`${this.url}/ordenardesc`);
+  }
+  buscarContadoresCantidad() {
+    return this.http.get<Respuesta[]>(`${this.url}/cantidad`);
   }
 }
