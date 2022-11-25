@@ -55,12 +55,14 @@ import { TipomonedaBuscarComponent } from './page/tipomoneda/tipomoneda-buscar/t
 import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creaedita/tipomoneda-creaedita.component';
 import { CurriculumListarComponent } from './page/curriculum/curriculum-listar/curriculum-listar.component';
 import { ContadorDialogoComponent } from './page/contador/contador-listar/contador-dialogo/contador-dialogo.component';
-import { SolicitudempleoComponent } from './page/solicitudempleo/solicitudempleo.component';
-import { SolicitudempleoBuscarComponent } from './page/solicitudempleo/solicitudempleo-buscar/solicitudempleo-buscar.component';
-import { SolicitudempleoCreaditaComponent } from './page/solicitudempleo/solicitudempleo-creadita/solicitudempleo-creadita.component';
-import { SolicitudempleoListarComponent } from './page/solicitudempleo/solicitudempleo-listar/solicitudempleo-listar.component';
-import { SolicitudempleoOrdenarComponent } from './page/solicitudempleo/solicitudempleo-ordenar/solicitudempleo-ordenar.component';
-import { SolicitudempleoDialogoComponent } from './page/solicitudempleo/solicitudempleo-listar/solicitudempleo-dialogo/solicitudempleo-dialogo.component';
+import { ContadorBuscarComponent } from './page/contador/contador-buscar/contador-buscar.component';
+import { ContadorOrdenarComponent } from './page/contador/contador-ordenar/contador-ordenar.component';
+import { ContadorCantidadComponent } from './page/contador/contador-cantidad/contador-cantidad.component';
+import { CurriculumCreaeditaComponent } from './page/curriculum/curriculum-creaedita/curriculum-creaedita.component';
+import { CurriculumBuscarComponent } from './page/curriculum/curriculum-buscar/curriculum-buscar.component';
+import { CurriculumDialogoComponent } from './page/curriculum/curriculum-listar/curriculum-dialogo/curriculum-dialogo.component';
+
+
 
 @NgModule({
   declarations: [
@@ -105,14 +107,12 @@ import { SolicitudempleoDialogoComponent } from './page/solicitudempleo/solicitu
     TipomonedaCreaeditaComponent,
     CurriculumListarComponent,
     ContadorDialogoComponent,
-    SolicitudempleoComponent,
-    SolicitudempleoBuscarComponent,
-    SolicitudempleoCreaditaComponent,
-    SolicitudempleoListarComponent,
-    SolicitudempleoOrdenarComponent,
-    SolicitudempleoDialogoComponent,
-
-
+    ContadorBuscarComponent,
+    ContadorOrdenarComponent,
+    ContadorCantidadComponent,
+    CurriculumCreaeditaComponent,
+    CurriculumBuscarComponent,
+    CurriculumDialogoComponent,
 
 
   ],

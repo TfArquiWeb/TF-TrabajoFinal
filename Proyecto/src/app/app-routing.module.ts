@@ -1,4 +1,7 @@
-import { SolicitudempleoComponent } from './page/solicitudempleo/solicitudempleo.component';
+
+import { ContadorCantidadComponent } from './page/contador/contador-cantidad/contador-cantidad.component';
+import { ContadorOrdenarComponent } from './page/contador/contador-ordenar/contador-ordenar.component';
+import { CurriculumCreaeditaComponent } from './page/curriculum/curriculum-creaedita/curriculum-creaedita.component';
 import { ContadorCreaditaComponent } from './page/contador/contador-creadita/contador-creadita.component';
 import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { CurriculumComponent } from './page/curriculum/curriculum.component';
@@ -19,18 +22,14 @@ import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/t
 import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creaedita/tipomoneda-creaedita.component';
 import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
 const routes: Routes = [{
-  path: 'solicitudempleo', component: SolicitudempleoComponent, children: [
-    {path: 'insertar', component: SolicitudempleoComponent},
-    { path: 'edicion/:id', component: SolicitudempleoComponent },
-    { path: 'ordenar', component: SolicitudempleoComponent }
-  ]
-}, {
   path: 'empresario', component: EmpresarioComponent, children: [
   ]
 }, {
   path: 'contador', component: ContadorComponent, children: [
     { path: 'insertar', component: ContadorCreaditaComponent },
-    { path: 'edicion/:id', component: ContadorCreaditaComponent }
+    { path: 'edicion/:id', component: ContadorCreaditaComponent },
+    { path: 'ordenar', component: ContadorOrdenarComponent },
+    { path: 'cantidad', component: ContadorCantidadComponent }
   ]
 }, {
   path: 'tipopago', component: TipopagoComponent, children: [
@@ -61,12 +60,14 @@ const routes: Routes = [{
     { path: 'insertar', component: UsuarioCreaditaComponent },
     { path: 'edicion/:id', component: UsuarioCreaditaComponent }
   ]
-}, {
+}, { 
   path: 'contrato', component: ContratoComponent, children: [
 
   ]
 }, {
   path: 'curriculum', component: CurriculumComponent, children: [
+    {path: 'insertar', component: CurriculumCreaeditaComponent},
+    { path: 'edicion/:id', component: CurriculumCreaeditaComponent }
   ]
 },{
   path: 'tipomoneda', component: TipomonedaComponent, children: [

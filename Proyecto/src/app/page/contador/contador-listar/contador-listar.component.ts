@@ -13,14 +13,14 @@ import { Contador } from 'src/app/model/contador';
 export class ContadorListarComponent implements OnInit {
   listacontador:Contador[]=[];
   dataSource: MatTableDataSource<Contador> = new MatTableDataSource();
-  displayedColumns: string[] = ['idContador','desc','linkedid','idUsuario','accion1','accion2'];
+  displayedColumns: string[] = ['idContador','desc','linkedid','idUsuario','nombreUsuario','accion1','accion2'];
   private idMayor: number = 0;
   constructor(private Cs: ContadorService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.Cs.listarContador().subscribe(data => {
       console.log(data)
-      this.listacontador=data;
+      this.listacontador=data; 
       this.dataSource = new MatTableDataSource(data);
     }); 
     this.Cs.getlistaContador().subscribe(data => {
