@@ -1,3 +1,11 @@
+
+import { CvCantidadComponent } from './page/cv/cv-cantidad/cv-cantidad.component';
+import { CvOrdenarComponent } from './page/cv/cv-ordenar/cv-ordenar.component';
+import { CvCreaeditaComponent } from './page/cv/cv-creaedita/cv-creaedita.component';
+import { CvComponent } from './page/cv/cv.component';
+import { CurriculumCantidadComponent } from './page/curriculum/curriculum-cantidad/curriculum-cantidad.component';
+import { CurriculumOrdenarComponent } from './page/curriculum/curriculum-ordenar/curriculum-ordenar.component';
+
 import { EmpresarioCantidadComponent } from './page/empresario/empresario-cantidad/empresario-cantidad.component';
 import { EmpresarioOrdenarComponent } from './page/empresario/empresario-ordenar/empresario-ordenar.component';
 import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
@@ -72,11 +80,20 @@ const routes: Routes = [{
 
   ]
 }, {
-  path: 'curriculum', component: CurriculumComponent, children: [
+  path: 'nocurriculum', component: CurriculumComponent, children: [
     {path: 'insertar', component: CurriculumCreaeditaComponent},
-    { path: 'edicion/:id', component: CurriculumCreaeditaComponent }
+    { path: 'edicion/:id', component: CurriculumCreaeditaComponent },
+    { path: 'ordenar', component: CurriculumOrdenarComponent },
+    { path: 'cantidad', component: CurriculumCantidadComponent }
   ]
 },{
+  path: 'curriculum', component: CvComponent, children: [
+    {path: 'insertar', component: CvCreaeditaComponent},
+    { path: 'edicion/:id', component: CvCreaeditaComponent },
+    { path: 'ordenar', component: CvOrdenarComponent },
+    { path: 'cantidad', component: CvCantidadComponent }
+  ]
+}, {
   path: 'tipomoneda', component: TipomonedaComponent, children: [
     {path: 'insertar', component: TipomonedaCreaeditaComponent},
     { path: 'edicion/:id', component: TipomonedaCreaeditaComponent }

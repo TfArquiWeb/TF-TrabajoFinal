@@ -1,61 +1,61 @@
 <div class="container">
-  <h1> Lista de curriculum </h1>
-
+  <div style=" text-align: center;">
+    <br>
+    <h1>Lista de Curriculum</h1>
+  </div>
   <app-curriculum-buscar></app-curriculum-buscar>
-  <!--Búsqueda usando BD-->
-
-  <!--Búsqueda en el front/cliente-->
-  <!-- 
-  <mat-form-field>
-      <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
-  </mat-form-field>
-  -->
-
-
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-      <!-- Position Column -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> Id </th>
-        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-      </ng-container> 
-  
-      <!-- Name Column -->
-      <ng-container matColumnDef="habilidad">
-        <th mat-header-cell *matHeaderCellDef> Habilidad </th>
-        <td mat-cell *matCellDef="let element"> {{element.habilidad.descHabilidad}} </td>
-      </ng-container>
-  
-      <!-- Weight Column -->
-      <ng-container matColumnDef="capacitacion">
-        <th mat-header-cell *matHeaderCellDef> Capacitacion </th>
-        <td mat-cell *matCellDef="let element"> {{element.capacitacion.descCapacitacion}} </td>
-      </ng-container>
-      <ng-container matColumnDef="experiencia">
-        <th mat-header-cell *matHeaderCellDef> Experiencia </th>
-        <td mat-cell *matCellDef="let element"> {{element.experiencia.descExperiencia}} </td>
-      </ng-container>
-  
-  
-      <ng-container matColumnDef="accion1">
-        <th mat-header-cell *matHeaderCellDef> Actualizar </th>
-        <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-                [routerLink]="['edicion', element?.id]"> Actualizar </button>
-        </td>
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="habilidad">
+      <th mat-header-cell *matHeaderCellDef> Habilidad </th>
+      <td mat-cell *matCellDef="let element"> {{element.habilidad.descHabilidad}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="capacitacion">
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.capacitacion.descCapacitacion}} </td>
+  </ng-container>
+
+
+    <ng-container matColumnDef="experiencia">
+      <th mat-header-cell *matHeaderCellDef> Experiencia </th>
+      <td mat-cell *matCellDef="let element"> {{element.experiencia.descExperiencia}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="accion1">
+      <th mat-header-cell *matHeaderCellDef> Actualizar </th>
+      <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+          [routerLink]="['edicion', element?.id]"> Actualizar </button>
+      </td>
     </ng-container>
     <ng-container matColumnDef="accion2">
-        <th mat-header-cell *matHeaderCellDef> Eliminar </th>
-        <td mat-cell *matCellDef="let element">
-            <button mat-raised-button color="warn" (click)="confirmar(element.id)"> Eliminar </button>
-        </td>
+      <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="warn" (click)="confirmarCurriculum(element.id)"> Eliminar </button>
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+  </table>
+  <div class="example-button-container">
 
-<button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon"
-    routerLink="/curriculum/insertar">
-    <mat-icon>plus_one</mat-icon>
-</button>
+    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+        routerLink="/curriculum/insertar">
+        <mat-icon>plus_one</mat-icon>
+    </button>
+    &nbsp;
+    <button mat-raised-button color="primary" routerLink="/curriculum/ordenar">ordenar</button>
+    &nbsp;
+    <button mat-raised-button color="primary" routerLink="/curriculum/cantidad">cantidad</button>
+</div>
 
 </div>

@@ -1,21 +1,22 @@
+import { CvService } from './../../../service/cv.service';
 import { ExperienciaService } from './../../../service/experiencia.service';
 import { HabilidadService } from './../../../service/habilidad.service';
 import { CapacitacionService } from './../../../service/capacitacion.service';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Capacitacion } from './../../../model/capacitacion';
 import { Experiencia } from './../../../model/experiencia';
 import { Habilidad } from './../../../model/habilidad';
-import { Capacitacion } from './../../../model/capacitacion';
-import { curriculum } from '../../../model/curriculum';
-import { Router, ActivatedRoute, Params } from '@angular/router';
-import { CurriculumService } from './../../../service/curriculum.service';
+import { Cv } from './../../../model/cv';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-curriculum-creaedita',
-  templateUrl: './curriculum-creaedita.component.html',
-  styleUrls: ['./curriculum-creaedita.component.css']
-}) 
-export class CurriculumCreaeditaComponent implements OnInit {
-  Curriculum: curriculum = new curriculum();
+  selector: 'app-cv-creaedita',
+  templateUrl: './cv-creaedita.component.html',
+  styleUrls: ['./cv-creaedita.component.css']
+})
+export class CvCreaeditaComponent implements OnInit {
+  id: number = 0;
+  cv: Cv = new Cv();
   listaCapacitacion: Capacitacion[] = []; 
   idCapacitacionSelecionado: number=0;
   listaHabilidad: Habilidad[] = [];
@@ -25,8 +26,8 @@ export class CurriculumCreaeditaComponent implements OnInit {
   mensaje: string = "";
   mensaje1: string = "";
   edicion: boolean = false;
-  id: number = 0;
-  constructor(private curriculumService: CurriculumService, private router: Router, 
+  
+  constructor(private cvService: CvService, private router: Router, 
     private route: ActivatedRoute, private capacitacionService: CapacitacionService,
     private HabilidadService: HabilidadService,
     private ExperienciaService: ExperienciaService
@@ -45,26 +46,26 @@ export class CurriculumCreaeditaComponent implements OnInit {
     //if (this.idExperienciaSeleccionado > 0 && this.idHabilidadSeleccionado > 0) {
       let c = new Capacitacion();
       c.id = this.idCapacitacionSelecionado;
-      this.Curriculum.Capacitacion = c;
+      this.cv.Capacitacion = c;
 
       let e = new Experiencia();
       e.id = this.idExperienciaSeleccionado;
-      this.Curriculum.Experiencia = e;
+      this.cv.Experiencia = e;
 
       let h = new Habilidad();
       h.id = this.idHabilidadSeleccionado;
-      this.Curriculum.Habilidad = h;
+      this.cv.Habilidad = h;
 
       if (this.edicion) {
-        this.curriculumService.modificar(this.Curriculum).subscribe(() => {
-          this.curriculumService.listar().subscribe(data => {
-            this.curriculumService.setLista(data);
+        this.cvService.modificar(this.cv).subscribe(() => {
+          this.cvService.listar().subscribe(data => {
+            this.cvService.setLista(data);
           })
         })
       } else {
-        this.curriculumService.insertar(this.Curriculum).subscribe(() => {
-          this.curriculumService.listar().subscribe(data => {
-            this.curriculumService.setLista(data);
+        this.cvService.insertar(this.cv).subscribe(() => {
+          this.cvService.listar().subscribe(data => {
+            this.cvService.setLista(data);
           });
         }, err => {
           console.log(err);
@@ -77,13 +78,16 @@ export class CurriculumCreaeditaComponent implements OnInit {
   }
   init() {
     if (this.edicion) {
-      this.curriculumService.listarId(this.id).subscribe(data => {
-        this.Curriculum = data
+      this.cvService.listarId(this.id).subscribe(data => {
+        this.cv = data
         console.log(data);
         this.idCapacitacionSelecionado = data.Capacitacion.id;
         this.idHabilidadSeleccionado = data.Habilidad.id;
         this.idExperienciaSeleccionado = data.Experiencia.id;
-      })
+      });
     }
+
   }
 }
+
+

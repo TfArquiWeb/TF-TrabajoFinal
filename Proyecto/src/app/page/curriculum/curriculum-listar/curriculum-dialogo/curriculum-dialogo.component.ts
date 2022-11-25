@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./curriculum-dialogo.component.css']
 })
 export class CurriculumDialogoComponent implements OnInit {
-  constructor(private curriculumService: CurriculumService,
-    private dialogRef: MatDialogRef<CurriculumDialogoComponent>) { }
+  
+  constructor(private curriculumService: CurriculumService, private dialogRef: MatDialogRef<CurriculumDialogoComponent>) { }
 
   ngOnInit(): void {}
 
@@ -18,3 +18,4 @@ export class CurriculumDialogoComponent implements OnInit {
     this.dialogRef.close();
   }
 } 
+ 
