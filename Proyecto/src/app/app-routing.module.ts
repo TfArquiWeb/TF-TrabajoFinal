@@ -32,6 +32,13 @@ const routes: Routes = [{
     { path: 'cantidad', component: ContadorCantidadComponent }
   ]
 }, {
+  path: 'solicitudempleo', component: ContadorComponent, children: [
+    { path: 'insertar', component: ContadorCreaditaComponent },
+    { path: 'edicion/:id', component: ContadorCreaditaComponent },
+    { path: 'ordenar', component: ContadorOrdenarComponent },
+    { path: 'cantidad', component: ContadorCantidadComponent }
+  ]
+},{
   path: 'tipopago', component: TipopagoComponent, children: [
     {path: 'insertar', component: TipopagoCreaeditaComponent},
     { path: 'edicion/:id', component: TipopagoCreaeditaComponent }

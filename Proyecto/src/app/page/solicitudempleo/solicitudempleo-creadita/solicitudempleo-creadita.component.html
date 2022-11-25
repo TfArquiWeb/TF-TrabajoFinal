@@ -1,37 +1,47 @@
-<p>solicitudempleo-creadita works!</p>
 <div class="container">
 
-    <h1>Contador</h1>
-    <mat-form-field class="example-full-width">
-      <mat-label>Id</mat-label>
-      <input matInput placeholder="idSolicitudempleo" [(ngModel)]="contador.id">
-    </mat-form-field>
-  
-    <br>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>descContador</mat-label>
-      <input matInput placeholder="descContador" [(ngModel)]="contador.descContador">
-    </mat-form-field>
-    <br>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>linkedinContador</mat-label>
-      <input matInput placeholder="linkedinContador" [(ngModel)]="contador.linkedinContador">
-    </mat-form-field>
-    <br>
-    <mat-form-field appearance="fill">
-      <mat-label>Seleccione Usuario</mat-label>
-      <mat-select [(value)]="idUsuarioSeleccionado" required>
-        <mat-option *ngFor="let u of listaUsuario" [value]="u.id">
-            {{u.nombreUsuario}}
-        </mat-option>
-    </mat-select>
+  <h1>Solicitud de empleo</h1>
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="idSE" [(ngModel)]="solicitudempleo.id">
   </mat-form-field>
-  
-    <br>
-    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
-    <button mat-raised-button color="warn" routerLink="/solicitudempleo">Cancelar</button>
-    <p>{{mensaje}}</p>
-  
-  </div>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Fecha</mat-label>
+    <input matInput placeholder="fechaSE" [(ngModel)]="solicitudempleo.fechaSE">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Estado </mat-label>
+    <input matInput placeholder="estadoSE" [(ngModel)]="solicitudempleo.estadoSE">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="fill"><!-- jalar los de 2 -->
+    <mat-label>Seleccione id contador</mat-label>
+    <mat-select [(value)]="idContadorSeleccionado" required>
+      <mat-option *ngFor="let u of listaContador" [value]="u.idContador">
+          {{u.idUsuario}}
+      </mat-option>
+  </mat-select>
+  </mat-form-field>
+
+  <br>
+  <mat-form-field appearance="fill"><!-- jalar los de 2 -->
+    <mat-label>Seleccione nombre contador</mat-label>
+    <mat-select [(value)]="idUsuarioSeleccionado" required>
+      <mat-option *ngFor="let u of listaContador" [value]="u.idContador">
+          {{u.nombreUsuario}}
+      </mat-option>
+  </mat-select>
+  </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/solicitudempleo">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>

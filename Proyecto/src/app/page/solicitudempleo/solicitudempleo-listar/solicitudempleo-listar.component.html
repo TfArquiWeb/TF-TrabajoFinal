@@ -22,7 +22,7 @@
 
         <!-- Weight Column -->
         <ng-container matColumnDef="estadoSE">
-            <th mat-header-cell *matHeaderCellDef> LinkedIn </th>
+            <th mat-header-cell *matHeaderCellDef> Estado </th>
             <td mat-cell *matCellDef="let element"> {{element.estadoSE}} </td>
         </ng-container>
         <!-- Position Column -->
@@ -31,7 +31,7 @@
             <td mat-cell *matCellDef="let element"> {{element.contador.id}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="nombreUsuario">
+        <ng-container matColumnDef="contadorSE">
             <th mat-header-cell *matHeaderCellDef> contador</th>
             <td mat-cell *matCellDef="let element"> {{element.contador.usuario.nombreUsuario}} </td>
         </ng-container>
