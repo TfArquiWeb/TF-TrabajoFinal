@@ -2,12 +2,12 @@
     <h1> Cantidad de capacitaciones por curriculum</h1>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
         <ng-container matColumnDef="curriculum">
-            <th mat-header-cell *matHeaderCellDef> curriculum </th>
+            <th mat-header-cell *matHeaderCellDef> Curriculum </th>
             <td mat-cell *matCellDef="let element"> {{element.curriculum}} </td>
         </ng-container>
 
         <ng-container matColumnDef="cantidad">
-            <th mat-header-cell *matHeaderCellDef> cantidad </th>
+            <th mat-header-cell *matHeaderCellDef> Cantidad </th>
             <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
         </ng-container>
 

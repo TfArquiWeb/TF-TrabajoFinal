@@ -15,6 +15,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cv-creaedita.component.css']
 })
 export class CvCreaeditaComponent implements OnInit {
+  id: number = 0;
   cv: Cv = new Cv();
   listaCapacitacion: Capacitacion[] = []; 
   idCapacitacionSelecionado: number=0;
@@ -25,7 +26,7 @@ export class CvCreaeditaComponent implements OnInit {
   mensaje: string = "";
   mensaje1: string = "";
   edicion: boolean = false;
-  id: number = 0;
+  
   constructor(private cvService: CvService, private router: Router, 
     private route: ActivatedRoute, private capacitacionService: CapacitacionService,
     private HabilidadService: HabilidadService,
@@ -83,7 +84,10 @@ export class CvCreaeditaComponent implements OnInit {
         this.idCapacitacionSelecionado = data.Capacitacion.id;
         this.idHabilidadSeleccionado = data.Habilidad.id;
         this.idExperienciaSeleccionado = data.Experiencia.id;
-      })
+      });
     }
+
   }
 }
+
+
