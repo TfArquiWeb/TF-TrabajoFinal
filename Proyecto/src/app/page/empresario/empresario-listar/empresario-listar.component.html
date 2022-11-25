@@ -1,85 +1,73 @@
-<div class="container">
-<div style=" text-align: center;">
-  <h1>Lista de empresarios</h1>
-</div> 
-<table  mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+<div class="container"> 
+  <div style=" text-align: center;">
+      <h1>Lista de Empresarios</h1>
+  </div>
+  <app-empresario-buscar></app-empresario-buscar>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-  <!-- Position Column -->
-  <ng-container matColumnDef="id" >
-    <th mat-header-cell *matHeaderCellDef> Id </th>
-    <td mat-cell *matCellDef="let element"> {{element.idEmpresario}} </td>
-  </ng-container>
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
 
-  <!-- Name Column -->
-  <ng-container matColumnDef="dni">
-    <th mat-header-cell *matHeaderCellDef> DNI </th>
-    <td mat-cell *matCellDef="let element"> {{element.Usuario.dniUsuario}} </td>
-  </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> idEmpresario </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
 
-  <!-- Weight Column -->
-  <ng-container matColumnDef="nombre">
-    <th mat-header-cell *matHeaderCellDef> Nombre </th>
-    <td mat-cell *matCellDef="let element"> {{element.Usuario.nombreUsuario}} </td>
-  </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="razon">
+          <th mat-header-cell *matHeaderCellDef> Descripción </th>
+          <td mat-cell *matCellDef="let element"> {{element.razonEmpresario}} </td>
+      </ng-container>
 
-  <!-- Weight Column -->
-  <ng-container matColumnDef="apellido">
-    <th mat-header-cell *matHeaderCellDef> Apellido </th>
-    <td mat-cell *matCellDef="let element"> {{element.Usuario.apellidoUsuario}} </td>
-  </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="ruc">
+          <th mat-header-cell *matHeaderCellDef> LinkedIn </th>
+          <td mat-cell *matCellDef="let element"> {{element.rucEmpresario}} </td>
+      </ng-container>
+      <!-- Position Column -->
+      <ng-container matColumnDef="rubro">
+          <th mat-header-cell *matHeaderCellDef> Id </th>
+          <td mat-cell *matCellDef="let element"> {{element.rubroEmpresario}} </td>
+      </ng-container>
+      <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.descEmpresario}} </td>
+    </ng-container>
+      <ng-container matColumnDef="idUsuario">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.usuario.id}} </td>
+    </ng-container>
+    
 
-  <!-- Weight Column -->
-  <ng-container matColumnDef="numero">
-    <th mat-header-cell *matHeaderCellDef> Número </th>
-    <td mat-cell *matCellDef="let element"> {{element.Usuario.numeroUsuario}} </td>
-  </ng-container>
+      <ng-container matColumnDef="nombreUsuario">
+          <th mat-header-cell *matHeaderCellDef> nombre</th>
+          <td mat-cell *matCellDef="let element"> {{element.usuario.nombreUsuario}} </td>
+      </ng-container>
 
-  <!-- Weight Column -->
-  <ng-container matColumnDef="correo">
-    <th mat-header-cell *matHeaderCellDef> Correo </th>
-    <td mat-cell *matCellDef="let element"> {{element.Usuario.correoUsuario}} </td>
-  </ng-container>
+      <ng-container matColumnDef="accion1">
+          <th mat-header-cell *matHeaderCellDef> Acciones </th>
+          <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+              [routerLink]="['edicion', element?.id]">Actualizar</button>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="accion2">
+          <th mat-header-cell *matHeaderCellDef> Acciones </th>
+          <td mat-cell *matCellDef="let element">
+              <button mat-raised-button color="warn" (click)="confirmarEmpresario(element.id)">Eliminar</button>
+          </td>
+        </ng-container>
 
-  <!-- Weight Column -->
-  <ng-container matColumnDef="razon">
-    <th mat-header-cell *matHeaderCellDef> Razon Social </th>
-    <td mat-cell *matCellDef="let element"> {{element.razonEmpresario}} </td>
-  </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <div class="example-button-container">
 
-  <!-- Weight Column -->
-  <ng-container matColumnDef="ruc">
-    <th mat-header-cell *matHeaderCellDef> RUC </th>
-    <td mat-cell *matCellDef="let element"> {{element.rucEmpresario}} </td>
-  </ng-container>
-
-  <!-- Weight Column -->
-  <ng-container matColumnDef="rubro">
-    <th mat-header-cell *matHeaderCellDef> Rubro </th>
-    <td mat-cell *matCellDef="let element"> {{element.rubroEmpresario}} </td>
-  </ng-container>
-
-  <!-- Weight Column -->
-  <ng-container matColumnDef="descripcion">
-    <th mat-header-cell *matHeaderCellDef> Descripción </th>
-    <td mat-cell *matCellDef="let element"> {{element.descEmpresario}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="acciones">
-    <th mat-header-cell *matHeaderCellDef> Acciones </th>
-    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="basic"
-            [routerLink]="['edicion', element.idEmpresario]">Actualizar</button>
-        <button mat-raised-button color="warn" (click)="confirmar(element.idEmpresario)">Eliminar</button>
-    </td>
-</ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-<div class="example-button-container">
-
-  <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-    routerLink="/empresario/insertar">
-    <mat-icon>plus_one</mat-icon>
-  </button>
-</div>
+      <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+          routerLink="/empresario/insertar">
+          <mat-icon>plus_one</mat-icon>
+      </button>
+      <button mat-raised-button color="primary" routerLink="/empresario/ordenar">ordenar</button>
+      <button mat-raised-button color="primary" routerLink="/empresario/cantidad">cantidad</button>
+  </div>
 </div>

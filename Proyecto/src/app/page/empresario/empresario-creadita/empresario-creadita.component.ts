@@ -30,34 +30,29 @@ export class EmpresarioCreaditaComponent implements OnInit {
       });
       this.usuarioService.listarUsuario().subscribe(data => { this.listaUsuarios = data });
     }
-    aceptar() {
-      if (this.empresario.razonEmpresario.length > 0 &&
-        this.idUsuarioSeleccionado>0) {
-        let p = new Usuario();
-        p.id = this.idUsuarioSeleccionado;
-        this.empresario.Usuario = p;
-        if (this.edicion) {
+    aceptar(): void {
+      if (this.empresario.descEmpresario.length > 0 && this.empresario.rubroEmpresario.length > 0) {
+        let c=new Usuario();
+        c.id= this.idUsuarioSeleccionado
+        this.empresario.usuario=c;
+        if(this.edicion){
           this.empresarioService.modificarEmpresario(this.empresario).subscribe(() => {
             this.empresarioService.listarEmpresario().subscribe(data => {
               this.empresarioService.setListaEmpresario(data);
-            });
+            })
           });
-  
-        } else {
+        }else{
           this.empresarioService.insertarEmpresario(this.empresario).subscribe(() => {
             this.empresarioService.listarEmpresario().subscribe(data => {
               this.empresarioService.setListaEmpresario(data);
             });
           }, err => {
-            //this.mensaje=err
             console.log(err);
           });
         }
-        this.router.navigate(['vehiculos']);
-  
-      }
-      else {
-        this.mensaje1 = "Complete los valores requeridos";
+        this.router.navigate(['empresario']);
+      } else{
+        this.mensaje="Completar los datos";
       }
     }
   
@@ -66,13 +61,11 @@ export class EmpresarioCreaditaComponent implements OnInit {
         this.empresarioService.listarIdEmpresario(this.id).subscribe(data => {
           this.empresario = data
           console.log(data);
-          this.idUsuarioSeleccionado = data.Usuario.id;
+          this.idUsuarioSeleccionado = data.usuario.id;
         });
   
       }
   
     }
-  
   }
-  
   

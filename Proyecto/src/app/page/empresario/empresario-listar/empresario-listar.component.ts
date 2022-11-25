@@ -1,5 +1,4 @@
 import { EmpresarioDialogoComponent } from './empresario-dialogo/empresario-dialogo.component';
-
 import { MatDialog } from '@angular/material/dialog';
 import { EmpresarioService } from './../../../service/empresario.service';
 import { Component, OnInit } from '@angular/core';
@@ -12,29 +11,27 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./empresario-listar.component.css']
 }) 
 export class EmpresarioListarComponent implements OnInit {
-  lista: Empresario[] = [];
+  listaempresario: Empresario[] = [];
   dataSource: MatTableDataSource<Empresario> = new MatTableDataSource();
-  displayedColumns: string[] = ['id','dni','nombre','apellido','numero','correo','razon','ruc','rubro','descripcion','acciones'];
+  displayedColumns: string[] = ['id','razon','ruc','rubro','descripcion','idUsuario','nombreUsuario','accion1','accion2'];
   private idMayor: number = 0;
   constructor(private empresarioService: EmpresarioService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.empresarioService.listarEmpresario().subscribe(data => {
-      this.lista = data;
+      console.log(data)
+      this.listaempresario = data;
       this.dataSource = new MatTableDataSource(data);
     });
-
     this.empresarioService.getListaEmpresario().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
       console.log(data);
-
     });
-
     this.empresarioService.getConfirmaEliminacionEmpresario().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
   }
-  confirmar(id: number) {
+  confirmarEmpresario(id: number) {
     this.idMayor = id;
     this.dialog.open(EmpresarioDialogoComponent);
   }

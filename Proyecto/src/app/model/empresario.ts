@@ -6,5 +6,5 @@ export class Empresario {
     rucEmpresario: number = 0;
     rubroEmpresario: string = "";
     descEmpresario: string = "";
-    Usuario: Usuario = new Usuario();
+    usuario: Usuario = new Usuario();
 } 
