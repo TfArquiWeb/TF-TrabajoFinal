@@ -1,3 +1,6 @@
+import { SolicitudempleoOrdenarComponent } from './page/solicitudempleo/solicitudempleo-ordenar/solicitudempleo-ordenar.component';
+import { SolicitudempleoCreaditaComponent } from './page/solicitudempleo/solicitudempleo-creadita/solicitudempleo-creadita.component';
+import { SolicitudempleoComponent } from './page/solicitudempleo/solicitudempleo.component';
 
 import { ContadorCantidadComponent } from './page/contador/contador-cantidad/contador-cantidad.component';
 import { ContadorOrdenarComponent } from './page/contador/contador-ordenar/contador-ordenar.component';
@@ -32,11 +35,10 @@ const routes: Routes = [{
     { path: 'cantidad', component: ContadorCantidadComponent }
   ]
 }, {
-  path: 'solicitudempleo', component: ContadorComponent, children: [
-    { path: 'insertar', component: ContadorCreaditaComponent },
-    { path: 'edicion/:id', component: ContadorCreaditaComponent },
-    { path: 'ordenar', component: ContadorOrdenarComponent },
-    { path: 'cantidad', component: ContadorCantidadComponent }
+  path: 'solicitudempleo', component: SolicitudempleoComponent, children: [
+    { path: 'insertar', component: SolicitudempleoCreaditaComponent },
+    { path: 'edicion/:id', component: SolicitudempleoCreaditaComponent },
+    { path: 'ordenar', component: SolicitudempleoOrdenarComponent }
   ]
 },{
   path: 'tipopago', component: TipopagoComponent, children: [
