@@ -33,7 +33,6 @@ import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuari
 import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
 import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/tipopago-creaedita.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { SidenavComponent } from './page/sidenav/sidenav.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
@@ -130,7 +129,6 @@ import { CurriculumDialogoComponent } from './page/curriculum/curriculum-listar/
     MatToolbarModule,
     FormsModule,
     MatButtonModule,
-    MatFormFieldModule,
     MatInputModule,
     MatSelectModule
 
