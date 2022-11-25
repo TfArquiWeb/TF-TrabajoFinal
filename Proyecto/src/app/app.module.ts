@@ -61,6 +61,9 @@ import { ContadorCantidadComponent } from './page/contador/contador-cantidad/con
 import { CurriculumCreaeditaComponent } from './page/curriculum/curriculum-creaedita/curriculum-creaedita.component';
 import { CurriculumBuscarComponent } from './page/curriculum/curriculum-buscar/curriculum-buscar.component';
 import { CurriculumDialogoComponent } from './page/curriculum/curriculum-listar/curriculum-dialogo/curriculum-dialogo.component';
+import { EmpresarioBuscarComponent } from './page/empresario/empresario-buscar/empresario-buscar.component';
+import { EmpresarioCantidadComponent } from './page/empresario/empresario-cantidad/empresario-cantidad.component';
+import { EmpresarioOrdenarComponent } from './page/empresario/empresario-ordenar/empresario-ordenar.component';
 
 
 
@@ -113,6 +116,9 @@ import { CurriculumDialogoComponent } from './page/curriculum/curriculum-listar/
     CurriculumCreaeditaComponent,
     CurriculumBuscarComponent,
     CurriculumDialogoComponent,
+    EmpresarioBuscarComponent,
+    EmpresarioCantidadComponent,
+    EmpresarioOrdenarComponent,
 
 
   ],
