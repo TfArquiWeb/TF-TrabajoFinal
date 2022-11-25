@@ -1,9 +1,15 @@
+
 import { CvCantidadComponent } from './page/cv/cv-cantidad/cv-cantidad.component';
 import { CvOrdenarComponent } from './page/cv/cv-ordenar/cv-ordenar.component';
 import { CvCreaeditaComponent } from './page/cv/cv-creaedita/cv-creaedita.component';
 import { CvComponent } from './page/cv/cv.component';
 import { CurriculumCantidadComponent } from './page/curriculum/curriculum-cantidad/curriculum-cantidad.component';
 import { CurriculumOrdenarComponent } from './page/curriculum/curriculum-ordenar/curriculum-ordenar.component';
+
+import { EmpresarioCantidadComponent } from './page/empresario/empresario-cantidad/empresario-cantidad.component';
+import { EmpresarioOrdenarComponent } from './page/empresario/empresario-ordenar/empresario-ordenar.component';
+import { EmpresarioCreaditaComponent } from './page/empresario/empresario-creadita/empresario-creadita.component';
+
 import { ContadorCantidadComponent } from './page/contador/contador-cantidad/contador-cantidad.component';
 import { ContadorOrdenarComponent } from './page/contador/contador-ordenar/contador-ordenar.component';
 import { CurriculumCreaeditaComponent } from './page/curriculum/curriculum-creaedita/curriculum-creaedita.component';
@@ -28,6 +34,10 @@ import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creae
 import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
 const routes: Routes = [{
   path: 'empresario', component: EmpresarioComponent, children: [
+    { path: 'insertar', component: EmpresarioCreaditaComponent },
+    { path: 'edicion/:id', component: EmpresarioCreaditaComponent },
+    { path: 'ordenar', component: EmpresarioOrdenarComponent },
+    { path: 'cantidad', component: EmpresarioCantidadComponent }
   ]
 }, {
   path: 'contador', component: ContadorComponent, children: [

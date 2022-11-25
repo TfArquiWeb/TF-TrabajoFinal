@@ -70,6 +70,10 @@ import { CvBuscarComponent } from './page/cv/cv-buscar/cv-buscar.component';
 import { CvCantidadComponent } from './page/cv/cv-cantidad/cv-cantidad.component';
 import { CvOrdenarComponent } from './page/cv/cv-ordenar/cv-ordenar.component';
 import { CvCreaeditaComponent } from './page/cv/cv-creaedita/cv-creaedita.component';
+import { EmpresarioBuscarComponent } from './page/empresario/empresario-buscar/empresario-buscar.component';
+import { EmpresarioCantidadComponent } from './page/empresario/empresario-cantidad/empresario-cantidad.component';
+import { EmpresarioOrdenarComponent } from './page/empresario/empresario-ordenar/empresario-ordenar.component';
+
 
 
 
@@ -131,7 +135,9 @@ import { CvCreaeditaComponent } from './page/cv/cv-creaedita/cv-creaedita.compon
     CvCantidadComponent,
     CvOrdenarComponent,
     CvCreaeditaComponent,
-
+    EmpresarioBuscarComponent,
+    EmpresarioCantidadComponent,
+    EmpresarioOrdenarComponent,
 
   ],
   imports: [
