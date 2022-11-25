@@ -13,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
 export class SolicitudempleoListarComponent implements OnInit {
   listarse: SolicitudEmpleo[]=[];
   dataSource: MatTableDataSource<SolicitudEmpleo> = new MatTableDataSource();
-  displayecColums: string[]=[]// Falta insertar cuantas columnas tendre
+  displayecColums: string[]=['idSE','fechaSE','estadoSE','estadoSE','contadoridSE','contadorSE','accion1','accion2']// Falta insertar cuantas columnas tendre
   private idMayor: number = 0;
   constructor(private SeS: SolicitudempleoService, private dialog: MatDialog) { }
 

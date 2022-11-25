@@ -1,3 +1,4 @@
+import { SolicitudempleoComponent } from './page/solicitudempleo/solicitudempleo.component';
 import { ContadorCreaditaComponent } from './page/contador/contador-creadita/contador-creadita.component';
 import { UsuarioCreaditaComponent } from './page/usuario/usuario-creadita/usuario-creadita.component';
 import { CurriculumComponent } from './page/curriculum/curriculum.component';
@@ -18,6 +19,12 @@ import { TipopagoCreaeditaComponent } from './page/tipopago/tipopago-creaedita/t
 import { TipomonedaCreaeditaComponent } from './page/tipomoneda/tipomoneda-creaedita/tipomoneda-creaedita.component';
 import { TipomonedaComponent } from './page/tipomoneda/tipomoneda.component';
 const routes: Routes = [{
+  path: 'solicitudempleo', component: SolicitudempleoComponent, children: [
+    {path: 'insertar', component: SolicitudempleoComponent},
+    { path: 'edicion/:id', component: SolicitudempleoComponent },
+    { path: 'ordenar', component: SolicitudempleoComponent }
+  ]
+}, {
   path: 'empresario', component: EmpresarioComponent, children: [
   ]
 }, {
