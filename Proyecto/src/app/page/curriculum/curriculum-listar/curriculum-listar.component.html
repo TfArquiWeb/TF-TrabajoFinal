@@ -1,6 +1,7 @@
 <div class="container">
   <div style=" text-align: center;">
-    <h1>Lista de curriculum</h1>
+    <br>
+    <h1>Lista de Curriculum</h1>
   </div>
   <app-curriculum-buscar></app-curriculum-buscar>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -18,9 +19,11 @@
 
     <!-- Weight Column -->
     <ng-container matColumnDef="capacitacion">
-      <th mat-header-cell *matHeaderCellDef> Capacitacion </th>
+      <th mat-header-cell *matHeaderCellDef> Id </th>
       <td mat-cell *matCellDef="let element"> {{element.capacitacion.descCapacitacion}} </td>
-    </ng-container>
+  </ng-container>
+
+
     <ng-container matColumnDef="experiencia">
       <th mat-header-cell *matHeaderCellDef> Experiencia </th>
       <td mat-cell *matCellDef="let element"> {{element.experiencia.descExperiencia}} </td>
@@ -49,7 +52,9 @@
         routerLink="/curriculum/insertar">
         <mat-icon>plus_one</mat-icon>
     </button>
+    &nbsp;
     <button mat-raised-button color="primary" routerLink="/curriculum/ordenar">ordenar</button>
+    &nbsp;
     <button mat-raised-button color="primary" routerLink="/curriculum/cantidad">cantidad</button>
 </div>
 

@@ -2,7 +2,7 @@ import { CurriculumDialogoComponent } from './curriculum-dialogo/curriculum-dial
 import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { curriculum } from '../../../model/Curriculum';
+import { curriculum } from '../../../model/curriculum';
 import { CurriculumService } from './../../../service/curriculum.service';
 
 @Component({

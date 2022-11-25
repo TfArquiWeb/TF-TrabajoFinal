@@ -18,6 +18,18 @@ export class CurriculumBuscarComponent implements OnInit {
       this.curriculumService.setLista(data);
     });
   }
+  buscardescExperiencia(e: any) {
+    this.curriculumService.buscardescExperiencia(e.target.value).subscribe(data=>{
+      this.curriculumService.setLista(data);
+    });
+  }
+
+  buscardescHabilidad(e: any) {
+    this.curriculumService.buscardescHabilidad(e.target.value).subscribe(data=>{
+      this.curriculumService.setLista(data);
+    });
+  }
+
 
 }
 
