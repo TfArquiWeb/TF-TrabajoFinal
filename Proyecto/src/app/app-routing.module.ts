@@ -63,6 +63,8 @@ const routes: Routes = [{
   path: 'curriculum', component: CurriculumComponent, children: [
     {path: 'insertar', component: CurriculumCreaeditaComponent},
     { path: 'edicion/:id', component: CurriculumCreaeditaComponent }
+    //{ path: 'ordenar', component: CurriculumOrdenarComponent },
+    //{ path: 'cantidad', component: CurriculumCantidadComponent }
   ]
 },{
   path: 'tipomoneda', component: TipomonedaComponent, children: [
