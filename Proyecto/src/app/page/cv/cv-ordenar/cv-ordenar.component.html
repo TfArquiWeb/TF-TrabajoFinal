@@ -1,7 +1,11 @@
 <div class="container">
     <div style=" text-align: center;"> 
-        <h1>Lista de curriculum</h1>
-    </div>
+        <br>
+        <h1>
+            <FONT FACE="Comic Sans MS" size=6 >Lista ordenada</FONT> 
+        </h1>
+        <br> 
+    </div> 
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
         <!--- Note that these columns can be defined in any order.
@@ -14,7 +18,7 @@
         </ng-container>
 
         <ng-container matColumnDef="capacitacion">
-            <th mat-header-cell *matHeaderCellDef> Capacitacion</th>
+            <th mat-header-cell *matHeaderCellDef> Capacitación</th>
             <td mat-cell *matCellDef="let element"> {{element.capacitacion.descCapacitacion}} </td>
         </ng-container>
 
@@ -30,5 +34,8 @@
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>    
+    </table> 
+    <br>
+    &nbsp;
+    <button mat-raised-button color="primary" routerLink="/curriculum" class="mat-elevation-z8">Regresar</button>   
 </div>
